@@ -216,6 +216,8 @@ multiline_comment|/* front only? */
 l_int|0x02
 )brace
 suffix:semicolon
+macro_line|#if 0
+multiline_comment|/* The datasheet says the node 0x07 is connected from inputs,&n; * but it shows zero connection in the real implementation.&n; */
 id|hda_nid_t
 id|alc880_adc_nids
 (braket
@@ -234,6 +236,24 @@ l_int|0x09
 comma
 )brace
 suffix:semicolon
+macro_line|#else
+id|hda_nid_t
+id|alc880_adc_nids
+(braket
+l_int|2
+)braket
+op_assign
+(brace
+"&t;"
+multiline_comment|/* ADC1-2 */
+"&t;"
+l_int|0x08
+comma
+l_int|0x09
+comma
+)brace
+suffix:semicolon
+macro_line|#endif
 macro_line|#define ALC880_DIGOUT_NID&t;0x06
 macro_line|#define ALC880_DIGIN_NID&t;0x0a
 id|hda_nid_t
@@ -1491,12 +1511,14 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
+multiline_comment|/* We don&squot;t use NID 0x07 - see above */
+"&t;"
 id|HDA_CODEC_VOLUME
 c_func
 (paren
 l_string|&quot;Capture Volume&quot;
 comma
-l_int|0x07
+l_int|0x08
 comma
 l_int|0x0
 comma
@@ -1509,7 +1531,7 @@ c_func
 (paren
 l_string|&quot;Capture Switch&quot;
 comma
-l_int|0x07
+l_int|0x08
 comma
 l_int|0x0
 comma
@@ -1524,7 +1546,7 @@ l_string|&quot;Capture Volume&quot;
 comma
 l_int|1
 comma
-l_int|0x08
+l_int|0x09
 comma
 l_int|0x0
 comma
@@ -1539,7 +1561,7 @@ l_string|&quot;Capture Switch&quot;
 comma
 l_int|1
 comma
-l_int|0x08
+l_int|0x09
 comma
 l_int|0x0
 comma
@@ -1934,12 +1956,14 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
+multiline_comment|/* We don&squot;t use NID 0x07 - see above */
+"&t;"
 id|HDA_CODEC_VOLUME
 c_func
 (paren
 l_string|&quot;Capture Volume&quot;
 comma
-l_int|0x07
+l_int|0x08
 comma
 l_int|0x0
 comma
@@ -1952,7 +1976,7 @@ c_func
 (paren
 l_string|&quot;Capture Switch&quot;
 comma
-l_int|0x07
+l_int|0x08
 comma
 l_int|0x0
 comma
@@ -1967,7 +1991,7 @@ l_string|&quot;Capture Volume&quot;
 comma
 l_int|1
 comma
-l_int|0x08
+l_int|0x09
 comma
 l_int|0x0
 comma
@@ -1982,7 +2006,7 @@ l_string|&quot;Capture Switch&quot;
 comma
 l_int|1
 comma
-l_int|0x08
+l_int|0x09
 comma
 l_int|0x0
 comma
@@ -2510,6 +2534,36 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
+id|HDA_CODEC_VOLUME_IDX
+c_func
+(paren
+l_string|&quot;Capture Volume&quot;
+comma
+l_int|2
+comma
+l_int|0x09
+comma
+l_int|0x0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE_IDX
+c_func
+(paren
+l_string|&quot;Capture Switch&quot;
+comma
+l_int|2
+comma
+l_int|0x09
+comma
+l_int|0x0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
 (brace
 "&t;&t;"
 dot
@@ -2531,7 +2585,7 @@ comma
 dot
 id|count
 op_assign
-l_int|2
+l_int|3
 comma
 "&t;&t;"
 dot
@@ -2764,14 +2818,58 @@ l_int|0x7000
 )brace
 comma
 "&t;"
-multiline_comment|/* set connection select to line in (default select for this ADC) */
+multiline_comment|/* set connection select to mic in */
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_CONNECT_SEL
 comma
-l_int|0x02
+l_int|0x00
+)brace
+comma
+"&t;"
+multiline_comment|/* unmute amp left and right */
+"&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+multiline_comment|/* set connection select to mic in */
+"&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
+)brace
+comma
+"&t;"
+multiline_comment|/* unmute amp left and right */
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+multiline_comment|/* set connection select to mic in */
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
 )brace
 comma
 "&t;"
@@ -3185,14 +3283,58 @@ l_int|0x7000
 )brace
 comma
 "&t;"
-multiline_comment|/* set connection select to line in (default select for this ADC) */
+multiline_comment|/* set connection select to mic in */
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_CONNECT_SEL
 comma
-l_int|0x02
+l_int|0x00
+)brace
+comma
+"&t;"
+multiline_comment|/* unmute amp left and right */
+"&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+multiline_comment|/* set connection select to mic in */
+"&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
+)brace
+comma
+"&t;"
+multiline_comment|/* unmute amp left and right */
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+multiline_comment|/* set connection select to mic in */
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
 )brace
 comma
 "&t;"
@@ -3930,14 +4072,58 @@ l_int|0x7000
 )brace
 comma
 "&t;"
-multiline_comment|/* set connection select to line in (default select for this ADC) */
+multiline_comment|/* set connection select to mic in */
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_CONNECT_SEL
 comma
-l_int|0x02
+l_int|0x00
+)brace
+comma
+"&t;"
+multiline_comment|/* unmute amp left and right */
+"&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+multiline_comment|/* set connection select to mic in */
+"&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
+)brace
+comma
+"&t;"
+multiline_comment|/* unmute amp left and right */
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+multiline_comment|/* set connection select to mic in */
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
 )brace
 comma
 "&t;"
@@ -4579,9 +4765,9 @@ comma
 dot
 id|nid
 op_assign
-l_int|0x07
+l_int|0x08
 comma
-multiline_comment|/* NID to query formats and rates */
+multiline_comment|/* NID to query formats and rates&n;&t;&t;      * (0x07 might be broken on some devices)&n;&t;&t;      */
 "&t;"
 dot
 id|ops
@@ -6485,6 +6671,62 @@ comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
 l_int|0xb080
+)brace
+comma
+"&t;"
+multiline_comment|/* ADC set up */
+"&t;"
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
+)brace
+comma
+"&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
+)brace
+comma
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+l_int|0x7000
+)brace
+comma
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
 )brace
 comma
 "&t;"
@@ -10345,6 +10587,15 @@ l_int|0x7000
 )brace
 comma
 "&t;"
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
+)brace
+comma
+"&t;"
 multiline_comment|/* ADC2: unmute amp left and right */
 "&t;"
 (brace
@@ -10356,14 +10607,32 @@ l_int|0x7000
 )brace
 comma
 "&t;"
+(brace
+l_int|0x08
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
+)brace
+comma
+"&t;"
 multiline_comment|/* ADC3: unmute amp left and right */
 "&t;"
 (brace
-l_int|0x08
+l_int|0x09
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
 l_int|0x7000
+)brace
+comma
+"&t;"
+(brace
+l_int|0x09
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
 )brace
 comma
 "&t;"
