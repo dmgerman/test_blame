@@ -260,6 +260,13 @@ r_struct
 id|hda_input_mux
 id|private_imux
 suffix:semicolon
+"&t;"
+id|hda_nid_t
+id|private_dac_nids
+(braket
+l_int|4
+)braket
+suffix:semicolon
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * input MUX handling&n; */
@@ -8607,23 +8614,9 @@ id|ALC880_5ST_DIG
 )brace
 comma
 "&t;"
-(brace
-dot
-id|pci_subvendor
-op_assign
-l_int|0x0000
-comma
-dot
-id|pci_subdevice
-op_assign
-l_int|0x8086
-comma
-dot
-id|config
-op_assign
-id|ALC880_5ST_DIG
-)brace
-comma
+multiline_comment|/* note subvendor = 0 below */
+"&t;"
+multiline_comment|/* { .pci_subvendor = 0x0000, .pci_subdevice = 0x8086, .config = ALC880_5ST_DIG }, */
 "&t;"
 (brace
 dot
@@ -9503,6 +9496,9 @@ op_assign
 id|alc880_volume_init_verbs
 comma
 id|alc880_pin_w810_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc880_gpio2_init_verbs
 )brace
 comma
 "&t;&t;"
@@ -9575,9 +9571,6 @@ op_assign
 id|alc880_volume_init_verbs
 comma
 id|alc880_pin_z71v_init_verbs
-comma
-"&t;&t;&t;&t;"
-id|alc880_gpio2_init_verbs
 )brace
 comma
 "&t;&t;"
@@ -10369,6 +10362,11 @@ r_sizeof
 id|assigned
 )paren
 )paren
+suffix:semicolon
+"&t;"
+id|spec-&gt;multiout.dac_nids
+op_assign
+id|spec-&gt;private_dac_nids
 suffix:semicolon
 "&t;"
 multiline_comment|/* check the pins hardwired to audio widget */
