@@ -10278,7 +10278,7 @@ suffix:semicolon
 "&t;"
 id|knew-&gt;name
 op_assign
-id|snd_kmalloc_strdup
+id|kstrdup
 c_func
 (paren
 id|name
