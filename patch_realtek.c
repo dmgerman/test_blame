@@ -8581,23 +8581,8 @@ id|ALC880_5ST_DIG
 )brace
 comma
 "&t;"
-(brace
-dot
-id|pci_subvendor
-op_assign
-l_int|0x1019
-comma
-dot
-id|pci_subdevice
-op_assign
-l_int|0xa884
-comma
-dot
-id|config
-op_assign
-id|ALC880_5ST_DIG
-)brace
-comma
+multiline_comment|/* { .pci_subvendor = 0x1019, .pci_subdevice = 0xa884, .config = ALC880_5ST_DIG }, */
+multiline_comment|/* conflict with 6stack */
 "&t;"
 (brace
 dot
@@ -8695,6 +8680,25 @@ op_assign
 id|ALC880_6ST
 )brace
 comma
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
+l_int|0x1019
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0xa884
+comma
+dot
+id|config
+op_assign
+id|ALC880_6ST
+)brace
+comma
+multiline_comment|/* Acer APFV */
 "&t;"
 (brace
 dot
