@@ -3191,6 +3191,45 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+multiline_comment|/* additional mixers to alc880_asus_mixer */
+id|snd_kcontrol_new_t
+id|alc880_pcbeep_mixer
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;PC Speaker Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x05
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;PC Speaker Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x05
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+(brace
+)brace
+multiline_comment|/* end */
+)brace
+suffix:semicolon
 multiline_comment|/*&n; * build control elements&n; */
 r_int
 id|alc_build_controls
@@ -10036,6 +10075,8 @@ id|mixers
 op_assign
 (brace
 id|alc880_asus_mixer
+comma
+id|alc880_pcbeep_mixer
 )brace
 comma
 "&t;&t;"
