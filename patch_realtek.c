@@ -8249,6 +8249,24 @@ id|ALC880_3ST
 )brace
 comma
 "&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
+l_int|0x104d
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x81a0
+comma
+dot
+id|config
+op_assign
+id|ALC880_3ST
+)brace
+comma
+"&t;"
 multiline_comment|/* Back 3 jack plus 1 SPDIF out jack, front 2 jack */
 "&t;"
 (brace
