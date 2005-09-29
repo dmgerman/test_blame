@@ -14623,7 +14623,7 @@ l_int|2
 comma
 l_int|2
 comma
-id|HDA_OUTPUT
+id|HDA_INPUT
 )paren
 comma
 "&t;"
