@@ -6760,7 +6760,7 @@ comma
 id|ALC_BIND_MUTE
 c_func
 (paren
-l_string|&quot;CLFE Playback Volume&quot;
+l_string|&quot;CLFE Playback Switch&quot;
 comma
 l_int|0x0e
 comma
@@ -6773,7 +6773,7 @@ comma
 id|ALC_BIND_MUTE
 c_func
 (paren
-l_string|&quot;Side Playback Volume&quot;
+l_string|&quot;Side Playback Switch&quot;
 comma
 l_int|0x0f
 comma
