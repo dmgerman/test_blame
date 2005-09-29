@@ -13122,7 +13122,7 @@ l_int|1
 comma
 l_int|2
 comma
-id|HDA_OUTPUT
+id|HDA_INPUT
 )paren
 comma
 "&t;"
@@ -13381,7 +13381,7 @@ l_int|1
 comma
 l_int|2
 comma
-id|HDA_OUTPUT
+id|HDA_INPUT
 )paren
 comma
 "&t;"
