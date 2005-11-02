@@ -237,13 +237,6 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* used in alc_build_pcms() */
 "&t;"
-r_struct
-id|semaphore
-id|bind_mutex
-suffix:semicolon
-"&t;"
-multiline_comment|/* for bound controls */
-"&t;"
 multiline_comment|/* dynamic controls, init_verbs and input_mux */
 "&t;"
 r_struct
@@ -815,320 +808,6 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
-multiline_comment|/*&n; * bound volume controls&n; *&n; * bind multiple volumes (# indices, from 0)&n; */
-macro_line|#define AMP_VAL_IDX_SHIFT&t;19
-macro_line|#define AMP_VAL_IDX_MASK&t;(0x0f&lt;&lt;19)
-r_int
-id|alc_bind_switch_info
-c_func
-(paren
-id|snd_kcontrol_t
-op_star
-id|kcontrol
-comma
-id|snd_ctl_elem_info_t
-op_star
-id|uinfo
-)paren
-(brace
-"&t;"
-r_struct
-id|hda_codec
-op_star
-id|codec
-op_assign
-id|snd_kcontrol_chip
-c_func
-(paren
-id|kcontrol
-)paren
-suffix:semicolon
-"&t;"
-r_struct
-id|alc_spec
-op_star
-id|spec
-op_assign
-id|codec-&gt;spec
-suffix:semicolon
-"&t;"
-r_int
-r_int
-id|pval
-suffix:semicolon
-"&t;"
-id|down
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
-suffix:semicolon
-"&t;"
-id|pval
-op_assign
-id|kcontrol-&gt;private_value
-suffix:semicolon
-"&t;"
-id|kcontrol-&gt;private_value
-op_assign
-id|pval
-op_amp
-op_complement
-id|AMP_VAL_IDX_MASK
-suffix:semicolon
-multiline_comment|/* index 0 */
-"&t;"
-id|snd_hda_mixer_amp_switch_info
-c_func
-(paren
-id|kcontrol
-comma
-id|uinfo
-)paren
-suffix:semicolon
-"&t;"
-id|kcontrol-&gt;private_value
-op_assign
-id|pval
-suffix:semicolon
-"&t;"
-id|up
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
-suffix:semicolon
-"&t;"
-r_return
-l_int|0
-suffix:semicolon
-)brace
-r_int
-id|alc_bind_switch_get
-c_func
-(paren
-id|snd_kcontrol_t
-op_star
-id|kcontrol
-comma
-id|snd_ctl_elem_value_t
-op_star
-id|ucontrol
-)paren
-(brace
-"&t;"
-r_struct
-id|hda_codec
-op_star
-id|codec
-op_assign
-id|snd_kcontrol_chip
-c_func
-(paren
-id|kcontrol
-)paren
-suffix:semicolon
-"&t;"
-r_struct
-id|alc_spec
-op_star
-id|spec
-op_assign
-id|codec-&gt;spec
-suffix:semicolon
-"&t;"
-r_int
-r_int
-id|pval
-suffix:semicolon
-"&t;"
-id|down
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
-suffix:semicolon
-"&t;"
-id|pval
-op_assign
-id|kcontrol-&gt;private_value
-suffix:semicolon
-"&t;"
-id|kcontrol-&gt;private_value
-op_assign
-id|pval
-op_amp
-op_complement
-id|AMP_VAL_IDX_MASK
-suffix:semicolon
-multiline_comment|/* index 0 */
-"&t;"
-id|snd_hda_mixer_amp_switch_get
-c_func
-(paren
-id|kcontrol
-comma
-id|ucontrol
-)paren
-suffix:semicolon
-"&t;"
-id|kcontrol-&gt;private_value
-op_assign
-id|pval
-suffix:semicolon
-"&t;"
-id|up
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
-suffix:semicolon
-"&t;"
-r_return
-l_int|0
-suffix:semicolon
-)brace
-r_int
-id|alc_bind_switch_put
-c_func
-(paren
-id|snd_kcontrol_t
-op_star
-id|kcontrol
-comma
-id|snd_ctl_elem_value_t
-op_star
-id|ucontrol
-)paren
-(brace
-"&t;"
-r_struct
-id|hda_codec
-op_star
-id|codec
-op_assign
-id|snd_kcontrol_chip
-c_func
-(paren
-id|kcontrol
-)paren
-suffix:semicolon
-"&t;"
-r_struct
-id|alc_spec
-op_star
-id|spec
-op_assign
-id|codec-&gt;spec
-suffix:semicolon
-"&t;"
-r_int
-r_int
-id|pval
-suffix:semicolon
-"&t;"
-r_int
-id|i
-comma
-id|indices
-comma
-id|change
-op_assign
-l_int|0
-suffix:semicolon
-"&t;"
-id|down
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
-suffix:semicolon
-"&t;"
-id|pval
-op_assign
-id|kcontrol-&gt;private_value
-suffix:semicolon
-"&t;"
-id|indices
-op_assign
-(paren
-id|pval
-op_amp
-id|AMP_VAL_IDX_MASK
-)paren
-op_rshift
-id|AMP_VAL_IDX_SHIFT
-suffix:semicolon
-"&t;"
-r_for
-c_loop
-(paren
-id|i
-op_assign
-l_int|0
-suffix:semicolon
-id|i
-OL
-id|indices
-suffix:semicolon
-id|i
-op_increment
-)paren
-(brace
-"&t;&t;"
-id|kcontrol-&gt;private_value
-op_assign
-(paren
-id|pval
-op_amp
-op_complement
-id|AMP_VAL_IDX_MASK
-)paren
-op_or
-(paren
-id|i
-op_lshift
-id|AMP_VAL_IDX_SHIFT
-)paren
-suffix:semicolon
-"&t;&t;"
-id|change
-op_or_assign
-id|snd_hda_mixer_amp_switch_put
-c_func
-(paren
-id|kcontrol
-comma
-id|ucontrol
-)paren
-suffix:semicolon
-"&t;"
-)brace
-"&t;"
-id|kcontrol-&gt;private_value
-op_assign
-id|pval
-suffix:semicolon
-"&t;"
-id|up
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
-suffix:semicolon
-"&t;"
-r_return
-id|change
-suffix:semicolon
-)brace
-macro_line|#define ALC_BIND_MUTE_MONO(xname, nid, channel, indices, direction) &bslash;&n;&t;{ .iface = SNDRV_CTL_ELEM_IFACE_MIXER, .name = xname, .index = 0,  &bslash;&n;&t;  .info = alc_bind_switch_info, &bslash;&n;&t;  .get = alc_bind_switch_get, &bslash;&n;&t;  .put = alc_bind_switch_put, &bslash;&n;&t;  .private_value = HDA_COMPOSE_AMP_VAL(nid, channel, indices, direction) }
-macro_line|#define ALC_BIND_MUTE(xname,nid,indices,dir) ALC_BIND_MUTE_MONO(xname,nid,3,indices,dir)
 multiline_comment|/*&n; * Control of pin widget settings via the mixer.  Only boolean settings are&n; * supported, so VrefEn can&squot;t be controlled using these functions as they&n; * stand.&n; */
 r_int
 id|alc_pinctl_switch_info
@@ -1647,7 +1326,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -1673,7 +1352,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
@@ -1716,7 +1395,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
@@ -1731,7 +1410,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
@@ -2209,7 +1888,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Side Playback Switch&quot;
@@ -2428,7 +2107,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -2454,7 +2133,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
@@ -2497,7 +2176,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
@@ -2512,7 +2191,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
@@ -2540,7 +2219,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Side Playback Switch&quot;
@@ -2779,7 +2458,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -2805,7 +2484,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
@@ -2848,7 +2527,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
@@ -2863,7 +2542,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
@@ -2946,7 +2625,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -2972,7 +2651,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Headphone Playback Switch&quot;
@@ -3076,7 +2755,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Headphone Playback Switch&quot;
@@ -3102,7 +2781,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Internal Speaker Playback Switch&quot;
@@ -3196,7 +2875,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -3222,7 +2901,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
@@ -3265,7 +2944,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
@@ -3280,7 +2959,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
@@ -6994,7 +6673,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -7007,7 +6686,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
@@ -7020,7 +6699,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;CLFE Playback Switch&quot;
@@ -7033,7 +6712,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Side Playback Switch&quot;
@@ -10462,7 +10141,7 @@ l_int|0
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_int|NULL
@@ -12498,14 +12177,6 @@ r_return
 id|ENOMEM
 suffix:semicolon
 "&t;"
-id|init_MUTEX
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
-suffix:semicolon
-"&t;"
 id|codec-&gt;spec
 op_assign
 id|spec
@@ -13129,7 +12800,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -13285,7 +12956,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Headphone Playback Switch&quot;
@@ -13313,7 +12984,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Mono Playback Switch&quot;
@@ -13414,7 +13085,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -13544,7 +13215,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Headphone Playback Switch&quot;
@@ -13572,7 +13243,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Mono Playback Switch&quot;
@@ -13673,7 +13344,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Headphone Playback Switch&quot;
@@ -13788,7 +13459,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Internal Speaker Playback Switch&quot;
@@ -14723,14 +14394,6 @@ r_return
 id|ENOMEM
 suffix:semicolon
 "&t;"
-id|init_MUTEX
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
-suffix:semicolon
-"&t;"
 id|codec-&gt;spec
 op_assign
 id|spec
@@ -15359,7 +15022,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
@@ -15385,7 +15048,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
@@ -15428,7 +15091,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
@@ -15443,7 +15106,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE_MONO
+id|HDA_BIND_MUTE_MONO
 c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
@@ -15471,7 +15134,7 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|ALC_BIND_MUTE
+id|HDA_BIND_MUTE
 c_func
 (paren
 l_string|&quot;Side Playback Switch&quot;
@@ -16417,14 +16080,6 @@ l_int|NULL
 "&t;&t;"
 r_return
 id|ENOMEM
-suffix:semicolon
-"&t;"
-id|init_MUTEX
-c_func
-(paren
-op_amp
-id|spec-&gt;bind_mutex
-)paren
 suffix:semicolon
 "&t;"
 id|codec-&gt;spec
