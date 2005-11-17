@@ -79,19 +79,6 @@ id|ALC260_MODEL_LAST
 multiline_comment|/* last tag */
 )brace
 suffix:semicolon
-multiline_comment|/* amp values */
-macro_line|#define AMP_IN_MUTE(idx)&t;(0x7080 | ((idx)&lt;&lt;8))
-macro_line|#define AMP_IN_UNMUTE(idx)&t;(0x7000 | ((idx)&lt;&lt;8))
-macro_line|#define AMP_OUT_MUTE&t;0xb080
-macro_line|#define AMP_OUT_UNMUTE&t;0xb000
-macro_line|#define AMP_OUT_ZERO&t;0xb000
-multiline_comment|/* pinctl values */
-macro_line|#define PIN_IN&t;&t;0x20
-macro_line|#define PIN_VREF80&t;0x24
-macro_line|#define PIN_VREF50&t;0x21
-macro_line|#define PIN_OUT&t;&t;0x40
-macro_line|#define PIN_HP&t;&t;0xc0
-macro_line|#define PIN_HP_AMP&t;0x80
 r_struct
 id|alc_spec
 (brace
@@ -10739,9 +10726,9 @@ r_return
 l_int|0
 suffix:semicolon
 )brace
-multiline_comment|/* add playback controls for HP output */
+multiline_comment|/* add playback controls for speaker and HP outputs */
 r_int
-id|alc880_auto_create_hp_ctls
+id|alc880_auto_create_extra_out
 c_func
 (paren
 r_struct
@@ -10751,6 +10738,12 @@ id|spec
 comma
 id|hda_nid_t
 id|pin
+comma
+"&t;&t;&t;&t;&t;"
+r_const
+r_char
+op_star
+id|pfx
 )paren
 (brace
 "&t;"
@@ -10760,6 +10753,13 @@ suffix:semicolon
 "&t;"
 r_int
 id|err
+suffix:semicolon
+"&t;"
+r_char
+id|name
+(braket
+l_int|32
+)braket
 suffix:semicolon
 "&t;"
 r_if
@@ -10833,7 +10833,7 @@ suffix:semicolon
 )brace
 r_else
 "&t;&t;&t;"
-multiline_comment|/* specify the DAC as the extra HP output */
+multiline_comment|/* specify the DAC as the extra output */
 "&t;&t;&t;"
 id|spec-&gt;multiout.hp_nid
 op_assign
@@ -10855,6 +10855,17 @@ id|pin
 )paren
 suffix:semicolon
 "&t;&t;"
+id|sprintf
+c_func
+(paren
+id|name
+comma
+l_string|&quot;%s Playback Volume&quot;
+comma
+id|pfx
+)paren
+suffix:semicolon
+"&t;&t;"
 r_if
 c_cond
 (paren
@@ -10868,7 +10879,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_VOL
 comma
-l_string|&quot;Headphone Playback Volume&quot;
+id|name
 comma
 "&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
@@ -10892,6 +10903,17 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;"
+id|sprintf
+c_func
+(paren
+id|name
+comma
+l_string|&quot;%s Playback Switch&quot;
+comma
+id|pfx
+)paren
+suffix:semicolon
+"&t;&t;"
 r_if
 c_cond
 (paren
@@ -10905,7 +10927,7 @@ id|spec
 comma
 id|ALC_CTL_BIND_MUTE
 comma
-l_string|&quot;Headphone Playback Switch&quot;
+id|name
 comma
 "&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
@@ -10989,6 +11011,17 @@ suffix:semicolon
 "&t;&t;"
 multiline_comment|/* we have only a switch on HP-out PIN */
 "&t;&t;"
+id|sprintf
+c_func
+(paren
+id|name
+comma
+l_string|&quot;%s Playback Switch&quot;
+comma
+id|pfx
+)paren
+suffix:semicolon
+"&t;&t;"
 r_if
 c_cond
 (paren
@@ -11002,7 +11035,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_MUTE
 comma
-l_string|&quot;Headphone Playback Switch&quot;
+id|name
 comma
 "&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
@@ -11512,7 +11545,7 @@ suffix:semicolon
 )brace
 )brace
 r_void
-id|alc880_auto_init_hp_out
+id|alc880_auto_init_extra_out
 c_func
 (paren
 r_struct
@@ -11532,6 +11565,31 @@ suffix:semicolon
 "&t;"
 id|hda_nid_t
 id|pin
+suffix:semicolon
+"&t;"
+id|pin
+op_assign
+id|spec-&gt;autocfg.speaker_pin
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|pin
+)paren
+multiline_comment|/* connect to front */
+"&t;&t;"
+id|alc880_auto_set_output_and_unmute
+c_func
+(paren
+id|codec
+comma
+id|pin
+comma
+id|PIN_OUT
+comma
+l_int|0
+)paren
 suffix:semicolon
 "&t;"
 id|pin
@@ -11747,6 +11805,10 @@ op_logical_neg
 id|spec-&gt;autocfg.line_outs
 op_logical_and
 op_logical_neg
+id|spec-&gt;autocfg.speaker_pin
+op_logical_and
+"&t;"
+op_logical_neg
 id|spec-&gt;autocfg.hp_pin
 )paren
 "&t;&t;"
@@ -11777,12 +11839,33 @@ op_logical_or
 (paren
 id|err
 op_assign
-id|alc880_auto_create_hp_ctls
+id|alc880_auto_create_extra_out
 c_func
 (paren
 id|spec
 comma
-id|spec-&gt;autocfg.hp_pin
+id|spec-&gt;autocfg.speaker_pin
+comma
+"&t;&t;&t;&t;&t;&t;"
+l_string|&quot;Speaker&quot;
+)paren
+)paren
+OL
+l_int|0
+op_logical_or
+"&t;"
+(paren
+id|err
+op_assign
+id|alc880_auto_create_extra_out
+c_func
+(paren
+id|spec
+comma
+id|spec-&gt;autocfg.speaker_pin
+comma
+"&t;&t;&t;&t;&t;&t;"
+l_string|&quot;Headphone&quot;
 )paren
 )paren
 OL
@@ -11898,7 +11981,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc880_auto_init_hp_out
+id|alc880_auto_init_extra_out
 c_func
 (paren
 id|codec
