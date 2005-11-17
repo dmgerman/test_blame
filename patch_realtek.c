@@ -85,7 +85,8 @@ id|alc_spec
 "&t;"
 multiline_comment|/* codec parameterization */
 "&t;"
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 op_star
 id|mixers
 (braket
@@ -238,7 +239,8 @@ comma
 id|num_kctl_used
 suffix:semicolon
 "&t;"
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 op_star
 id|kctl_alloc
 suffix:semicolon
@@ -261,11 +263,13 @@ r_int
 id|alc_mux_enum_info
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_info_t
+r_struct
+id|snd_ctl_elem_info
 op_star
 id|uinfo
 )paren
@@ -305,11 +309,13 @@ r_int
 id|alc_mux_enum_get
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -368,11 +374,13 @@ r_int
 id|alc_mux_enum_put
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -441,11 +449,13 @@ r_int
 id|alc880_ch_mode_info
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_info_t
+r_struct
+id|snd_ctl_elem_info
 op_star
 id|uinfo
 )paren
@@ -490,11 +500,13 @@ r_int
 id|alc880_ch_mode_get
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -541,11 +553,13 @@ r_int
 id|alc880_ch_mode_put
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -594,11 +608,13 @@ r_int
 id|alc_pinctl_switch_info
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_info_t
+r_struct
+id|snd_ctl_elem_info
 op_star
 id|uinfo
 )paren
@@ -632,11 +648,13 @@ r_int
 id|alc_pinctl_switch_get
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -721,11 +739,13 @@ r_int
 id|alc_pinctl_switch_put
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -1087,7 +1107,8 @@ id|alc880_threestack_ch6_init
 comma
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_three_stack_mixer
 (braket
 )braket
@@ -1390,7 +1411,8 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* capture mixer elements */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_capture_mixer
 (braket
 )braket
@@ -1534,7 +1556,8 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* capture mixer elements (in case NID 0x07 not available) */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_capture_alt_mixer
 (braket
 )braket
@@ -1649,7 +1672,8 @@ multiline_comment|/* end */
 suffix:semicolon
 multiline_comment|/*&n; * ALC880 5-stack model&n; *&n; * DAC: Front = 0x02 (0x0c), Surr = 0x05 (0x0f), CLFE = 0x04 (0x0d), Side = 0x02 (0xd)&n; * Pin assignment: Front = 0x14, Surr = 0x17, CLFE = 0x16&n; *                 Line-In/Side = 0x1a, Mic = 0x18, F-Mic = 0x1b, HP = 0x19&n; */
 multiline_comment|/* additional mixers to alc880_three_stack_mixer */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_five_stack_mixer
 (braket
 )braket
@@ -1868,7 +1892,8 @@ l_int|NULL
 comma
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_six_stack_mixer
 (braket
 )braket
@@ -2219,7 +2244,8 @@ l_int|NULL
 )brace
 suffix:semicolon
 multiline_comment|/* Pin assignment: Front = 0x14, Surr = 0x15, CLFE = 0x16, HP = 0x1b */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_w810_base_mixer
 (braket
 )braket
@@ -2386,7 +2412,8 @@ l_int|NULL
 )brace
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_z71v_mixer
 (braket
 )braket
@@ -2516,7 +2543,8 @@ l_int|0x03
 )brace
 suffix:semicolon
 macro_line|#define ALC880_F1734_HP_DAC&t;0x02
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_f1734_mixer
 (braket
 )braket
@@ -2636,7 +2664,8 @@ multiline_comment|/* FIXME! */
 multiline_comment|/*&n; * ALC880 ASUS model&n; *&n; * DAC: HP/Front = 0x02 (0x0c), Surr = 0x03 (0x0d), CLFE = 0x04 (0x0e)&n; * Pin assignment: HP/Front = 0x14, Surr = 0x15, CLFE = 0x16,&n; *  Mic = 0x18, Line = 0x1a&n; */
 macro_line|#define alc880_asus_dac_nids&t;alc880_w810_dac_nids&t;/* identical with w810 */
 macro_line|#define alc880_asus_modes&t;alc880_threestack_modes&t;/* 2/6 channel mode */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_asus_mixer
 (braket
 )braket
@@ -2876,7 +2905,8 @@ suffix:semicolon
 multiline_comment|/* FIXME! */
 multiline_comment|/*&n; * ALC880 ASUS W1V model&n; *&n; * DAC: HP/Front = 0x02 (0x0c), Surr = 0x03 (0x0d), CLFE = 0x04 (0x0e)&n; * Pin assignment: HP/Front = 0x14, Surr = 0x15, CLFE = 0x16,&n; *  Mic = 0x18, Line = 0x1a, Line2 = 0x1b&n; */
 multiline_comment|/* additional mixers to alc880_asus_mixer */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_asus_w1v_mixer
 (braket
 )braket
@@ -2915,7 +2945,8 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* additional mixers to alc880_asus_mixer */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_pcbeep_mixer
 (braket
 )braket
@@ -4720,7 +4751,8 @@ op_star
 id|codec
 comma
 "&t;&t;&t;&t;"
-id|snd_pcm_substream_t
+r_struct
+id|snd_pcm_substream
 op_star
 id|substream
 )paren
@@ -4773,7 +4805,8 @@ r_int
 id|format
 comma
 "&t;&t;&t;&t;"
-id|snd_pcm_substream_t
+r_struct
+id|snd_pcm_substream
 op_star
 id|substream
 )paren
@@ -4821,7 +4854,8 @@ op_star
 id|codec
 comma
 "&t;&t;&t;&t;"
-id|snd_pcm_substream_t
+r_struct
+id|snd_pcm_substream
 op_star
 id|substream
 )paren
@@ -4863,7 +4897,8 @@ op_star
 id|codec
 comma
 "&t;&t;&t;&t;&t;"
-id|snd_pcm_substream_t
+r_struct
+id|snd_pcm_substream
 op_star
 id|substream
 )paren
@@ -4904,7 +4939,8 @@ op_star
 id|codec
 comma
 "&t;&t;&t;&t;&t;"
-id|snd_pcm_substream_t
+r_struct
+id|snd_pcm_substream
 op_star
 id|substream
 )paren
@@ -4956,7 +4992,8 @@ r_int
 id|format
 comma
 "&t;&t;&t;&t;"
-id|snd_pcm_substream_t
+r_struct
+id|snd_pcm_substream
 op_star
 id|substream
 )paren
@@ -5009,7 +5046,8 @@ op_star
 id|codec
 comma
 "&t;&t;&t;&t;"
-id|snd_pcm_substream_t
+r_struct
+id|snd_pcm_substream
 op_star
 id|substream
 )paren
@@ -5704,11 +5742,13 @@ r_int
 id|alc_test_pin_ctl_info
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_info_t
+r_struct
+id|snd_ctl_elem_info
 op_star
 id|uinfo
 )paren
@@ -5790,11 +5830,13 @@ r_int
 id|alc_test_pin_ctl_get
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -5967,11 +6009,13 @@ r_int
 id|alc_test_pin_ctl_put
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -6143,11 +6187,13 @@ r_int
 id|alc_test_pin_src_info
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_info_t
+r_struct
+id|snd_ctl_elem_info
 op_star
 id|uinfo
 )paren
@@ -6220,11 +6266,13 @@ r_int
 id|alc_test_pin_src_get
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -6291,11 +6339,13 @@ r_int
 id|alc_test_pin_src_put
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -6395,7 +6445,8 @@ suffix:semicolon
 )brace
 macro_line|#define PIN_CTL_TEST(xname,nid) {&t;&t;&t;&bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER,&t;&bslash;&n;&t;&t;&t;.name = xname,&t;&t;       &bslash;&n;&t;&t;&t;.info = alc_test_pin_ctl_info, &bslash;&n;&t;&t;&t;.get = alc_test_pin_ctl_get,   &bslash;&n;&t;&t;&t;.put = alc_test_pin_ctl_put,   &bslash;&n;&t;&t;&t;.private_value = nid&t;       &bslash;&n;&t;&t;&t;}
 macro_line|#define PIN_SRC_TEST(xname,nid) {&t;&t;&t;&bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER,&t;&bslash;&n;&t;&t;&t;.name = xname,&t;&t;       &bslash;&n;&t;&t;&t;.info = alc_test_pin_src_info, &bslash;&n;&t;&t;&t;.get = alc_test_pin_src_get,   &bslash;&n;&t;&t;&t;.put = alc_test_pin_src_put,   &bslash;&n;&t;&t;&t;.private_value = nid&t;       &bslash;&n;&t;&t;&t;}
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_test_mixer
 (braket
 )braket
@@ -8784,7 +8835,8 @@ r_struct
 id|alc_config_preset
 (brace
 "&t;"
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 op_star
 id|mixers
 (braket
@@ -9889,7 +9941,8 @@ id|ALC_CTL_BIND_MUTE
 comma
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc880_control_templates
 (braket
 )braket
@@ -9960,7 +10013,8 @@ id|val
 )paren
 (brace
 "&t;"
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 op_star
 id|knew
 suffix:semicolon
@@ -12657,7 +12711,8 @@ l_int|NULL
 comma
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc260_base_mixer
 (braket
 )braket
@@ -12942,7 +12997,8 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc260_hp_mixer
 (braket
 )braket
@@ -13201,7 +13257,8 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc260_fujitsu_mixer
 (braket
 )braket
@@ -14673,11 +14730,13 @@ r_int
 id|alc882_mux_enum_put
 c_func
 (paren
-id|snd_kcontrol_t
+r_struct
+id|snd_kcontrol
 op_star
 id|kcontrol
 comma
-id|snd_ctl_elem_value_t
+r_struct
+id|snd_ctl_elem_value
 op_star
 id|ucontrol
 )paren
@@ -14879,7 +14938,8 @@ l_int|1
 suffix:semicolon
 )brace
 multiline_comment|/* Pin assignment: Front=0x14, Rear=0x15, CLFE=0x16, Side=0x17&n; *                 Mic=0x18, Front Mic=0x19, Line-In=0x1a, HP=0x1b&n; */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc882_base_mixer
 (braket
 )braket
