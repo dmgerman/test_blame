@@ -12445,7 +12445,7 @@ r_int
 r_int
 id|wcap
 op_assign
-id|snd_hda_param_read
+id|get_wcaps
 c_func
 (paren
 id|codec
@@ -12454,9 +12454,6 @@ id|alc880_adc_nids
 (braket
 l_int|0
 )braket
-comma
-"&t;&t;&t;&t;&t;&t;"
-id|AC_PAR_AUDIO_WIDGET_CAP
 )paren
 suffix:semicolon
 "&t;&t;"
