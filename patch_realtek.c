@@ -10282,7 +10282,7 @@ id|spec-&gt;multiout.dac_nids
 id|i
 )braket
 op_assign
-id|alc880_dac_to_idx
+id|alc880_idx_to_dac
 c_func
 (paren
 id|idx
