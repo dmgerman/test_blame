@@ -6042,6 +6042,26 @@ op_assign
 id|info
 suffix:semicolon
 "&t;"
+id|snd_assert
+c_func
+(paren
+id|spec-&gt;stream_analog_playback
+comma
+r_return
+id|EINVAL
+)paren
+suffix:semicolon
+"&t;"
+id|snd_assert
+c_func
+(paren
+id|spec-&gt;stream_analog_capture
+comma
+r_return
+id|EINVAL
+)paren
+suffix:semicolon
+"&t;"
 id|info-&gt;name
 op_assign
 id|spec-&gt;stream_name_analog
@@ -6188,6 +6208,16 @@ id|spec-&gt;multiout.dig_out_nid
 )paren
 (brace
 "&t;&t;&t;"
+id|snd_assert
+c_func
+(paren
+id|spec-&gt;stream_digital_playback
+comma
+r_return
+id|EINVAL
+)paren
+suffix:semicolon
+"&t;&t;&t;"
 id|info-&gt;stream
 (braket
 id|SNDRV_PCM_STREAM_PLAYBACK
@@ -6217,6 +6247,16 @@ c_cond
 id|spec-&gt;dig_in_nid
 )paren
 (brace
+"&t;&t;&t;"
+id|snd_assert
+c_func
+(paren
+id|spec-&gt;stream_digital_capture
+comma
+r_return
+id|EINVAL
+)paren
+suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
 (braket
@@ -21142,8 +21182,17 @@ r_return
 id|err
 suffix:semicolon
 "&t;"
+r_else
+r_if
+c_cond
+(paren
+id|err
+OG
+l_int|0
+)paren
+"&t;&t;"
 multiline_comment|/* hack - override the init verbs */
-"&t;"
+"&t;&t;"
 id|spec-&gt;init_verbs
 (braket
 l_int|0
@@ -21153,7 +21202,7 @@ id|alc882_auto_init_verbs
 suffix:semicolon
 "&t;"
 r_return
-l_int|0
+id|err
 suffix:semicolon
 )brace
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
@@ -21555,6 +21604,7 @@ macro_line|#define alc262_dac_nids&t;&t;alc260_dac_nids
 macro_line|#define alc262_adc_nids&t;&t;alc882_adc_nids
 macro_line|#define alc262_adc_nids_alt&t;alc882_adc_nids_alt
 macro_line|#define alc262_modes&t;&t;alc260_modes
+macro_line|#define alc262_capture_source&t;alc882_capture_source
 r_struct
 id|snd_kcontrol_new
 id|alc262_base_mixer
@@ -23762,6 +23812,12 @@ dot
 id|channel_mode
 op_assign
 id|alc262_modes
+comma
+"&t;&t;"
+dot
+id|input_mux
+op_assign
+id|alc262_capture_source
 comma
 "&t;"
 )brace
