@@ -15822,6 +15822,8 @@ l_int|2
 comma
 )brace
 suffix:semicolon
+macro_line|#define alc260_pcm_digital_playback&t;alc880_pcm_digital_playback
+macro_line|#define alc260_pcm_digital_capture&t;alc880_pcm_digital_capture
 multiline_comment|/*&n; * for BIOS auto-configuration&n; */
 r_int
 id|alc260_add_playback_controls
@@ -18154,6 +18156,23 @@ id|spec-&gt;stream_analog_capture
 op_assign
 op_amp
 id|alc260_pcm_analog_capture
+suffix:semicolon
+"&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC260 Digital&quot;
+suffix:semicolon
+"&t;"
+id|spec-&gt;stream_digital_playback
+op_assign
+op_amp
+id|alc260_pcm_digital_playback
+suffix:semicolon
+"&t;"
+id|spec-&gt;stream_digital_capture
+op_assign
+op_amp
+id|alc260_pcm_digital_capture
 suffix:semicolon
 "&t;"
 id|codec-&gt;patch_ops
@@ -23817,6 +23836,7 @@ comma
 dot
 id|input_mux
 op_assign
+op_amp
 id|alc262_capture_source
 comma
 "&t;"
