@@ -9281,6 +9281,25 @@ comma
 dot
 id|pci_subdevice
 op_assign
+l_int|0x8196
+comma
+dot
+id|config
+op_assign
+id|ALC880_6ST
+)brace
+comma
+multiline_comment|/* ASUS P5GD1-HVM */
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
+l_int|0x1043
+comma
+dot
+id|pci_subdevice
+op_assign
 l_int|0x81b4
 comma
 dot
