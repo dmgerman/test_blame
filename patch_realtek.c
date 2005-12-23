@@ -9487,6 +9487,25 @@ comma
 "&t;"
 (brace
 dot
+id|pci_subvendor
+op_assign
+l_int|0x1297
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0xc790
+comma
+dot
+id|config
+op_assign
+id|ALC880_6ST_DIG
+)brace
+comma
+multiline_comment|/* Shuttle ST20G5 */
+"&t;"
+(brace
+dot
 id|modelname
 op_assign
 l_string|&quot;asus&quot;
