@@ -20571,7 +20571,7 @@ comma
 dot
 id|config
 op_assign
-id|ALC861_3ST_DIG
+id|ALC882_3ST_DIG
 )brace
 comma
 "&t;"
@@ -20584,7 +20584,7 @@ comma
 dot
 id|config
 op_assign
-id|ALC861_6ST_DIG
+id|ALC882_6ST_DIG
 )brace
 comma
 "&t;"
@@ -20654,7 +20654,7 @@ comma
 dot
 id|config
 op_assign
-id|ALC861_AUTO
+id|ALC882_AUTO
 )brace
 comma
 "&t;"
