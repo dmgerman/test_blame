@@ -14025,7 +14025,7 @@ comma
 comma
 )brace
 suffix:semicolon
-multiline_comment|/* On Fujitsu S702x laptops capture only makes sense from Mic/LineIn jack&n; * and the internal CD lines.&n; */
+multiline_comment|/* On Fujitsu S702x laptops capture only makes sense from Mic/LineIn jack,&n; * headphone jack and the internal CD lines.&n; */
 r_struct
 id|hda_input_mux
 id|alc260_fujitsu_capture_source
@@ -16317,6 +16317,7 @@ l_int|0x05
 comma
 )brace
 suffix:semicolon
+multiline_comment|/* This is a bit messy since the two input muxes in the ALC260 have slight&n; * variations in their signal assignments.  The ideal way to deal with this&n; * is to extend alc_spec.input_mux to allow a different input MUX for each&n; * ADC.  For the purposes of the test model it&squot;s sufficient to just list&n; * both options for affected signal indices.  The separate input mux&n; * functionality only needs to be considered if a model comes along which&n; * actually uses signals 0x5, 0x6 and 0x7 for something which makes sense to&n; * record.&n; */
 r_struct
 id|hda_input_mux
 id|alc260_test_capture_source
@@ -16326,7 +16327,7 @@ op_assign
 dot
 id|num_items
 op_assign
-l_int|7
+l_int|8
 comma
 "&t;"
 dot
@@ -16370,16 +16371,23 @@ l_int|0x4
 comma
 "&t;&t;"
 (brace
-l_string|&quot;LINE-OUT pin&quot;
+l_string|&quot;LINE-OUT pin (cap1), Mixer (cap2)&quot;
 comma
 l_int|0x5
 )brace
 comma
 "&t;&t;"
 (brace
-l_string|&quot;HP-OUT pin&quot;
+l_string|&quot;HP-OUT pin (cap1), LINE-OUT pin (cap2)&quot;
 comma
 l_int|0x6
+)brace
+comma
+"&t;&t;"
+(brace
+l_string|&quot;HP-OUT pin (cap2 only)&quot;
+comma
+l_int|0x7
 )brace
 comma
 )brace
