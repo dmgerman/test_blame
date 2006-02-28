@@ -16470,7 +16470,9 @@ comma
 id|PIN_OUT
 )brace
 comma
+"&t;"
 multiline_comment|/* Mic/Line-in jack is connected to mic1 pin, so make it an input */
+"&t;"
 (brace
 l_int|0x12
 comma
@@ -16479,7 +16481,9 @@ comma
 id|PIN_IN
 )brace
 comma
-multiline_comment|/* Ensure all other unused pins are disabled and muted.&n;&t; * Note: trying to set widget 0x15 to anything blocks all audio&n;&t; * output for some reason, so just leave that at the default.&n;&t; */
+"&t;"
+multiline_comment|/* Ensure all other unused pins are disabled and muted. */
+"&t;"
 (brace
 l_int|0x0f
 comma
@@ -16488,6 +16492,7 @@ comma
 l_int|0
 )brace
 comma
+"&t;"
 (brace
 l_int|0x0f
 comma
@@ -16509,6 +16514,7 @@ comma
 l_int|0
 )brace
 comma
+"&t;"
 (brace
 l_int|0x11
 comma
@@ -16530,6 +16536,7 @@ comma
 l_int|0
 )brace
 comma
+"&t;"
 (brace
 l_int|0x13
 comma
@@ -16542,7 +16549,31 @@ l_int|0
 )paren
 )brace
 comma
+"&t;"
+(brace
+l_int|0x15
+comma
+id|AC_VERB_SET_PIN_WIDGET_CONTROL
+comma
+l_int|0
+)brace
+comma
+"&t;"
+(brace
+l_int|0x15
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|0
+)paren
+)brace
+comma
+"&t;"
 multiline_comment|/* Disable digital (SPDIF) pins */
+"&t;"
 (brace
 l_int|0x03
 comma
@@ -16551,6 +16582,7 @@ comma
 l_int|0
 )brace
 comma
+"&t;"
 (brace
 l_int|0x06
 comma
@@ -16559,7 +16591,9 @@ comma
 l_int|0
 )brace
 comma
-multiline_comment|/* Ensure Line1 pin widget takes its input from the OUT1 sum bus &n;         * when acting as an output.&n;         */
+"&t;"
+multiline_comment|/* Ensure Line1 pin widget takes its input from the OUT1 sum bus &n;&t; * when acting as an output.&n;&t; */
+"&t;"
 (brace
 l_int|0x0d
 comma
@@ -16568,6 +16602,7 @@ comma
 l_int|0
 )brace
 comma
+"&t;"
 multiline_comment|/* Start with output sum widgets muted and their output gains at min */
 "&t;"
 (brace
@@ -16674,7 +16709,9 @@ comma
 id|AMP_OUT_ZERO
 )brace
 comma
+"&t;"
 multiline_comment|/* Unmute HP pin widget amp left and right (no equiv mixer ctrl) */
+"&t;"
 (brace
 l_int|0x10
 comma
@@ -16683,7 +16720,9 @@ comma
 id|AMP_OUT_UNMUTE
 )brace
 comma
-multiline_comment|/* Unmute Line1 pin widget output buffer since it starts as an output.&n;         * If the pin mode is changed by the user the pin mode control will&n;         * take care of enabling the pin&squot;s input/output buffers as needed.&n;         * Therefore there&squot;s no need to enable the input buffer at this&n;         * stage.&n;&t; */
+"&t;"
+multiline_comment|/* Unmute Line1 pin widget output buffer since it starts as an output.&n;&t; * If the pin mode is changed by the user the pin mode control will&n;&t; * take care of enabling the pin&squot;s input/output buffers as needed.&n;&t; * Therefore there&squot;s no need to enable the input buffer at this&n;&t; * stage.&n;&t; */
+"&t;"
 (brace
 l_int|0x14
 comma
@@ -16694,6 +16733,7 @@ id|AMP_OUT_UNMUTE
 comma
 "&t;"
 multiline_comment|/* Unmute input buffer of pin widget used for Line-in (no equiv &n;&t; * mixer ctrl)&n;&t; */
+"&t;"
 (brace
 l_int|0x12
 comma
@@ -16706,7 +16746,9 @@ l_int|0
 )paren
 )brace
 comma
+"&t;"
 multiline_comment|/* Mute capture amp left and right */
+"&t;"
 (brace
 l_int|0x04
 comma
@@ -16719,7 +16761,9 @@ l_int|0
 )paren
 )brace
 comma
-multiline_comment|/* Set ADC connection select to match default mixer setting - line &n;         * in (on mic1 pin)&n;         */
+"&t;"
+multiline_comment|/* Set ADC connection select to match default mixer setting - line &n;&t; * in (on mic1 pin)&n;&t; */
+"&t;"
 (brace
 l_int|0x04
 comma
@@ -16728,7 +16772,9 @@ comma
 l_int|0x00
 )brace
 comma
-multiline_comment|/* Do the same for the second ADC: mute capture input amp and&n;         * set ADC connection to line in&n;         */
+"&t;"
+multiline_comment|/* Do the same for the second ADC: mute capture input amp and&n;&t; * set ADC connection to line in (on mic1 pin)&n;&t; */
+"&t;"
 (brace
 l_int|0x05
 comma
@@ -16741,6 +16787,7 @@ l_int|0
 )paren
 )brace
 comma
+"&t;"
 (brace
 l_int|0x05
 comma
@@ -16749,7 +16796,9 @@ comma
 l_int|0x00
 )brace
 comma
+"&t;"
 multiline_comment|/* Mute all inputs to mixer widget (even unconnected ones) */
+"&t;"
 (brace
 l_int|0x07
 comma
@@ -16763,6 +16812,7 @@ l_int|0
 )brace
 comma
 multiline_comment|/* mic1 pin */
+"&t;"
 (brace
 l_int|0x07
 comma
@@ -16776,6 +16826,7 @@ l_int|1
 )brace
 comma
 multiline_comment|/* mic2 pin */
+"&t;"
 (brace
 l_int|0x07
 comma
@@ -16789,6 +16840,7 @@ l_int|2
 )brace
 comma
 multiline_comment|/* line1 pin */
+"&t;"
 (brace
 l_int|0x07
 comma
@@ -16802,6 +16854,7 @@ l_int|3
 )brace
 comma
 multiline_comment|/* line2 pin */
+"&t;"
 (brace
 l_int|0x07
 comma
@@ -16815,6 +16868,7 @@ l_int|4
 )brace
 comma
 multiline_comment|/* CD pin */
+"&t;"
 (brace
 l_int|0x07
 comma
@@ -16828,6 +16882,7 @@ l_int|5
 )brace
 comma
 multiline_comment|/* Beep-gen pin */
+"&t;"
 (brace
 l_int|0x07
 comma
@@ -16841,6 +16896,7 @@ l_int|6
 )brace
 comma
 multiline_comment|/* Line-out pin */
+"&t;"
 (brace
 l_int|0x07
 comma
@@ -18013,7 +18069,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Ensure mic1, mic2, line1 and line2 pin widget take input from the &n;&t; * OUT1 sum bus when acting as an output.&n;&t; */
+multiline_comment|/* Ensure mic1, mic2, line1 and line2 pin widgets take input from the &n;&t; * OUT1 sum bus when acting as an output.&n;&t; */
 "&t;"
 (brace
 l_int|0x0b
@@ -18240,7 +18296,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Set ADC connection select to match default mixer setting - line &n;&t; * in (on mic1 pin)&n;&t; */
+multiline_comment|/* Set ADC connection select to match default mixer setting (mic1&n;&t; * pin)&n;&t; */
 "&t;"
 (brace
 l_int|0x04
@@ -18251,7 +18307,7 @@ l_int|0x00
 )brace
 comma
 "&t;"
-multiline_comment|/* Do the same for the second ADC: mute capture input amp and&n;&t; * set ADC connection to line in&n;&t; */
+multiline_comment|/* Do the same for the second ADC: mute capture input amp and&n;&t; * set ADC connection to mic1 pin&n;&t; */
 "&t;"
 (brace
 l_int|0x05
