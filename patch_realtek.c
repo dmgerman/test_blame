@@ -14053,8 +14053,9 @@ comma
 l_int|0x04
 )brace
 suffix:semicolon
+multiline_comment|/* NIDs used when simultaneous access to both ADCs makes sense.  Note that&n; * alc260_capture_mixer assumes ADC0 (nid 0x04) is the first ADC.&n; */
 id|hda_nid_t
-id|alc260_fujitsu_adc_nids
+id|alc260_dual_adc_nids
 (braket
 l_int|2
 )braket
@@ -19480,14 +19481,14 @@ op_assign
 id|ARRAY_SIZE
 c_func
 (paren
-id|alc260_fujitsu_adc_nids
+id|alc260_dual_adc_nids
 )paren
 comma
 "&t;&t;"
 dot
 id|adc_nids
 op_assign
-id|alc260_fujitsu_adc_nids
+id|alc260_dual_adc_nids
 comma
 "&t;&t;"
 dot
