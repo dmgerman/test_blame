@@ -21425,6 +21425,26 @@ multiline_comment|/* Sony VAIO */
 "&t;"
 (brace
 dot
+id|pci_subvendor
+op_assign
+l_int|0x152d
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x0729
+comma
+"&t;"
+dot
+id|config
+op_assign
+id|ALC260_BASIC
+)brace
+comma
+multiline_comment|/* CTL Travel Master U553W */
+"&t;"
+(brace
+dot
 id|modelname
 op_assign
 l_string|&quot;hp&quot;
