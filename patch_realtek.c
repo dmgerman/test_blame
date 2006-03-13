@@ -11075,6 +11075,26 @@ id|ALC880_5ST_DIG
 )brace
 comma
 "&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
+l_int|0xa0a0
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x0560
+comma
+"&t;"
+dot
+id|config
+op_assign
+id|ALC880_5ST_DIG
+)brace
+comma
+multiline_comment|/* Aopen i915GMm-HFS */
+"&t;"
 multiline_comment|/* { .pci_subvendor = 0x1019, .pci_subdevice = 0xa884, .config = ALC880_5ST_DIG }, */
 multiline_comment|/* conflict with 6stack */
 "&t;"
