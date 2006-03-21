@@ -11680,6 +11680,25 @@ comma
 dot
 id|pci_subvendor
 op_assign
+l_int|0x1043
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x8181
+comma
+dot
+id|config
+op_assign
+id|ALC880_ASUS_DIG
+)brace
+comma
+multiline_comment|/* ASUS P4GPL-X */
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
 l_int|0x1558
 comma
 dot
