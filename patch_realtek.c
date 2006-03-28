@@ -270,6 +270,11 @@ multiline_comment|/* digital-in NID; optional */
 "&t;"
 multiline_comment|/* capture source */
 "&t;"
+r_int
+r_int
+id|num_mux_defs
+suffix:semicolon
+"&t;"
 r_const
 r_struct
 id|hda_input_mux
@@ -464,6 +469,11 @@ op_star
 id|channel_mode
 suffix:semicolon
 "&t;"
+r_int
+r_int
+id|num_mux_defs
+suffix:semicolon
+"&t;"
 r_const
 r_struct
 id|hda_input_mux
@@ -536,11 +546,42 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
+r_int
+r_int
+id|mux_idx
+op_assign
+id|snd_ctl_get_ioffidx
+c_func
+(paren
+id|kcontrol
+comma
+op_amp
+id|uinfo-&gt;id
+)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|mux_idx
+op_ge
+id|spec-&gt;num_mux_defs
+)paren
+"&t;&t;"
+id|mux_idx
+op_assign
+l_int|0
+suffix:semicolon
+"&t;"
 r_return
 id|snd_hda_input_mux_info
 c_func
 (paren
+op_amp
 id|spec-&gt;input_mux
+(braket
+id|mux_idx
+)braket
 comma
 id|uinfo
 )paren
@@ -661,13 +702,31 @@ id|ucontrol-&gt;id
 )paren
 suffix:semicolon
 "&t;"
+r_int
+r_int
+id|mux_idx
+op_assign
+id|adc_idx
+op_ge
+id|spec-&gt;num_mux_defs
+ques
+c_cond
+l_int|0
+suffix:colon
+id|adc_idx
+suffix:semicolon
+"&t;"
 r_return
 id|snd_hda_input_mux_put
 c_func
 (paren
 id|codec
 comma
+op_amp
 id|spec-&gt;input_mux
+(braket
+id|mux_idx
+)braket
 comma
 id|ucontrol
 comma
@@ -844,7 +903,7 @@ id|spec-&gt;multiout.max_channels
 )paren
 suffix:semicolon
 )brace
-multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidently treating the % as &n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour.&n; */
+multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidently treating the % as &n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour as of&n; * March 2006.&n; */
 r_char
 op_star
 id|alc_pin_mode_names
@@ -886,16 +945,18 @@ id|PIN_HP
 comma
 )brace
 suffix:semicolon
-multiline_comment|/* The control can present all 5 options, or it can limit the options based&n; * in the pin being assumed to be exclusively an input or an output pin.&n; */
-macro_line|#define ALC_PIN_DIR_IN    0x00
-macro_line|#define ALC_PIN_DIR_OUT   0x01
-macro_line|#define ALC_PIN_DIR_INOUT 0x02
-multiline_comment|/* Info about the pin modes supported by the three different pin directions. &n; * For each direction the minimum and maximum values are given.&n; */
+multiline_comment|/* The control can present all 5 options, or it can limit the options based&n; * in the pin being assumed to be exclusively an input or an output pin.  In&n; * addition, &quot;input&quot; pins may or may not process the mic bias option&n; * depending on actual widget capability (NIDs 0x0f and 0x10 don&squot;t seem to&n; * accept requests for bias as of chip versions up to March 2006) and/or&n; * wiring in the computer.&n; */
+macro_line|#define ALC_PIN_DIR_IN              0x00
+macro_line|#define ALC_PIN_DIR_OUT             0x01
+macro_line|#define ALC_PIN_DIR_INOUT           0x02
+macro_line|#define ALC_PIN_DIR_IN_NOMICBIAS    0x03
+macro_line|#define ALC_PIN_DIR_INOUT_NOMICBIAS 0x04
+multiline_comment|/* Info about the pin modes supported by the different pin direction modes. &n; * For each direction the minimum and maximum values are given.&n; */
 r_int
 r_char
 id|alc_pin_mode_dir_info
 (braket
-l_int|3
+l_int|5
 )braket
 (braket
 l_int|2
@@ -926,6 +987,22 @@ l_int|4
 )brace
 comma
 multiline_comment|/* ALC_PIN_DIR_INOUT */
+"&t;"
+(brace
+l_int|2
+comma
+l_int|2
+)brace
+comma
+multiline_comment|/* ALC_PIN_DIR_IN_NOMICBIAS */
+"&t;"
+(brace
+l_int|2
+comma
+l_int|4
+)brace
+comma
+multiline_comment|/* ALC_PIN_DIR_INOUT_NOMICBIAS */
 )brace
 suffix:semicolon
 macro_line|#define alc_pin_mode_min(_dir) (alc_pin_mode_dir_info[_dir][0])
@@ -1297,7 +1374,7 @@ id|val
 )paren
 suffix:semicolon
 "&t;&t;"
-multiline_comment|/* Also enable the retasking pin&squot;s input/output as required &n;&t;&t; * for the requested pin mode.  Enum values of 2 or less are&n;&t;&t; * input modes.&n;&t;&t; *&n;&t;&t; * Dynamically switching the input/output buffers probably&n;&t;&t; * reduces noise slightly, particularly on input.  However,&n;&t;&t; * havingboth input and output buffers enabled&n;&t;&t; * simultaneously doesn&squot;t seem to be problematic.&n;&t;&t; */
+multiline_comment|/* Also enable the retasking pin&squot;s input/output as required &n;&t;&t; * for the requested pin mode.  Enum values of 2 or less are&n;&t;&t; * input modes.&n;&t;&t; *&n;&t;&t; * Dynamically switching the input/output buffers probably&n;&t;&t; * reduces noise slightly (particularly on input) so we&squot;ll&n;&t;&t; * do it.  However, having both input and output buffers&n;&t;&t; * enabled simultaneously doesn&squot;t seem to be problematic if&n;&t;&t; * this turns out to be necessary in the future.&n;&t;&t; */
 "&t;&t;"
 r_if
 c_cond
@@ -2082,6 +2159,23 @@ op_assign
 id|preset-&gt;hp_nid
 suffix:semicolon
 "&t;"
+"&t;"
+id|spec-&gt;num_mux_defs
+op_assign
+id|preset-&gt;num_mux_defs
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;num_mux_defs
+)paren
+"&t;&t;"
+id|spec-&gt;num_mux_defs
+op_assign
+l_int|1
+suffix:semicolon
 "&t;"
 id|spec-&gt;input_mux
 op_assign
@@ -15736,6 +15830,11 @@ op_assign
 id|alc880_volume_init_verbs
 suffix:semicolon
 "&t;"
+id|spec-&gt;num_mux_defs
+op_assign
+l_int|1
+suffix:semicolon
+"&t;"
 id|spec-&gt;input_mux
 op_assign
 op_amp
@@ -16254,42 +16353,97 @@ comma
 comma
 )brace
 suffix:semicolon
-multiline_comment|/* On Fujitsu S702x laptops capture only makes sense from Mic/LineIn jack,&n; * headphone jack and the internal CD lines.&n; */
+multiline_comment|/* On Fujitsu S702x laptops capture only makes sense from Mic/LineIn jack,&n; * headphone jack and the internal CD lines since these are the only pins at&n; * which audio can appear.  For flexibility, also allow the option of&n; * recording the mixer output on the second ADC (ADC0 doesn&squot;t have a&n; * connection to the mixer output).&n; */
 r_struct
 id|hda_input_mux
-id|alc260_fujitsu_capture_source
+id|alc260_fujitsu_capture_sources
+(braket
+l_int|2
+)braket
 op_assign
 (brace
 "&t;"
+(brace
+"&t;&t;"
 dot
 id|num_items
 op_assign
 l_int|3
 comma
-"&t;"
+"&t;&t;"
 dot
 id|items
 op_assign
 (brace
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;Mic/Line&quot;
 comma
 l_int|0x0
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;CD&quot;
 comma
 l_int|0x4
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;Headphone&quot;
 comma
 l_int|0x2
+)brace
+comma
+"&t;&t;"
+)brace
+comma
+"&t;"
+)brace
+comma
+"&t;"
+(brace
+"&t;&t;"
+dot
+id|num_items
+op_assign
+l_int|4
+comma
+"&t;&t;"
+dot
+id|items
+op_assign
+(brace
+"&t;&t;&t;"
+(brace
+l_string|&quot;Mic/Line&quot;
+comma
+l_int|0x0
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;CD&quot;
+comma
+l_int|0x4
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Headphone&quot;
+comma
+l_int|0x2
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Mixer&quot;
+comma
+l_int|0x5
+)brace
+comma
+"&t;&t;"
 )brace
 comma
 "&t;"
@@ -16297,42 +16451,111 @@ comma
 comma
 )brace
 suffix:semicolon
-multiline_comment|/* Acer TravelMate(/Extensa/Aspire) notebooks have similar configutation to&n; * the Fujitsu S702x, but jacks are marked differently. We won&squot;t allow&n; * retasking the Headphone jack, so it won&squot;t be available here.&n; */
+multiline_comment|/* Acer TravelMate(/Extensa/Aspire) notebooks have similar configuration to&n; * the Fujitsu S702x, but jacks are marked differently.&n; */
 r_struct
 id|hda_input_mux
-id|alc260_acer_capture_source
+id|alc260_acer_capture_sources
+(braket
+l_int|2
+)braket
 op_assign
 (brace
 "&t;"
+(brace
+"&t;&t;"
 dot
 id|num_items
 op_assign
-l_int|3
+l_int|4
 comma
-"&t;"
+"&t;&t;"
 dot
 id|items
 op_assign
 (brace
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;Mic&quot;
 comma
 l_int|0x0
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;Line&quot;
 comma
 l_int|0x2
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;CD&quot;
 comma
 l_int|0x4
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Headphone&quot;
+comma
+l_int|0x5
+)brace
+comma
+"&t;&t;"
+)brace
+comma
+"&t;"
+)brace
+comma
+"&t;"
+(brace
+"&t;&t;"
+dot
+id|num_items
+op_assign
+l_int|5
+comma
+"&t;&t;"
+dot
+id|items
+op_assign
+(brace
+"&t;&t;&t;"
+(brace
+l_string|&quot;Mic&quot;
+comma
+l_int|0x0
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Line&quot;
+comma
+l_int|0x2
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;CD&quot;
+comma
+l_int|0x4
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Headphone&quot;
+comma
+l_int|0x6
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Mixer&quot;
+comma
+l_int|0x5
+)brace
+comma
+"&t;&t;"
 )brace
 comma
 "&t;"
@@ -16732,6 +16955,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+multiline_comment|/* Fujitsu S702x series laptops.  ALC260 pin usage: Mic/Line jack = 0x12, &n; * HP jack = 0x14, CD audio =  0x16, internal speaker = 0x10.&n; */
 r_struct
 id|snd_kcontrol_new
 id|alc260_fujitsu_mixer
@@ -16897,6 +17121,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+multiline_comment|/* Mixer for Acer TravelMate(/Extensa/Aspire) notebooks.  Note that current&n; * versions of the ALC260 don&squot;t act on requests to enable mic bias from NID&n; * 0x0f (used to drive the headphone jack in these laptops).  The ALC260&n; * datasheet doesn&squot;t mention this restriction.  At this stage it&squot;s not clear&n; * whether this behaviour is intentional or is a hardware bug in chip&n; * revisions available in early 2006.  Therefore for now allow the&n; * &quot;Headphone Jack Mode&quot; control to span all choices, but if it turns out&n; * that the lack of mic bias for this NID is intentional we could change the&n; * mode from ALC_PIN_DIR_INOUT to ALC_PIN_DIR_INOUT_NOMICBIAS.&n; *&n; * In addition, Acer TravelMate(/Extensa/Aspire) notebooks in early 2006&n; * don&squot;t appear to make the mic bias available from the &quot;line&quot; jack, even&n; * though the NID used for this jack (0x14) can supply it.  The theory is&n; * that perhaps Acer have included blocking capacitors between the ALC260&n; * and the output jack.  If this turns out to be the case for all such&n; * models the &quot;Line Jack Mode&quot; mode could be changed from ALC_PIN_DIR_INOUT&n; * to ALC_PIN_DIR_INOUT_NOMICBIAS.&n; */
 r_struct
 id|snd_kcontrol_new
 id|alc260_acer_mixer
@@ -16928,6 +17153,17 @@ comma
 l_int|2
 comma
 id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|ALC_PIN_MODE
+c_func
+(paren
+l_string|&quot;Headphone Jack Mode&quot;
+comma
+l_int|0x0f
+comma
+id|ALC_PIN_DIR_INOUT
 )paren
 comma
 "&t;"
@@ -18283,7 +18519,7 @@ comma
 )brace
 )brace
 suffix:semicolon
-multiline_comment|/* Initialisation sequence for ALC260 as configured in Fujitsu S702x&n; * laptops.&n; */
+multiline_comment|/* Initialisation sequence for ALC260 as configured in Fujitsu S702x&n; * laptops.  ALC260 pin usage: Mic/Line jack = 0x12, HP jack = 0x14, CD&n; * audio = 0x16, internal speaker = 0x10.&n; */
 r_struct
 id|hda_verb
 id|alc260_fujitsu_init_verbs
@@ -19142,7 +19378,7 @@ l_int|0x00
 )brace
 comma
 "&t;"
-multiline_comment|/* Do similar with the second ADC: mute capture input amp and&n;&t; * set ADC connection to line (on line1 pin)&n;&t; */
+multiline_comment|/* Do similar with the second ADC: mute capture input amp and&n;&t; * set ADC connection to mic to match ALSA&squot;s default state.&n;&t; */
 "&t;"
 (brace
 l_int|0x05
@@ -19162,7 +19398,7 @@ l_int|0x05
 comma
 id|AC_VERB_SET_CONNECT_SEL
 comma
-l_int|0x02
+l_int|0x00
 )brace
 comma
 "&t;"
@@ -19312,77 +19548,152 @@ l_int|0x05
 comma
 )brace
 suffix:semicolon
-multiline_comment|/* This is a bit messy since the two input muxes in the ALC260 have slight&n; * variations in their signal assignments.  The ideal way to deal with this&n; * is to extend alc_spec.input_mux to allow a different input MUX for each&n; * ADC.  For the purposes of the test model it&squot;s sufficient to just list&n; * both options for affected signal indices.  The separate input mux&n; * functionality only needs to be considered if a model comes along which&n; * actually uses signals 0x5, 0x6 and 0x7 for something which makes sense to&n; * record.&n; */
+multiline_comment|/* For testing the ALC260, each input MUX needs its own definition since&n; * the signal assignments are different.  This assumes that the first ADC &n; * is NID 0x04.&n; */
 r_struct
 id|hda_input_mux
-id|alc260_test_capture_source
+id|alc260_test_capture_sources
+(braket
+l_int|2
+)braket
 op_assign
 (brace
 "&t;"
+(brace
+"&t;&t;"
 dot
 id|num_items
 op_assign
-l_int|8
+l_int|7
 comma
-"&t;"
+"&t;&t;"
 dot
 id|items
 op_assign
 (brace
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;MIC1 pin&quot;
 comma
 l_int|0x0
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;MIC2 pin&quot;
 comma
 l_int|0x1
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;LINE1 pin&quot;
 comma
 l_int|0x2
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;LINE2 pin&quot;
 comma
 l_int|0x3
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
 l_string|&quot;CD pin&quot;
 comma
 l_int|0x4
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
-l_string|&quot;LINE-OUT pin (cap1), Mixer (cap2)&quot;
+l_string|&quot;LINE-OUT pin&quot;
 comma
 l_int|0x5
 )brace
 comma
-"&t;&t;"
+"&t;&t;&t;"
 (brace
-l_string|&quot;HP-OUT pin (cap1), LINE-OUT pin (cap2)&quot;
+l_string|&quot;HP-OUT pin&quot;
 comma
 l_int|0x6
 )brace
 comma
 "&t;&t;"
+)brace
+comma
+)brace
+comma
+"&t;"
 (brace
-l_string|&quot;HP-OUT pin (cap2 only)&quot;
+"&t;&t;"
+dot
+id|num_items
+op_assign
+l_int|8
+comma
+"&t;&t;"
+dot
+id|items
+op_assign
+(brace
+"&t;&t;&t;"
+(brace
+l_string|&quot;MIC1 pin&quot;
+comma
+l_int|0x0
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;MIC2 pin&quot;
+comma
+l_int|0x1
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;LINE1 pin&quot;
+comma
+l_int|0x2
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;LINE2 pin&quot;
+comma
+l_int|0x3
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;CD pin&quot;
+comma
+l_int|0x4
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Mixer&quot;
+comma
+l_int|0x5
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;LINE-OUT pin&quot;
+comma
+l_int|0x6
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;HP-OUT pin&quot;
 comma
 l_int|0x7
+)brace
+comma
+"&t;&t;"
 )brace
 comma
 )brace
@@ -19481,7 +19792,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-multiline_comment|/* Modes for retasking pin widgets */
+multiline_comment|/* Modes for retasking pin widgets&n;&t; * Note: the ALC260 doesn&squot;t seem to act on requests to enable mic&n;         * bias from NIDs 0x0f and 0x10.  The ALC260 datasheet doesn&squot;t&n;         * mention this restriction.  At this stage it&squot;s not clear whether&n;         * this behaviour is intentional or is a hardware bug in chip&n;         * revisions available at least up until early 2006.  Therefore for&n;         * now allow the &quot;HP-OUT&quot; and &quot;LINE-OUT&quot; Mode controls to span all&n;         * choices, but if it turns out that the lack of mic bias for these&n;         * NIDs is intentional we could change their modes from&n;         * ALC_PIN_DIR_INOUT to ALC_PIN_DIR_INOUT_NOMICBIAS.&n;&t; */
 "&t;"
 id|ALC_PIN_MODE
 c_func
@@ -21793,6 +22104,11 @@ op_assign
 id|alc260_volume_init_verbs
 suffix:semicolon
 "&t;"
+id|spec-&gt;num_mux_defs
+op_assign
+l_int|1
+suffix:semicolon
+"&t;"
 id|spec-&gt;input_mux
 op_assign
 op_amp
@@ -22555,10 +22871,19 @@ id|alc260_modes
 comma
 "&t;&t;"
 dot
+id|num_mux_defs
+op_assign
+id|ARRAY_SIZE
+c_func
+(paren
+id|alc260_fujitsu_capture_sources
+)paren
+comma
+"&t;&t;"
+dot
 id|input_mux
 op_assign
-op_amp
-id|alc260_fujitsu_capture_source
+id|alc260_fujitsu_capture_sources
 comma
 "&t;"
 )brace
@@ -22638,10 +22963,19 @@ id|alc260_modes
 comma
 "&t;&t;"
 dot
+id|num_mux_defs
+op_assign
+id|ARRAY_SIZE
+c_func
+(paren
+id|alc260_acer_capture_sources
+)paren
+comma
+"&t;&t;"
+dot
 id|input_mux
 op_assign
-op_amp
-id|alc260_acer_capture_source
+id|alc260_acer_capture_sources
 comma
 "&t;"
 )brace
@@ -22722,10 +23056,19 @@ id|alc260_modes
 comma
 "&t;&t;"
 dot
+id|num_mux_defs
+op_assign
+id|ARRAY_SIZE
+c_func
+(paren
+id|alc260_test_capture_sources
+)paren
+comma
+"&t;&t;"
+dot
 id|input_mux
 op_assign
-op_amp
-id|alc260_test_capture_source
+id|alc260_test_capture_sources
 comma
 "&t;"
 )brace
@@ -29055,6 +29398,11 @@ op_assign
 id|alc262_volume_init_verbs
 suffix:semicolon
 "&t;"
+id|spec-&gt;num_mux_defs
+op_assign
+l_int|1
+suffix:semicolon
+"&t;"
 id|spec-&gt;input_mux
 op_assign
 op_amp
@@ -33194,6 +33542,11 @@ op_increment
 )braket
 op_assign
 id|alc861_auto_init_verbs
+suffix:semicolon
+"&t;"
+id|spec-&gt;num_mux_defs
+op_assign
+l_int|1
 suffix:semicolon
 "&t;"
 id|spec-&gt;input_mux
