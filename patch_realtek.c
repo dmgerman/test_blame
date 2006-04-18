@@ -11983,6 +11983,25 @@ multiline_comment|/* FIC P4M-915GD1 */
 "&t;"
 (brace
 dot
+id|pci_subvendor
+op_assign
+l_int|0x1695
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x4012
+comma
+dot
+id|config
+op_assign
+id|ALC880_5ST_DIG
+)brace
+comma
+multiline_comment|/* Epox EP-5LDA+ GLi */
+"&t;"
+(brace
+dot
 id|modelname
 op_assign
 l_string|&quot;asus&quot;
