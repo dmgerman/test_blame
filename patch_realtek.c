@@ -22298,6 +22298,26 @@ multiline_comment|/* Sony VAIO */
 dot
 id|pci_subvendor
 op_assign
+l_int|0x104d
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x81cd
+comma
+"&t;"
+dot
+id|config
+op_assign
+id|ALC260_BASIC
+)brace
+comma
+multiline_comment|/* Sony VAIO */
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
 l_int|0x152d
 comma
 dot
