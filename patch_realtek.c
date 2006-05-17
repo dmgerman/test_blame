@@ -17908,6 +17908,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+macro_line|#if 0 /* should be identical with alc260_init_verbs? */
 r_struct
 id|hda_verb
 id|alc260_hp_init_verbs
@@ -18232,6 +18233,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+macro_line|#endif
 r_struct
 id|hda_verb
 id|alc260_hp_3013_init_verbs
@@ -22726,7 +22728,7 @@ dot
 id|init_verbs
 op_assign
 (brace
-id|alc260_hp_init_verbs
+id|alc260_init_verbs
 )brace
 comma
 "&t;&t;"
