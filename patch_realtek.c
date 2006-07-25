@@ -11315,7 +11315,20 @@ id|ALC880_3ST_DIG
 )brace
 comma
 "&t;"
-multiline_comment|/* Clevo m520G NB */
+multiline_comment|/* Clevo laptops */
+"&t;"
+(brace
+dot
+id|modelname
+op_assign
+l_string|&quot;clevo&quot;
+comma
+dot
+id|config
+op_assign
+id|ALC880_CLEVO
+)brace
+comma
 "&t;"
 (brace
 dot
@@ -11328,12 +11341,34 @@ id|pci_subdevice
 op_assign
 l_int|0x0520
 comma
+"&t;"
 dot
 id|config
 op_assign
 id|ALC880_CLEVO
 )brace
 comma
+multiline_comment|/* Clevo m520G NB */
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
+l_int|0x1558
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x0660
+comma
+"&t;"
+dot
+id|config
+op_assign
+id|ALC880_CLEVO
+)brace
+comma
+multiline_comment|/* Clevo m665n */
 "&t;"
 multiline_comment|/* Back 3 jack plus 1 SPDIF out jack, front 2 jack (Internal add Aux-In)*/
 "&t;"
