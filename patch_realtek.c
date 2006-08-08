@@ -22703,7 +22703,7 @@ comma
 dot
 id|config
 op_assign
-id|ALC260_HP
+id|ALC260_HP_3013
 )brace
 comma
 "&t;"
