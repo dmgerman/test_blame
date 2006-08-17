@@ -33059,6 +33059,17 @@ id|alc262_fujitsu_master_vol_put
 comma
 "&t;&t;"
 dot
+id|tlv
+op_assign
+(brace
+dot
+id|c
+op_assign
+id|snd_hda_mixer_amp_tlv
+)brace
+comma
+"&t;&t;"
+dot
 id|private_value
 op_assign
 id|HDA_COMPOSE_AMP_VAL
