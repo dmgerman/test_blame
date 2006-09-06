@@ -12717,6 +12717,24 @@ op_assign
 id|ALC880_LG_LW
 )brace
 comma
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
+l_int|0x1854
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x0077
+comma
+dot
+id|config
+op_assign
+id|ALC880_LG_LW
+)brace
+comma
 macro_line|#ifdef CONFIG_SND_DEBUG
 "&t;"
 (brace
