@@ -969,8 +969,9 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-op_logical_neg
 id|err
+op_ge
+l_int|0
 op_logical_and
 id|spec-&gt;need_dac_fix
 )paren
