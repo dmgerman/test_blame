@@ -8672,7 +8672,10 @@ l_int|2
 suffix:semicolon
 "&t;&t;"
 id|info
-op_increment
+op_assign
+id|spec-&gt;pcm_rec
+op_plus
+l_int|1
 suffix:semicolon
 "&t;&t;"
 id|info-&gt;name
@@ -8772,7 +8775,10 @@ l_int|3
 suffix:semicolon
 "&t;&t;"
 id|info
-op_increment
+op_assign
+id|spec-&gt;pcm_rec
+op_plus
+l_int|2
 suffix:semicolon
 "&t;&t;"
 id|info-&gt;name
