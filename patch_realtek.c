@@ -30648,6 +30648,7 @@ id|config
 op_assign
 id|ALC883_MEDION
 )brace
+comma
 "&t;"
 (brace
 dot
