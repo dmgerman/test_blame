@@ -35407,6 +35407,26 @@ comma
 dot
 id|pci_subdevice
 op_assign
+l_int|0x2801
+comma
+"&t;"
+dot
+id|config
+op_assign
+id|ALC262_HP_BPC
+)brace
+comma
+multiline_comment|/* q965 */
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
+l_int|0x103c
+comma
+dot
+id|pci_subdevice
+op_assign
 l_int|0x3014
 comma
 "&t;"
