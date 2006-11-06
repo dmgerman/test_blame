@@ -35386,7 +35386,7 @@ comma
 dot
 id|pci_subdevice
 op_assign
-l_int|0x208c
+l_int|0x280c
 comma
 "&t;"
 dot
