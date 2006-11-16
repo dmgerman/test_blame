@@ -13478,25 +13478,6 @@ multiline_comment|/* Acer APFV */
 "&t;"
 (brace
 dot
-id|pci_subvendor
-op_assign
-l_int|0x1458
-comma
-dot
-id|pci_subdevice
-op_assign
-l_int|0xa102
-comma
-dot
-id|config
-op_assign
-id|ALC880_6ST
-)brace
-comma
-multiline_comment|/* Gigabyte K8N51 */
-"&t;"
-(brace
-dot
 id|modelname
 op_assign
 l_string|&quot;6stack-digout&quot;
@@ -13708,6 +13689,25 @@ id|ALC880_5ST_DIG
 )brace
 comma
 multiline_comment|/* Epox EP-5LDA+ GLi */
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
+l_int|0x1458
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0xa102
+comma
+dot
+id|config
+op_assign
+id|ALC880_6ST_DIG
+)brace
+comma
+multiline_comment|/* Gigabyte K8N51 */
 "&t;"
 (brace
 dot
