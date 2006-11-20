@@ -33425,6 +33425,26 @@ comma
 dot
 id|pci_subvendor
 op_assign
+l_int|0x1071
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x8258
+comma
+"&t;"
+dot
+id|config
+op_assign
+id|ALC883_LAPTOP_EAPD
+)brace
+comma
+multiline_comment|/* Evesham Voyager C530RD */
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
 l_int|0x1558
 comma
 dot
