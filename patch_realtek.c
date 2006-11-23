@@ -30547,7 +30547,8 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc883_fivestack_mixer
 (braket
 )braket
@@ -41961,7 +41962,8 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc861_toshiba_mixer
 (braket
 )braket
@@ -42706,7 +42708,8 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* additional mixer */
-id|snd_kcontrol_new_t
+r_struct
+id|snd_kcontrol_new
 id|alc861_asus_laptop_mixer
 (braket
 )braket
