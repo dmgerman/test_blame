@@ -18119,7 +18119,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/* Mixer for Acer TravelMate(/Extensa/Aspire) notebooks.  Note that current&n; * versions of the ALC260 don&squot;t act on requests to enable mic bias from NID&n; * 0x0f (used to drive the headphone jack in these laptops).  The ALC260&n; * datasheet doesn&squot;t mention this restriction.  At this stage it&squot;s not clear&n; * whether this behaviour is intentional or is a hardware bug in chip&n; * revisions available in early 2006.  Therefore for now allow the&n; * &quot;Headphone Jack Mode&quot; control to span all choices, but if it turns out&n; * that the lack of mic bias for this NID is intentional we could change the&n; * mode from ALC_PIN_DIR_INOUT to ALC_PIN_DIR_INOUT_NOMICBIAS.&n; *&n; * In addition, Acer TravelMate(/Extensa/Aspire) notebooks in early 2006&n; * don&squot;t appear to make the mic bias available from the &quot;line&quot; jack, even&n; * though the NID used for this jack (0x14) can supply it.  The theory is&n; * that perhaps Acer have included blocking capacitors between the ALC260&n; * and the output jack.  If this turns out to be the case for all such&n; * models the &quot;Line Jack Mode&quot; mode could be changed from ALC_PIN_DIR_INOUT&n; * to ALC_PIN_DIR_INOUT_NOMICBIAS.&n; */
+multiline_comment|/* Mixer for Acer TravelMate(/Extensa/Aspire) notebooks.  Note that current&n; * versions of the ALC260 don&squot;t act on requests to enable mic bias from NID&n; * 0x0f (used to drive the headphone jack in these laptops).  The ALC260&n; * datasheet doesn&squot;t mention this restriction.  At this stage it&squot;s not clear&n; * whether this behaviour is intentional or is a hardware bug in chip&n; * revisions available in early 2006.  Therefore for now allow the&n; * &quot;Headphone Jack Mode&quot; control to span all choices, but if it turns out&n; * that the lack of mic bias for this NID is intentional we could change the&n; * mode from ALC_PIN_DIR_INOUT to ALC_PIN_DIR_INOUT_NOMICBIAS.&n; *&n; * In addition, Acer TravelMate(/Extensa/Aspire) notebooks in early 2006&n; * don&squot;t appear to make the mic bias available from the &quot;line&quot; jack, even&n; * though the NID used for this jack (0x14) can supply it.  The theory is&n; * that perhaps Acer have included blocking capacitors between the ALC260&n; * and the output jack.  If this turns out to be the case for all such&n; * models the &quot;Line Jack Mode&quot; mode could be changed from ALC_PIN_DIR_INOUT&n; * to ALC_PIN_DIR_INOUT_NOMICBIAS.&n; *&n; * The C20x Tablet series have a mono internal speaker which is controlled&n; * via the chip&squot;s Mono sum widget and pin complex, so include the necessary&n; * controls for such models.  On models without a &quot;mono speaker&quot; the control&n; * won&squot;t do anything.&n; */
 r_struct
 id|snd_kcontrol_new
 id|alc260_acer_mixer
@@ -18162,6 +18162,38 @@ comma
 l_int|0x0f
 comma
 id|ALC_PIN_DIR_INOUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME_MONO
+c_func
+(paren
+l_string|&quot;Mono Speaker Playback Volume&quot;
+comma
+l_int|0x0a
+comma
+l_int|1
+comma
+l_int|0x0
+comma
+"&t;&t;&t;"
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_BIND_MUTE_MONO
+c_func
+(paren
+l_string|&quot;Mono Speaker Playback Switch&quot;
+comma
+l_int|0x0a
+comma
+l_int|1
+comma
+l_int|2
+comma
+"&t;&t;&t;"
+id|HDA_INPUT
 )paren
 comma
 "&t;"
@@ -20076,6 +20108,17 @@ id|PIN_IN
 )brace
 comma
 "&t;"
+multiline_comment|/* Some Acers (eg: C20x Tablets) use Mono pin for internal speaker */
+"&t;"
+(brace
+l_int|0x11
+comma
+id|AC_VERB_SET_PIN_WIDGET_CONTROL
+comma
+id|PIN_HP
+)brace
+comma
+"&t;"
 multiline_comment|/* Ensure all other unused pins are disabled and muted. */
 "&t;"
 (brace
@@ -20089,28 +20132,6 @@ comma
 "&t;"
 (brace
 l_int|0x10
-comma
-id|AC_VERB_SET_AMP_GAIN_MUTE
-comma
-id|AMP_IN_MUTE
-c_func
-(paren
-l_int|0
-)paren
-)brace
-comma
-"&t;"
-(brace
-l_int|0x11
-comma
-id|AC_VERB_SET_PIN_WIDGET_CONTROL
-comma
-l_int|0
-)brace
-comma
-"&t;"
-(brace
-l_int|0x11
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -20317,6 +20338,17 @@ multiline_comment|/* Unmute Line-out pin widget amp left and right (no equiv mix
 "&t;"
 (brace
 l_int|0x0f
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_OUT_UNMUTE
+)brace
+comma
+"&t;"
+multiline_comment|/* Unmute mono pin widget amp output (no equiv mixer ctrl) */
+"&t;"
+(brace
+l_int|0x11
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -23316,6 +23348,19 @@ id|alc260_cfg_tbl
 )braket
 op_assign
 (brace
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
+l_int|0x007b
+comma
+l_string|&quot;Acer C20x&quot;
+comma
+id|ALC260_ACER
+)paren
+comma
 "&t;"
 id|SND_PCI_QUIRK
 c_func
