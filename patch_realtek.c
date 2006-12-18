@@ -12358,6 +12358,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1019
+comma
+l_int|0x0f69
+comma
+l_string|&quot;Coeus G610P&quot;
+comma
+id|ALC880_W810
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1025
 comma
 l_int|0x0070
