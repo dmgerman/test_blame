@@ -27356,6 +27356,19 @@ id|ALC882_ARIMA
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
+l_int|0x81d8
+comma
+l_string|&quot;Asus P5WD&quot;
+comma
+id|ALC882_6ST_DIG
+)paren
+comma
+"&t;"
 (brace
 )brace
 )brace
