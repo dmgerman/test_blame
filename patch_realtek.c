@@ -30167,6 +30167,26 @@ multiline_comment|/* MSI  */
 dot
 id|pci_subvendor
 op_assign
+l_int|0x1462
+comma
+dot
+id|pci_subdevice
+op_assign
+l_int|0x7280
+comma
+"&t;"
+dot
+id|config
+op_assign
+id|ALC883_6ST_DIG
+)brace
+comma
+multiline_comment|/* MSI K9A Platinum (MS-7280) */
+"&t;"
+(brace
+dot
+id|pci_subvendor
+op_assign
 l_int|0x105b
 comma
 dot
