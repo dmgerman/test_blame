@@ -12600,7 +12600,7 @@ l_int|0x814e
 comma
 l_string|&quot;ASUS&quot;
 comma
-id|ALC880_5ST
+id|ALC880_ASUS
 )paren
 comma
 "&t;"
