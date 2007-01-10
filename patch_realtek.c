@@ -46081,6 +46081,7 @@ op_assign
 (brace
 "&t;"
 id|SND_PCI_QUIRK
+c_func
 (paren
 l_int|0x1043
 comma
@@ -46089,7 +46090,7 @@ comma
 l_string|&quot;ASUS W7J&quot;
 comma
 id|ALC861_3ST
-)brace
+)paren
 comma
 "&t;"
 id|SND_PCI_QUIRK
