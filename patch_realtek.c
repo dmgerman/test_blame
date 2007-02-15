@@ -35171,6 +35171,19 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
+l_string|&quot;Mic Boost&quot;
+comma
+l_int|0x18
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
 l_string|&quot;Front Mic Playback Volume&quot;
 comma
 l_int|0x0b
@@ -35189,6 +35202,19 @@ comma
 l_int|0x0b
 comma
 l_int|0x01
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Front Mic Boost&quot;
+comma
+l_int|0x19
+comma
+l_int|0
 comma
 id|HDA_INPUT
 )paren
@@ -35372,6 +35398,19 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
+l_string|&quot;Mic Boost&quot;
+comma
+l_int|0x18
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
 l_string|&quot;Front Mic Playback Volume&quot;
 comma
 l_int|0x0b
@@ -35390,6 +35429,19 @@ comma
 l_int|0x0b
 comma
 l_int|0x01
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Front Mic Boost&quot;
+comma
+l_int|0x19
+comma
+l_int|0
 comma
 id|HDA_INPUT
 )paren
@@ -35523,6 +35575,19 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
+l_string|&quot;Mic Boost&quot;
+comma
+l_int|0x18
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
 l_string|&quot;Front Mic Playback Volume&quot;
 comma
 l_int|0x0b
@@ -35541,6 +35606,19 @@ comma
 l_int|0x0b
 comma
 l_int|0x01
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Front Mic Boost&quot;
+comma
+l_int|0x19
+comma
+l_int|0
 comma
 id|HDA_INPUT
 )paren
@@ -35774,6 +35852,19 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
+l_string|&quot;Front Mic Boost&quot;
+comma
+l_int|0x1a
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
 l_string|&quot;Line Playback Volume&quot;
 comma
 l_int|0x0b
@@ -35883,6 +35974,19 @@ comma
 l_int|0x0b
 comma
 l_int|0x0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Rear Mic Boost&quot;
+comma
+l_int|0x18
+comma
+l_int|0
 comma
 id|HDA_INPUT
 )paren
