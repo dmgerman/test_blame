@@ -28555,20 +28555,48 @@ id|ALC882_MODEL_LAST
 )paren
 (brace
 "&t;&t;"
+multiline_comment|/* Pick up systems that don&squot;t supply PCI SSID */
+"&t;&t;"
+r_switch
+c_cond
+(paren
+id|codec-&gt;subsystem_id
+)paren
+(brace
+"&t;&t;"
+r_case
+l_int|0x106b0c00
+suffix:colon
+multiline_comment|/* Mac Pro */
+"&t;&t;&t;"
+id|board_config
+op_assign
+id|ALC885_MACPRO
+suffix:semicolon
+"&t;&t;&t;"
+r_break
+suffix:semicolon
+"&t;&t;"
+r_default
+suffix:colon
+"&t;&t;&t;"
 id|printk
 c_func
 (paren
 id|KERN_INFO
 l_string|&quot;hda_codec: Unknown model for ALC882, &quot;
 "&t;&t;"
+"&t;&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
 )paren
 suffix:semicolon
-"&t;&t;"
+"&t;&t;&t;"
 id|board_config
 op_assign
 id|ALC882_AUTO
 suffix:semicolon
+"&t;&t;"
+)brace
 "&t;"
 )brace
 "&t;"
