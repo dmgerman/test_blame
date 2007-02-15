@@ -48096,6 +48096,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1849
+comma
+l_int|0x0660
+comma
+l_string|&quot;Asrock 939SLI32&quot;
+comma
+id|ALC660_3ST
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x8086
 comma
 l_int|0xd600
@@ -50963,6 +50976,19 @@ id|alc861vd_cfg_tbl
 )braket
 op_assign
 (brace
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
+l_int|0x12e2
+comma
+l_string|&quot;Asus z35m&quot;
+comma
+id|ALC660VD_3ST
+)paren
+comma
 "&t;"
 id|SND_PCI_QUIRK
 c_func
