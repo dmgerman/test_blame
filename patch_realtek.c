@@ -23725,6 +23725,19 @@ c_func
 (paren
 l_int|0x103c
 comma
+l_int|0x280a
+comma
+l_string|&quot;HP d5750&quot;
+comma
+id|ALC260_HP_3013
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x103c
+comma
 l_int|0x3010
 comma
 l_string|&quot;HP&quot;
