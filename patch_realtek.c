@@ -3718,7 +3718,6 @@ comma
 l_int|0x05
 )brace
 suffix:semicolon
-"&t;"
 r_struct
 id|hda_input_mux
 id|alc880_6stack_capture_source
@@ -7322,6 +7321,11 @@ r_int
 id|present
 suffix:semicolon
 "&t;"
+r_int
+r_char
+id|bits
+suffix:semicolon
+"&t;"
 id|present
 op_assign
 id|snd_hda_codec_read
@@ -7342,6 +7346,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -7358,12 +7372,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -7383,12 +7392,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -7408,12 +7412,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -7433,12 +7432,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -7482,14 +7476,7 @@ op_lshift
 l_int|8
 )paren
 op_or
-(paren
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
-)paren
+id|bits
 )paren
 suffix:semicolon
 )brace
@@ -7555,6 +7542,11 @@ r_int
 id|present
 suffix:semicolon
 "&t;"
+r_int
+r_char
+id|bits
+suffix:semicolon
+"&t;"
 id|present
 op_assign
 id|snd_hda_codec_read
@@ -7575,6 +7567,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -7591,12 +7593,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -7616,12 +7613,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 )brace
@@ -9121,6 +9113,11 @@ r_int
 id|present
 suffix:semicolon
 "&t;"
+r_int
+r_char
+id|bits
+suffix:semicolon
+"&t;"
 id|present
 op_assign
 id|snd_hda_codec_read
@@ -9141,6 +9138,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -9157,12 +9164,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -9182,12 +9184,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 )brace
@@ -9540,6 +9537,11 @@ r_int
 id|present
 suffix:semicolon
 "&t;"
+r_int
+r_char
+id|bits
+suffix:semicolon
+"&t;"
 id|present
 op_assign
 id|snd_hda_codec_read
@@ -9560,6 +9562,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -9576,12 +9588,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -9601,12 +9608,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 )brace
@@ -13791,6 +13793,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_3stack_init_verbs
 )brace
 comma
@@ -13863,6 +13866,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_3stack_init_verbs
 )brace
 comma
@@ -14009,6 +14013,7 @@ op_assign
 (brace
 id|alc880_three_stack_mixer
 comma
+"&t;&t;&t;"
 id|alc880_five_stack_mixer
 )brace
 comma
@@ -14019,6 +14024,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_5stack_init_verbs
 )brace
 comma
@@ -14077,6 +14083,7 @@ op_assign
 (brace
 id|alc880_three_stack_mixer
 comma
+"&t;&t;&t;"
 id|alc880_five_stack_mixer
 )brace
 comma
@@ -14087,6 +14094,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_5stack_init_verbs
 )brace
 comma
@@ -14159,6 +14167,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_6stack_init_verbs
 )brace
 comma
@@ -14225,6 +14234,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_6stack_init_verbs
 )brace
 comma
@@ -14297,6 +14307,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_w810_init_verbs
 comma
 "&t;&t;&t;&t;"
@@ -14372,6 +14383,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_z71v_init_verbs
 )brace
 comma
@@ -14450,6 +14462,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_f1734_init_verbs
 )brace
 comma
@@ -14522,6 +14535,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_asus_init_verbs
 comma
 "&t;&t;&t;&t;"
@@ -14597,6 +14611,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_asus_init_verbs
 comma
 "&t;&t;&t;&t;"
@@ -14678,6 +14693,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_asus_init_verbs
 comma
 "&t;&t;&t;&t;"
@@ -14762,6 +14778,7 @@ op_assign
 (brace
 id|alc880_volume_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc880_pin_asus_init_verbs
 comma
 "&t;&t;&t;&t;"
@@ -15567,6 +15584,7 @@ r_char
 op_star
 id|name
 comma
+"&t;&t;"
 r_int
 r_int
 id|val
@@ -15596,6 +15614,8 @@ op_plus
 id|NUM_CONTROL_ALLOC
 suffix:semicolon
 "&t;&t;"
+multiline_comment|/* array + terminator */
+"&t;&t;"
 id|knew
 op_assign
 id|kcalloc
@@ -15614,7 +15634,6 @@ comma
 id|GFP_KERNEL
 )paren
 suffix:semicolon
-multiline_comment|/* array + terminator */
 "&t;&t;"
 r_if
 c_cond
@@ -15641,6 +15660,7 @@ id|knew
 comma
 id|spec-&gt;kctl_alloc
 comma
+"&t;&t;&t;"
 r_sizeof
 (paren
 op_star
@@ -15746,6 +15766,7 @@ id|alc_spec
 op_star
 id|spec
 comma
+"&t;&t;&t;&t;"
 r_const
 r_struct
 id|auto_pin_cfg
@@ -15934,6 +15955,7 @@ id|spec-&gt;multiout.dac_nids
 id|i
 )braket
 op_assign
+"&t;&t;&t;&t;&t;"
 id|alc880_idx_to_dac
 c_func
 (paren
@@ -16002,6 +16024,7 @@ l_int|4
 )braket
 op_assign
 (brace
+"&t;&t;"
 l_string|&quot;Front&quot;
 comma
 l_string|&quot;Surround&quot;
@@ -16010,6 +16033,7 @@ l_int|NULL
 multiline_comment|/*CLFE*/
 comma
 l_string|&quot;Side&quot;
+"&t;"
 )brace
 suffix:semicolon
 "&t;"
@@ -16079,10 +16103,6 @@ l_int|2
 "&t;&t;&t;"
 multiline_comment|/* Center/LFE */
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16092,6 +16112,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_VOL
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Center Playback Volume&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -16104,10 +16125,16 @@ l_int|1
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16116,10 +16143,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16129,6 +16152,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_VOL
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;LFE Playback Volume&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -16141,10 +16165,16 @@ l_int|2
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16153,10 +16183,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16166,6 +16192,7 @@ id|spec
 comma
 id|ALC_CTL_BIND_MUTE
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Center Playback Switch&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -16178,10 +16205,16 @@ l_int|1
 comma
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16190,10 +16223,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16203,6 +16232,7 @@ id|spec
 comma
 id|ALC_CTL_BIND_MUTE
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;LFE Playback Switch&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -16215,10 +16245,16 @@ l_int|2
 comma
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16245,10 +16281,6 @@ id|i
 )paren
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16270,10 +16302,16 @@ l_int|3
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16296,10 +16334,6 @@ id|i
 )paren
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16321,10 +16355,16 @@ l_int|3
 comma
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16462,10 +16502,6 @@ id|pfx
 )paren
 suffix:semicolon
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16490,7 +16526,12 @@ comma
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16510,10 +16551,6 @@ id|pfx
 )paren
 suffix:semicolon
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16538,7 +16575,12 @@ comma
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16575,10 +16617,6 @@ id|pfx
 )paren
 suffix:semicolon
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16603,7 +16641,12 @@ comma
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16631,6 +16674,7 @@ comma
 id|hda_nid_t
 id|pin
 comma
+"&t;&t;&t;"
 r_const
 r_char
 op_star
@@ -16667,10 +16711,6 @@ id|ctlname
 )paren
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16695,7 +16735,12 @@ comma
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16715,10 +16760,6 @@ id|ctlname
 )paren
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -16743,7 +16784,12 @@ comma
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -16878,6 +16924,7 @@ id|imux-&gt;num_items
 dot
 id|label
 op_assign
+"&t;&t;&t;&t;"
 id|auto_pin_cfg_labels
 (braket
 id|i
@@ -16891,6 +16938,7 @@ id|imux-&gt;num_items
 dot
 id|index
 op_assign
+"&t;&t;&t;&t;"
 id|alc880_input_pin_idx
 c_func
 (paren
@@ -16948,6 +16996,7 @@ l_int|0
 comma
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
+"&t;&t;&t;"
 id|pin_type
 )paren
 suffix:semicolon
@@ -16963,6 +17012,7 @@ l_int|0
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+"&t;&t;&t;"
 id|AMP_OUT_UNMUTE
 )paren
 suffix:semicolon
@@ -17252,6 +17302,7 @@ id|nid
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;"
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
 "&t;&t;&t;&t;&t;"
@@ -17260,6 +17311,7 @@ op_le
 id|AUTO_PIN_FRONT_MIC
 ques
 c_cond
+"&t;&t;&t;&t;&t;"
 id|PIN_VREF80
 suffix:colon
 id|PIN_IN
@@ -17283,6 +17335,7 @@ id|nid
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;"
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
 "&t;&t;&t;&t;&t;&t;"
@@ -17295,7 +17348,7 @@ suffix:semicolon
 )brace
 )brace
 multiline_comment|/* parse the BIOS configuration and set up the alc_spec */
-multiline_comment|/* return 1 if successful, 0 if the proper config is not found, or a negative error code */
+multiline_comment|/* return 1 if successful, 0 if the proper config is not found,&n; * or a negative error code&n; */
 r_int
 id|alc880_parse_auto_config
 c_func
@@ -17331,10 +17384,6 @@ l_int|0
 )brace
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|snd_hda_parse_pin_def_config
@@ -17345,10 +17394,15 @@ comma
 op_amp
 id|spec-&gt;autocfg
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|alc880_ignore
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -17369,10 +17423,6 @@ l_int|0
 suffix:semicolon
 multiline_comment|/* can&squot;t find valid BIOS pin config */
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|alc880_auto_fill_dac_nids
@@ -17383,12 +17433,20 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc880_auto_create_multi_out_ctls
@@ -17399,12 +17457,20 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc880_auto_create_extra_out
@@ -17412,21 +17478,29 @@ c_func
 (paren
 id|spec
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|spec-&gt;autocfg.speaker_pins
 (braket
 l_int|0
 )braket
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Speaker&quot;
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc880_auto_create_extra_out
@@ -17439,15 +17513,23 @@ id|spec-&gt;autocfg.hp_pins
 l_int|0
 )braket
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Headphone&quot;
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc880_auto_create_analog_input_ctls
@@ -17458,7 +17540,12 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -17822,6 +17909,8 @@ l_int|0
 )paren
 suffix:semicolon
 "&t;&t;"
+multiline_comment|/* get type */
+"&t;&t;"
 id|wcap
 op_assign
 (paren
@@ -17832,7 +17921,6 @@ id|AC_WCAP_TYPE
 op_rshift
 id|AC_WCAP_TYPE_SHIFT
 suffix:semicolon
-multiline_comment|/* get type */
 "&t;&t;"
 r_if
 c_cond
@@ -17862,6 +17950,7 @@ id|spec-&gt;mixers
 id|spec-&gt;num_mixers
 )braket
 op_assign
+"&t;&t;&t;&t;"
 id|alc880_capture_alt_mixer
 suffix:semicolon
 "&t;&t;&t;"
@@ -18374,7 +18463,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-"&t;"
 r_struct
 id|snd_kcontrol_new
 id|alc260_input_mixer
@@ -19769,7 +19857,7 @@ id|AMP_OUT_UNMUTE
 )brace
 comma
 "&t;"
-multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp; Line In 2 = 0x03 */
+multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp;&n;&t; * Line In 2 = 0x03&n;&t; */
 "&t;"
 multiline_comment|/* mute CD */
 "&t;"
@@ -20058,7 +20146,7 @@ l_int|0x0000
 )brace
 comma
 "&t;"
-multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp; Line In 2 = 0x03 */
+multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp;&n;&t; * Line In 2 = 0x03&n;&t; */
 "&t;"
 multiline_comment|/* unmute CD */
 "&t;"
@@ -20383,7 +20471,7 @@ l_int|0x0000
 )brace
 comma
 "&t;"
-multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp; Line In 2 = 0x03 */
+multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp;&n;&t; * Line In 2 = 0x03&n;&t; */
 "&t;"
 multiline_comment|/* unmute CD */
 "&t;"
@@ -21339,7 +21427,7 @@ id|AMP_OUT_ZERO
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute Line-out pin widget amp left and right (no equiv mixer ctrl) */
+multiline_comment|/* Unmute Line-out pin widget amp left and right&n;&t; * (no equiv mixer ctrl)&n;&t; */
 "&t;"
 (brace
 l_int|0x0f
@@ -23228,10 +23316,6 @@ id|pfx
 )paren
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -23245,7 +23329,12 @@ id|name
 comma
 id|vol_val
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -23270,10 +23359,6 @@ id|pfx
 )paren
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -23287,7 +23372,12 @@ id|name
 comma
 id|sw_val
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -23474,7 +23564,6 @@ suffix:semicolon
 r_return
 l_int|0
 suffix:semicolon
-"&t;"
 )brace
 multiline_comment|/* create playback/capture controls for input pins */
 r_int
@@ -23569,6 +23658,7 @@ id|i
 comma
 id|idx
 comma
+"&t;&t;&t;&t;&t;"
 l_int|0x07
 )paren
 suffix:semicolon
@@ -23592,6 +23682,7 @@ id|imux-&gt;num_items
 dot
 id|label
 op_assign
+"&t;&t;&t;&t;"
 id|auto_pin_cfg_labels
 (braket
 id|i
@@ -23617,23 +23708,19 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-(paren
 id|cfg-&gt;input_pins
 (braket
 id|i
 )braket
 op_ge
 l_int|0x0f
-)paren
 op_logical_and
-(paren
 id|cfg-&gt;input_pins
 (braket
 id|i
 )braket
 op_le
 l_int|0x10
-)paren
 )paren
 (brace
 "&t;&t;&t;"
@@ -23666,6 +23753,7 @@ id|i
 comma
 id|idx
 comma
+"&t;&t;&t;&t;&t;"
 l_int|0x07
 )paren
 suffix:semicolon
@@ -23689,6 +23777,7 @@ id|imux-&gt;num_items
 dot
 id|label
 op_assign
+"&t;&t;&t;&t;"
 id|auto_pin_cfg_labels
 (braket
 id|i
@@ -23752,6 +23841,7 @@ l_int|0
 comma
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
+"&t;&t;&t;"
 id|pin_type
 )paren
 suffix:semicolon
@@ -23767,6 +23857,7 @@ l_int|0
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+"&t;&t;&t;"
 id|AMP_OUT_UNMUTE
 )paren
 suffix:semicolon
@@ -23806,7 +23897,6 @@ comma
 id|sel_idx
 )paren
 suffix:semicolon
-"&t;&t;&t;&t;"
 "&t;"
 )brace
 )brace
@@ -23853,7 +23943,6 @@ id|spec-&gt;autocfg.line_out_pins
 l_int|0
 )braket
 suffix:semicolon
-"&t;"
 "&t;"
 r_if
 c_cond
@@ -23929,7 +24018,6 @@ l_int|0
 )paren
 suffix:semicolon
 )brace
-"&t;"
 macro_line|#define ALC260_PIN_CD_NID&t;&t;0x16
 r_void
 id|alc260_auto_init_analog_input
@@ -23997,6 +24085,7 @@ id|nid
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;"
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
 "&t;&t;&t;&t;&t;"
@@ -24005,6 +24094,7 @@ op_le
 id|AUTO_PIN_FRONT_MIC
 ques
 c_cond
+"&t;&t;&t;&t;&t;"
 id|PIN_VREF80
 suffix:colon
 id|PIN_IN
@@ -24028,6 +24118,7 @@ id|nid
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;"
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
 "&t;&t;&t;&t;&t;&t;"
@@ -24095,7 +24186,7 @@ l_int|0
 comma
 "&t;"
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for front panel&n;&t; * mic (mic 2)&n;&t; */
+multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -24322,10 +24413,6 @@ l_int|0
 )brace
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|snd_hda_parse_pin_def_config
@@ -24336,10 +24423,15 @@ comma
 op_amp
 id|spec-&gt;autocfg
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|alc260_ignore
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -24348,10 +24440,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|alc260_auto_create_multi_out_ctls
@@ -24362,7 +24450,12 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -24383,10 +24476,6 @@ l_int|0
 suffix:semicolon
 multiline_comment|/* can&squot;t find valid BIOS pin config */
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|alc260_auto_create_analog_input_ctls
@@ -24397,7 +24486,12 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -25997,6 +26091,7 @@ id|snd_kcontrol
 op_star
 id|kcontrol
 comma
+"&t;&t;&t;"
 r_struct
 id|snd_ctl_elem_value
 op_star
@@ -28095,7 +28190,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for front panel&n;&t; * mic (mic 2)&n;&t; */
+multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -29299,7 +29394,6 @@ r_int
 id|idx
 suffix:semicolon
 "&t;"
-"&t;"
 r_if
 c_cond
 (paren
@@ -29338,6 +29432,7 @@ l_int|0
 comma
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
+"&t;&t;&t;"
 id|pin_type
 )paren
 suffix:semicolon
@@ -29353,6 +29448,7 @@ l_int|0
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+"&t;&t;&t;"
 id|AMP_OUT_UNMUTE
 )paren
 suffix:semicolon
@@ -29432,7 +29528,6 @@ id|spec-&gt;autocfg.line_out_pins
 id|i
 )braket
 suffix:semicolon
-"&t;"
 "&t;&t;"
 r_if
 c_cond
@@ -29449,6 +29544,7 @@ id|nid
 comma
 id|PIN_OUT
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|i
 )paren
 suffix:semicolon
@@ -29493,6 +29589,8 @@ id|pin
 )paren
 multiline_comment|/* connect to front */
 "&t;&t;"
+multiline_comment|/* use dac 0 */
+"&t;&t;"
 id|alc882_auto_set_output_and_unmute
 c_func
 (paren
@@ -29505,7 +29603,6 @@ comma
 l_int|0
 )paren
 suffix:semicolon
-multiline_comment|/* use dac 0 */
 )brace
 macro_line|#define alc882_is_input_pin(nid)&t;alc880_is_input_pin(nid)
 macro_line|#define ALC882_PIN_CD_NID&t;&t;ALC880_PIN_CD_NID
@@ -29577,6 +29674,7 @@ id|nid
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;"
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
 "&t;&t;&t;&t;&t;"
@@ -29585,6 +29683,7 @@ op_le
 id|AUTO_PIN_FRONT_MIC
 ques
 c_cond
+"&t;&t;&t;&t;&t;"
 id|PIN_VREF80
 suffix:colon
 id|PIN_IN
@@ -29608,6 +29707,7 @@ id|nid
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;"
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
 "&t;&t;&t;&t;&t;&t;"
@@ -30030,6 +30130,8 @@ l_int|0x07
 )paren
 suffix:semicolon
 "&t;&t;"
+multiline_comment|/* get type */
+"&t;&t;"
 id|wcap
 op_assign
 (paren
@@ -30040,7 +30142,6 @@ id|AC_WCAP_TYPE
 op_rshift
 id|AC_WCAP_TYPE_SHIFT
 suffix:semicolon
-multiline_comment|/* get type */
 "&t;&t;"
 r_if
 c_cond
@@ -30070,6 +30171,7 @@ id|spec-&gt;mixers
 id|spec-&gt;num_mixers
 )braket
 op_assign
+"&t;&t;&t;&t;"
 id|alc882_capture_alt_mixer
 suffix:semicolon
 "&t;&t;&t;"
@@ -32596,7 +32698,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-"&t;"
 r_struct
 id|snd_kcontrol_new
 id|alc883_tagra_2ch_mixer
@@ -32813,7 +32914,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-"&t;"
 r_struct
 id|snd_kcontrol_new
 id|alc883_lenovo_101e_2ch_mixer
@@ -33000,7 +33100,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-"&t;"
 r_struct
 id|snd_kcontrol_new
 id|alc883_chmode_mixer
@@ -33836,6 +33935,11 @@ r_int
 id|present
 suffix:semicolon
 "&t;"
+r_int
+r_char
+id|bits
+suffix:semicolon
+"&t;"
 id|present
 op_assign
 id|snd_hda_codec_read
@@ -33856,6 +33960,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -33872,12 +33986,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -33897,12 +34006,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -33917,6 +34021,7 @@ l_int|0
 comma
 id|AC_VERB_SET_GPIO_DATA
 comma
+"&t;&t;&t;"
 id|present
 ques
 c_cond
@@ -33976,6 +34081,11 @@ r_int
 id|present
 suffix:semicolon
 "&t;"
+r_int
+r_char
+id|bits
+suffix:semicolon
+"&t;"
 id|present
 op_assign
 id|snd_hda_codec_read
@@ -33996,6 +34106,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -34012,12 +34132,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -34037,12 +34152,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 )brace
@@ -34060,6 +34170,11 @@ id|codec
 r_int
 r_int
 id|present
+suffix:semicolon
+"&t;"
+r_int
+r_char
+id|bits
 suffix:semicolon
 "&t;"
 id|present
@@ -34082,6 +34197,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -34098,12 +34223,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -34123,12 +34243,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -34148,12 +34263,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -34173,12 +34283,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 )brace
@@ -34291,7 +34396,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for front panel&n;&t; * mic (mic 2)&n;&t; */
+multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -34579,7 +34684,7 @@ l_int|2
 )brace
 comma
 "&t;"
-singleline_comment|//{0x23, AC_VERB_SET_AMP_GAIN_MUTE, AMP_IN_UNMUTE(3)},
+multiline_comment|/* {0x23, AC_VERB_SET_AMP_GAIN_MUTE, AMP_IN_UNMUTE(3)}, */
 "&t;"
 (brace
 l_int|0x23
@@ -34635,7 +34740,7 @@ l_int|2
 )brace
 comma
 "&t;"
-singleline_comment|//{0x22, AC_VERB_SET_AMP_GAIN_MUTE, AMP_IN_UNMUTE(3)},
+multiline_comment|/* {0x22, AC_VERB_SET_AMP_GAIN_MUTE, AMP_IN_UNMUTE(3)}, */
 "&t;"
 (brace
 l_int|0x23
@@ -35379,7 +35484,6 @@ comma
 )brace
 comma
 "&t;"
-"&t;"
 (braket
 id|ALC883_3ST_6ch
 )braket
@@ -35467,7 +35571,6 @@ comma
 "&t;"
 )brace
 comma
-"&t;"
 "&t;"
 (braket
 id|ALC883_6ST_DIG
@@ -36255,7 +36358,6 @@ r_int
 id|idx
 suffix:semicolon
 "&t;"
-"&t;"
 r_if
 c_cond
 (paren
@@ -36390,7 +36492,6 @@ id|spec-&gt;autocfg.line_out_pins
 id|i
 )braket
 suffix:semicolon
-"&t;"
 "&t;&t;"
 r_if
 c_cond
@@ -36407,6 +36508,7 @@ id|nid
 comma
 id|PIN_OUT
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|i
 )paren
 suffix:semicolon
@@ -37992,7 +38094,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for front panel&n;&t; * mic (mic 2)&n;&t; */
+multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -38506,7 +38608,6 @@ l_int|8
 )paren
 )brace
 comma
-"&t;"
 "&t;"
 (brace
 )brace
@@ -40049,6 +40150,7 @@ id|alc_spec
 op_star
 id|spec
 comma
+"&t;&t;&t;&t;&t;"
 r_const
 r_struct
 id|auto_pin_cfg
@@ -40100,10 +40202,6 @@ id|nid
 )paren
 (brace
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -40113,6 +40211,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_VOL
 comma
+"&t;&t;&t;&t;"
 l_string|&quot;Front Playback Volume&quot;
 comma
 "&t;&t;&t;&t;"
@@ -40128,7 +40227,12 @@ comma
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -40137,10 +40241,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -40150,6 +40250,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_MUTE
 comma
+"&t;&t;&t;&t;"
 l_string|&quot;Front Playback Switch&quot;
 comma
 "&t;&t;&t;&t;"
@@ -40165,7 +40266,12 @@ comma
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -40200,10 +40306,6 @@ l_int|0x16
 )paren
 (brace
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -40213,6 +40315,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_VOL
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Speaker Playback Volume&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -40225,10 +40328,16 @@ l_int|2
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -40237,10 +40346,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -40250,6 +40355,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_MUTE
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Speaker Playback Switch&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -40262,10 +40368,16 @@ l_int|2
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -40278,10 +40390,6 @@ suffix:semicolon
 r_else
 (brace
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -40291,6 +40399,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_MUTE
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Speaker Playback Switch&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -40303,10 +40412,16 @@ l_int|3
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -40345,10 +40460,6 @@ l_int|0x16
 )paren
 (brace
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -40358,6 +40469,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_VOL
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Headphone Playback Volume&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -40370,10 +40482,16 @@ l_int|2
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -40382,10 +40500,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -40395,6 +40509,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_MUTE
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Headphone Playback Switch&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -40407,10 +40522,16 @@ l_int|2
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -40423,10 +40544,6 @@ suffix:semicolon
 r_else
 (brace
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -40436,6 +40553,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_MUTE
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Headphone Playback Switch&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -40448,10 +40566,16 @@ l_int|3
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -40467,10 +40591,9 @@ suffix:semicolon
 r_return
 l_int|0
 suffix:semicolon
-"&t;"
 )brace
 multiline_comment|/* identical with ALC880 */
-macro_line|#define alc262_auto_create_analog_input_ctls alc880_auto_create_analog_input_ctls
+macro_line|#define alc262_auto_create_analog_input_ctls &bslash;&n;&t;alc880_auto_create_analog_input_ctls
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
 r_struct
 id|hda_verb
@@ -40548,7 +40671,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for front panel&n;&t; * mic (mic 2)&n;&t; */
+multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -41025,7 +41148,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for front panel&n;&t; * mic (mic 2)&n;&t; */
+multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -42438,10 +42561,6 @@ l_int|0
 )brace
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|snd_hda_parse_pin_def_config
@@ -42452,10 +42571,15 @@ comma
 op_amp
 id|spec-&gt;autocfg
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|alc262_ignore
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -42476,10 +42600,6 @@ l_int|0
 suffix:semicolon
 multiline_comment|/* can&squot;t find valid BIOS pin config */
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|alc262_auto_create_multi_out_ctls
@@ -42490,12 +42610,20 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc262_auto_create_analog_input_ctls
@@ -42506,7 +42634,12 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -43327,7 +43460,6 @@ comma
 )brace
 comma
 "&t;"
-"&t;"
 (braket
 id|ALC262_HP_BPC_D7000_WF
 )braket
@@ -43397,7 +43529,6 @@ comma
 "&t;"
 )brace
 comma
-"&t;"
 "&t;"
 (braket
 id|ALC262_HP_BPC_D7000_WL
@@ -43472,7 +43603,6 @@ comma
 )brace
 comma
 "&t;"
-"&t;"
 (braket
 id|ALC262_BENQ_ED8
 )braket
@@ -43544,7 +43674,6 @@ comma
 "&t;"
 )brace
 comma
-"&t;&t;"
 )brace
 suffix:semicolon
 r_int
@@ -43605,7 +43734,7 @@ id|spec
 suffix:semicolon
 macro_line|#if 0
 "&t;"
-multiline_comment|/* pshou 07/11/05  set a zero PCM sample to DAC when FIFO is under-run */
+multiline_comment|/* pshou 07/11/05  set a zero PCM sample to DAC when FIFO is&n;&t; * under-run&n;&t; */
 "&t;"
 (brace
 "&t;"
@@ -43874,6 +44003,8 @@ l_int|0x07
 )paren
 suffix:semicolon
 "&t;&t;"
+multiline_comment|/* get type */
+"&t;&t;"
 id|wcap
 op_assign
 (paren
@@ -43884,7 +44015,6 @@ id|AC_WCAP_TYPE
 op_rshift
 id|AC_WCAP_TYPE_SHIFT
 suffix:semicolon
-multiline_comment|/* get type */
 "&t;&t;"
 r_if
 c_cond
@@ -43914,6 +44044,7 @@ id|spec-&gt;mixers
 id|spec-&gt;num_mixers
 )braket
 op_assign
+"&t;&t;&t;&t;"
 id|alc262_capture_alt_mixer
 suffix:semicolon
 "&t;&t;&t;"
@@ -43999,7 +44130,7 @@ l_int|0x20
 )brace
 comma
 "&t;"
-multiline_comment|/* set pin widget 18h (mic1/2) for input, for mic also enable the vref */
+multiline_comment|/* set pin widget 18h (mic1/2) for input, for mic also enable&n;&t; * the vref&n;&t; */
 "&t;"
 (brace
 l_int|0x0d
@@ -44313,7 +44444,7 @@ l_int|0x20
 )brace
 comma
 "&t;"
-multiline_comment|/* set pin widget 18h (mic1/2) for input, for mic also enable the vref */
+multiline_comment|/* set pin widget 18h (mic1/2) for input, for mic also enable&n;&t; * the vref&n;&t; */
 "&t;"
 (brace
 l_int|0x0d
@@ -45179,7 +45310,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-"&t;"
 r_struct
 id|snd_kcontrol_new
 id|alc861_uniwill_m31_mixer
@@ -45473,7 +45603,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-"&t;&t;&t;"
 r_struct
 id|snd_kcontrol_new
 id|alc861_asus_mixer
@@ -45683,7 +45812,6 @@ comma
 id|HDA_OUTPUT
 )paren
 comma
-multiline_comment|/* was HDA_INPUT (why?) */
 "&t;"
 multiline_comment|/* Capture mixer control */
 "&t;"
@@ -46199,7 +46327,7 @@ comma
 l_int|0xb00c
 )brace
 comma
-singleline_comment|//Output 0~12 step
+multiline_comment|/* Output 0~12 step */
 "&t;"
 (brace
 l_int|0x16
@@ -46304,6 +46432,8 @@ l_int|1
 )paren
 )brace
 comma
+"&t;"
+multiline_comment|/* hp used DAC 3 (Front) */
 "&t;"
 (brace
 l_int|0x1a
@@ -46317,7 +46447,6 @@ l_int|3
 )paren
 )brace
 comma
-singleline_comment|// hp used DAC 3 (Front)
 (brace
 l_int|0x1a
 comma
@@ -46638,7 +46767,7 @@ comma
 l_int|0xb00c
 )brace
 comma
-singleline_comment|//Output 0~12 step
+multiline_comment|/* Output 0~12 step */
 "&t;"
 (brace
 l_int|0x16
@@ -46743,6 +46872,8 @@ l_int|1
 )paren
 )brace
 comma
+"&t;"
+multiline_comment|/* hp used DAC 3 (Front) */
 "&t;"
 (brace
 l_int|0x1a
@@ -46756,7 +46887,6 @@ l_int|3
 )paren
 )brace
 comma
-singleline_comment|// hp used DAC 3 (Front)
 (brace
 l_int|0x1a
 comma
@@ -46839,6 +46969,8 @@ comma
 "&t;"
 multiline_comment|/* port-E for HP out (front panel) */
 "&t;"
+multiline_comment|/* this has to be set to VREF80 */
+"&t;"
 (brace
 l_int|0x0f
 comma
@@ -46847,7 +46979,6 @@ comma
 l_int|0x24
 )brace
 comma
-singleline_comment|// this has to be set to VREF80
 "&t;"
 multiline_comment|/* route front PCM to HP */
 "&t;"
@@ -47078,7 +47209,7 @@ comma
 l_int|0xb00c
 )brace
 comma
-singleline_comment|//Output 0~12 step
+multiline_comment|/* Output 0~12 step */
 "&t;"
 (brace
 l_int|0x16
@@ -47183,6 +47314,8 @@ l_int|1
 )paren
 )brace
 comma
+"&t;"
+multiline_comment|/* hp used DAC 3 (Front) */
 "&t;"
 (brace
 l_int|0x1a
@@ -47196,7 +47329,6 @@ l_int|3
 )paren
 )brace
 comma
-singleline_comment|// hp used DAC 3 (Front)
 (brace
 l_int|0x1a
 comma
@@ -47224,7 +47356,7 @@ op_assign
 "&t;"
 multiline_comment|/*&n;&t; * Unmute ADC0 and set the default input to mic-in&n;&t; */
 "&t;"
-multiline_comment|/* port-A for surround (rear panel) | according to codec#0 this is the HP jack*/
+multiline_comment|/* port-A for surround (rear panel)&n;&t; * according to codec#0 this is the HP jack&n;&t; */
 "&t;"
 (brace
 l_int|0x0e
@@ -47291,6 +47423,8 @@ comma
 "&t;"
 multiline_comment|/* port-E for HP out (front panel) */
 "&t;"
+multiline_comment|/* this has to be set to VREF80 */
+"&t;"
 (brace
 l_int|0x0f
 comma
@@ -47299,7 +47433,6 @@ comma
 l_int|0x24
 )brace
 comma
-multiline_comment|/* this has to be set to VREF80 */
 "&t;"
 multiline_comment|/* route front PCM to HP */
 "&t;"
@@ -47635,6 +47768,8 @@ l_int|1
 )brace
 comma
 "&t;"
+multiline_comment|/* hp used DAC 3 (Front) */
+"&t;"
 (brace
 l_int|0x1a
 comma
@@ -47647,7 +47782,6 @@ l_int|3
 )paren
 )brace
 comma
-multiline_comment|/* hp used DAC 3 (Front) */
 "&t;"
 (brace
 l_int|0x1a
@@ -47713,7 +47847,8 @@ op_assign
 (brace
 "&t;"
 multiline_comment|/*&n;&t; * Unmute ADC0 and set the default input to mic-in&n;&t; */
-singleline_comment|//&t;{0x08, AC_VERB_SET_CONNECT_SEL, 0x00},
+"&t;"
+multiline_comment|/* {0x08, AC_VERB_SET_CONNECT_SEL, 0x00}, */
 "&t;"
 (brace
 l_int|0x08
@@ -48025,7 +48160,6 @@ l_int|2
 )brace
 comma
 "&t;"
-"&t;"
 (brace
 l_int|0x1a
 comma
@@ -48038,7 +48172,6 @@ l_int|3
 )paren
 )brace
 comma
-"&t;&t;"
 "&t;"
 (brace
 l_int|0x1b
@@ -48079,7 +48212,6 @@ l_int|2
 )brace
 comma
 "&t;"
-"&t;"
 (brace
 l_int|0x1b
 comma
@@ -48093,7 +48225,6 @@ l_int|3
 )brace
 comma
 "&t;"
-"&t;"
 (brace
 l_int|0x08
 comma
@@ -48103,7 +48234,7 @@ l_int|0x00
 )brace
 comma
 "&t;"
-singleline_comment|// set Mic 1
+multiline_comment|/* set Mic 1 */
 "&t;"
 (brace
 )brace
@@ -48442,6 +48573,7 @@ id|alc_spec
 op_star
 id|spec
 comma
+"&t;&t;&t;&t;"
 r_const
 r_struct
 id|auto_pin_cfg
@@ -48568,6 +48700,7 @@ l_int|4
 )braket
 op_assign
 (brace
+"&t;&t;"
 l_string|&quot;Front&quot;
 comma
 l_string|&quot;Surround&quot;
@@ -48576,6 +48709,7 @@ l_int|NULL
 multiline_comment|/*CLFE*/
 comma
 l_string|&quot;Side&quot;
+"&t;"
 )brace
 suffix:semicolon
 "&t;"
@@ -48636,10 +48770,6 @@ l_int|0x05
 "&t;&t;&t;"
 multiline_comment|/* Center/LFE */
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -48649,6 +48779,7 @@ id|spec
 comma
 id|ALC_CTL_BIND_MUTE
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Center Playback Switch&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -48661,10 +48792,16 @@ l_int|1
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -48673,10 +48810,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -48686,6 +48819,7 @@ id|spec
 comma
 id|ALC_CTL_BIND_MUTE
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;LFE Playback Switch&quot;
 comma
 "&t;&t;&t;&t;&t;"
@@ -48698,10 +48832,16 @@ l_int|2
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -48730,6 +48870,7 @@ id|alc861_dac_nids
 )paren
 l_int|1
 suffix:semicolon
+"&t;&t;&t;"
 id|idx
 op_increment
 )paren
@@ -48762,10 +48903,6 @@ id|idx
 )paren
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -48787,10 +48924,16 @@ l_int|3
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -48868,10 +49011,6 @@ op_assign
 l_int|0x03
 suffix:semicolon
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -48881,6 +49020,7 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_MUTE
 comma
+"&t;&t;&t;&t;"
 l_string|&quot;Headphone Playback Switch&quot;
 comma
 "&t;&t;&t;&t;"
@@ -48896,7 +49036,12 @@ comma
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -48926,6 +49071,7 @@ id|alc_spec
 op_star
 id|spec
 comma
+"&t;&t;&t;&t;&t;&t;"
 r_const
 r_struct
 id|auto_pin_cfg
@@ -48993,7 +49139,7 @@ op_assign
 l_int|2
 suffix:semicolon
 "&t;"
-singleline_comment|// Line In
+multiline_comment|/* Line In */
 "&t;&t;&t;"
 r_break
 suffix:semicolon
@@ -49012,7 +49158,7 @@ op_assign
 l_int|2
 suffix:semicolon
 "&t;"
-singleline_comment|// Line In
+multiline_comment|/* Line In */
 "&t;&t;&t;"
 r_break
 suffix:semicolon
@@ -49031,7 +49177,7 @@ op_assign
 l_int|1
 suffix:semicolon
 "&t;"
-singleline_comment|// Mic In 
+multiline_comment|/* Mic In */
 "&t;&t;&t;"
 r_break
 suffix:semicolon
@@ -49039,7 +49185,6 @@ suffix:semicolon
 r_case
 l_int|0x10
 suffix:colon
-"&t;"
 "&t;&t;&t;"
 id|idx1
 op_assign
@@ -49051,7 +49196,7 @@ op_assign
 l_int|1
 suffix:semicolon
 "&t;"
-singleline_comment|// Mic In 
+multiline_comment|/* Mic In */
 "&t;&t;&t;"
 r_break
 suffix:semicolon
@@ -49070,7 +49215,7 @@ op_assign
 l_int|0
 suffix:semicolon
 "&t;"
-singleline_comment|// CD
+multiline_comment|/* CD */
 "&t;&t;&t;"
 r_break
 suffix:semicolon
@@ -49145,7 +49290,6 @@ suffix:semicolon
 id|imux-&gt;num_items
 op_increment
 suffix:semicolon
-"&t;"
 "&t;"
 )brace
 "&t;"
@@ -49246,6 +49390,7 @@ id|hda_codec
 op_star
 id|codec
 comma
+"&t;&t;&t;&t;&t;"
 id|hda_nid_t
 id|nid
 comma
@@ -49271,6 +49416,7 @@ l_int|0
 comma
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
+"&t;&t;&t;"
 id|pin_type
 )paren
 suffix:semicolon
@@ -49286,6 +49432,7 @@ l_int|0
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+"&t;&t;&t;"
 id|AMP_OUT_UNMUTE
 )paren
 suffix:semicolon
@@ -49366,6 +49513,7 @@ id|nid
 comma
 id|PIN_OUT
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|spec-&gt;multiout.dac_nids
 (braket
 id|i
@@ -49422,6 +49570,7 @@ id|pin
 comma
 id|PIN_HP
 comma
+"&t;&t;&t;&t;&t;&t;"
 id|spec-&gt;multiout.dac_nids
 (braket
 l_int|0
@@ -49480,17 +49629,13 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-(paren
 id|nid
 op_ge
 l_int|0x0c
-)paren
 op_logical_and
-(paren
 id|nid
 op_le
 l_int|0x11
-)paren
 )paren
 (brace
 "&t;&t;&t;"
@@ -49503,6 +49648,7 @@ id|nid
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;"
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
 "&t;&t;&t;&t;&t;"
@@ -49511,6 +49657,7 @@ op_le
 id|AUTO_PIN_FRONT_MIC
 ques
 c_cond
+"&t;&t;&t;&t;&t;"
 id|PIN_VREF80
 suffix:colon
 id|PIN_IN
@@ -49522,7 +49669,7 @@ suffix:semicolon
 )brace
 )brace
 multiline_comment|/* parse the BIOS configuration and set up the alc_spec */
-multiline_comment|/* return 1 if successful, 0 if the proper config is not found, or a negative error code */
+multiline_comment|/* return 1 if successful, 0 if the proper config is not found,&n; * or a negative error code&n; */
 r_int
 id|alc861_parse_auto_config
 c_func
@@ -49558,10 +49705,6 @@ l_int|0
 )brace
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|snd_hda_parse_pin_def_config
@@ -49572,10 +49715,15 @@ comma
 op_amp
 id|spec-&gt;autocfg
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|alc861_ignore
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -49596,10 +49744,6 @@ l_int|0
 suffix:semicolon
 multiline_comment|/* can&squot;t find valid BIOS pin config */
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|alc861_auto_fill_dac_nids
@@ -49610,12 +49754,20 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc861_auto_create_multi_out_ctls
@@ -49626,12 +49778,20 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc861_auto_create_hp_ctls
@@ -49644,12 +49804,20 @@ id|spec-&gt;autocfg.hp_pins
 l_int|0
 )braket
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc861_auto_create_analog_input_ctls
@@ -49660,7 +49828,12 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -50494,6 +50667,7 @@ op_assign
 (brace
 id|alc861_base_init_verbs
 comma
+"&t;&t;&t;&t;"
 id|alc861_toshiba_init_verbs
 )brace
 comma
@@ -50820,7 +50994,6 @@ id|codec-&gt;spec
 op_assign
 id|spec
 suffix:semicolon
-"&t;"
 id|board_config
 op_assign
 id|snd_hda_check_board_config
@@ -53696,10 +53869,6 @@ l_int|2
 "&t;&t;&t;"
 multiline_comment|/* Center/LFE */
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -53709,10 +53878,10 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_VOL
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Center Playback Volume&quot;
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
@@ -53720,13 +53889,18 @@ id|nid_v
 comma
 l_int|1
 comma
-"&t;&t;&t;&t;&t;&t;&t;"
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -53735,10 +53909,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -53748,10 +53918,10 @@ id|spec
 comma
 id|ALC_CTL_WIDGET_VOL
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 l_string|&quot;LFE Playback Volume&quot;
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
@@ -53759,13 +53929,18 @@ id|nid_v
 comma
 l_int|2
 comma
-"&t;&t;&t;&t;&t;&t;&t;"
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -53774,10 +53949,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -53787,10 +53958,10 @@ id|spec
 comma
 id|ALC_CTL_BIND_MUTE
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Center Playback Switch&quot;
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
@@ -53798,13 +53969,18 @@ id|nid_s
 comma
 l_int|1
 comma
-"&t;&t;&t;&t;&t;&t;"
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -53813,10 +53989,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -53826,10 +53998,10 @@ id|spec
 comma
 id|ALC_CTL_BIND_MUTE
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 l_string|&quot;LFE Playback Switch&quot;
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
@@ -53837,13 +54009,18 @@ id|nid_s
 comma
 l_int|2
 comma
-"&t;&t;&t;&t;&t;&t;"
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -53870,10 +54047,6 @@ id|i
 )paren
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -53885,7 +54058,7 @@ id|ALC_CTL_WIDGET_VOL
 comma
 id|name
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
@@ -53893,13 +54066,18 @@ id|nid_v
 comma
 l_int|3
 comma
-"&t;&t;&t;&t;&t;&t;&t;"
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -53922,10 +54100,6 @@ id|i
 )paren
 suffix:semicolon
 "&t;&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -53937,7 +54111,7 @@ id|ALC_CTL_BIND_MUTE
 comma
 id|name
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
@@ -53945,13 +54119,18 @@ id|nid_v
 comma
 l_int|3
 comma
-"&t;&t;&t;&t;&t;&t;&t;"
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -54107,10 +54286,6 @@ id|pfx
 )paren
 suffix:semicolon
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -54132,11 +54307,15 @@ l_int|3
 comma
 l_int|0
 comma
-"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -54156,10 +54335,6 @@ id|pfx
 )paren
 suffix:semicolon
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -54181,11 +54356,15 @@ l_int|3
 comma
 l_int|2
 comma
-"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -54222,10 +54401,6 @@ id|pfx
 )paren
 suffix:semicolon
 "&t;&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|add_control
@@ -54247,11 +54422,15 @@ l_int|3
 comma
 l_int|0
 comma
-"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
-)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -54302,10 +54481,6 @@ l_int|0
 )brace
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|snd_hda_parse_pin_def_config
@@ -54316,10 +54491,15 @@ comma
 op_amp
 id|spec-&gt;autocfg
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|alc861vd_ignore
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -54340,10 +54520,6 @@ l_int|0
 suffix:semicolon
 multiline_comment|/* can&squot;t find valid BIOS pin config */
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|alc880_auto_fill_dac_nids
@@ -54354,12 +54530,20 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
 "&t;&t;"
-(paren
+r_return
+id|err
+suffix:semicolon
+"&t;"
 id|err
 op_assign
 id|alc861vd_auto_create_multi_out_ctls
@@ -54367,16 +54551,23 @@ c_func
 (paren
 id|spec
 comma
-"&t;&t;&t;"
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
 "&t;&t;"
-(paren
+r_return
+id|err
+suffix:semicolon
+"&t;"
 id|err
 op_assign
 id|alc861vd_auto_create_extra_out
@@ -54384,20 +54575,29 @@ c_func
 (paren
 id|spec
 comma
-"&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|spec-&gt;autocfg.speaker_pins
 (braket
 l_int|0
 )braket
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Speaker&quot;
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
 "&t;&t;"
-(paren
+r_return
+id|err
+suffix:semicolon
+"&t;"
 id|err
 op_assign
 id|alc861vd_auto_create_extra_out
@@ -54405,20 +54605,29 @@ c_func
 (paren
 id|spec
 comma
-"&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|spec-&gt;autocfg.hp_pins
 (braket
 l_int|0
 )braket
 comma
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Headphone&quot;
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
 "&t;&t;"
-(paren
+r_return
+id|err
+suffix:semicolon
+"&t;"
 id|err
 op_assign
 id|alc880_auto_create_analog_input_ctls
@@ -54426,11 +54635,15 @@ c_func
 (paren
 id|spec
 comma
-"&t;&t;&t;"
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
@@ -57367,6 +57580,11 @@ r_int
 id|present
 suffix:semicolon
 "&t;"
+r_int
+r_char
+id|bits
+suffix:semicolon
+"&t;"
 id|present
 op_assign
 id|snd_hda_codec_read
@@ -57387,6 +57605,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -57403,12 +57631,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -57428,12 +57651,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 )brace
@@ -57451,6 +57669,11 @@ id|codec
 r_int
 r_int
 id|present
+suffix:semicolon
+"&t;"
+r_int
+r_char
+id|bits
 suffix:semicolon
 "&t;"
 id|present
@@ -57473,6 +57696,16 @@ op_amp
 l_int|0x80000000
 suffix:semicolon
 "&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+l_int|0x80
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_amp_update
 c_func
 (paren
@@ -57489,12 +57722,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -57514,12 +57742,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -57539,12 +57762,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 "&t;"
@@ -57564,12 +57782,7 @@ comma
 "&t;&t;&t;&t;"
 l_int|0x80
 comma
-id|present
-ques
-c_cond
-l_int|0x80
-suffix:colon
-l_int|0
+id|bits
 )paren
 suffix:semicolon
 )brace
@@ -57917,7 +58130,6 @@ comma
 )brace
 comma
 "&t;"
-"&t;"
 (braket
 id|ALC662_3ST_6ch
 )braket
@@ -58005,7 +58217,6 @@ comma
 "&t;"
 )brace
 comma
-"&t;"
 "&t;"
 (braket
 id|ALC662_5ST_DIG
@@ -58326,6 +58537,7 @@ l_int|1
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
@@ -58365,6 +58577,7 @@ l_int|2
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
@@ -58404,6 +58617,7 @@ l_int|1
 comma
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
@@ -58443,6 +58657,7 @@ l_int|2
 comma
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
@@ -58499,6 +58714,7 @@ l_int|3
 comma
 l_int|0
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 )paren
 )paren
@@ -58551,6 +58767,7 @@ l_int|3
 comma
 l_int|2
 comma
+"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
@@ -59447,10 +59664,6 @@ l_int|0
 suffix:semicolon
 multiline_comment|/* can&squot;t find valid BIOS pin config */
 "&t;"
-r_if
-c_cond
-(paren
-(paren
 id|err
 op_assign
 id|alc880_auto_fill_dac_nids
@@ -59461,12 +59674,20 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc662_auto_create_multi_out_ctls
@@ -59477,12 +59698,20 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc662_auto_create_extra_out
@@ -59490,21 +59719,29 @@ c_func
 (paren
 id|spec
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|spec-&gt;autocfg.speaker_pins
 (braket
 l_int|0
 )braket
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Speaker&quot;
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc662_auto_create_extra_out
@@ -59517,15 +59754,23 @@ id|spec-&gt;autocfg.hp_pins
 l_int|0
 )braket
 comma
-"&t;&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 l_string|&quot;Headphone&quot;
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
-op_logical_or
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
 "&t;"
-(paren
 id|err
 op_assign
 id|alc662_auto_create_analog_input_ctls
@@ -59536,7 +59781,12 @@ comma
 op_amp
 id|spec-&gt;autocfg
 )paren
-)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
