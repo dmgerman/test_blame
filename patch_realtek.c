@@ -50187,6 +50187,19 @@ c_func
 (paren
 l_int|0x1043
 comma
+l_int|0x13d7
+comma
+l_string|&quot;ASUS A9rp&quot;
+comma
+id|ALC861_ASUS_LAPTOP
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
 l_int|0x1393
 comma
 l_string|&quot;ASUS&quot;
