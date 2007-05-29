@@ -38016,6 +38016,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x15d9
+comma
+l_int|0x8780
+comma
+l_string|&quot;Supermicro PDSBA&quot;
+comma
+id|ALC883_3ST_6ch
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x161f
 comma
 l_int|0x2054
