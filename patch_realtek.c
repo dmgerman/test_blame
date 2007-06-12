@@ -37783,6 +37783,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x103c
+comma
+l_int|0x2a3d
+comma
+l_string|&quot;HP Pavillion&quot;
+comma
+id|ALC883_6ST_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x108e
 comma
 l_int|0x534d
