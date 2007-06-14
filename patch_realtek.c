@@ -60842,6 +60842,19 @@ id|ALC861VD_LENOVO
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1179
+comma
+l_int|0xff00
+comma
+l_string|&quot;Toshiba A135&quot;
+comma
+id|ALC861VD_LENOVO
+)paren
+comma
+"&t;"
 (brace
 )brace
 )brace
