@@ -67805,20 +67805,10 @@ r_return
 id|err
 suffix:semicolon
 "&t;"
-r_else
-r_if
-c_cond
-(paren
-id|err
-OG
-l_int|0
-)paren
-"&t;&t;"
-multiline_comment|/* hack - override the init verbs */
-"&t;&t;"
 id|spec-&gt;init_verbs
 (braket
-l_int|0
+id|spec-&gt;num_init_verbs
+op_increment
 )braket
 op_assign
 id|alc662_auto_init_verbs
@@ -67837,7 +67827,7 @@ op_increment
 suffix:semicolon
 "&t;"
 r_return
-id|err
+l_int|1
 suffix:semicolon
 )brace
 multiline_comment|/* additional initialization for auto-configuration model */
@@ -68016,6 +68006,7 @@ r_else
 r_if
 c_cond
 (paren
+op_logical_neg
 id|err
 )paren
 (brace
