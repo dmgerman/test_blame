@@ -9508,6 +9508,7 @@ comma
 comma
 )brace
 suffix:semicolon
+macro_line|#define alc880_lg_lw_modes alc880_threestack_modes
 r_struct
 id|snd_kcontrol_new
 id|alc880_lg_lw_mixer
@@ -9519,7 +9520,7 @@ op_assign
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Master Playback Volume&quot;
+l_string|&quot;Front Playback Volume&quot;
 comma
 l_int|0x0c
 comma
@@ -9532,11 +9533,123 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;Master Playback Switch&quot;
+l_string|&quot;Front Playback Switch&quot;
 comma
 l_int|0x0c
 comma
 l_int|2
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Surround Playback Volume&quot;
+comma
+l_int|0x0f
+comma
+l_int|0x0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_BIND_MUTE
+c_func
+(paren
+l_string|&quot;Surround Playback Switch&quot;
+comma
+l_int|0x0f
+comma
+l_int|2
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME_MONO
+c_func
+(paren
+l_string|&quot;Center Playback Volume&quot;
+comma
+l_int|0x0e
+comma
+l_int|1
+comma
+l_int|0x0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME_MONO
+c_func
+(paren
+l_string|&quot;LFE Playback Volume&quot;
+comma
+l_int|0x0e
+comma
+l_int|2
+comma
+l_int|0x0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_BIND_MUTE_MONO
+c_func
+(paren
+l_string|&quot;Center Playback Switch&quot;
+comma
+l_int|0x0e
+comma
+l_int|1
+comma
+l_int|2
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_BIND_MUTE_MONO
+c_func
+(paren
+l_string|&quot;LFE Playback Switch&quot;
+comma
+l_int|0x0e
+comma
+l_int|2
+comma
+l_int|2
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Line Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x02
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Line Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x02
 comma
 id|HDA_INPUT
 )paren
@@ -9595,6 +9708,41 @@ id|HDA_INPUT
 comma
 "&t;"
 (brace
+"&t;&t;"
+dot
+id|iface
+op_assign
+id|SNDRV_CTL_ELEM_IFACE_MIXER
+comma
+"&t;&t;"
+dot
+id|name
+op_assign
+l_string|&quot;Channel Mode&quot;
+comma
+"&t;&t;"
+dot
+id|info
+op_assign
+id|alc_ch_mode_info
+comma
+"&t;&t;"
+dot
+id|get
+op_assign
+id|alc_ch_mode_get
+comma
+"&t;&t;"
+dot
+id|put
+op_assign
+id|alc_ch_mode_put
+comma
+"&t;"
+)brace
+comma
+"&t;"
+(brace
 )brace
 multiline_comment|/* end */
 )brace
@@ -9606,6 +9754,36 @@ id|alc880_lg_lw_init_verbs
 )braket
 op_assign
 (brace
+"&t;"
+(brace
+l_int|0x13
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x00
+)brace
+comma
+multiline_comment|/* HP */
+"&t;"
+(brace
+l_int|0x10
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x02
+)brace
+comma
+multiline_comment|/* mic/clfe */
+"&t;"
+(brace
+l_int|0x12
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x03
+)brace
+comma
+multiline_comment|/* line/surround */
 "&t;"
 multiline_comment|/* set capture source to mic-in */
 "&t;"
@@ -9682,15 +9860,6 @@ id|AMP_OUT_UNMUTE
 comma
 "&t;"
 multiline_comment|/* HP-out */
-"&t;"
-(brace
-l_int|0x13
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x00
-)brace
-comma
 "&t;"
 (brace
 l_int|0x1b
@@ -15623,7 +15792,11 @@ comma
 dot
 id|num_dacs
 op_assign
-l_int|1
+id|ARRAY_SIZE
+c_func
+(paren
+id|alc880_dac_nids
+)paren
 comma
 "&t;&t;"
 dot
@@ -15644,14 +15817,14 @@ op_assign
 id|ARRAY_SIZE
 c_func
 (paren
-id|alc880_2_jack_modes
+id|alc880_lg_lw_modes
 )paren
 comma
 "&t;&t;"
 dot
 id|channel_mode
 op_assign
-id|alc880_2_jack_modes
+id|alc880_lg_lw_modes
 comma
 "&t;&t;"
 dot
