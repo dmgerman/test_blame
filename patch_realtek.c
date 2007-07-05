@@ -66999,7 +66999,7 @@ suffix:semicolon
 "&t;&t;"
 id|nid
 op_assign
-id|alc880_idx_to_dac
+id|alc880_idx_to_mixer
 c_func
 (paren
 id|i
