@@ -47682,7 +47682,15 @@ l_string|&quot;benq&quot;
 comma
 "&t;"
 (braket
-id|ALC262_BENQ_ED8
+id|ALC262_BENQ_T31
+)braket
+"&t;"
+op_assign
+l_string|&quot;benq-t31&quot;
+comma
+"&t;"
+(braket
+id|ALC262_SONY_ASSAMD
 )braket
 "&t;"
 op_assign
