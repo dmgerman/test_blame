@@ -58222,18 +58222,9 @@ id|ALC861_TOSHIBA
 )paren
 comma
 "&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1179
-comma
-l_int|0xff10
-comma
-l_string|&quot;Toshiba&quot;
-comma
-id|ALC861_TOSHIBA
-)paren
-comma
+multiline_comment|/* FIXME: the entry below breaks Toshiba A100 (model=auto works!)&n;&t; *        Any other models that need this preset?&n;&t; */
+"&t;"
+multiline_comment|/* SND_PCI_QUIRK(0x1179, 0xff10, &quot;Toshiba&quot;, ALC861_TOSHIBA), */
 "&t;"
 id|SND_PCI_QUIRK
 c_func
