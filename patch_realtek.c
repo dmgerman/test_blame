@@ -9623,8 +9623,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-multiline_comment|/*&n; * LG LW20&n; *&n; * Pin assignment:&n; *   Speaker-out: 0x14&n; *   Mic-In: 0x18&n; *   Built-in Mic-In: 0x19 (?)&n; *   HP-Out: 0x1b&n; *   SPDIF-Out: 0x1e&n; */
-multiline_comment|/* seems analog CD is not working */
+multiline_comment|/*&n; * LG LW20&n; *&n; * Pin assignment:&n; *   Speaker-out: 0x14&n; *   Mic-In: 0x18&n; *   Built-in Mic-In: 0x19&n; *   Line-In: 0x1b&n; *   HP-Out: 0x1a&n; *   SPDIF-Out: 0x1e&n; */
 r_struct
 id|hda_input_mux
 id|alc880_lg_lw_capture_source
@@ -9634,7 +9633,7 @@ op_assign
 dot
 id|num_items
 op_assign
-l_int|2
+l_int|3
 comma
 "&t;"
 dot
@@ -9653,6 +9652,13 @@ comma
 l_string|&quot;Internal Mic&quot;
 comma
 l_int|0x1
+)brace
+comma
+"&t;&t;"
+(brace
+l_string|&quot;Line In&quot;
+comma
+l_int|0x2
 )brace
 comma
 "&t;"
