@@ -58563,6 +58563,32 @@ id|ALC861_3ST
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1462
+comma
+l_int|0x7254
+comma
+l_string|&quot;HP dx2200 (MSI MS-7254)&quot;
+comma
+id|ALC861_3ST
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1462
+comma
+l_int|0x7297
+comma
+l_string|&quot;HP dx2250 (MSI MS-7297)&quot;
+comma
+id|ALC861_3ST
+)paren
+comma
+"&t;"
 (brace
 )brace
 )brace
