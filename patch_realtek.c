@@ -39679,6 +39679,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x103c
+comma
+l_int|0x2a4f
+comma
+l_string|&quot;HP Samba&quot;
+comma
+id|ALC888_HP_LUCKNOW
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x17c0
 comma
 l_int|0x4071
