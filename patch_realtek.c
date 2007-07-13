@@ -352,10 +352,10 @@ id|ALC888_LENOVO_MS7195_DIG
 comma
 "&t;&t;"
 "&t;"
-id|ALC888_HP_NETTLE
+id|ALC888_6ST_HP
 comma
 "&t;"
-id|ALC888_HP_LUCKNOW
+id|ALC888_3ST_HP
 comma
 "&t;"
 id|ALC883_AUTO
@@ -35712,7 +35712,7 @@ suffix:semicolon
 "&t;"
 r_struct
 id|snd_kcontrol_new
-id|alc888_hp_nettle_mixer
+id|alc888_6st_hp_mixer
 (braket
 )braket
 op_assign
@@ -36131,7 +36131,7 @@ multiline_comment|/* end */
 suffix:semicolon
 r_struct
 id|snd_kcontrol_new
-id|alc888_hp_lucknow_mixer
+id|alc888_3st_hp_mixer
 (braket
 )braket
 op_assign
@@ -37460,7 +37460,7 @@ multiline_comment|/* end */
 suffix:semicolon
 r_struct
 id|hda_verb
-id|alc888_hp_nettle_verbs
+id|alc888_6st_hp_verbs
 (braket
 )braket
 op_assign
@@ -37516,7 +37516,7 @@ multiline_comment|/* Side : output 3 (0x0f) */
 suffix:semicolon
 r_struct
 id|hda_verb
-id|alc888_hp_lucknow_verbs
+id|alc888_3st_hp_verbs
 (braket
 )braket
 op_assign
@@ -37561,7 +37561,7 @@ multiline_comment|/* CLFE : output 2 (0x0e) */
 suffix:semicolon
 r_struct
 id|hda_verb
-id|alc888_hp_lucknow_2ch_init
+id|alc888_3st_hp_2ch_init
 (braket
 )braket
 op_assign
@@ -37609,7 +37609,7 @@ comma
 suffix:semicolon
 r_struct
 id|hda_verb
-id|alc888_hp_lucknow_6ch_init
+id|alc888_3st_hp_6ch_init
 (braket
 )braket
 op_assign
@@ -37657,7 +37657,7 @@ comma
 suffix:semicolon
 r_struct
 id|hda_channel_mode
-id|alc888_hp_lucknow_modes
+id|alc888_3st_hp_modes
 (braket
 l_int|2
 )braket
@@ -37667,14 +37667,14 @@ op_assign
 (brace
 l_int|2
 comma
-id|alc888_hp_lucknow_2ch_init
+id|alc888_3st_hp_2ch_init
 )brace
 comma
 "&t;"
 (brace
 l_int|6
 comma
-id|alc888_hp_lucknow_6ch_init
+id|alc888_3st_hp_6ch_init
 )brace
 comma
 )brace
@@ -39215,19 +39215,19 @@ l_string|&quot;lenovo-ms7195-dig&quot;
 comma
 "&t;"
 (braket
-id|ALC888_HP_NETTLE
+id|ALC888_6ST_HP
 )braket
-"&t;"
+"&t;&t;"
 op_assign
-l_string|&quot;hp-nettle&quot;
+l_string|&quot;6stack-hp&quot;
 comma
 "&t;"
 (braket
-id|ALC888_HP_LUCKNOW
+id|ALC888_3ST_HP
 )braket
-"&t;"
+"&t;&t;"
 op_assign
-l_string|&quot;hp-lucknow&quot;
+l_string|&quot;3stack-hp&quot;
 comma
 "&t;"
 (braket
@@ -39659,7 +39659,7 @@ l_int|0x2a61
 comma
 l_string|&quot;HP Nettle&quot;
 comma
-id|ALC888_HP_NETTLE
+id|ALC888_6ST_HP
 )paren
 comma
 "&t;"
@@ -39672,7 +39672,7 @@ l_int|0x2a60
 comma
 l_string|&quot;HP Lucknow&quot;
 comma
-id|ALC888_HP_LUCKNOW
+id|ALC888_3ST_HP
 )paren
 comma
 "&t;"
@@ -39685,7 +39685,7 @@ l_int|0x2a4f
 comma
 l_string|&quot;HP Samba&quot;
 comma
-id|ALC888_HP_LUCKNOW
+id|ALC888_3ST_HP
 )paren
 comma
 "&t;"
@@ -40959,7 +40959,7 @@ comma
 "&t;"
 "&t;"
 (braket
-id|ALC888_HP_NETTLE
+id|ALC888_6ST_HP
 )braket
 op_assign
 (brace
@@ -40968,7 +40968,7 @@ dot
 id|mixers
 op_assign
 (brace
-id|alc888_hp_nettle_mixer
+id|alc888_6st_hp_mixer
 comma
 id|alc883_chmode_mixer
 )brace
@@ -40980,7 +40980,7 @@ op_assign
 (brace
 id|alc883_init_verbs
 comma
-id|alc888_hp_nettle_verbs
+id|alc888_6st_hp_verbs
 )brace
 comma
 "&t;&t;"
@@ -41055,7 +41055,7 @@ comma
 comma
 "&t;"
 (braket
-id|ALC888_HP_LUCKNOW
+id|ALC888_3ST_HP
 )braket
 op_assign
 (brace
@@ -41064,7 +41064,7 @@ dot
 id|mixers
 op_assign
 (brace
-id|alc888_hp_lucknow_mixer
+id|alc888_3st_hp_mixer
 comma
 id|alc883_chmode_mixer
 )brace
@@ -41076,7 +41076,7 @@ op_assign
 (brace
 id|alc883_init_verbs
 comma
-id|alc888_hp_lucknow_verbs
+id|alc888_3st_hp_verbs
 )brace
 comma
 "&t;&t;"
@@ -41118,14 +41118,14 @@ op_assign
 id|ARRAY_SIZE
 c_func
 (paren
-id|alc888_hp_lucknow_modes
+id|alc888_3st_hp_modes
 )paren
 comma
 "&t;&t;"
 dot
 id|channel_mode
 op_assign
-id|alc888_hp_lucknow_modes
+id|alc888_3st_hp_modes
 comma
 "&t;&t;"
 dot
