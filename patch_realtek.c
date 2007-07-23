@@ -1731,47 +1731,7 @@ suffix:semicolon
 macro_line|#define ALC_PIN_MODE(xname, nid, dir) &bslash;&n;&t;{ .iface = SNDRV_CTL_ELEM_IFACE_MIXER, .name = xname, .index = 0,  &bslash;&n;&t;  .info = alc_pin_mode_info, &bslash;&n;&t;  .get = alc_pin_mode_get, &bslash;&n;&t;  .put = alc_pin_mode_put, &bslash;&n;&t;  .private_value = nid | (dir&lt;&lt;16) }
 multiline_comment|/* A switch control for ALC260 GPIO pins.  Multiple GPIOs can be ganged&n; * together using a mask with more than one bit set.  This control is&n; * currently used only by the ALC260 test model.  At this stage they are not&n; * needed for any &quot;production&quot; models.&n; */
 macro_line|#ifdef CONFIG_SND_DEBUG
-r_int
-id|alc_gpio_data_info
-c_func
-(paren
-r_struct
-id|snd_kcontrol
-op_star
-id|kcontrol
-comma
-"&t;&t;&t;"
-r_struct
-id|snd_ctl_elem_info
-op_star
-id|uinfo
-)paren
-(brace
-"&t;"
-id|uinfo-&gt;type
-op_assign
-id|SNDRV_CTL_ELEM_TYPE_BOOLEAN
-suffix:semicolon
-"&t;"
-id|uinfo-&gt;count
-op_assign
-l_int|1
-suffix:semicolon
-"&t;"
-id|uinfo-&gt;value.integer.min
-op_assign
-l_int|0
-suffix:semicolon
-"&t;"
-id|uinfo-&gt;value.integer.max
-op_assign
-l_int|1
-suffix:semicolon
-"&t;"
-r_return
-l_int|0
-suffix:semicolon
-)brace
+macro_line|#define alc_gpio_data_info&t;snd_ctl_boolean_mono_info
 r_int
 id|alc_gpio_data_get
 c_func
@@ -2014,47 +1974,7 @@ macro_line|#define ALC_GPIO_DATA_SWITCH(xname, nid, mask) &bslash;&n;&t;{ .iface
 macro_line|#endif   /* CONFIG_SND_DEBUG */
 multiline_comment|/* A switch control to allow the enabling of the digital IO pins on the&n; * ALC260.  This is incredibly simplistic; the intention of this control is&n; * to provide something in the test model allowing digital outputs to be&n; * identified if present.  If models are found which can utilise these&n; * outputs a more complete mixer control can be devised for those models if&n; * necessary.&n; */
 macro_line|#ifdef CONFIG_SND_DEBUG
-r_int
-id|alc_spdif_ctrl_info
-c_func
-(paren
-r_struct
-id|snd_kcontrol
-op_star
-id|kcontrol
-comma
-"&t;&t;&t;"
-r_struct
-id|snd_ctl_elem_info
-op_star
-id|uinfo
-)paren
-(brace
-"&t;"
-id|uinfo-&gt;type
-op_assign
-id|SNDRV_CTL_ELEM_TYPE_BOOLEAN
-suffix:semicolon
-"&t;"
-id|uinfo-&gt;count
-op_assign
-l_int|1
-suffix:semicolon
-"&t;"
-id|uinfo-&gt;value.integer.min
-op_assign
-l_int|0
-suffix:semicolon
-"&t;"
-id|uinfo-&gt;value.integer.max
-op_assign
-l_int|1
-suffix:semicolon
-"&t;"
-r_return
-l_int|0
-suffix:semicolon
-)brace
+macro_line|#define alc_spdif_ctrl_info&t;snd_ctl_boolean_mono_info
 r_int
 id|alc_spdif_ctrl_get
 c_func
