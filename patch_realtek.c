@@ -63300,6 +63300,19 @@ id|ALC861VD_LENOVO
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1849
+comma
+l_int|0x0862
+comma
+l_string|&quot;ASRock K8NF6G-VSTA&quot;
+comma
+id|ALC861VD_6ST_DIG
+)paren
+comma
+"&t;"
 (brace
 )brace
 )brace
