@@ -607,6 +607,13 @@ id|jack_present
 suffix:colon
 l_int|1
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_struct
+id|hda_loopback_check
+id|loopback
+suffix:semicolon
+macro_line|#endif
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * configuration template - to be copied to the spec instance&n; */
@@ -724,6 +731,14 @@ id|hda_codec
 op_star
 )paren
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_struct
+id|hda_amp_list
+op_star
+id|loopbacks
+suffix:semicolon
+macro_line|#endif
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * input MUX handling&n; */
@@ -2407,6 +2422,13 @@ id|spec-&gt;init_hook
 op_assign
 id|preset-&gt;init_hook
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|preset-&gt;loopbacks
+suffix:semicolon
+macro_line|#endif
 )brace
 multiline_comment|/* Enable GPIO mask and set output */
 r_struct
@@ -6045,7 +6067,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -6058,7 +6080,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -6071,7 +6093,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -6084,7 +6106,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -6097,10 +6119,36 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
+)paren
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|6
+)paren
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|7
 )paren
 )brace
 comma
@@ -9132,7 +9180,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|6
@@ -9145,7 +9193,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|7
@@ -9760,7 +9808,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|7
@@ -9971,6 +10019,106 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+r_struct
+id|hda_amp_list
+id|alc880_loopbacks
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|0
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|1
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|2
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|3
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|4
+)brace
+comma
+"&t;"
+(brace
+)brace
+multiline_comment|/* end */
+)brace
+suffix:semicolon
+r_struct
+id|hda_amp_list
+id|alc880_lg_loopbacks
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|1
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|6
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|7
+)brace
+comma
+"&t;"
+(brace
+)brace
+multiline_comment|/* end */
+)brace
+suffix:semicolon
+macro_line|#endif
 multiline_comment|/*&n; * Common callbacks&n; */
 r_int
 id|alc_init
@@ -10082,6 +10230,43 @@ id|res
 )paren
 suffix:semicolon
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+r_int
+id|alc_check_power_status
+c_func
+(paren
+r_struct
+id|hda_codec
+op_star
+id|codec
+comma
+id|hda_nid_t
+id|nid
+)paren
+(brace
+"&t;"
+r_struct
+id|alc_spec
+op_star
+id|spec
+op_assign
+id|codec-&gt;spec
+suffix:semicolon
+"&t;"
+r_return
+id|snd_hda_check_amp_list_power
+c_func
+(paren
+id|codec
+comma
+op_amp
+id|spec-&gt;loopback
+comma
+id|nid
+)paren
+suffix:semicolon
+)brace
+macro_line|#endif
 multiline_comment|/*&n; * Analog playback callbacks&n; */
 r_int
 id|alc880_playback_pcm_open
@@ -11210,6 +11395,14 @@ id|unsol_event
 op_assign
 id|alc_unsol_event
 comma
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+dot
+id|check_power_status
+op_assign
+id|alc_check_power_status
+comma
+macro_line|#endif
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * Test configuration for debugging&n; *&n; * Almost all inputs/outputs are enabled.  I/O pins can be configured via&n; * enum controls.&n; */
@@ -15580,6 +15773,14 @@ id|init_hook
 op_assign
 id|alc880_lg_automute
 comma
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;&t;"
+dot
+id|loopbacks
+op_assign
+id|alc880_lg_loopbacks
+comma
+macro_line|#endif
 "&t;"
 )brace
 comma
@@ -18286,6 +18487,20 @@ id|spec-&gt;init_hook
 op_assign
 id|alc880_auto_init
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;loopback.amplist
+)paren
+"&t;&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|alc880_loopbacks
+suffix:semicolon
+macro_line|#endif
 "&t;"
 r_return
 l_int|0
@@ -20136,29 +20351,40 @@ comma
 "&t;"
 multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp;&n;&t; * Line In 2 = 0x03&n;&t; */
 "&t;"
-multiline_comment|/* mute CD */
+multiline_comment|/* mute analog inputs */
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
-l_int|4
+l_int|0
 )paren
 )brace
 comma
 "&t;"
-multiline_comment|/* mute Line In */
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|1
+)paren
+)brace
+comma
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -20166,17 +20392,28 @@ l_int|2
 )brace
 comma
 "&t;"
-multiline_comment|/* mute Mic */
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|3
+)paren
+)brace
+comma
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
-l_int|0
+l_int|4
 )paren
 )brace
 comma
@@ -20425,59 +20662,69 @@ comma
 "&t;"
 multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp;&n;&t; * Line In 2 = 0x03&n;&t; */
 "&t;"
-multiline_comment|/* unmute CD */
+multiline_comment|/* mute analog inputs */
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+id|AMP_IN_MUTE
+c_func
 (paren
-l_int|0x7000
-op_or
-(paren
-l_int|0x04
-op_lshift
-l_int|8
-)paren
+l_int|0
 )paren
 )brace
 comma
 "&t;"
-multiline_comment|/* unmute Line In */
-"&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+id|AMP_IN_MUTE
+c_func
 (paren
-l_int|0x7000
-op_or
-(paren
-l_int|0x02
-op_lshift
-l_int|8
-)paren
+l_int|1
 )paren
 )brace
 comma
 "&t;"
-multiline_comment|/* unmute Mic */
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|2
+)paren
+)brace
+comma
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+id|AMP_IN_MUTE
+c_func
 (paren
-l_int|0x7000
-op_or
-(paren
-l_int|0x00
-op_lshift
-l_int|8
+l_int|3
 )paren
+)brace
+comma
+"&t;"
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|4
 )paren
 )brace
 comma
@@ -20750,59 +20997,69 @@ comma
 "&t;"
 multiline_comment|/* Amp Indexes: CD = 0x04, Line In 1 = 0x02, Mic 1 = 0x00 &amp;&n;&t; * Line In 2 = 0x03&n;&t; */
 "&t;"
-multiline_comment|/* unmute CD */
+multiline_comment|/* mute analog inputs */
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+id|AMP_IN_MUTE
+c_func
 (paren
-l_int|0x7000
-op_or
-(paren
-l_int|0x04
-op_lshift
-l_int|8
-)paren
+l_int|0
 )paren
 )brace
 comma
 "&t;"
-multiline_comment|/* unmute Line In */
-"&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+id|AMP_IN_MUTE
+c_func
 (paren
-l_int|0x7000
-op_or
-(paren
-l_int|0x02
-op_lshift
-l_int|8
-)paren
+l_int|1
 )paren
 )brace
 comma
 "&t;"
-multiline_comment|/* unmute Mic */
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|2
+)paren
+)brace
+comma
 "&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
+id|AMP_IN_MUTE
+c_func
 (paren
-l_int|0x7000
-op_or
-(paren
-l_int|0x00
-op_lshift
-l_int|8
+l_int|3
 )paren
+)brace
+comma
+"&t;"
+(brace
+l_int|0x07
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|4
 )paren
 )brace
 comma
@@ -24484,12 +24741,14 @@ multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the a
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
+multiline_comment|/* mute analog inputs */
+"&t;"
 (brace
 l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -24502,7 +24761,7 @@ l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -24515,7 +24774,7 @@ l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -24528,7 +24787,7 @@ l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -24541,7 +24800,7 @@ l_int|0x07
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -24963,6 +25222,66 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+r_struct
+id|hda_amp_list
+id|alc260_loopbacks
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+(brace
+l_int|0x07
+comma
+id|HDA_INPUT
+comma
+l_int|0
+)brace
+comma
+"&t;"
+(brace
+l_int|0x07
+comma
+id|HDA_INPUT
+comma
+l_int|1
+)brace
+comma
+"&t;"
+(brace
+l_int|0x07
+comma
+id|HDA_INPUT
+comma
+l_int|2
+)brace
+comma
+"&t;"
+(brace
+l_int|0x07
+comma
+id|HDA_INPUT
+comma
+l_int|3
+)brace
+comma
+"&t;"
+(brace
+l_int|0x07
+comma
+id|HDA_INPUT
+comma
+l_int|4
+)brace
+comma
+"&t;"
+(brace
+)brace
+multiline_comment|/* end */
+)brace
+suffix:semicolon
+macro_line|#endif
 multiline_comment|/*&n; * ALC260 configurations&n; */
 r_const
 r_char
@@ -26277,6 +26596,20 @@ id|spec-&gt;init_hook
 op_assign
 id|alc260_auto_init
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;loopback.amplist
+)paren
+"&t;&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|alc260_loopbacks
+suffix:semicolon
+macro_line|#endif
 "&t;"
 r_return
 l_int|0
@@ -29769,7 +30102,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
+multiline_comment|/* Mute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -29778,7 +30111,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -29791,7 +30124,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -29804,7 +30137,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -29817,7 +30150,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -29830,7 +30163,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -30489,6 +30822,9 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#define alc882_loopbacks&t;alc880_loopbacks
+macro_line|#endif
 multiline_comment|/* pcm configuration: identiacal with ALC880 */
 macro_line|#define alc882_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc882_pcm_analog_capture&t;alc880_pcm_analog_capture
@@ -32384,6 +32720,20 @@ id|spec-&gt;init_hook
 op_assign
 id|alc882_auto_init
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;loopback.amplist
+)paren
+"&t;&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|alc882_loopbacks
+suffix:semicolon
+macro_line|#endif
 "&t;"
 r_return
 l_int|0
@@ -37063,12 +37413,14 @@ l_int|1
 )brace
 comma
 "&t;"
+multiline_comment|/* mute analog input loopbacks */
+"&t;"
 (brace
 l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -37081,7 +37433,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -37094,7 +37446,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -37107,7 +37459,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -37120,7 +37472,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -38794,7 +39146,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
+multiline_comment|/* Mute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -38803,7 +39155,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -38816,7 +39168,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -38829,7 +39181,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -38842,7 +39194,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -38855,7 +39207,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -39272,6 +39624,9 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#define alc883_loopbacks&t;alc880_loopbacks
+macro_line|#endif
 multiline_comment|/* pcm configuration: identiacal with ALC880 */
 macro_line|#define alc883_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc883_pcm_analog_capture&t;alc880_pcm_analog_capture
@@ -42193,6 +42548,20 @@ id|spec-&gt;init_hook
 op_assign
 id|alc883_auto_init
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;loopback.amplist
+)paren
+"&t;&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|alc883_loopbacks
+suffix:semicolon
+macro_line|#endif
 "&t;"
 r_return
 l_int|0
@@ -43469,7 +43838,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
+multiline_comment|/* Mute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -43478,7 +43847,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -43491,7 +43860,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -43504,7 +43873,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -43517,7 +43886,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -43530,7 +43899,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -45751,7 +46120,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
+multiline_comment|/* Mute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -45760,7 +46129,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -45773,7 +46142,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -45786,7 +46155,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -45799,7 +46168,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -45812,7 +46181,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -46228,7 +46597,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
+multiline_comment|/* Mute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -46237,7 +46606,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -46250,7 +46619,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -46263,7 +46632,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -46276,7 +46645,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -46289,7 +46658,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -46302,7 +46671,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|5
@@ -46314,7 +46683,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|6
@@ -46890,7 +47259,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for front&n;&t; * panel mic (mic 2)&n;&t; */
+multiline_comment|/* Mute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for front&n;&t; * panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
 "&t;"
@@ -46899,7 +47268,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -46912,7 +47281,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -46925,7 +47294,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -46938,7 +47307,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -46951,7 +47320,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -46964,7 +47333,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|5
@@ -46977,7 +47346,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|6
@@ -46990,7 +47359,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|7
@@ -47600,6 +47969,9 @@ comma
 )brace
 )brace
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#define alc262_loopbacks&t;alc880_loopbacks
+macro_line|#endif
 multiline_comment|/* pcm configuration: identiacal with ALC880 */
 macro_line|#define alc262_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc262_pcm_analog_capture&t;alc880_pcm_analog_capture
@@ -49499,6 +49871,20 @@ id|spec-&gt;init_hook
 op_assign
 id|alc262_auto_init
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;loopback.amplist
+)paren
+"&t;&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|alc262_loopbacks
+suffix:semicolon
+macro_line|#endif
 "&t;&t;"
 "&t;"
 r_return
@@ -51892,6 +52278,9 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#define alc883_loopbacks&t;alc880_loopbacks
+macro_line|#endif
 multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
@@ -58221,6 +58610,57 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+r_struct
+id|hda_amp_list
+id|alc861_loopbacks
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+(brace
+l_int|0x15
+comma
+id|HDA_INPUT
+comma
+l_int|0
+)brace
+comma
+"&t;"
+(brace
+l_int|0x15
+comma
+id|HDA_INPUT
+comma
+l_int|1
+)brace
+comma
+"&t;"
+(brace
+l_int|0x15
+comma
+id|HDA_INPUT
+comma
+l_int|2
+)brace
+comma
+"&t;"
+(brace
+l_int|0x15
+comma
+id|HDA_INPUT
+comma
+l_int|3
+)brace
+comma
+"&t;"
+(brace
+)brace
+multiline_comment|/* end */
+)brace
+suffix:semicolon
+macro_line|#endif
 multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
@@ -59498,6 +59938,20 @@ id|spec-&gt;init_hook
 op_assign
 id|alc861_auto_init
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;loopback.amplist
+)paren
+"&t;&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|alc861_loopbacks
+suffix:semicolon
+macro_line|#endif
 "&t;&t;"
 "&t;"
 r_return
@@ -61071,7 +61525,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -61084,7 +61538,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -61097,7 +61551,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -61110,7 +61564,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -61123,7 +61577,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -62504,6 +62958,9 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#define alc861vd_loopbacks&t;alc880_loopbacks
+macro_line|#endif
 multiline_comment|/* pcm configuration: identiacal with ALC880 */
 macro_line|#define alc861vd_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc861vd_pcm_analog_capture&t;alc880_pcm_analog_capture
@@ -64925,6 +65382,20 @@ id|spec-&gt;init_hook
 op_assign
 id|alc861vd_auto_init
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;loopback.amplist
+)paren
+"&t;&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|alc861vd_loopbacks
+suffix:semicolon
+macro_line|#endif
 "&t;"
 r_return
 l_int|0
@@ -66713,7 +67184,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -66726,7 +67197,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -66739,7 +67210,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -66752,7 +67223,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -66765,7 +67236,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -67148,7 +67619,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|0
@@ -67161,7 +67632,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|1
@@ -67174,7 +67645,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|2
@@ -67187,7 +67658,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|3
@@ -67200,7 +67671,7 @@ l_int|0x0b
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_IN_UNMUTE
+id|AMP_IN_MUTE
 c_func
 (paren
 l_int|4
@@ -67680,6 +68151,9 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#define alc662_loopbacks&t;alc880_loopbacks
+macro_line|#endif
 multiline_comment|/* pcm configuration: identiacal with ALC880 */
 macro_line|#define alc662_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc662_pcm_analog_capture&t;alc880_pcm_analog_capture
@@ -70014,6 +70488,20 @@ id|spec-&gt;init_hook
 op_assign
 id|alc662_auto_init
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;loopback.amplist
+)paren
+"&t;&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|alc662_loopbacks
+suffix:semicolon
+macro_line|#endif
 "&t;"
 r_return
 l_int|0
