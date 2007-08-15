@@ -52318,6 +52318,14 @@ l_string|&quot;3stack&quot;
 comma
 "&t;"
 (braket
+id|ALC268_TOSHIBA
+)braket
+"&t;"
+op_assign
+l_string|&quot;toshiba&quot;
+comma
+"&t;"
+(braket
 id|ALC268_AUTO
 )braket
 "&t;&t;"
@@ -63193,6 +63201,7 @@ comma
 (braket
 id|ALC660VD_3ST_DIG
 )braket
+"&t;"
 op_assign
 l_string|&quot;3stack-660-digout&quot;
 comma
@@ -63235,6 +63244,14 @@ id|ALC861VD_DALLAS
 "&t;"
 op_assign
 l_string|&quot;dallas&quot;
+comma
+"&t;"
+(braket
+id|ALC861VD_HP
+)braket
+"&t;&t;"
+op_assign
+l_string|&quot;hp&quot;
 comma
 "&t;"
 (braket
