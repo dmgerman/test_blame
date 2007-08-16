@@ -64937,6 +64937,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1179
+comma
+l_int|0xff03
+comma
+l_string|&quot;Toshiba P205&quot;
+comma
+id|ALC861VD_LENOVO
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1565
 comma
 l_int|0x820d
