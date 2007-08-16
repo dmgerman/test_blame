@@ -52552,9 +52552,6 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-macro_line|#define alc883_loopbacks&t;alc880_loopbacks
-macro_line|#endif
 multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
