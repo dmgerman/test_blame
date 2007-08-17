@@ -51214,7 +51214,57 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Acer specific */
-macro_line|#define alc268_acer_bind_master_vol&t;alc262_fujitsu_bind_master_vol
+multiline_comment|/* bind volumes of both NID 0x0c and 0x0d */
+r_struct
+id|hda_bind_ctls
+id|alc268_acer_bind_master_vol
+op_assign
+(brace
+"&t;"
+dot
+id|ops
+op_assign
+op_amp
+id|snd_hda_bind_vol
+comma
+"&t;"
+dot
+id|values
+op_assign
+(brace
+"&t;&t;"
+id|HDA_COMPOSE_AMP_VAL
+c_func
+(paren
+l_int|0x02
+comma
+l_int|3
+comma
+l_int|0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;&t;"
+id|HDA_COMPOSE_AMP_VAL
+c_func
+(paren
+l_int|0x03
+comma
+l_int|3
+comma
+l_int|0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;&t;"
+l_int|0
+"&t;"
+)brace
+comma
+)brace
+suffix:semicolon
 macro_line|#define alc268_acer_master_sw_put&t;alc262_fujitsu_master_sw_put
 macro_line|#define alc268_acer_automute&t;alc262_fujitsu_automute
 r_struct
