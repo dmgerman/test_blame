@@ -15585,6 +15585,12 @@ id|alc880_dac_nids
 comma
 "&t;&t;"
 dot
+id|dig_out_nid
+op_assign
+id|ALC880_DIGOUT_NID
+comma
+"&t;&t;"
+dot
 id|num_channel_mode
 op_assign
 id|ARRAY_SIZE
