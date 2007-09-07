@@ -55431,6 +55431,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1179
+comma
+l_int|0xff50
+comma
+l_string|&quot;TOSHIBA A305&quot;
+comma
+id|ALC268_TOSHIBA
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x103c
 comma
 l_int|0x30cc
