@@ -42357,6 +42357,32 @@ id|ALC883_LENOVO_NB0763
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
+l_int|0x8249
+comma
+l_string|&quot;Asus M2A-VM HDMI&quot;
+comma
+id|ALC883_3ST_6ch_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x147b
+comma
+l_int|0x1083
+comma
+l_string|&quot;Abit IP35-PRO&quot;
+comma
+id|ALC883_6ST_DIG
+)paren
+comma
+"&t;"
 (brace
 )brace
 )brace
