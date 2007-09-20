@@ -70959,7 +70959,7 @@ l_int|4
 comma
 "&t;"
 (brace
-l_int|0x02
+l_int|0x0c
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -70972,7 +70972,7 @@ l_int|0
 comma
 "&t;"
 (brace
-l_int|0x02
+l_int|0x0c
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -70985,7 +70985,7 @@ l_int|1
 comma
 "&t;"
 (brace
-l_int|0x03
+l_int|0x0d
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -70998,7 +70998,7 @@ l_int|0
 comma
 "&t;"
 (brace
-l_int|0x03
+l_int|0x0d
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -71011,7 +71011,7 @@ l_int|1
 comma
 "&t;"
 (brace
-l_int|0x04
+l_int|0x0e
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -71024,7 +71024,7 @@ l_int|0
 comma
 "&t;"
 (brace
-l_int|0x04
+l_int|0x0e
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -71429,7 +71429,7 @@ multiline_comment|/* set up input amps for analog loopback */
 multiline_comment|/* Amp Indices: DAC = 0, mixer = 1 */
 "&t;"
 (brace
-l_int|0x02
+l_int|0x0c
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -71442,7 +71442,7 @@ l_int|0
 comma
 "&t;"
 (brace
-l_int|0x02
+l_int|0x0c
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -71455,7 +71455,7 @@ l_int|1
 comma
 "&t;"
 (brace
-l_int|0x03
+l_int|0x0d
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -71468,7 +71468,7 @@ l_int|0
 comma
 "&t;"
 (brace
-l_int|0x03
+l_int|0x0d
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -71481,7 +71481,7 @@ l_int|1
 comma
 "&t;"
 (brace
-l_int|0x04
+l_int|0x0e
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -71494,7 +71494,7 @@ l_int|0
 comma
 "&t;"
 (brace
-l_int|0x04
+l_int|0x0e
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
@@ -72497,7 +72497,7 @@ suffix:semicolon
 "&t;&t;"
 id|nid
 op_assign
-id|alc880_idx_to_mixer
+id|alc880_idx_to_dac
 c_func
 (paren
 id|i
