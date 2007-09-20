@@ -32302,6 +32302,19 @@ c_func
 (paren
 l_int|0x1043
 comma
+l_int|0x1243
+comma
+l_string|&quot;Asus A7J&quot;
+comma
+id|ALC882_ASUS_A7J
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
 l_int|0x13c2
 comma
 l_string|&quot;Asus A7M&quot;
