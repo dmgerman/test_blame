@@ -47341,7 +47341,7 @@ op_assign
 dot
 id|num_items
 op_assign
-l_int|2
+l_int|3
 comma
 "&t;"
 dot
@@ -47353,6 +47353,13 @@ op_assign
 l_string|&quot;Mic&quot;
 comma
 l_int|0x0
+)brace
+comma
+"&t;&t;"
+(brace
+l_string|&quot;Int Mic&quot;
+comma
+l_int|0x1
 )brace
 comma
 "&t;&t;"
@@ -47982,6 +47989,45 @@ comma
 l_int|0x0b
 comma
 l_int|0x0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Int Mic Boost&quot;
+comma
+l_int|0x19
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Int Mic Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x1
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Int Mic Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x1
 comma
 id|HDA_INPUT
 )paren
@@ -51426,6 +51472,9 @@ op_assign
 (brace
 id|alc262_init_verbs
 comma
+id|alc262_EAPD_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc262_fujitsu_unsol_verbs
 )brace
 comma
