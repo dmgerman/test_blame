@@ -73180,6 +73180,13 @@ l_string|&quot;lenovo-101e&quot;
 comma
 "&t;"
 (braket
+id|ALC662_ASUS_EEEPC_P701
+)braket
+op_assign
+l_string|&quot;eeepc-p701&quot;
+comma
+"&t;"
+(braket
 id|ALC662_AUTO
 )braket
 "&t;&t;"
