@@ -577,7 +577,7 @@ suffix:semicolon
 id|hda_nid_t
 id|private_dac_nids
 (braket
-l_int|5
+id|AUTO_CFG_MAX_OUTS
 )braket
 suffix:semicolon
 "&t;"
