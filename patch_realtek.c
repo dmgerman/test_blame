@@ -56578,13 +56578,6 @@ id|alc268_capture_source
 comma
 "&t;&t;"
 dot
-id|input_mux
-op_assign
-op_amp
-id|alc268_capture_source
-comma
-"&t;&t;"
-dot
 id|unsol_event
 op_assign
 id|alc268_toshiba_unsol_event
