@@ -52104,6 +52104,19 @@ c_func
 (paren
 l_int|0x103c
 comma
+l_int|0x1309
+comma
+l_string|&quot;HP xw4*00&quot;
+comma
+id|ALC262_HP_BPC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x103c
+comma
 l_int|0x3014
 comma
 l_string|&quot;HP xw6400&quot;
@@ -52130,6 +52143,19 @@ c_func
 (paren
 l_int|0x103c
 comma
+l_int|0x130a
+comma
+l_string|&quot;HP xw6*00&quot;
+comma
+id|ALC262_HP_BPC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x103c
+comma
 l_int|0x3015
 comma
 l_string|&quot;HP xw8400&quot;
@@ -52146,6 +52172,19 @@ comma
 l_int|0x1306
 comma
 l_string|&quot;HP xw8600&quot;
+comma
+id|ALC262_HP_BPC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x103c
+comma
+l_int|0x130b
+comma
+l_string|&quot;HP xw8*00&quot;
 comma
 id|ALC262_HP_BPC
 )paren
