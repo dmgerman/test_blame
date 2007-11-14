@@ -52476,6 +52476,14 @@ l_string|&quot;hp-bpc-d7000&quot;
 comma
 "&t;"
 (braket
+id|ALC262_HP_TC_T5735
+)braket
+"&t;"
+op_assign
+l_string|&quot;hp-tc-t5735&quot;
+comma
+"&t;"
+(braket
 id|ALC262_BENQ_ED8
 )braket
 "&t;"
