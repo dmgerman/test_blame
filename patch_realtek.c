@@ -42278,7 +42278,7 @@ comma
 multiline_comment|/* {0x22, AC_VERB_SET_AMP_GAIN_MUTE, AMP_IN_UNMUTE(3)}, */
 "&t;"
 (brace
-l_int|0x23
+l_int|0x22
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
