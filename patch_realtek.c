@@ -42753,6 +42753,19 @@ c_func
 (paren
 l_int|0x1462
 comma
+l_int|0x040d
+comma
+l_string|&quot;MSI&quot;
+comma
+id|ALC883_TARGA_2ch_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1462
+comma
 l_int|0x3729
 comma
 l_string|&quot;MSI S420&quot;
