@@ -2106,7 +2106,7 @@ comma
 l_int|0
 comma
 "&t;&t;&t;&t;&t;"
-id|AC_VERB_GET_DIGI_CONVERT
+id|AC_VERB_GET_DIGI_CONVERT_1
 comma
 l_int|0x00
 )paren
@@ -2204,7 +2204,7 @@ comma
 l_int|0
 comma
 "&t;&t;&t;&t;&t;&t;"
-id|AC_VERB_GET_DIGI_CONVERT
+id|AC_VERB_GET_DIGI_CONVERT_1
 comma
 "&t;&t;&t;&t;&t;&t;"
 l_int|0x00
