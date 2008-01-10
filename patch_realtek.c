@@ -661,6 +661,19 @@ id|jack_present
 suffix:colon
 l_int|1
 suffix:semicolon
+"&t;"
+multiline_comment|/* for virtual master */
+"&t;"
+id|hda_nid_t
+id|vmaster_nid
+suffix:semicolon
+"&t;"
+id|u32
+id|vmaster_tlv
+(braket
+l_int|4
+)braket
+suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 "&t;"
 r_struct
@@ -5755,7 +5768,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Speaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0d
 comma
@@ -5768,7 +5781,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;Internal Speaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x0d
 comma
@@ -6347,7 +6360,7 @@ op_assign
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;HPhone Playback Volume&quot;
+l_string|&quot;Headphone Playback Volume&quot;
 comma
 l_int|0x0c
 comma
@@ -6360,7 +6373,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;HPhone Playback Switch&quot;
+l_string|&quot;Headphone Playback Switch&quot;
 comma
 l_int|0x0c
 comma
@@ -6373,7 +6386,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0d
 comma
@@ -6386,7 +6399,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x0d
 comma
@@ -6780,7 +6793,7 @@ op_assign
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;HPhone Playback Volume&quot;
+l_string|&quot;Headphone Playback Volume&quot;
 comma
 l_int|0x0c
 comma
@@ -6793,7 +6806,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;HPhone Playback Switch&quot;
+l_string|&quot;Headphone Playback Switch&quot;
 comma
 l_int|0x0c
 comma
@@ -6806,7 +6819,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0d
 comma
@@ -6819,7 +6832,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x0d
 comma
@@ -6858,6 +6871,91 @@ comma
 (brace
 )brace
 multiline_comment|/* end */
+)brace
+suffix:semicolon
+multiline_comment|/*&n; * virtual master controls&n; */
+multiline_comment|/*&n; * slave controls for virtual master&n; */
+r_const
+r_char
+op_star
+id|alc_slave_vols
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+l_string|&quot;Front Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;Surround Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;Center Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;LFE Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;Side Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;Headphone Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;Speaker Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;Mono Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;iSpeaker Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;Line-Out Playback Volume&quot;
+comma
+"&t;"
+l_int|NULL
+comma
+)brace
+suffix:semicolon
+r_const
+r_char
+op_star
+id|alc_slave_sws
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+l_string|&quot;Front Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;Surround Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;Center Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;LFE Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;Side Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;Headphone Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;Speaker Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;Mono Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;iSpeaker Playback Switch&quot;
+comma
+"&t;"
+l_int|NULL
+comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * build control elements&n; */
@@ -6980,6 +7078,110 @@ c_func
 id|codec
 comma
 id|spec-&gt;dig_in_nid
+)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
+OL
+l_int|0
+)paren
+"&t;&t;&t;"
+r_return
+id|err
+suffix:semicolon
+"&t;"
+)brace
+"&t;"
+multiline_comment|/* if we have no master control, let&squot;s create it */
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|snd_hda_find_mixer_ctl
+c_func
+(paren
+id|codec
+comma
+l_string|&quot;Master Playback Volume&quot;
+)paren
+)paren
+(brace
+"&t;&t;"
+id|snd_hda_set_vmaster_tlv
+c_func
+(paren
+id|codec
+comma
+id|spec-&gt;vmaster_nid
+comma
+"&t;&t;&t;&t;&t;"
+id|HDA_OUTPUT
+comma
+id|spec-&gt;vmaster_tlv
+)paren
+suffix:semicolon
+"&t;&t;"
+id|err
+op_assign
+id|snd_hda_add_vmaster
+c_func
+(paren
+id|codec
+comma
+l_string|&quot;Master Playback Volume&quot;
+comma
+"&t;&t;&t;&t;&t;"
+id|spec-&gt;vmaster_tlv
+comma
+id|alc_slave_vols
+)paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
+OL
+l_int|0
+)paren
+"&t;&t;&t;"
+r_return
+id|err
+suffix:semicolon
+"&t;"
+)brace
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|snd_hda_find_mixer_ctl
+c_func
+(paren
+id|codec
+comma
+l_string|&quot;Master Playback Switch&quot;
+)paren
+)paren
+(brace
+"&t;&t;"
+id|err
+op_assign
+id|snd_hda_add_vmaster
+c_func
+(paren
+id|codec
+comma
+l_string|&quot;Master Playback Switch&quot;
+comma
+"&t;&t;&t;&t;&t;"
+l_int|NULL
+comma
+id|alc_slave_sws
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -9905,7 +10107,7 @@ multiline_comment|/* FIXME: it&squot;s not really &quot;master&quot; but front c
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Master Playback Volume&quot;
+l_string|&quot;Front Playback Volume&quot;
 comma
 l_int|0x0f
 comma
@@ -9918,7 +10120,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;Master Playback Switch&quot;
+l_string|&quot;Front Playback Switch&quot;
 comma
 l_int|0x0f
 comma
@@ -19498,6 +19700,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x0c
+suffix:semicolon
+"&t;"
 id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
@@ -27631,6 +27838,11 @@ op_amp
 id|alc260_pcm_digital_capture
 suffix:semicolon
 "&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x08
+suffix:semicolon
+"&t;"
 id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
@@ -28706,7 +28918,7 @@ op_assign
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Master Volume&quot;
+l_string|&quot;Front Playback Volume&quot;
 comma
 l_int|0x0c
 comma
@@ -28718,7 +28930,7 @@ comma
 "&t;"
 id|HDA_BIND_MUTE
 (paren
-l_string|&quot;Master Switch&quot;
+l_string|&quot;Front Playback Switch&quot;
 comma
 l_int|0x0c
 comma
@@ -28730,7 +28942,7 @@ comma
 "&t;"
 id|HDA_CODEC_MUTE
 (paren
-l_string|&quot;Speaker Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x14
 comma
@@ -28743,7 +28955,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line Out Volume&quot;
+l_string|&quot;Line-Out Playback Volume&quot;
 comma
 l_int|0x0d
 comma
@@ -28756,7 +28968,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line In Playback Volume&quot;
+l_string|&quot;Line Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -28768,7 +28980,7 @@ comma
 "&t;"
 id|HDA_CODEC_MUTE
 (paren
-l_string|&quot;Line In Playback Switch&quot;
+l_string|&quot;Line Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -28806,7 +29018,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line In Boost&quot;
+l_string|&quot;Line Boost&quot;
 comma
 l_int|0x1a
 comma
@@ -35405,6 +35617,11 @@ suffix:semicolon
 )brace
 "&t;"
 )brace
+"&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x0c
+suffix:semicolon
 "&t;"
 id|codec-&gt;patch_ops
 op_assign
@@ -46466,6 +46683,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x0c
+suffix:semicolon
+"&t;"
 id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
@@ -55717,6 +55939,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x0c
+suffix:semicolon
+"&t;"
 id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
@@ -59934,6 +60161,11 @@ suffix:semicolon
 )brace
 "&t;"
 )brace
+"&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x02
+suffix:semicolon
 "&t;"
 id|codec-&gt;patch_ops
 op_assign
@@ -68879,6 +69111,11 @@ op_amp
 id|alc861_pcm_digital_capture
 suffix:semicolon
 "&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x03
+suffix:semicolon
+"&t;"
 id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
@@ -74565,6 +74802,11 @@ suffix:semicolon
 "&t;"
 id|spec-&gt;num_mixers
 op_increment
+suffix:semicolon
+"&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x02
 suffix:semicolon
 "&t;"
 id|codec-&gt;patch_ops
@@ -80546,6 +80788,11 @@ id|alc662_adc_nids
 suffix:semicolon
 "&t;"
 )brace
+"&t;"
+id|spec-&gt;vmaster_nid
+op_assign
+l_int|0x02
+suffix:semicolon
 "&t;"
 id|codec-&gt;patch_ops
 op_assign
