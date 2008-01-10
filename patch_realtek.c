@@ -35122,6 +35122,11 @@ r_break
 suffix:semicolon
 "&t;&t;"
 r_case
+l_int|0x106b00a1
+suffix:colon
+multiline_comment|/* Macbook */
+"&t;&t;"
+r_case
 l_int|0x106b2c00
 suffix:colon
 multiline_comment|/* Macbook Pro rev3 */
