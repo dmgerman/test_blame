@@ -4705,7 +4705,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -4820,7 +4820,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -5720,7 +5720,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/* FIXME! */
 multiline_comment|/*&n; * ALC880 F1734 model&n; *&n; * DAC: HP = 0x02 (0x0c), Front = 0x03 (0x0d)&n; * Pin assignment: HP = 0x14, Front = 0x15, Mic = 0x18&n; */
 id|hda_nid_t
 id|alc880_f1734_dac_nids
@@ -5851,7 +5850,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/* FIXME! */
 multiline_comment|/*&n; * ALC880 ASUS model&n; *&n; * DAC: HP/Front = 0x02 (0x0c), Surr = 0x03 (0x0d), CLFE = 0x04 (0x0e)&n; * Pin assignment: HP/Front = 0x14, Surr = 0x15, CLFE = 0x16,&n; *  Mic = 0x18, Line = 0x1a&n; */
 macro_line|#define alc880_asus_dac_nids&t;alc880_w810_dac_nids&t;/* identical with w810 */
 macro_line|#define alc880_asus_modes&t;alc880_threestack_modes&t;/* 2/6 channel mode */
@@ -6093,7 +6091,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/* FIXME! */
 multiline_comment|/*&n; * ALC880 ASUS W1V model&n; *&n; * DAC: HP/Front = 0x02 (0x0c), Surr = 0x03 (0x0d), CLFE = 0x04 (0x0e)&n; * Pin assignment: HP/Front = 0x14, Surr = 0x15, CLFE = 0x16,&n; *  Mic = 0x18, Line = 0x1a, Line2 = 0x1b&n; */
 multiline_comment|/* additional mixers to alc880_asus_mixer */
 r_struct
@@ -6309,7 +6306,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -9256,7 +9253,6 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-multiline_comment|/* FIXME! */
 multiline_comment|/*&n; * F1734 pin configuration:&n; * HP = 0x14, speaker-out = 0x15, mic = 0x18&n; */
 r_struct
 id|hda_verb
@@ -9423,7 +9419,6 @@ comma
 )brace
 )brace
 suffix:semicolon
-multiline_comment|/* FIXME! */
 multiline_comment|/*&n; * ASUS pin configuration:&n; * HP/front = 0x14, surr = 0x15, clfe = 0x16, mic = 0x18, line = 0x1a&n; */
 r_struct
 id|hda_verb
@@ -10104,8 +10099,6 @@ id|alc880_lg_mixer
 )braket
 op_assign
 (brace
-"&t;"
-multiline_comment|/* FIXME: it&squot;s not really &quot;master&quot; but front channels */
 "&t;"
 id|HDA_CODEC_VOLUME
 c_func
@@ -21224,7 +21217,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -21308,7 +21301,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -33159,7 +33152,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -33303,7 +33296,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -44076,7 +44069,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -58281,7 +58274,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -58395,7 +58388,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -61241,7 +61234,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -67998,7 +67991,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; *FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -70587,7 +70580,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; *FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
@@ -78343,7 +78336,7 @@ op_assign
 id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;&t;"
-multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; * FIXME: the controls appear in the &quot;playback&quot; view!&n;&t;&t; */
+multiline_comment|/* The multiple &quot;Capture Source&quot; controls confuse alsamixer&n;&t;&t; * So call somewhat different..&n;&t;&t; */
 "&t;&t;"
 multiline_comment|/* .name = &quot;Capture Source&quot;, */
 "&t;&t;"
