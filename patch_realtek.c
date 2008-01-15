@@ -58713,18 +58713,9 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|HDA_CODEC_VOLUME
-c_func
-(paren
-l_string|&quot;PCBEEP Playback Volume&quot;
-comma
-l_int|0x1d
-comma
-l_int|0x0
-comma
-id|HDA_INPUT
-)paren
-comma
+multiline_comment|/* The below appears problematic on some hardwares */
+"&t;"
+multiline_comment|/*HDA_CODEC_VOLUME(&quot;PCBEEP Playback Volume&quot;, 0x1d, 0x0, HDA_INPUT),*/
 "&t;"
 id|HDA_CODEC_VOLUME
 c_func
