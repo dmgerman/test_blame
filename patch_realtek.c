@@ -60538,6 +60538,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1025
+comma
+l_int|0x0136
+comma
+l_string|&quot;Acer Aspire 5315&quot;
+comma
+id|ALC268_ACER
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1028
 comma
 l_int|0x0253
