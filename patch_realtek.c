@@ -491,6 +491,18 @@ op_star
 id|stream_analog_capture
 suffix:semicolon
 "&t;"
+r_struct
+id|hda_pcm_stream
+op_star
+id|stream_analog_alt_playback
+suffix:semicolon
+"&t;"
+r_struct
+id|hda_pcm_stream
+op_star
+id|stream_analog_alt_capture
+suffix:semicolon
+"&t;"
 r_char
 op_star
 id|stream_name_digital
@@ -518,6 +530,10 @@ id|multiout
 suffix:semicolon
 "&t;"
 multiline_comment|/* playback set-up&n;&t;&t;&t;&t;&t; * max_channels, dacs must be set&n;&t;&t;&t;&t;&t; * dig_out_nid and hp_nid are optional&n;&t;&t;&t;&t;&t; */
+"&t;"
+id|hda_nid_t
+id|alt_dac_nid
+suffix:semicolon
 "&t;"
 multiline_comment|/* capture */
 "&t;"
@@ -11781,7 +11797,7 @@ suffix:semicolon
 )brace
 multiline_comment|/*&n; * Analog capture&n; */
 r_int
-id|alc880_capture_pcm_prepare
+id|alc880_alt_capture_pcm_prepare
 c_func
 (paren
 r_struct
@@ -11829,6 +11845,8 @@ comma
 id|spec-&gt;adc_nids
 (braket
 id|substream-&gt;number
+op_plus
+l_int|1
 )braket
 comma
 "&t;&t;&t;&t;"
@@ -11845,7 +11863,7 @@ l_int|0
 suffix:semicolon
 )brace
 r_int
-id|alc880_capture_pcm_cleanup
+id|alc880_alt_capture_pcm_cleanup
 c_func
 (paren
 r_struct
@@ -11883,6 +11901,8 @@ comma
 id|spec-&gt;adc_nids
 (braket
 id|substream-&gt;number
+op_plus
+l_int|1
 )braket
 comma
 "&t;&t;&t;&t;"
@@ -11960,8 +11980,63 @@ op_assign
 dot
 id|substreams
 op_assign
+l_int|1
+comma
+"&t;"
+dot
+id|channels_min
+op_assign
 l_int|2
 comma
+"&t;"
+dot
+id|channels_max
+op_assign
+l_int|2
+comma
+"&t;"
+multiline_comment|/* NID is set in alc_build_pcms */
+)brace
+suffix:semicolon
+r_struct
+id|hda_pcm_stream
+id|alc880_pcm_analog_alt_playback
+op_assign
+(brace
+"&t;"
+dot
+id|substreams
+op_assign
+l_int|1
+comma
+"&t;"
+dot
+id|channels_min
+op_assign
+l_int|2
+comma
+"&t;"
+dot
+id|channels_max
+op_assign
+l_int|2
+comma
+"&t;"
+multiline_comment|/* NID is set in alc_build_pcms */
+)brace
+suffix:semicolon
+r_struct
+id|hda_pcm_stream
+id|alc880_pcm_analog_alt_capture
+op_assign
+(brace
+"&t;"
+dot
+id|substreams
+op_assign
+l_int|2
+comma
+multiline_comment|/* can be overridden */
 "&t;"
 dot
 id|channels_min
@@ -11985,13 +12060,13 @@ op_assign
 dot
 id|prepare
 op_assign
-id|alc880_capture_pcm_prepare
+id|alc880_alt_capture_pcm_prepare
 comma
 "&t;&t;"
 dot
 id|cleanup
 op_assign
-id|alc880_capture_pcm_cleanup
+id|alc880_alt_capture_pcm_cleanup
 "&t;"
 )brace
 comma
@@ -12079,7 +12154,7 @@ suffix:semicolon
 multiline_comment|/* Used by alc_build_pcms to flag that a PCM has no playback stream */
 r_struct
 id|hda_pcm_stream
-id|alc_pcm_null_playback
+id|alc_pcm_null_stream
 op_assign
 (brace
 "&t;"
@@ -12410,14 +12485,20 @@ multiline_comment|/* Additional Analaog capture for index #2 */
 r_if
 c_cond
 (paren
+(paren
+id|spec-&gt;alt_dac_nid
+op_logical_and
+id|spec-&gt;stream_analog_alt_playback
+)paren
+op_logical_or
+"&t;"
+(paren
 id|spec-&gt;num_adc_nids
 OG
 l_int|1
 op_logical_and
-id|spec-&gt;stream_analog_capture
-op_logical_and
-"&t;"
-id|spec-&gt;adc_nids
+id|spec-&gt;stream_analog_alt_capture
+)paren
 )paren
 (brace
 "&t;&t;"
@@ -12438,16 +12519,47 @@ op_assign
 id|spec-&gt;stream_name_analog
 suffix:semicolon
 "&t;&t;"
-multiline_comment|/* No playback stream for second PCM */
-"&t;&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;alt_dac_nid
+)paren
+(brace
+"&t;&t;&t;"
 id|info-&gt;stream
 (braket
 id|SNDRV_PCM_STREAM_PLAYBACK
 )braket
 op_assign
-id|alc_pcm_null_playback
+"&t;&t;&t;&t;"
+op_star
+id|spec-&gt;stream_analog_alt_playback
+suffix:semicolon
+"&t;&t;&t;"
+id|info-&gt;stream
+(braket
+id|SNDRV_PCM_STREAM_PLAYBACK
+)braket
+dot
+id|nid
+op_assign
+"&t;&t;&t;&t;"
+id|spec-&gt;alt_dac_nid
 suffix:semicolon
 "&t;&t;"
+)brace
+r_else
+(brace
+"&t;&t;&t;"
+id|info-&gt;stream
+(braket
+id|SNDRV_PCM_STREAM_PLAYBACK
+)braket
+op_assign
+"&t;&t;&t;&t;"
+id|alc_pcm_null_stream
+suffix:semicolon
+"&t;&t;&t;"
 id|info-&gt;stream
 (braket
 id|SNDRV_PCM_STREAM_PLAYBACK
@@ -12458,10 +12570,14 @@ op_assign
 l_int|0
 suffix:semicolon
 "&t;&t;"
+)brace
+"&t;&t;"
 r_if
 c_cond
 (paren
-id|spec-&gt;stream_analog_capture
+id|spec-&gt;num_adc_nids
+OG
+l_int|1
 )paren
 (brace
 "&t;&t;&t;"
@@ -12470,10 +12586,9 @@ id|info-&gt;stream
 id|SNDRV_PCM_STREAM_CAPTURE
 )braket
 op_assign
+"&t;&t;&t;&t;"
 op_star
-(paren
-id|spec-&gt;stream_analog_capture
-)paren
+id|spec-&gt;stream_analog_alt_capture
 suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
@@ -12483,10 +12598,46 @@ id|SNDRV_PCM_STREAM_CAPTURE
 dot
 id|nid
 op_assign
+"&t;&t;&t;&t;"
 id|spec-&gt;adc_nids
 (braket
 l_int|1
 )braket
+suffix:semicolon
+"&t;&t;&t;"
+id|info-&gt;stream
+(braket
+id|SNDRV_PCM_STREAM_CAPTURE
+)braket
+dot
+id|substreams
+op_assign
+"&t;&t;&t;&t;"
+id|spec-&gt;num_adc_nids
+l_int|1
+suffix:semicolon
+"&t;&t;"
+)brace
+r_else
+(brace
+"&t;&t;&t;"
+id|info-&gt;stream
+(braket
+id|SNDRV_PCM_STREAM_CAPTURE
+)braket
+op_assign
+"&t;&t;&t;&t;"
+id|alc_pcm_null_stream
+suffix:semicolon
+"&t;&t;&t;"
+id|info-&gt;stream
+(braket
+id|SNDRV_PCM_STREAM_CAPTURE
+)braket
+dot
+id|nid
+op_assign
+l_int|0
 suffix:semicolon
 "&t;&t;"
 )brace
@@ -19571,6 +19722,12 @@ op_amp
 id|alc880_pcm_analog_capture
 suffix:semicolon
 "&t;"
+id|spec-&gt;stream_analog_alt_capture
+op_assign
+op_amp
+id|alc880_pcm_analog_alt_capture
+suffix:semicolon
+"&t;"
 id|spec-&gt;stream_name_digital
 op_assign
 l_string|&quot;ALC880 Digital&quot;
@@ -24846,56 +25003,8 @@ multiline_comment|/* HP-pin pin */
 )brace
 suffix:semicolon
 macro_line|#endif
-r_struct
-id|hda_pcm_stream
-id|alc260_pcm_analog_playback
-op_assign
-(brace
-"&t;"
-dot
-id|substreams
-op_assign
-l_int|1
-comma
-"&t;"
-dot
-id|channels_min
-op_assign
-l_int|2
-comma
-"&t;"
-dot
-id|channels_max
-op_assign
-l_int|2
-comma
-)brace
-suffix:semicolon
-r_struct
-id|hda_pcm_stream
-id|alc260_pcm_analog_capture
-op_assign
-(brace
-"&t;"
-dot
-id|substreams
-op_assign
-l_int|1
-comma
-"&t;"
-dot
-id|channels_min
-op_assign
-l_int|2
-comma
-"&t;"
-dot
-id|channels_max
-op_assign
-l_int|2
-comma
-)brace
-suffix:semicolon
+macro_line|#define alc260_pcm_analog_playback&t;alc880_pcm_analog_alt_playback
+macro_line|#define alc260_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc260_pcm_digital_playback&t;alc880_pcm_digital_playback
 macro_line|#define alc260_pcm_digital_capture&t;alc880_pcm_digital_capture
 multiline_comment|/*&n; * for BIOS auto-configuration&n; */
@@ -35516,6 +35625,16 @@ op_amp
 id|alc882_pcm_analog_capture
 suffix:semicolon
 "&t;"
+multiline_comment|/* FIXME: setup DAC5 */
+"&t;"
+multiline_comment|/*spec-&gt;stream_analog_alt_playback = &amp;alc880_pcm_analog_alt_playback;*/
+"&t;"
+id|spec-&gt;stream_analog_alt_capture
+op_assign
+op_amp
+id|alc880_pcm_analog_alt_capture
+suffix:semicolon
+"&t;"
 id|spec-&gt;stream_name_digital
 op_assign
 l_string|&quot;ALC882 Digital&quot;
@@ -44120,6 +44239,7 @@ macro_line|#endif
 multiline_comment|/* pcm configuration: identiacal with ALC880 */
 macro_line|#define alc883_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc883_pcm_analog_capture&t;alc880_pcm_analog_capture
+macro_line|#define alc883_pcm_analog_alt_capture&t;alc880_pcm_analog_alt_capture
 macro_line|#define alc883_pcm_digital_playback&t;alc880_pcm_digital_playback
 macro_line|#define alc883_pcm_digital_capture&t;alc880_pcm_digital_capture
 multiline_comment|/*&n; * configuration and preset&n; */
@@ -47452,6 +47572,12 @@ id|spec-&gt;stream_analog_capture
 op_assign
 op_amp
 id|alc883_pcm_analog_capture
+suffix:semicolon
+"&t;"
+id|spec-&gt;stream_analog_alt_capture
+op_assign
+op_amp
+id|alc883_pcm_analog_alt_capture
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_name_digital
@@ -60069,6 +60195,7 @@ suffix:semicolon
 multiline_comment|/* pcm configuration: identiacal with ALC880 */
 macro_line|#define alc268_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc268_pcm_analog_capture&t;alc880_pcm_analog_capture
+macro_line|#define alc268_pcm_analog_alt_capture&t;alc880_pcm_analog_alt_capture
 macro_line|#define alc268_pcm_digital_playback&t;alc880_pcm_digital_playback
 multiline_comment|/*&n; * BIOS auto configuration&n; */
 r_int
@@ -61201,6 +61328,12 @@ id|spec-&gt;stream_analog_capture
 op_assign
 op_amp
 id|alc268_pcm_analog_capture
+suffix:semicolon
+"&t;"
+id|spec-&gt;stream_analog_alt_capture
+op_assign
+op_amp
+id|alc268_pcm_analog_alt_capture
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_name_digital
