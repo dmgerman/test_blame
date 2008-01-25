@@ -60527,6 +60527,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x012e
+comma
+l_string|&quot;Acer Aspire 5310&quot;
+comma
+id|ALC268_ACER
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x0130
 comma
 l_string|&quot;Acer Extensa 5210&quot;
