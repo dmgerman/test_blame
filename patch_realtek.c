@@ -33673,6 +33673,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1458
+comma
+l_int|0xa002
+comma
+l_string|&quot;Gigabyte P35 DS3R&quot;
+comma
+id|ALC882_6ST_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1462
 comma
 l_int|0x28fb
