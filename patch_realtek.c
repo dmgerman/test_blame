@@ -6927,9 +6927,6 @@ comma
 l_string|&quot;Mono Playback Volume&quot;
 comma
 "&t;"
-l_string|&quot;iSpeaker Playback Volume&quot;
-comma
-"&t;"
 l_string|&quot;Line-Out Playback Volume&quot;
 comma
 "&t;"
@@ -6968,9 +6965,6 @@ l_string|&quot;Speaker Playback Switch&quot;
 comma
 "&t;"
 l_string|&quot;Mono Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;iSpeaker Playback Switch&quot;
 comma
 "&t;"
 l_int|NULL
@@ -20591,7 +20585,7 @@ comma
 id|HDA_CODEC_VOLUME_MONO
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0a
 comma
@@ -20606,7 +20600,7 @@ comma
 id|HDA_CODEC_MUTE_MONO
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x11
 comma
@@ -38928,7 +38922,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0d
 comma
@@ -38941,7 +38935,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x0d
 comma
@@ -48979,7 +48973,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0c
 comma
@@ -48992,7 +48986,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x14
 comma
@@ -49270,7 +49264,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0e
 comma
@@ -49283,7 +49277,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x16
 comma
@@ -77538,7 +77532,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x03
 comma
@@ -77551,7 +77545,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x03
 comma
@@ -77642,7 +77636,7 @@ op_assign
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x14
 comma
@@ -77884,7 +77878,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;iSpeaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x1b
 comma
