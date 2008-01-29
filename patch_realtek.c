@@ -6974,6 +6974,9 @@ comma
 l_string|&quot;Mono Playback Switch&quot;
 comma
 "&t;"
+l_string|&quot;IEC958 Playback Switch&quot;
+comma
+"&t;"
 l_int|NULL
 comma
 )brace
