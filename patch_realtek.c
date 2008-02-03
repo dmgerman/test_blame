@@ -45787,6 +45787,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x17f2
+comma
+l_int|0x5000
+comma
+l_string|&quot;Albatron KI690-AM2&quot;
+comma
+id|ALC883_6ST_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1991
 comma
 l_int|0x5625
