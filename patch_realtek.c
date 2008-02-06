@@ -12417,6 +12417,11 @@ op_assign
 id|spec-&gt;stream_name_digital
 suffix:semicolon
 "&t;&t;"
+id|info-&gt;pcm_type
+op_assign
+id|HDA_PCM_TYPE_SPDIF
+suffix:semicolon
+"&t;&t;"
 r_if
 c_cond
 (paren
