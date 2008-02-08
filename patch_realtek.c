@@ -59950,58 +59950,6 @@ id|alc268_test_mixer
 op_assign
 (brace
 "&t;"
-id|HDA_CODEC_VOLUME
-c_func
-(paren
-l_string|&quot;Front Playback Volume&quot;
-comma
-l_int|0x2
-comma
-l_int|0x0
-comma
-id|HDA_OUTPUT
-)paren
-comma
-"&t;"
-id|HDA_CODEC_MUTE
-c_func
-(paren
-l_string|&quot;Front Playback Switch&quot;
-comma
-l_int|0x14
-comma
-l_int|0x0
-comma
-id|HDA_OUTPUT
-)paren
-comma
-"&t;"
-id|HDA_CODEC_VOLUME
-c_func
-(paren
-l_string|&quot;Headphone Playback Volume&quot;
-comma
-l_int|0x3
-comma
-l_int|0x0
-comma
-id|HDA_OUTPUT
-)paren
-comma
-"&t;"
-id|HDA_CODEC_MUTE
-c_func
-(paren
-l_string|&quot;Headphone Playback Switch&quot;
-comma
-l_int|0x15
-comma
-l_int|0x0
-comma
-id|HDA_OUTPUT
-)paren
-comma
-"&t;"
 multiline_comment|/* Volume widgets */
 "&t;"
 id|HDA_CODEC_VOLUME
