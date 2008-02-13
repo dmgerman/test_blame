@@ -18908,20 +18908,19 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* unmute pin */
 "&t;"
-id|snd_hda_codec_amp_stereo
+id|snd_hda_codec_write
 c_func
 (paren
 id|codec
 comma
 id|nid
 comma
-id|HDA_OUTPUT
-comma
 l_int|0
 comma
-l_int|0xff
+id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-l_int|0x00
+"&t;&t;&t;"
+id|AMP_OUT_UNMUTE
 )paren
 suffix:semicolon
 )brace
