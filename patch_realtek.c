@@ -29062,6 +29062,15 @@ id|hda_nid_t
 id|nid
 op_assign
 id|spec-&gt;capsrc_nids
+ques
+c_cond
+"&t;&t;"
+id|spec-&gt;capsrc_nids
+(braket
+id|adc_idx
+)braket
+suffix:colon
+id|spec-&gt;adc_nids
 (braket
 id|adc_idx
 )braket
@@ -48171,6 +48180,8 @@ macro_line|#define ALC262_DIGIN_NID&t;ALC880_DIGIN_NID
 macro_line|#define alc262_dac_nids&t;&t;alc260_dac_nids
 macro_line|#define alc262_adc_nids&t;&t;alc882_adc_nids
 macro_line|#define alc262_adc_nids_alt&t;alc882_adc_nids_alt
+macro_line|#define alc262_capsrc_nids&t;alc882_capsrc_nids
+macro_line|#define alc262_capsrc_nids_alt&t;alc882_capsrc_nids_alt
 macro_line|#define alc262_modes&t;&t;alc260_modes
 macro_line|#define alc262_capture_source&t;alc882_capture_source
 r_struct
@@ -57614,6 +57625,11 @@ id|alc262_adc_nids_alt
 )paren
 suffix:semicolon
 "&t;&t;&t;"
+id|spec-&gt;capsrc_nids
+op_assign
+id|alc262_capsrc_nids_alt
+suffix:semicolon
+"&t;&t;&t;"
 id|spec-&gt;mixers
 (braket
 id|spec-&gt;num_mixers
@@ -57643,6 +57659,11 @@ c_func
 (paren
 id|alc262_adc_nids
 )paren
+suffix:semicolon
+"&t;&t;&t;"
+id|spec-&gt;capsrc_nids
+op_assign
+id|alc262_capsrc_nids
 suffix:semicolon
 "&t;&t;&t;"
 id|spec-&gt;mixers
