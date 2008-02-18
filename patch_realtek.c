@@ -704,13 +704,6 @@ multiline_comment|/* for virtual master */
 id|hda_nid_t
 id|vmaster_nid
 suffix:semicolon
-"&t;"
-id|u32
-id|vmaster_tlv
-(braket
-l_int|4
-)braket
-suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 "&t;"
 r_struct
@@ -7177,6 +7170,14 @@ l_string|&quot;Master Playback Volume&quot;
 )paren
 (brace
 "&t;&t;"
+r_int
+r_int
+id|vmaster_tlv
+(braket
+l_int|4
+)braket
+suffix:semicolon
+"&t;&t;"
 id|snd_hda_set_vmaster_tlv
 c_func
 (paren
@@ -7187,7 +7188,7 @@ comma
 "&t;&t;&t;&t;&t;"
 id|HDA_OUTPUT
 comma
-id|spec-&gt;vmaster_tlv
+id|vmaster_tlv
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -7201,7 +7202,7 @@ comma
 l_string|&quot;Master Playback Volume&quot;
 comma
 "&t;&t;&t;&t;&t;"
-id|spec-&gt;vmaster_tlv
+id|vmaster_tlv
 comma
 id|alc_slave_vols
 )paren
