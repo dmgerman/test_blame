@@ -76869,7 +76869,7 @@ l_int|1
 )braket
 op_assign
 (brace
-l_int|0x23
+l_int|0x22
 )brace
 suffix:semicolon
 multiline_comment|/* input MUX */
