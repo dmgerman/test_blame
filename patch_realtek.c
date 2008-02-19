@@ -27343,6 +27343,10 @@ c_cond
 id|wcap
 op_ne
 id|AC_WID_AUD_IN
+op_logical_or
+id|spec-&gt;input_mux-&gt;num_items
+op_eq
+l_int|1
 )paren
 (brace
 "&t;&t;"
@@ -62495,6 +62499,10 @@ c_cond
 id|wcap
 op_ne
 id|AC_WID_AUD_IN
+op_logical_or
+id|spec-&gt;input_mux-&gt;num_items
+op_eq
+l_int|1
 )paren
 (brace
 "&t;&t;&t;"
