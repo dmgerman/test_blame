@@ -36809,12 +36809,10 @@ suffix:semicolon
 id|hda_nid_t
 id|capture_mixers
 (braket
-l_int|3
+l_int|2
 )braket
 op_assign
 (brace
-l_int|0x24
-comma
 l_int|0x23
 comma
 l_int|0x22
