@@ -78706,7 +78706,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;LineOut Playback Volume&quot;
+l_string|&quot;Line-Out Playback Volume&quot;
 comma
 l_int|0x02
 comma
@@ -78719,7 +78719,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;LineOut Playback Switch&quot;
+l_string|&quot;Line-Out Playback Switch&quot;
 comma
 l_int|0x1b
 comma
