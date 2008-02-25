@@ -56377,6 +56377,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x10cf
+comma
+l_int|0x142d
+comma
+l_string|&quot;Fujitsu Lifebook E8410&quot;
+comma
+id|ALC262_FUJITSU
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x144d
 comma
 l_int|0xc032
