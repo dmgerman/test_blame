@@ -21488,7 +21488,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Speaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x09
 comma
@@ -21501,7 +21501,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;Internal Speaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x09
 comma
@@ -21565,7 +21565,7 @@ comma
 id|HDA_CODEC_VOLUME_MONO
 c_func
 (paren
-l_string|&quot;Mono Speaker Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0a
 comma
@@ -21581,7 +21581,7 @@ comma
 id|HDA_BIND_MUTE_MONO
 c_func
 (paren
-l_string|&quot;Mono Speaker Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x0a
 comma
@@ -48640,7 +48640,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-multiline_comment|/* HDA_CODEC_VOLUME(&quot;PC Beep Playback Volume&quot;, 0x0b, 0x05, HDA_INPUT),&n;&t;   HDA_CODEC_MUTE(&quot;PC Beelp Playback Switch&quot;, 0x0b, 0x05, HDA_INPUT), */
+multiline_comment|/* HDA_CODEC_VOLUME(&quot;PC Beep Playback Volume&quot;, 0x0b, 0x05, HDA_INPUT),&n;&t;   HDA_CODEC_MUTE(&quot;PC Beep Playback Switch&quot;, 0x0b, 0x05, HDA_INPUT), */
 "&t;"
 id|HDA_CODEC_VOLUME
 c_func
@@ -48867,7 +48867,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-multiline_comment|/* HDA_CODEC_VOLUME(&quot;PC Beep Playback Volume&quot;, 0x0b, 0x05, HDA_INPUT),&n;&t;   HDA_CODEC_MUTE(&quot;PC Beelp Playback Switch&quot;, 0x0b, 0x05, HDA_INPUT), */
+multiline_comment|/* HDA_CODEC_VOLUME(&quot;PC Beep Playback Volume&quot;, 0x0b, 0x05, HDA_INPUT),&n;&t;   HDA_CODEC_MUTE(&quot;PC Beep Playback Switch&quot;, 0x0b, 0x05, HDA_INPUT), */
 "&t;"
 multiline_comment|/*HDA_CODEC_VOLUME(&quot;Headphone Playback Volume&quot;, 0x0D, 0x0, HDA_OUTPUT),*/
 "&t;"
@@ -78823,7 +78823,7 @@ op_assign
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;LineOut Playback Volume&quot;
+l_string|&quot;Line-Out Playback Volume&quot;
 comma
 l_int|0x02
 comma
@@ -78836,7 +78836,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;LineOut Playback Switch&quot;
+l_string|&quot;Line-Out Playback Switch&quot;
 comma
 l_int|0x14
 comma
