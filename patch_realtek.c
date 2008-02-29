@@ -6,6 +6,7 @@ macro_line|#include &lt;linux/pci.h&gt;
 macro_line|#include &lt;sound/core.h&gt;
 macro_line|#include &quot;hda_codec.h&quot;
 macro_line|#include &quot;hda_local.h&quot;
+macro_line|#include &quot;hda_patch.h&quot;
 macro_line|#define ALC880_FRONT_EVENT&t;&t;0x01
 macro_line|#define ALC880_DCVOL_EVENT&t;&t;0x02
 macro_line|#define ALC880_HP_EVENT&t;&t;&t;0x04
