@@ -72999,7 +72999,7 @@ op_assign
 dot
 id|num_items
 op_assign
-l_int|3
+l_int|2
 comma
 "&t;"
 dot
@@ -73008,23 +73008,16 @@ op_assign
 (brace
 "&t;&t;"
 (brace
-l_string|&quot;Front Mic&quot;
+l_string|&quot;Ext Mic&quot;
 comma
 l_int|0x0
 )brace
 comma
 "&t;&t;"
 (brace
-l_string|&quot;ATAPI Mic&quot;
+l_string|&quot;Int Mic&quot;
 comma
 l_int|0x1
-)brace
-comma
-"&t;&t;"
-(brace
-l_string|&quot;Line In&quot;
-comma
-l_int|0x5
 )brace
 comma
 "&t;"
@@ -74033,7 +74026,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/* Pin assignment: Front=0x14, HP = 0x15,&n; *                 Front Mic=0x18, ATAPI Mic = 0x19, Line In = 0x1d&n; */
+multiline_comment|/* Pin assignment: Speaker=0x14, HP = 0x15,&n; *                 Ext Mic=0x18, Int Mic = 0x19, CD = 0x1c, PC Beep = 0x1d&n; */
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_dallas_mixer
@@ -74045,7 +74038,7 @@ op_assign
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x02
 comma
@@ -74058,7 +74051,7 @@ comma
 id|HDA_BIND_MUTE
 c_func
 (paren
-l_string|&quot;Front Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x0c
 comma
@@ -74097,7 +74090,20 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Playback Volume&quot;
+l_string|&quot;Ext Mic Boost&quot;
+comma
+l_int|0x18
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Ext Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -74110,7 +74116,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Front Mic Playback Switch&quot;
+l_string|&quot;Ext Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -74123,7 +74129,20 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;ATAPI Mic Playback Volume&quot;
+l_string|&quot;Int Mic Boost&quot;
+comma
+l_int|0x19
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -74136,7 +74155,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;ATAPI Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -74149,7 +74168,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line Playback Volume&quot;
+l_string|&quot;PC Beep Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -74162,7 +74181,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Line Playback Switch&quot;
+l_string|&quot;PC Beep Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -75988,6 +76007,19 @@ comma
 l_string|&quot;Toshiba P205&quot;
 comma
 id|ALC861VD_LENOVO
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1179
+comma
+l_int|0xff31
+comma
+l_string|&quot;Toshiba L30-149&quot;
+comma
+id|ALC861VD_DALLAS
 )paren
 comma
 "&t;"
