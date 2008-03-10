@@ -9337,6 +9337,15 @@ op_assign
 (brace
 "&t;"
 (brace
+l_int|0x07
+comma
+id|AC_VERB_SET_CONNECT_SEL
+comma
+l_int|0x01
+)brace
+comma
+"&t;"
+(brace
 l_int|0x10
 comma
 id|AC_VERB_SET_CONNECT_SEL
@@ -9431,7 +9440,7 @@ l_int|0x19
 comma
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
-id|PIN_VREF80
+id|PIN_VREF50
 )brace
 comma
 "&t;"
