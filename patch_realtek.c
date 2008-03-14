@@ -82012,6 +82012,19 @@ c_func
 (paren
 l_int|0x1043
 comma
+l_int|0x8290
+comma
+l_string|&quot;ASUS P5GC-MX&quot;
+comma
+id|ALC662_3ST_6ch_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
 l_int|0x82a1
 comma
 l_string|&quot;ASUS Eeepc&quot;
