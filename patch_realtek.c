@@ -79211,11 +79211,11 @@ c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
 comma
-l_int|0x02
+l_int|0x0c
 comma
 l_int|0x0
 comma
-id|HDA_OUTPUT
+id|HDA_INPUT
 )paren
 comma
 "&t;"
@@ -79237,11 +79237,11 @@ c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
 comma
-l_int|0x03
+l_int|0x0d
 comma
 l_int|0x0
 comma
-id|HDA_OUTPUT
+id|HDA_INPUT
 )paren
 comma
 "&t;"
@@ -79275,31 +79275,31 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|HDA_BIND_MUTE_MONO
+id|HDA_CODEC_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
 comma
-l_int|0x04
+l_int|0x0e
 comma
 l_int|1
 comma
-l_int|2
+l_int|0x0
 comma
 id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|HDA_BIND_MUTE_MONO
+id|HDA_CODEC_MUTE_MONO
 c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
 comma
-l_int|0x04
+l_int|0x0e
 comma
 l_int|2
 comma
-l_int|2
+l_int|0x0
 comma
 id|HDA_INPUT
 )paren
@@ -79450,14 +79450,14 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|HDA_BIND_MUTE
+id|HDA_CODEC_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
 comma
-l_int|0x02
+l_int|0x0c
 comma
-l_int|2
+l_int|0x0
 comma
 id|HDA_INPUT
 )paren
@@ -79632,14 +79632,14 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|HDA_BIND_MUTE
+id|HDA_CODEC_MUTE
 c_func
 (paren
 l_string|&quot;Front Playback Switch&quot;
 comma
-l_int|0x02
+l_int|0x0c
 comma
-l_int|2
+l_int|0x0
 comma
 id|HDA_INPUT
 )paren
@@ -79658,14 +79658,14 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|HDA_BIND_MUTE
+id|HDA_CODEC_MUTE
 c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
 comma
-l_int|0x03
+l_int|0x0d
 comma
-l_int|2
+l_int|0x0
 comma
 id|HDA_INPUT
 )paren
@@ -79701,31 +79701,31 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
-id|HDA_BIND_MUTE_MONO
+id|HDA_CODEC_MUTE_MONO
 c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
 comma
-l_int|0x04
+l_int|0x0e
 comma
 l_int|1
 comma
-l_int|2
+l_int|0x0
 comma
 id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|HDA_BIND_MUTE_MONO
+id|HDA_CODEC_MUTE_MONO
 c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
 comma
-l_int|0x04
+l_int|0x0e
 comma
 l_int|2
 comma
-l_int|2
+l_int|0x0
 comma
 id|HDA_INPUT
 )paren
