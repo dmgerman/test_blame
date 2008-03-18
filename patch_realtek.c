@@ -36846,9 +36846,9 @@ multiline_comment|/* front, rear, clfe, rear_surr */
 "&t;"
 l_int|0x02
 comma
-l_int|0x04
-comma
 l_int|0x03
+comma
+l_int|0x04
 comma
 l_int|0x05
 )brace
@@ -40919,7 +40919,7 @@ c_func
 (paren
 l_string|&quot;Surround Playback Volume&quot;
 comma
-l_int|0x0e
+l_int|0x0d
 comma
 l_int|0x0
 comma
@@ -40932,7 +40932,7 @@ c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
 comma
-l_int|0x0e
+l_int|0x0d
 comma
 l_int|2
 comma
@@ -40945,7 +40945,7 @@ c_func
 (paren
 l_string|&quot;Center Playback Volume&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|1
 comma
@@ -40960,7 +40960,7 @@ c_func
 (paren
 l_string|&quot;LFE Playback Volume&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|2
 comma
@@ -40975,7 +40975,7 @@ c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|1
 comma
@@ -40990,7 +40990,7 @@ c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|2
 comma
@@ -41338,7 +41338,7 @@ c_func
 (paren
 l_string|&quot;Surround Playback Volume&quot;
 comma
-l_int|0x0e
+l_int|0x0d
 comma
 l_int|0x0
 comma
@@ -41351,7 +41351,7 @@ c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
 comma
-l_int|0x0e
+l_int|0x0d
 comma
 l_int|2
 comma
@@ -41364,7 +41364,7 @@ c_func
 (paren
 l_string|&quot;Center Playback Volume&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|1
 comma
@@ -41379,7 +41379,7 @@ c_func
 (paren
 l_string|&quot;LFE Playback Volume&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|2
 comma
@@ -41394,7 +41394,7 @@ c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|1
 comma
@@ -41409,7 +41409,7 @@ c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|2
 comma
@@ -41731,7 +41731,7 @@ c_func
 (paren
 l_string|&quot;Surround Playback Volume&quot;
 comma
-l_int|0x0e
+l_int|0x0d
 comma
 l_int|0x0
 comma
@@ -41744,7 +41744,7 @@ c_func
 (paren
 l_string|&quot;Surround Playback Switch&quot;
 comma
-l_int|0x0e
+l_int|0x0d
 comma
 l_int|2
 comma
@@ -41757,7 +41757,7 @@ c_func
 (paren
 l_string|&quot;Center Playback Volume&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|1
 comma
@@ -41772,7 +41772,7 @@ c_func
 (paren
 l_string|&quot;LFE Playback Volume&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|2
 comma
@@ -41787,7 +41787,7 @@ c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|1
 comma
@@ -41802,7 +41802,7 @@ c_func
 (paren
 l_string|&quot;LFE Playback Switch&quot;
 comma
-l_int|0x0d
+l_int|0x0e
 comma
 l_int|2
 comma
@@ -43708,62 +43708,6 @@ multiline_comment|/* end */
 suffix:semicolon
 r_struct
 id|hda_verb
-id|alc888_6st_hp_verbs
-(braket
-)braket
-op_assign
-(brace
-"&t;"
-(brace
-l_int|0x14
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x00
-)brace
-comma
-"&t;"
-multiline_comment|/* Front: output 0 (0x0c) */
-"&t;"
-(brace
-l_int|0x15
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x02
-)brace
-comma
-"&t;"
-multiline_comment|/* Rear : output 2 (0x0e) */
-"&t;"
-(brace
-l_int|0x16
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x01
-)brace
-comma
-"&t;"
-multiline_comment|/* CLFE : output 1 (0x0d) */
-"&t;"
-(brace
-l_int|0x17
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x03
-)brace
-comma
-"&t;"
-multiline_comment|/* Side : output 3 (0x0f) */
-"&t;"
-(brace
-)brace
-)brace
-suffix:semicolon
-r_struct
-id|hda_verb
 id|alc888_3st_hp_verbs
 (braket
 )braket
@@ -43782,7 +43726,7 @@ comma
 multiline_comment|/* Front: output 0 (0x0c) */
 "&t;"
 (brace
-l_int|0x18
+l_int|0x16
 comma
 id|AC_VERB_SET_CONNECT_SEL
 comma
@@ -43793,7 +43737,7 @@ comma
 multiline_comment|/* Rear : output 1 (0x0d) */
 "&t;"
 (brace
-l_int|0x16
+l_int|0x18
 comma
 id|AC_VERB_SET_CONNECT_SEL
 comma
@@ -43814,50 +43758,6 @@ id|alc888_6st_dell_verbs
 )braket
 op_assign
 (brace
-"&t;"
-(brace
-l_int|0x14
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x00
-)brace
-comma
-"&t;"
-multiline_comment|/* Front: output 0 (0x0c) */
-"&t;"
-(brace
-l_int|0x15
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x02
-)brace
-comma
-"&t;"
-multiline_comment|/* Rear : output 1 (0x0e) */
-"&t;"
-(brace
-l_int|0x16
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x01
-)brace
-comma
-"&t;"
-multiline_comment|/* CLFE : output 2 (0x0d) */
-"&t;"
-(brace
-l_int|0x17
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-l_int|0x03
-)brace
-comma
-"&t;"
-multiline_comment|/* Side : output 3 (0x0f) */
 "&t;"
 (brace
 l_int|0x1b
@@ -48100,8 +48000,6 @@ id|init_verbs
 op_assign
 (brace
 id|alc883_init_verbs
-comma
-id|alc888_6st_hp_verbs
 )brace
 comma
 "&t;&t;"
