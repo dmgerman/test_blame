@@ -45302,6 +45302,19 @@ c_func
 (paren
 l_int|0x1558
 comma
+l_int|0x0722
+comma
+l_string|&quot;Clevo laptop M720SR&quot;
+comma
+id|ALC883_CLEVO_M720R
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1558
+comma
 l_int|0
 comma
 l_string|&quot;Clevo laptop&quot;
