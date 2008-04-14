@@ -40128,6 +40128,45 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
+l_string|&quot;Int Mic Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x1
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Int Mic Boost&quot;
+comma
+l_int|0x19
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Int Mic Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x1
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
 l_string|&quot;Capture Volume&quot;
 comma
 l_int|0x08
@@ -45145,6 +45184,19 @@ c_func
 l_int|0x1462
 comma
 l_int|0x0579
+comma
+l_string|&quot;MSI&quot;
+comma
+id|ALC883_TARGA_2ch_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1462
+comma
+l_int|0x2fb3
 comma
 l_string|&quot;MSI&quot;
 comma
