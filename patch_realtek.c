@@ -9185,7 +9185,7 @@ id|codec
 comma
 l_int|0x15
 comma
-id|HDA_INPUT
+id|HDA_OUTPUT
 comma
 l_int|0
 comma
