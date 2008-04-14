@@ -52593,6 +52593,32 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
+l_string|&quot;PC Speaker Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x05
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;PC Speaker Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x05
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
 l_string|&quot;Mic Boost&quot;
 comma
 l_int|0x18
