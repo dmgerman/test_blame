@@ -12822,6 +12822,12 @@ c_func
 id|spec
 )paren
 suffix:semicolon
+"&t;"
+id|codec-&gt;spec
+op_assign
+l_int|NULL
+suffix:semicolon
+multiline_comment|/* to be sure */
 )brace
 multiline_comment|/*&n; */
 r_struct
@@ -36363,6 +36369,17 @@ id|codec
 suffix:semicolon
 )brace
 r_int
+id|patch_alc883
+c_func
+(paren
+r_struct
+id|hda_codec
+op_star
+id|codec
+)paren
+suffix:semicolon
+multiline_comment|/* called in patch_alc882() */
+r_int
 id|patch_alc882
 c_func
 (paren
@@ -36502,6 +36519,36 @@ suffix:semicolon
 "&t;&t;"
 r_default
 suffix:colon
+(brace
+)brace
+"&t;&t;&t;"
+multiline_comment|/* ALC889A is handled better as ALC888-compatible */
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|codec-&gt;revision_id
+op_eq
+l_int|0x100103
+)paren
+(brace
+"&t;&t;&t;&t;"
+id|alc_free
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+"&t;&t;&t;&t;"
+r_return
+id|patch_alc883
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+"&t;&t;&t;"
+)brace
 "&t;&t;&t;"
 id|printk
 c_func
@@ -84726,9 +84773,10 @@ comma
 dot
 id|patch
 op_assign
-id|patch_alc883
+id|patch_alc882
 )brace
 comma
+multiline_comment|/* should be patch_alc883() in future */
 "&t;"
 (brace
 dot
