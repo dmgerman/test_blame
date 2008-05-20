@@ -52399,7 +52399,7 @@ comma
 comma
 )brace
 suffix:semicolon
-multiline_comment|/* mute/unmute internal speaker according to the hp jack and mute state */
+multiline_comment|/* mute/unmute internal speaker according to the hp jacks and mute state */
 r_void
 id|alc262_fujitsu_automute
 c_func
@@ -52439,9 +52439,7 @@ id|spec-&gt;sense_updated
 "&t;&t;"
 r_int
 r_int
-id|present_int_hp
-comma
-id|present_dock_hp
+id|present
 suffix:semicolon
 "&t;&t;"
 multiline_comment|/* need to execute and sync at first */
@@ -52461,7 +52459,9 @@ l_int|0
 )paren
 suffix:semicolon
 "&t;&t;"
-id|present_int_hp
+multiline_comment|/* check laptop HP jack */
+"&t;&t;"
+id|present
 op_assign
 id|snd_hda_codec_read
 c_func
@@ -52479,12 +52479,14 @@ l_int|0
 )paren
 suffix:semicolon
 "&t;&t;"
+multiline_comment|/* need to execute and sync at first */
+"&t;&t;"
 id|snd_hda_codec_read
 c_func
 (paren
 id|codec
 comma
-l_int|0x1B
+l_int|0x1b
 comma
 l_int|0
 comma
@@ -52494,8 +52496,10 @@ l_int|0
 )paren
 suffix:semicolon
 "&t;&t;"
-id|present_dock_hp
-op_assign
+multiline_comment|/* check docking HP jack */
+"&t;&t;"
+id|present
+op_or_assign
 id|snd_hda_codec_read
 c_func
 (paren
@@ -52512,25 +52516,23 @@ l_int|0
 )paren
 suffix:semicolon
 "&t;&t;"
+r_if
+c_cond
+(paren
+id|present
+op_amp
+id|AC_PINSENSE_PRESENCE
+)paren
+"&t;&t;&t;"
 id|spec-&gt;jack_present
 op_assign
-(paren
-id|present_int_hp
-op_amp
-l_int|0x80000000
-)paren
-op_ne
-l_int|0
+l_int|1
 suffix:semicolon
 "&t;&t;"
+r_else
+"&t;&t;&t;"
 id|spec-&gt;jack_present
-op_or_assign
-(paren
-id|present_dock_hp
-op_amp
-l_int|0x80000000
-)paren
-op_ne
+op_assign
 l_int|0
 suffix:semicolon
 "&t;&t;"
@@ -52541,38 +52543,20 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
+multiline_comment|/* unmute internal speaker only if both HPs are unplugged and&n;&t; * master switch is on&n;&t; */
+"&t;"
 r_if
 c_cond
 (paren
 id|spec-&gt;jack_present
 )paren
-(brace
 "&t;&t;"
-multiline_comment|/* mute internal speaker */
-"&t;&t;"
-id|snd_hda_codec_amp_stereo
-c_func
-(paren
-id|codec
-comma
-l_int|0x15
-comma
-id|HDA_OUTPUT
-comma
-l_int|0
-comma
-"&t;&t;&t;&t;&t;"
+id|mute
+op_assign
 id|HDA_AMP_MUTE
-comma
-id|HDA_AMP_MUTE
-)paren
 suffix:semicolon
 "&t;"
-)brace
 r_else
-(brace
-"&t;&t;"
-multiline_comment|/* unmute internal speaker if necessary */
 "&t;&t;"
 id|mute
 op_assign
@@ -52590,7 +52574,7 @@ comma
 l_int|0
 )paren
 suffix:semicolon
-"&t;&t;"
+"&t;"
 id|snd_hda_codec_amp_stereo
 c_func
 (paren
@@ -52602,14 +52586,12 @@ id|HDA_OUTPUT
 comma
 l_int|0
 comma
-"&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;"
 id|HDA_AMP_MUTE
 comma
 id|mute
 )paren
 suffix:semicolon
-"&t;"
-)brace
 )brace
 multiline_comment|/* unsolicited event for HP jack sensing */
 r_void
@@ -52642,6 +52624,26 @@ id|ALC_HP_EVENT
 "&t;&t;"
 r_return
 suffix:semicolon
+"&t;"
+id|alc262_fujitsu_automute
+c_func
+(paren
+id|codec
+comma
+l_int|1
+)paren
+suffix:semicolon
+)brace
+r_void
+id|alc262_fujitsu_init_hook
+c_func
+(paren
+r_struct
+id|hda_codec
+op_star
+id|codec
+)paren
+(brace
 "&t;"
 id|alc262_fujitsu_automute
 c_func
@@ -58009,6 +58011,12 @@ dot
 id|unsol_event
 op_assign
 id|alc262_fujitsu_unsol_event
+comma
+"&t;&t;"
+dot
+id|init_hook
+op_assign
+id|alc262_fujitsu_init_hook
 comma
 "&t;"
 )brace
