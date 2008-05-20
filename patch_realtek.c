@@ -15452,9 +15452,9 @@ l_int|0x1043
 comma
 l_int|0x814e
 comma
-l_string|&quot;ASUS&quot;
+l_string|&quot;ASUS P5GD1 w/SPDIF&quot;
 comma
-id|ALC880_ASUS
+id|ALC880_6ST_DIG
 )paren
 comma
 "&t;"
