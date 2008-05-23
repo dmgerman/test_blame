@@ -45663,6 +45663,19 @@ c_func
 (paren
 l_int|0x105b
 comma
+l_int|0x0ce8
+comma
+l_string|&quot;Foxconn P35AX-S&quot;
+comma
+id|ALC883_6ST_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x105b
+comma
 l_int|0x6668
 comma
 l_string|&quot;Foxconn&quot;
