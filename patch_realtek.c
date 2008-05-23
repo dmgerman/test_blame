@@ -3446,6 +3446,10 @@ r_case
 l_int|0x10ec0662
 suffix:colon
 "&t;"
+"&t;&t;"
+r_case
+l_int|0x10ec0889
+suffix:colon
 "&t;&t;&t;"
 id|snd_hda_codec_write
 c_func
@@ -3589,6 +3593,10 @@ suffix:colon
 "&t;&t;"
 r_case
 l_int|0x10ec0888
+suffix:colon
+"&t;&t;"
+r_case
+l_int|0x10ec0889
 suffix:colon
 "&t;&t;&t;"
 id|snd_hda_codec_write
