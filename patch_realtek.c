@@ -37213,10 +37213,40 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|codec-&gt;vendor_id
+op_eq
+l_int|0x10ec0885
+)paren
+(brace
+"&t;&t;"
+id|spec-&gt;stream_name_analog
+op_assign
+l_string|&quot;ALC885 Analog&quot;
+suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC885 Digital&quot;
+suffix:semicolon
+"&t;"
+)brace
+r_else
+(brace
+"&t;&t;"
 id|spec-&gt;stream_name_analog
 op_assign
 l_string|&quot;ALC882 Analog&quot;
 suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC882 Digital&quot;
+suffix:semicolon
+"&t;"
+)brace
 "&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
@@ -37238,11 +37268,6 @@ id|spec-&gt;stream_analog_alt_capture
 op_assign
 op_amp
 id|alc880_pcm_analog_alt_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC882 Digital&quot;
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
@@ -48586,10 +48611,64 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
+r_switch
+c_cond
+(paren
+id|codec-&gt;vendor_id
+)paren
+(brace
+"&t;"
+r_case
+l_int|0x10ec0888
+suffix:colon
+"&t;&t;"
+id|spec-&gt;stream_name_analog
+op_assign
+l_string|&quot;ALC888 Analog&quot;
+suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC888 Digital&quot;
+suffix:semicolon
+"&t;&t;"
+r_break
+suffix:semicolon
+"&t;"
+r_case
+l_int|0x10ec0889
+suffix:colon
+"&t;&t;"
+id|spec-&gt;stream_name_analog
+op_assign
+l_string|&quot;ALC889 Analog&quot;
+suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC889 Digital&quot;
+suffix:semicolon
+"&t;&t;"
+r_break
+suffix:semicolon
+"&t;"
+r_default
+suffix:colon
+"&t;&t;"
 id|spec-&gt;stream_name_analog
 op_assign
 l_string|&quot;ALC883 Analog&quot;
 suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC883 Digital&quot;
+suffix:semicolon
+"&t;&t;"
+r_break
+suffix:semicolon
+"&t;"
+)brace
 "&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
@@ -48607,11 +48686,6 @@ id|spec-&gt;stream_analog_alt_capture
 op_assign
 op_amp
 id|alc883_pcm_analog_alt_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC883 Digital&quot;
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
@@ -64579,10 +64653,40 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|codec-&gt;vendor_id
+op_eq
+l_int|0x10ec0267
+)paren
+(brace
+"&t;&t;"
+id|spec-&gt;stream_name_analog
+op_assign
+l_string|&quot;ALC267 Analog&quot;
+suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC267 Digital&quot;
+suffix:semicolon
+"&t;"
+)brace
+r_else
+(brace
+"&t;&t;"
 id|spec-&gt;stream_name_analog
 op_assign
 l_string|&quot;ALC268 Analog&quot;
 suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC268 Digital&quot;
+suffix:semicolon
+"&t;"
+)brace
 "&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
@@ -64600,11 +64704,6 @@ id|spec-&gt;stream_analog_alt_capture
 op_assign
 op_amp
 id|alc268_pcm_analog_alt_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC268 Digital&quot;
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
@@ -79269,10 +79368,40 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|codec-&gt;vendor_id
+op_eq
+l_int|0x10ec0660
+)paren
+(brace
+"&t;&t;"
+id|spec-&gt;stream_name_analog
+op_assign
+l_string|&quot;ALC660-VD Analog&quot;
+suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC660-VD Digital&quot;
+suffix:semicolon
+"&t;"
+)brace
+r_else
+(brace
+"&t;&t;"
 id|spec-&gt;stream_name_analog
 op_assign
 l_string|&quot;ALC861VD Analog&quot;
 suffix:semicolon
+"&t;&t;"
+id|spec-&gt;stream_name_digital
+op_assign
+l_string|&quot;ALC861VD Digital&quot;
+suffix:semicolon
+"&t;"
+)brace
 "&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
@@ -79284,11 +79413,6 @@ id|spec-&gt;stream_analog_capture
 op_assign
 op_amp
 id|alc861vd_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC861VD Digital&quot;
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
