@@ -3928,12 +3928,6 @@ id|spec-&gt;unsol_event
 op_assign
 id|alc_sku_unsol_event
 suffix:semicolon
-"&t;"
-id|spec-&gt;init_hook
-op_assign
-id|alc_sku_automute
-suffix:semicolon
-"&t;"
 )brace
 multiline_comment|/*&n; * Fix-up pin default configurations&n; */
 r_struct
