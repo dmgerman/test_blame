@@ -51820,6 +51820,9 @@ comma
 id|PIN_HP
 )brace
 comma
+"&t;"
+(brace
+)brace
 )brace
 suffix:semicolon
 multiline_comment|/* mute/unmute internal speaker according to the hp jack and mute state */
