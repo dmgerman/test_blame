@@ -16131,6 +16131,19 @@ c_func
 (paren
 l_int|0x1734
 comma
+l_int|0x1094
+comma
+l_string|&quot;FSC Amilo M1451G&quot;
+comma
+id|ALC880_FUJITSU
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1734
+comma
 l_int|0x10ac
 comma
 l_string|&quot;FSC&quot;
