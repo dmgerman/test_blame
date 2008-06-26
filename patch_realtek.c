@@ -37384,12 +37384,17 @@ suffix:semicolon
 r_case
 l_int|0x106b00a1
 suffix:colon
-multiline_comment|/* Macbook */
+multiline_comment|/* Macbook (might be wrong - PCI SSID?) */
 "&t;&t;"
 r_case
 l_int|0x106b2c00
 suffix:colon
 multiline_comment|/* Macbook Pro rev3 */
+"&t;&t;"
+r_case
+l_int|0x106b3600
+suffix:colon
+multiline_comment|/* Macbook 3.1 */
 "&t;&t;&t;"
 id|board_config
 op_assign
