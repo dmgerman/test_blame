@@ -78391,6 +78391,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x17aa
+comma
+l_int|0x384e
+comma
+l_string|&quot;Lenovo 3000 N200&quot;
+comma
+id|ALC861VD_LENOVO
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1849
 comma
 l_int|0x0862
