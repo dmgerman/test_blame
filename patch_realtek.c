@@ -28557,7 +28557,7 @@ l_int|0x3011
 comma
 l_string|&quot;HP&quot;
 comma
-id|ALC260_HP
+id|ALC260_HP_3013
 )paren
 comma
 "&t;"
