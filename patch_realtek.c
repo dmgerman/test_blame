@@ -13329,6 +13329,13 @@ id|spec-&gt;dig_in_nid
 suffix:semicolon
 "&t;&t;"
 )brace
+"&t;&t;"
+multiline_comment|/* FIXME: do we need this for all Realtek codec models? */
+"&t;&t;"
+id|codec-&gt;spdif_status_reset
+op_assign
+l_int|1
+suffix:semicolon
 "&t;"
 )brace
 "&t;"
