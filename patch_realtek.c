@@ -3988,12 +3988,8 @@ r_case
 l_int|0x10ec0888
 suffix:colon
 "&t;&t;&t;"
-id|alc888_coef_init
-c_func
-(paren
-id|codec
-)paren
-suffix:semicolon
+multiline_comment|/*alc888_coef_init(codec);*/
+multiline_comment|/* called in alc_init() */
 "&t;&t;&t;"
 r_break
 suffix:semicolon
@@ -12204,6 +12200,21 @@ id|i
 suffix:semicolon
 "&t;"
 id|alc_fix_pll
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|codec-&gt;vendor_id
+op_eq
+l_int|0x10ec0888
+)paren
+"&t;&t;"
+id|alc888_coef_init
 c_func
 (paren
 id|codec
@@ -50111,20 +50122,6 @@ id|ALC883_AUTO
 id|spec-&gt;init_hook
 op_assign
 id|alc883_auto_init
-suffix:semicolon
-"&t;"
-r_else
-r_if
-c_cond
-(paren
-id|codec-&gt;vendor_id
-op_eq
-l_int|0x10ec0888
-)paren
-"&t;&t;"
-id|spec-&gt;init_hook
-op_assign
-id|alc888_coef_init
 suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 "&t;"
