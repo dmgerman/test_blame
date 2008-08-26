@@ -429,7 +429,6 @@ comma
 id|ALC883_MEDION_MD2
 comma
 "&t;"
-"&t;"
 id|ALC883_LAPTOP_EAPD
 comma
 "&t;"
@@ -444,7 +443,6 @@ comma
 "&t;"
 id|ALC883_HAIER_W66
 comma
-"&t;&t;"
 "&t;"
 id|ALC888_3ST_HP
 comma
@@ -1333,7 +1331,7 @@ r_return
 id|err
 suffix:semicolon
 )brace
-multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidently treating the % as &n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour as of&n; * March 2006.&n; */
+multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidently treating the % as&n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour as of&n; * March 2006.&n; */
 r_char
 op_star
 id|alc_pin_mode_names
@@ -1381,7 +1379,7 @@ macro_line|#define ALC_PIN_DIR_OUT             0x01
 macro_line|#define ALC_PIN_DIR_INOUT           0x02
 macro_line|#define ALC_PIN_DIR_IN_NOMICBIAS    0x03
 macro_line|#define ALC_PIN_DIR_INOUT_NOMICBIAS 0x04
-multiline_comment|/* Info about the pin modes supported by the different pin direction modes. &n; * For each direction the minimum and maximum values are given.&n; */
+multiline_comment|/* Info about the pin modes supported by the different pin direction modes.&n; * For each direction the minimum and maximum values are given.&n; */
 r_int
 r_char
 id|alc_pin_mode_dir_info
@@ -1814,7 +1812,7 @@ id|val
 )paren
 suffix:semicolon
 "&t;&t;"
-multiline_comment|/* Also enable the retasking pin&squot;s input/output as required &n;&t;&t; * for the requested pin mode.  Enum values of 2 or less are&n;&t;&t; * input modes.&n;&t;&t; *&n;&t;&t; * Dynamically switching the input/output buffers probably&n;&t;&t; * reduces noise slightly (particularly on input) so we&squot;ll&n;&t;&t; * do it.  However, having both input and output buffers&n;&t;&t; * enabled simultaneously doesn&squot;t seem to be problematic if&n;&t;&t; * this turns out to be necessary in the future.&n;&t;&t; */
+multiline_comment|/* Also enable the retasking pin&squot;s input/output as required&n;&t;&t; * for the requested pin mode.  Enum values of 2 or less are&n;&t;&t; * input modes.&n;&t;&t; *&n;&t;&t; * Dynamically switching the input/output buffers probably&n;&t;&t; * reduces noise slightly (particularly on input) so we&squot;ll&n;&t;&t; * do it.  However, having both input and output buffers&n;&t;&t; * enabled simultaneously doesn&squot;t seem to be problematic if&n;&t;&t; * this turns out to be necessary in the future.&n;&t;&t; */
 "&t;&t;"
 r_if
 c_cond
@@ -2736,7 +2734,6 @@ id|i
 )braket
 suffix:semicolon
 "&t;"
-"&t;"
 id|spec-&gt;channel_mode
 op_assign
 id|preset-&gt;channel_mode
@@ -2781,7 +2778,6 @@ id|spec-&gt;multiout.hp_nid
 op_assign
 id|preset-&gt;hp_nid
 suffix:semicolon
-"&t;"
 "&t;"
 id|spec-&gt;num_mux_defs
 op_assign
@@ -3474,7 +3470,7 @@ r_goto
 id|do_sku
 suffix:semicolon
 "&t;"
-multiline_comment|/*&t;&n;&t; * 31~30&t;: port conetcivity&n;&t; * 29~21&t;: reserve&n;&t; * 20&t;&t;: PCBEEP input&n;&t; * 19~16&t;: Check sum (15:1)&n;&t; * 15~1&t;&t;: Custom&n;&t; * 0&t;&t;: override&n;&t;*/
+multiline_comment|/*&n;&t; * 31~30&t;: port conetcivity&n;&t; * 29~21&t;: reserve&n;&t; * 20&t;&t;: PCBEEP input&n;&t; * 19~16&t;: Check sum (15:1)&n;&t; * 15~1&t;&t;: Custom&n;&t; * 0&t;&t;: override&n;&t;*/
 "&t;"
 id|nid
 op_assign
@@ -3963,7 +3959,6 @@ comma
 l_int|7
 )paren
 suffix:semicolon
-"&t;"
 "&t;&t;&t;"
 id|snd_hda_codec_write
 c_func
@@ -4054,7 +4049,6 @@ comma
 l_int|7
 )paren
 suffix:semicolon
-"&t;"
 "&t;&t;&t;"
 id|snd_hda_codec_write
 c_func
@@ -4087,7 +4081,6 @@ r_break
 suffix:semicolon
 "&t;"
 )brace
-"&t;"
 "&t;"
 multiline_comment|/* is laptop or Desktop and enable the function &quot;Mute internal speaker&n;&t; * when the external headphone out jack is plugged&quot;&n;&t; */
 "&t;"
@@ -5736,7 +5729,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/*&n; * ALC880 W810 model&n; *&n; * W810 has rear IO for:&n; * Front (DAC 02)&n; * Surround (DAC 03)&n; * Center/LFE (DAC 04)&n; * Digital out (06)&n; *&n; * The system also has a pair of internal speakers, and a headphone jack.&n; * These are both connected to Line2 on the codec, hence to DAC 02.&n; * &n; * There is a variable resistor to control the speaker or headphone&n; * volume. This is a hardware-only device without a software API.&n; *&n; * Plugging headphones in will disable the internal speakers. This is&n; * implemented in hardware, not via the driver using jack sense. In&n; * a similar fashion, plugging into the rear socket marked &quot;front&quot; will&n; * disable both the speakers and headphones.&n; *&n; * For input, there&squot;s a microphone jack, and an &quot;audio in&quot; jack.&n; * These may not do anything useful with this driver yet, because I&n; * haven&squot;t setup any initialization verbs for these yet...&n; */
+multiline_comment|/*&n; * ALC880 W810 model&n; *&n; * W810 has rear IO for:&n; * Front (DAC 02)&n; * Surround (DAC 03)&n; * Center/LFE (DAC 04)&n; * Digital out (06)&n; *&n; * The system also has a pair of internal speakers, and a headphone jack.&n; * These are both connected to Line2 on the codec, hence to DAC 02.&n; *&n; * There is a variable resistor to control the speaker or headphone&n; * volume. This is a hardware-only device without a software API.&n; *&n; * Plugging headphones in will disable the internal speakers. This is&n; * implemented in hardware, not via the driver using jack sense. In&n; * a similar fashion, plugging into the rear socket marked &quot;front&quot; will&n; * disable both the speakers and headphones.&n; *&n; * For input, there&squot;s a microphone jack, and an &quot;audio in&quot; jack.&n; * These may not do anything useful with this driver yet, because I&n; * haven&squot;t setup any initialization verbs for these yet...&n; */
 id|hda_nid_t
 id|alc880_w810_dac_nids
 (braket
@@ -8650,7 +8643,6 @@ id|PIN_IN
 )brace
 comma
 "&t;"
-"&t;"
 (brace
 )brace
 )brace
@@ -8941,7 +8933,7 @@ comma
 )brace
 )brace
 suffix:semicolon
-multiline_comment|/*&n;* Uniwill P53&n;* HP = 0x14, InternalSpeaker = 0x15, mic = 0x19, &n; */
+multiline_comment|/*&n;* Uniwill P53&n;* HP = 0x14, InternalSpeaker = 0x15, mic = 0x19,&n; */
 r_struct
 id|hda_verb
 id|alc880_uniwill_p53_init_verbs
@@ -9544,7 +9536,6 @@ r_int
 id|present
 suffix:semicolon
 "&t;"
-"&t;"
 id|present
 op_assign
 id|snd_hda_codec_read
@@ -10054,7 +10045,6 @@ comma
 id|PIN_IN
 )brace
 comma
-"&t;"
 "&t;"
 (brace
 )brace
@@ -19980,7 +19970,6 @@ r_int
 id|i
 suffix:semicolon
 "&t;"
-"&t;"
 id|alc_subsystem_id
 c_func
 (paren
@@ -24507,7 +24496,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Ensure Line1 pin widget takes its input from the OUT1 sum bus &n;&t; * when acting as an output.&n;&t; */
+multiline_comment|/* Ensure Line1 pin widget takes its input from the OUT1 sum bus&n;&t; * when acting as an output.&n;&t; */
 "&t;"
 (brace
 l_int|0x0d
@@ -24647,7 +24636,7 @@ id|AMP_OUT_UNMUTE
 )brace
 comma
 "&t;"
-multiline_comment|/* Unmute input buffer of pin widget used for Line-in (no equiv &n;&t; * mixer ctrl)&n;&t; */
+multiline_comment|/* Unmute input buffer of pin widget used for Line-in (no equiv&n;&t; * mixer ctrl)&n;&t; */
 "&t;"
 (brace
 l_int|0x12
@@ -24677,7 +24666,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Set ADC connection select to match default mixer setting - line &n;&t; * in (on mic1 pin)&n;&t; */
+multiline_comment|/* Set ADC connection select to match default mixer setting - line&n;&t; * in (on mic1 pin)&n;&t; */
 "&t;"
 (brace
 l_int|0x04
@@ -25000,7 +24989,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Ensure Mic1 and Line1 pin widgets take input from the OUT1 sum &n;&t; * bus when acting as outputs.&n;&t; */
+multiline_comment|/* Ensure Mic1 and Line1 pin widgets take input from the OUT1 sum&n;&t; * bus when acting as outputs.&n;&t; */
 "&t;"
 (brace
 l_int|0x0b
@@ -25663,7 +25652,7 @@ l_int|0x05
 comma
 )brace
 suffix:semicolon
-multiline_comment|/* For testing the ALC260, each input MUX needs its own definition since&n; * the signal assignments are different.  This assumes that the first ADC &n; * is NID 0x04.&n; */
+multiline_comment|/* For testing the ALC260, each input MUX needs its own definition since&n; * the signal assignments are different.  This assumes that the first ADC&n; * is NID 0x04.&n; */
 r_struct
 id|hda_input_mux
 id|alc260_test_capture_sources
@@ -26231,7 +26220,7 @@ l_int|0x08
 )paren
 comma
 "&t;"
-multiline_comment|/* Switches to allow the digital IO pins to be enabled.  The datasheet&n;&t; * is ambigious as to which NID is which; testing on laptops which&n;&t; * make this output available should provide clarification. &n;&t; */
+multiline_comment|/* Switches to allow the digital IO pins to be enabled.  The datasheet&n;&t; * is ambigious as to which NID is which; testing on laptops which&n;&t; * make this output available should provide clarification.&n;&t; */
 "&t;"
 id|ALC_SPDIF_CTRL_SWITCH
 c_func
@@ -26397,7 +26386,7 @@ l_int|0
 )brace
 comma
 "&t;"
-multiline_comment|/* Ensure mic1, mic2, line1 and line2 pin widgets take input from the &n;&t; * OUT1 sum bus when acting as an output.&n;&t; */
+multiline_comment|/* Ensure mic1, mic2, line1 and line2 pin widgets take input from the&n;&t; * OUT1 sum bus when acting as an output.&n;&t; */
 "&t;"
 (brace
 l_int|0x0b
@@ -26978,7 +26967,6 @@ r_return
 l_int|0
 suffix:semicolon
 multiline_comment|/* N/A */
-"&t;"
 "&t;"
 id|snprintf
 c_func
@@ -27633,7 +27621,6 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-"&t;"
 id|nid
 op_assign
 id|spec-&gt;autocfg.speaker_pins
@@ -27855,7 +27842,6 @@ l_int|0
 )brace
 comma
 "&t;"
-"&t;"
 multiline_comment|/* Unmute input amps (CD, Line In, Mic 1 &amp; Mic 2) of the analog-loopback&n;&t; * mixer widget&n;&t; * Note: PASD motherboards uses the Line In 2 as the input for&n;&t; * front panel mic (mic 2)&n;&t; */
 "&t;"
 multiline_comment|/* Amp Indices: Mic1 = 0, Mic2 = 1, Line1 = 2, Line2 = 3, CD = 4 */
@@ -28039,7 +28025,6 @@ l_int|1
 )paren
 )brace
 comma
-"&t;"
 "&t;"
 (brace
 )brace
@@ -33790,7 +33775,6 @@ id|PIN_OUT
 )brace
 comma
 "&t;"
-"&t;"
 (brace
 l_int|0x18
 comma
@@ -34046,7 +34030,6 @@ comma
 id|PIN_OUT
 )brace
 comma
-"&t;"
 "&t;"
 (brace
 l_int|0x14
@@ -36358,7 +36341,6 @@ comma
 )brace
 comma
 "&t;"
-"&t;"
 (braket
 id|ALC882_ASUS_A7M
 )braket
@@ -36444,7 +36426,6 @@ comma
 "&t;"
 )brace
 comma
-"&t;"
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * Pin config fixes&n; */
@@ -42765,7 +42746,6 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-"&t;"
 r_struct
 id|snd_kcontrol_new
 id|alc883_acer_aspire_mixer
@@ -44050,7 +44030,6 @@ comma
 id|PIN_OUT
 )brace
 comma
-"&t;"
 "&t;"
 (brace
 l_int|0x18
@@ -48433,7 +48412,6 @@ comma
 "&t;"
 )brace
 comma
-"&t;"
 "&t;"
 (braket
 id|ALC883_LAPTOP_EAPD
@@ -52924,7 +52902,6 @@ l_int|0x0000
 )brace
 comma
 "&t;"
-"&t;"
 (brace
 l_int|0x14
 comma
@@ -52942,7 +52919,6 @@ comma
 l_int|0x01
 )brace
 comma
-"&t;"
 "&t;"
 multiline_comment|/* FIXME: use matrix-type input source selection */
 "&t;"
@@ -56723,7 +56699,6 @@ id|AMP_OUT_ZERO
 )brace
 comma
 "&t;"
-"&t;"
 multiline_comment|/* set up input amps for analog loopback */
 "&t;"
 multiline_comment|/* Amp Indices: DAC = 0, mixer = 1 */
@@ -57193,7 +57168,6 @@ l_int|6
 )paren
 )brace
 comma
-"&t;"
 "&t;"
 multiline_comment|/*&n;&t; * Set up output mixers (0x0c - 0x0e)&n;&t; */
 "&t;"
@@ -60396,7 +60370,6 @@ comma
 )brace
 comma
 "&t;"
-"&t;"
 (braket
 id|ALC262_ULTRA
 )braket
@@ -60949,7 +60922,6 @@ op_assign
 op_amp
 id|alc262_pcm_analog_capture
 suffix:semicolon
-"&t;&t;"
 "&t;"
 id|spec-&gt;stream_name_digital
 op_assign
@@ -61122,7 +61094,6 @@ op_assign
 id|alc262_loopbacks
 suffix:semicolon
 macro_line|#endif
-"&t;&t;"
 "&t;"
 r_return
 l_int|0
@@ -61131,7 +61102,6 @@ suffix:semicolon
 multiline_comment|/*&n; *  ALC268 channel source setting (2 channel)&n; */
 macro_line|#define ALC268_DIGOUT_NID&t;ALC880_DIGOUT_NID
 macro_line|#define alc268_modes&t;&t;alc260_modes
-"&t;"
 id|hda_nid_t
 id|alc268_dac_nids
 (braket
@@ -62967,7 +62937,6 @@ comma
 "&t;"
 multiline_comment|/* Unmute Selector 23h,24h and set the default input to mic-in */
 "&t;"
-"&t;"
 (brace
 l_int|0x23
 comma
@@ -64209,7 +64178,6 @@ l_int|0
 )paren
 suffix:semicolon
 "&t;"
-"&t;"
 id|nid
 op_assign
 id|cfg-&gt;speaker_pins
@@ -64361,7 +64329,6 @@ suffix:semicolon
 r_return
 l_int|0
 suffix:semicolon
-"&t;"
 )brace
 multiline_comment|/* create playback/capture controls for input pins */
 r_int
@@ -64468,7 +64435,6 @@ suffix:semicolon
 r_case
 l_int|0x1c
 suffix:colon
-"&t;"
 "&t;&t;&t;"
 id|idx1
 op_assign
@@ -64532,7 +64498,6 @@ suffix:semicolon
 id|imux-&gt;num_items
 op_increment
 suffix:semicolon
-"&t;"
 "&t;"
 )brace
 "&t;"
@@ -64723,7 +64688,6 @@ id|line_nid
 op_eq
 l_int|0x14
 )paren
-"&t;"
 "&t;&t;"
 id|dac_vol2
 op_assign
@@ -64751,7 +64715,6 @@ id|hp_nid
 op_eq
 l_int|0x14
 )paren
-"&t;"
 "&t;&t;"
 id|dac_vol2
 op_assign
@@ -66653,7 +66616,6 @@ id|spec-&gt;init_hook
 op_assign
 id|alc268_auto_init
 suffix:semicolon
-"&t;&t;"
 "&t;"
 r_return
 l_int|0
@@ -68152,7 +68114,7 @@ id|hda_codec
 op_star
 id|codec
 comma
-"&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;"
 r_int
 r_int
 id|res
@@ -70792,7 +70754,6 @@ comma
 id|HDA_INPUT
 )paren
 comma
-"&t;"
 multiline_comment|/*Capture mixer control */
 "&t;"
 id|HDA_CODEC_VOLUME
@@ -71733,7 +71694,6 @@ l_int|0
 )brace
 comma
 "&t;"
-"&t;"
 multiline_comment|/* Unmute DAC0~3 &amp; spdif out*/
 "&t;"
 (brace
@@ -71780,7 +71740,6 @@ comma
 id|AMP_OUT_UNMUTE
 )brace
 comma
-"&t;"
 "&t;"
 multiline_comment|/* Unmute Mixer 14 (mic) 1c (Line in)*/
 "&t;"
@@ -71833,7 +71792,6 @@ l_int|1
 )paren
 )brace
 comma
-"&t;"
 "&t;"
 multiline_comment|/* Unmute Stereo Mixer 15 */
 "&t;"
@@ -72221,7 +72179,6 @@ id|AMP_OUT_UNMUTE
 )brace
 comma
 "&t;"
-"&t;"
 multiline_comment|/* Unmute Mixer 14 (mic) 1c (Line in)*/
 "&t;"
 (brace
@@ -72273,7 +72230,6 @@ l_int|1
 )paren
 )brace
 comma
-"&t;"
 "&t;"
 multiline_comment|/* Unmute Stereo Mixer 15 */
 "&t;"
@@ -72663,7 +72619,6 @@ id|AMP_OUT_UNMUTE
 )brace
 comma
 "&t;"
-"&t;"
 multiline_comment|/* Unmute Mixer 14 (mic) 1c (Line in)*/
 "&t;"
 (brace
@@ -72715,7 +72670,6 @@ l_int|1
 )paren
 )brace
 comma
-"&t;"
 "&t;"
 multiline_comment|/* Unmute Stereo Mixer 15 */
 "&t;"
@@ -73169,7 +73123,6 @@ l_int|1
 )brace
 comma
 "&t;"
-"&t;"
 multiline_comment|/* Unmute Stereo Mixer 15 */
 "&t;"
 (brace
@@ -73420,7 +73373,6 @@ l_int|0
 )brace
 comma
 "&t;"
-"&t;"
 multiline_comment|/* Unmute DAC0~3 &amp; spdif out*/
 "&t;"
 (brace
@@ -73467,7 +73419,6 @@ comma
 id|AMP_OUT_UNMUTE
 )brace
 comma
-"&t;"
 "&t;"
 multiline_comment|/* Unmute Mixer 14 (mic) 1c (Line in)*/
 "&t;"
@@ -73522,7 +73473,6 @@ l_int|1
 )paren
 )brace
 comma
-"&t;"
 "&t;"
 multiline_comment|/* Unmute Stereo Mixer 15 */
 "&t;"
@@ -76855,7 +76805,6 @@ op_assign
 id|alc861_loopbacks
 suffix:semicolon
 macro_line|#endif
-"&t;&t;"
 "&t;"
 r_return
 l_int|0
@@ -78294,7 +78243,6 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-"&t;"
 (brace
 )brace
 multiline_comment|/* end */
@@ -79103,7 +79051,6 @@ id|ALC880_MIC_EVENT
 )brace
 comma
 "&t;"
-"&t;"
 (brace
 )brace
 )brace
@@ -79475,7 +79422,6 @@ l_int|1
 )brace
 comma
 "&t;"
-"&t;"
 (brace
 l_int|0x14
 comma
@@ -79693,7 +79639,6 @@ comma
 l_int|0x00
 )brace
 comma
-"&t;"
 "&t;"
 (brace
 l_int|0x15
@@ -80728,7 +80673,6 @@ comma
 "&t;"
 )brace
 comma
-"&t;&t;"
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * BIOS auto configuration&n; */
@@ -86424,12 +86368,12 @@ l_int|0x18
 comma
 l_int|0
 comma
-"&t;&t;&t;&t;"
+"&t;&t;&t;"
 id|AC_VERB_GET_PIN_SENSE
 comma
 l_int|0
 )paren
-"&t;&t;"
+"&t;&t;&t;"
 op_amp
 id|AC_PINSENSE_PRESENCE
 suffix:semicolon
@@ -89655,7 +89599,6 @@ op_assign
 op_amp
 id|spec-&gt;private_imux
 suffix:semicolon
-"&t;"
 "&t;"
 id|spec-&gt;init_verbs
 (braket
