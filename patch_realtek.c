@@ -35480,19 +35480,6 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
-l_int|0x106b
-comma
-l_int|0x00a0
-comma
-l_string|&quot;Apple iMac 24&squot;&squot;&quot;
-comma
-id|ALC885_IMAC24
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
 l_int|0x1458
 comma
 l_int|0xa002
