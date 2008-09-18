@@ -38173,6 +38173,11 @@ suffix:colon
 multiline_comment|/* Macbook (might be wrong - PCI SSID?) */
 "&t;&t;"
 r_case
+l_int|0x106b00a4
+suffix:colon
+multiline_comment|/* MacbookPro4,1 */
+"&t;&t;"
+r_case
 l_int|0x106b2c00
 suffix:colon
 multiline_comment|/* Macbook Pro rev3 */
