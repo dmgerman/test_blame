@@ -97159,7 +97159,7 @@ c_func
 (paren
 id|spec
 comma
-id|ALC_CTL_BIND_MUTE
+id|ALC_CTL_WIDGET_MUTE
 comma
 "&t;&t;&t;&t;&t;"
 l_string|&quot;Center Playback Switch&quot;
@@ -97168,11 +97168,11 @@ comma
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
-id|nid
+l_int|0x0e
 comma
 l_int|1
 comma
-l_int|2
+l_int|0
 comma
 "&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
@@ -97199,7 +97199,7 @@ c_func
 (paren
 id|spec
 comma
-id|ALC_CTL_BIND_MUTE
+id|ALC_CTL_WIDGET_MUTE
 comma
 "&t;&t;&t;&t;&t;"
 l_string|&quot;LFE Playback Switch&quot;
@@ -97208,11 +97208,11 @@ comma
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
-id|nid
+l_int|0x0e
 comma
 l_int|2
 comma
-l_int|2
+l_int|0
 comma
 "&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
@@ -97310,21 +97310,25 @@ c_func
 (paren
 id|spec
 comma
-id|ALC_CTL_BIND_MUTE
+id|ALC_CTL_WIDGET_MUTE
 comma
 id|name
 comma
-"&t;&t;&t;&t;&t;"
+"&t;&t;&t;&t;"
 id|HDA_COMPOSE_AMP_VAL
 c_func
 (paren
-id|nid
+id|alc880_idx_to_mixer
+c_func
+(paren
+id|i
+)paren
 comma
+"&t;&t;&t;&t;&t;&t;"
 l_int|3
 comma
-l_int|2
+l_int|0
 comma
-"&t;&t;&t;&t;&t;&t;&t;"
 id|HDA_INPUT
 )paren
 )paren
