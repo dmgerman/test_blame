@@ -95337,6 +95337,20 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x105b
+comma
+l_int|0x0d47
+comma
+l_string|&quot;Foxconn 45CMX/45GMX/45CMX-K&quot;
+comma
+"&t;&t;"
+id|ALC662_3ST_6ch_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x17aa
 comma
 l_int|0x101e
