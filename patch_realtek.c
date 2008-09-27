@@ -38158,6 +38158,11 @@ r_case
 l_int|0x106b1000
 suffix:colon
 multiline_comment|/* iMac 24 */
+"&t;&t;"
+r_case
+l_int|0x106b2800
+suffix:colon
+multiline_comment|/* AppleTV */
 "&t;&t;&t;"
 id|board_config
 op_assign
