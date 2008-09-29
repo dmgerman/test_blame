@@ -95409,6 +95409,33 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1565
+comma
+l_int|0x820f
+comma
+l_string|&quot;Biostar TA780G M2+&quot;
+comma
+id|ALC662_3ST_6ch_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1849
+comma
+l_int|0x0774
+comma
+l_string|&quot;ASROCK K10N78FullHD-hSLI R3.0&quot;
+comma
+"&t;&t;&t;&t;&t;"
+id|ALC662_3ST_6ch_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1854
 comma
 l_int|0x2000
