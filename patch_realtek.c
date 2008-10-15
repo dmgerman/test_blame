@@ -63059,7 +63059,7 @@ c_func
 (paren
 l_int|0x1179
 comma
-l_int|0x0268
+l_int|0xff7b
 comma
 l_string|&quot;Toshiba S06&quot;
 comma
@@ -95183,7 +95183,7 @@ l_int|0x1043
 comma
 l_int|0x19a3
 comma
-l_string|&quot;ASUS M51VA&quot;
+l_string|&quot;ASUS G50V&quot;
 comma
 id|ALC663_ASUS_G50V
 )paren
@@ -95340,6 +95340,19 @@ comma
 l_int|0x19e3
 comma
 l_string|&quot;ASUS NB&quot;
+comma
+id|ALC663_ASUS_MODE1
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
+l_int|0x1993
+comma
+l_string|&quot;ASUS N20&quot;
 comma
 id|ALC663_ASUS_MODE1
 )paren
