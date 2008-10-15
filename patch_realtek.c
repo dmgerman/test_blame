@@ -49518,11 +49518,11 @@ c_func
 (paren
 l_int|0x1043
 comma
-l_int|0x8249
+l_int|0x1873
 comma
-l_string|&quot;Asus M2A-VM HDMI&quot;
+l_string|&quot;Asus M90V&quot;
 comma
-id|ALC883_3ST_6ch_DIG
+id|ALC888_ASUS_M90V
 )paren
 comma
 "&t;"
@@ -49531,11 +49531,11 @@ c_func
 (paren
 l_int|0x1043
 comma
-l_int|0x8317
+l_int|0x8249
 comma
-l_string|&quot;Asus M90V&quot;
+l_string|&quot;Asus M2A-VM HDMI&quot;
 comma
-id|ALC888_ASUS_M90V
+id|ALC883_3ST_6ch_DIG
 )paren
 comma
 "&t;"
