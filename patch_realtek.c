@@ -48124,6 +48124,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x0090
+comma
+l_string|&quot;Acer Aspire&quot;
+comma
+id|ALC883_ACER_ASPIRE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x0110
 comma
 l_string|&quot;Acer Aspire&quot;
@@ -48819,6 +48832,19 @@ comma
 l_string|&quot;MEDION MD2&quot;
 comma
 id|ALC883_MEDION_MD2
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17c0
+comma
+l_int|0x4085
+comma
+l_string|&quot;MEDION MD96630&quot;
+comma
+id|ALC888_LENOVO_MS7195_DIG
 )paren
 comma
 "&t;"
