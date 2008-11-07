@@ -22761,7 +22761,7 @@ c_func
 (paren
 id|codec
 comma
-l_int|0x0f
+id|hp
 comma
 l_int|0
 comma
@@ -22777,7 +22777,7 @@ c_func
 (paren
 id|codec
 comma
-l_int|0x10
+id|line
 comma
 l_int|0
 comma
@@ -22810,7 +22810,7 @@ c_func
 (paren
 id|codec
 comma
-l_int|0x11
+id|mono
 comma
 l_int|0
 comma
@@ -23301,13 +23301,13 @@ dot
 id|private_value
 op_assign
 (paren
-l_int|0x10
+l_int|0x15
 op_lshift
 l_int|16
 )paren
 op_or
 (paren
-l_int|0x15
+l_int|0x10
 op_lshift
 l_int|8
 )paren
@@ -23684,9 +23684,9 @@ c_func
 (paren
 id|codec
 comma
-l_int|0x10
-comma
 l_int|0x15
+comma
+l_int|0x10
 comma
 l_int|0x11
 )paren
