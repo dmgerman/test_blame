@@ -6,7 +6,6 @@ macro_line|#include &lt;linux/pci.h&gt;
 macro_line|#include &lt;sound/core.h&gt;
 macro_line|#include &quot;hda_codec.h&quot;
 macro_line|#include &quot;hda_local.h&quot;
-macro_line|#include &quot;hda_patch.h&quot;
 macro_line|#define ALC880_FRONT_EVENT&t;&t;0x01
 macro_line|#define ALC880_DCVOL_EVENT&t;&t;0x02
 macro_line|#define ALC880_HP_EVENT&t;&t;&t;0x04
@@ -101023,4 +101022,84 @@ comma
 multiline_comment|/* terminator */
 )brace
 suffix:semicolon
+id|MODULE_ALIAS
+c_func
+(paren
+l_string|&quot;snd-hda-codec-id:10ec*&quot;
+)paren
+suffix:semicolon
+id|MODULE_LICENSE
+c_func
+(paren
+l_string|&quot;GPL&quot;
+)paren
+suffix:semicolon
+id|MODULE_DESCRIPTION
+c_func
+(paren
+l_string|&quot;Realtek HD-audio codec&quot;
+)paren
+suffix:semicolon
+r_struct
+id|hda_codec_preset_list
+id|realtek_list
+op_assign
+(brace
+"&t;"
+dot
+id|preset
+op_assign
+id|snd_hda_preset_realtek
+comma
+"&t;"
+dot
+id|owner
+op_assign
+id|THIS_MODULE
+comma
+)brace
+suffix:semicolon
+r_int
+id|__init
+id|patch_realtek_init
+c_func
+(paren
+)paren
+(brace
+"&t;"
+r_return
+id|snd_hda_add_codec_preset
+c_func
+(paren
+op_amp
+id|realtek_list
+)paren
+suffix:semicolon
+)brace
+r_void
+id|__exit
+id|patch_realtek_exit
+c_func
+(paren
+)paren
+(brace
+"&t;"
+id|snd_hda_delete_codec_preset
+c_func
+(paren
+op_amp
+id|realtek_list
+)paren
+suffix:semicolon
+)brace
+id|module_init
+c_func
+(paren
+id|patch_realtek_init
+)paren
+id|module_exit
+c_func
+(paren
+id|patch_realtek_exit
+)paren
 eof
