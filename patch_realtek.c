@@ -22979,7 +22979,7 @@ OG
 l_int|0
 op_logical_and
 id|spec-&gt;num_adc_nids
-OL
+op_le
 l_int|3
 )paren
 "&t;&t;"
