@@ -63575,6 +63575,20 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x104d
+comma
+l_int|0x9033
+comma
+l_string|&quot;Sony VAIO VGN-SR19XN&quot;
+comma
+"&t;&t;"
+id|ALC262_SONY_ASSAMD
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1179
 comma
 l_int|0x0001
