@@ -63715,6 +63715,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x144d
+comma
+l_int|0xc510
+comma
+l_string|&quot;Samsung Q45&quot;
+comma
+id|ALC262_HIPPO
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x17aa
 comma
 l_int|0x384e
