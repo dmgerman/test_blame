@@ -49588,6 +49588,34 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x013f
+comma
+l_string|&quot;Acer Aspire 5930G&quot;
+comma
+"&t;&t;"
+id|ALC888_ACER_ASPIRE_4930G
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
+l_int|0x015e
+comma
+l_string|&quot;Acer Aspire 6930G&quot;
+comma
+"&t;&t;"
+id|ALC888_ACER_ASPIRE_4930G
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0
 comma
 l_string|&quot;Acer laptop&quot;
