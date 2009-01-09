@@ -6918,10 +6918,9 @@ id|mutex_lock
 c_func
 (paren
 op_amp
-id|codec-&gt;spdif_mutex
+id|codec-&gt;control_mutex
 )paren
 suffix:semicolon
-multiline_comment|/* reuse spdif_mutex */
 "&t;"
 id|kcontrol-&gt;private_value
 op_assign
@@ -6957,10 +6956,9 @@ id|mutex_unlock
 c_func
 (paren
 op_amp
-id|codec-&gt;spdif_mutex
+id|codec-&gt;control_mutex
 )paren
 suffix:semicolon
-multiline_comment|/* reuse spdif_mutex */
 "&t;"
 r_return
 id|err
@@ -7019,10 +7017,9 @@ id|mutex_lock
 c_func
 (paren
 op_amp
-id|codec-&gt;spdif_mutex
+id|codec-&gt;control_mutex
 )paren
 suffix:semicolon
-multiline_comment|/* reuse spdif_mutex */
 "&t;"
 id|kcontrol-&gt;private_value
 op_assign
@@ -7062,10 +7059,9 @@ id|mutex_unlock
 c_func
 (paren
 op_amp
-id|codec-&gt;spdif_mutex
+id|codec-&gt;control_mutex
 )paren
 suffix:semicolon
-multiline_comment|/* reuse spdif_mutex */
 "&t;"
 r_return
 id|err
@@ -7153,10 +7149,9 @@ id|mutex_lock
 c_func
 (paren
 op_amp
-id|codec-&gt;spdif_mutex
+id|codec-&gt;control_mutex
 )paren
 suffix:semicolon
-multiline_comment|/* reuse spdif_mutex */
 "&t;"
 id|kcontrol-&gt;private_value
 op_assign
@@ -7192,10 +7187,9 @@ id|mutex_unlock
 c_func
 (paren
 op_amp
-id|codec-&gt;spdif_mutex
+id|codec-&gt;control_mutex
 )paren
 suffix:semicolon
-multiline_comment|/* reuse spdif_mutex */
 "&t;"
 r_return
 id|err
