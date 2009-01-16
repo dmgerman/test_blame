@@ -49780,6 +49780,19 @@ c_func
 (paren
 l_int|0x1071
 comma
+l_int|0x8227
+comma
+l_string|&quot;Mitac 82801H&quot;
+comma
+id|ALC883_MITAC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1071
+comma
 l_int|0x8253
 comma
 l_string|&quot;Mitac 8252d&quot;
@@ -50384,6 +50397,19 @@ comma
 l_string|&quot;DG33FBC&quot;
 comma
 id|ALC883_3ST_6ch_INTEL
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x8086
+comma
+l_int|0x2503
+comma
+l_string|&quot;82801H&quot;
+comma
+id|ALC883_MITAC
 )paren
 comma
 "&t;"
