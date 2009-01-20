@@ -646,6 +646,10 @@ id|hda_nid_t
 id|alt_dac_nid
 suffix:semicolon
 "&t;"
+r_int
+id|dig_out_type
+suffix:semicolon
+"&t;"
 multiline_comment|/* capture */
 "&t;"
 r_int
@@ -15402,6 +15406,19 @@ op_assign
 id|spec-&gt;stream_name_digital
 suffix:semicolon
 "&t;&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;dig_out_type
+)paren
+"&t;&t;&t;"
+id|info-&gt;pcm_type
+op_assign
+id|spec-&gt;dig_out_type
+suffix:semicolon
+"&t;&t;"
+r_else
+"&t;&t;&t;"
 id|info-&gt;pcm_type
 op_assign
 id|HDA_PCM_TYPE_SPDIF
