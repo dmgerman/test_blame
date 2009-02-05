@@ -48227,12 +48227,7 @@ r_case
 id|ALC880_HP_EVENT
 suffix:colon
 "&t;&t;"
-id|printk
-c_func
-(paren
-l_string|&quot;hp_event&bslash;n&quot;
-)paren
-suffix:semicolon
+multiline_comment|/* printk(KERN_DEBUG &quot;hp_event&bslash;n&quot;); */
 "&t;&t;"
 id|alc888_6st_dell_front_automute
 c_func
@@ -100503,7 +100498,8 @@ id|pin
 )paren
 )paren
 suffix:semicolon
-multiline_comment|/* printk(&quot;DAC nid=%x&bslash;n&quot;,nid); */
+"&t;&t;"
+multiline_comment|/* printk(KERN_DEBUG &quot;DAC nid=%x&bslash;n&quot;,nid); */
 "&t;&t;"
 multiline_comment|/* specify the DAC as the extra output */
 "&t;&t;"
