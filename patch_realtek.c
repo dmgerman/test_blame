@@ -4483,6 +4483,10 @@ l_int|0x10ec0269
 suffix:colon
 "&t;&t;"
 r_case
+l_int|0x10ec0272
+suffix:colon
+"&t;&t;"
+r_case
 l_int|0x10ec0660
 suffix:colon
 "&t;&t;"
@@ -4640,6 +4644,10 @@ suffix:colon
 "&t;&t;"
 r_case
 l_int|0x10ec0885
+suffix:colon
+"&t;&t;"
+r_case
+l_int|0x10ec0887
 suffix:colon
 "&t;&t;"
 r_case
