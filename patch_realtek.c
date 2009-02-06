@@ -15897,12 +15897,6 @@ c_func
 id|codec
 )paren
 suffix:semicolon
-"&t;"
-id|codec-&gt;spec
-op_assign
-l_int|NULL
-suffix:semicolon
-multiline_comment|/* to be sure */
 )brace
 macro_line|#ifdef SND_HDA_NEEDS_RESUME
 r_void
