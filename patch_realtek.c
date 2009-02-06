@@ -76101,8 +76101,6 @@ id|codec-&gt;spec
 suffix:semicolon
 "&t;"
 r_int
-id|i
-comma
 id|err
 suffix:semicolon
 "&t;"
