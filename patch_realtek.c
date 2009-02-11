@@ -23024,7 +23024,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 )paren
 "&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
@@ -30948,7 +30948,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 )paren
 "&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
@@ -63532,7 +63532,7 @@ id|spec-&gt;autocfg.line_outs
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 op_logical_or
 id|spec-&gt;autocfg.dig_in_pin
 )paren
@@ -63621,7 +63621,7 @@ suffix:colon
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 )paren
 (brace
 "&t;&t;"
@@ -63633,6 +63633,9 @@ suffix:semicolon
 id|spec-&gt;dig_out_type
 op_assign
 id|spec-&gt;autocfg.dig_out_type
+(braket
+l_int|0
+)braket
 suffix:semicolon
 "&t;"
 )brace
@@ -70695,7 +70698,7 @@ multiline_comment|/* digital only support output */
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 )paren
 "&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
@@ -76222,7 +76225,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 )paren
 "&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
@@ -82690,7 +82693,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 )paren
 "&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
@@ -89235,7 +89238,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 )paren
 "&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
@@ -100753,7 +100756,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;autocfg.dig_out_pin
+id|spec-&gt;autocfg.dig_outs
 )paren
 "&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
