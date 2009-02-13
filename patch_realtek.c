@@ -49560,6 +49560,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x0158
+comma
+l_string|&quot;Acer AX1700-U3700A&quot;
+comma
+id|ALC883_AUTO
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x015e
 comma
 l_string|&quot;Acer Aspire 6930G&quot;
