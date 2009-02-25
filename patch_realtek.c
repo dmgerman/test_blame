@@ -64812,42 +64812,18 @@ id|ALC262_SONY_ASSAMD
 )paren
 comma
 "&t;"
-id|SND_PCI_QUIRK
+id|SND_PCI_QUIRK_MASK
 c_func
 (paren
 l_int|0x104d
 comma
-l_int|0x900e
+l_int|0xff00
 comma
-l_string|&quot;Sony ASSAMD&quot;
+l_int|0x9000
 comma
-id|ALC262_SONY_ASSAMD
-)paren
+l_string|&quot;Sony VAIO&quot;
 comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x104d
-comma
-l_int|0x9015
-comma
-l_string|&quot;Sony 0x9015&quot;
-comma
-id|ALC262_SONY_ASSAMD
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x104d
-comma
-l_int|0x9033
-comma
-l_string|&quot;Sony VAIO VGN-SR19XN&quot;
-comma
-"&t;&t;"
+"&t;&t;&t;"
 id|ALC262_SONY_ASSAMD
 )paren
 comma
