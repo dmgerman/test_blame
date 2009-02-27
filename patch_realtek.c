@@ -39807,11 +39807,6 @@ id|i
 )braket
 suffix:semicolon
 "&t;&t;"
-r_int
-r_int
-id|vref
-suffix:semicolon
-"&t;&t;"
 r_if
 c_cond
 (paren
