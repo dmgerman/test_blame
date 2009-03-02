@@ -71360,6 +71360,9 @@ suffix:semicolon
 r_if
 c_cond
 (paren
+op_logical_neg
+id|spec-&gt;no_analog
+op_logical_and
 id|spec-&gt;autocfg.speaker_pins
 (braket
 l_int|0
