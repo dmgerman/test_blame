@@ -64818,6 +64818,20 @@ id|ALC262_SONY_ASSAMD
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x9016
+comma
+l_string|&quot;Sony VAIO&quot;
+comma
+id|ALC262_AUTO
+)paren
+comma
+multiline_comment|/* dig-only */
+"&t;"
 id|SND_PCI_QUIRK_MASK
 c_func
 (paren
