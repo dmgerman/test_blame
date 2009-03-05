@@ -4174,7 +4174,7 @@ op_amp
 l_int|0xf0
 )paren
 op_eq
-l_int|2
+l_int|0x20
 )paren
 "&t;&t;"
 multiline_comment|/* alc888S-VC */
