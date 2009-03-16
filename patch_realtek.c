@@ -102206,7 +102206,7 @@ id|spec
 comma
 l_int|0x0b
 comma
-l_int|0x05
+l_int|0x04
 comma
 id|HDA_INPUT
 )paren
