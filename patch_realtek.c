@@ -50398,6 +50398,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x010a
+comma
+l_string|&quot;Acer Ferrari 5000&quot;
+comma
+id|ALC883_ACER_ASPIRE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x0110
 comma
 l_string|&quot;Acer Aspire&quot;
