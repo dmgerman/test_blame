@@ -7371,7 +7371,10 @@ id|snd_hda_mixer_amp_switch_put
 )paren
 suffix:semicolon
 )brace
-macro_line|#define DEFINE_CAPMIX(num) &bslash;&n;static struct snd_kcontrol_new alc_capture_mixer ## num[] = { &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;.name = &quot;Capture Switch&quot;, &bslash;&n;&t;&t;.access = SNDRV_CTL_ELEM_ACCESS_READWRITE, &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_cap_sw_info, &bslash;&n;&t;&t;.get = alc_cap_sw_get, &bslash;&n;&t;&t;.put = alc_cap_sw_put, &bslash;&n;&t;}, &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;.name = &quot;Capture Volume&quot;, &bslash;&n;&t;&t;.access = (SNDRV_CTL_ELEM_ACCESS_READWRITE | &bslash;&n;&t;&t;&t;   SNDRV_CTL_ELEM_ACCESS_TLV_READ | &bslash;&n;&t;&t;&t;   SNDRV_CTL_ELEM_ACCESS_TLV_CALLBACK), &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_cap_vol_info, &bslash;&n;&t;&t;.get = alc_cap_vol_get, &bslash;&n;&t;&t;.put = alc_cap_vol_put, &bslash;&n;&t;&t;.tlv = { .c = alc_cap_vol_tlv }, &bslash;&n;&t;}, &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;/* .name = &quot;Capture Source&quot;, */ &bslash;&n;&t;&t;.name = &quot;Input Source&quot;, &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_mux_enum_info, &bslash;&n;&t;&t;.get = alc_mux_enum_get, &bslash;&n;&t;&t;.put = alc_mux_enum_put, &bslash;&n;&t;}, &bslash;&n;&t;{ } /* end */ &bslash;&n;}
+macro_line|#define _DEFINE_CAPMIX(num) &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;.name = &quot;Capture Switch&quot;, &bslash;&n;&t;&t;.access = SNDRV_CTL_ELEM_ACCESS_READWRITE, &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_cap_sw_info, &bslash;&n;&t;&t;.get = alc_cap_sw_get, &bslash;&n;&t;&t;.put = alc_cap_sw_put, &bslash;&n;&t;}, &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;.name = &quot;Capture Volume&quot;, &bslash;&n;&t;&t;.access = (SNDRV_CTL_ELEM_ACCESS_READWRITE | &bslash;&n;&t;&t;&t;   SNDRV_CTL_ELEM_ACCESS_TLV_READ | &bslash;&n;&t;&t;&t;   SNDRV_CTL_ELEM_ACCESS_TLV_CALLBACK), &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_cap_vol_info, &bslash;&n;&t;&t;.get = alc_cap_vol_get, &bslash;&n;&t;&t;.put = alc_cap_vol_put, &bslash;&n;&t;&t;.tlv = { .c = alc_cap_vol_tlv }, &bslash;&n;&t;}
+macro_line|#define _DEFINE_CAPSRC(num) &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;/* .name = &quot;Capture Source&quot;, */ &bslash;&n;&t;&t;.name = &quot;Input Source&quot;, &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_mux_enum_info, &bslash;&n;&t;&t;.get = alc_mux_enum_get, &bslash;&n;&t;&t;.put = alc_mux_enum_put, &bslash;&n;&t;}
+macro_line|#define DEFINE_CAPMIX(num) &bslash;&n;static struct snd_kcontrol_new alc_capture_mixer ## num[] = { &bslash;&n;&t;_DEFINE_CAPMIX(num),&t;&t;&t;&t;      &bslash;&n;&t;_DEFINE_CAPSRC(num),&t;&t;&t;&t;      &bslash;&n;&t;{ } /* end */&t;&t;&t;&t;&t;      &bslash;&n;}
+macro_line|#define DEFINE_CAPMIX_NOSRC(num) &bslash;&n;static struct snd_kcontrol_new alc_capture_mixer_nosrc ## num[] = { &bslash;&n;&t;_DEFINE_CAPMIX(num),&t;&t;&t;&t;&t;    &bslash;&n;&t;{ } /* end */&t;&t;&t;&t;&t;&t;    &bslash;&n;}
 multiline_comment|/* up to three ADCs */
 id|DEFINE_CAPMIX
 c_func
@@ -7386,6 +7389,24 @@ l_int|2
 )paren
 suffix:semicolon
 id|DEFINE_CAPMIX
+c_func
+(paren
+l_int|3
+)paren
+suffix:semicolon
+id|DEFINE_CAPMIX_NOSRC
+c_func
+(paren
+l_int|1
+)paren
+suffix:semicolon
+id|DEFINE_CAPMIX_NOSRC
+c_func
+(paren
+l_int|2
+)paren
+suffix:semicolon
+id|DEFINE_CAPMIX_NOSRC
 c_func
 (paren
 l_int|3
@@ -23034,11 +23055,26 @@ id|snd_kcontrol_new
 op_star
 id|caps
 (braket
+l_int|2
+)braket
+(braket
 l_int|3
 )braket
 op_assign
 (brace
 "&t;&t;"
+(brace
+id|alc_capture_mixer_nosrc1
+comma
+"&t;&t;"
+id|alc_capture_mixer_nosrc2
+comma
+"&t;&t;"
+id|alc_capture_mixer_nosrc3
+)brace
+comma
+"&t;&t;"
+(brace
 id|alc_capture_mixer1
 comma
 "&t;&t;"
@@ -23046,6 +23082,7 @@ id|alc_capture_mixer2
 comma
 "&t;&t;"
 id|alc_capture_mixer3
+)brace
 comma
 "&t;"
 )brace
@@ -23062,15 +23099,47 @@ id|spec-&gt;num_adc_nids
 op_le
 l_int|3
 )paren
+(brace
+"&t;&t;"
+r_int
+id|mux
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;input_mux
+op_logical_and
+id|spec-&gt;input_mux-&gt;num_items
+OG
+l_int|1
+)paren
+"&t;&t;&t;"
+id|mux
+op_assign
+l_int|1
+suffix:semicolon
+"&t;&t;"
+r_else
+"&t;&t;&t;"
+id|mux
+op_assign
+l_int|0
+suffix:semicolon
 "&t;&t;"
 id|spec-&gt;cap_mixer
 op_assign
 id|caps
 (braket
+id|mux
+)braket
+(braket
 id|spec-&gt;num_adc_nids
 l_int|1
 )braket
 suffix:semicolon
+"&t;"
+)brace
 )brace
 macro_line|#define set_beep_amp(spec, nid, idx, dir) &bslash;&n;&t;((spec)-&gt;beep_amp = HDA_COMPOSE_AMP_VAL(nid, 3, idx, dir))
 multiline_comment|/*&n; * OK, here we have finally the patch for ALC880&n; */
