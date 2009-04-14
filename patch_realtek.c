@@ -51175,41 +51175,32 @@ id|ALC883_MEDION
 )paren
 comma
 "&t;"
-id|SND_PCI_QUIRK
+id|SND_PCI_QUIRK_MASK
 c_func
 (paren
 l_int|0x1734
 comma
-l_int|0x1107
+l_int|0xfff0
 comma
-l_string|&quot;FSC AMILO Xi2550&quot;
+l_int|0x1100
+comma
+l_string|&quot;FSC AMILO Xi/Pi25xx&quot;
 comma
 "&t;&t;"
 id|ALC883_FUJITSU_PI2515
 )paren
 comma
 "&t;"
-id|SND_PCI_QUIRK
+id|SND_PCI_QUIRK_MASK
 c_func
 (paren
 l_int|0x1734
 comma
-l_int|0x1108
+l_int|0xfff0
 comma
-l_string|&quot;Fujitsu AMILO Pi2515&quot;
+l_int|0x1130
 comma
-id|ALC883_FUJITSU_PI2515
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1734
-comma
-l_int|0x113d
-comma
-l_string|&quot;Fujitsu AMILO Xa3530&quot;
+l_string|&quot;Fujitsu AMILO Xa35xx&quot;
 comma
 "&t;&t;"
 id|ALC888_FUJITSU_XA3530
