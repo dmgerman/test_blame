@@ -4324,6 +4324,20 @@ id|nid
 )paren
 suffix:semicolon
 "&t;"
+id|snd_printd
+c_func
+(paren
+l_string|&quot;realtek: No valid SSID, &quot;
+"&t;&t;"
+l_string|&quot;checking pincfg 0x%08x for NID 0x%x&bslash;n&quot;
+comma
+"&t;&t;"
+id|ass
+comma
+id|nid
+)paren
+suffix:semicolon
+"&t;"
 r_if
 c_cond
 (paren
@@ -4423,6 +4437,20 @@ r_return
 suffix:semicolon
 id|do_sku
 suffix:colon
+"&t;"
+id|snd_printd
+c_func
+(paren
+l_string|&quot;realtek: Enabling init ASM_ID=0x%04x CODEC_ID=%08x&bslash;n&quot;
+comma
+"&t;&t;"
+id|ass
+op_amp
+l_int|0xffff
+comma
+id|codec-&gt;vendor_id
+)paren
+suffix:semicolon
 "&t;"
 multiline_comment|/*&n;&t; * 0 : override&n;&t; * 1 :&t;Swap Jack&n;&t; * 2 : 0 --&gt; Desktop, 1 --&gt; Laptop&n;&t; * 3~5 : External Amplifier control&n;&t; * 7~6 : Reserved&n;&t;*/
 "&t;"
