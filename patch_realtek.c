@@ -4778,6 +4778,11 @@ id|spec-&gt;autocfg.line_out_pins
 (braket
 l_int|0
 )braket
+op_logical_and
+"&t;&t;"
+id|spec-&gt;autocfg.line_out_type
+op_eq
+id|AUTO_PIN_SPEAKER_OUT
 )paren
 "&t;&t;&t;"
 id|spec-&gt;autocfg.speaker_pins
@@ -4798,6 +4803,19 @@ r_return
 suffix:semicolon
 "&t;"
 )brace
+"&t;"
+id|snd_printdd
+c_func
+(paren
+l_string|&quot;realtek: Enable HP auto-muting on NID 0x%x&bslash;n&quot;
+comma
+"&t;&t;"
+id|spec-&gt;autocfg.hp_pins
+(braket
+l_int|0
+)braket
+)paren
+suffix:semicolon
 "&t;"
 id|snd_hda_codec_write_cache
 c_func
