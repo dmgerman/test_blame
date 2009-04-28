@@ -4957,9 +4957,9 @@ l_string|&quot;realtek: No valid SSID, &quot;
 l_string|&quot;checking pincfg 0x%08x for NID 0x%x&bslash;n&quot;
 comma
 "&t;&t;"
-id|nid
-comma
 id|ass
+comma
+id|nid
 )paren
 suffix:semicolon
 "&t;"
