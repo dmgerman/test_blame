@@ -49931,18 +49931,9 @@ id|ALC888_ACER_ASPIRE_4930G
 )paren
 comma
 "&t;"
-multiline_comment|/* default Acer */
+multiline_comment|/* default Acer -- disabled as it causes more problems.&n;&t; *    model=auto should work fine now&n;&t; */
 "&t;"
-id|SND_PCI_QUIRK_VENDOR
-c_func
-(paren
-l_int|0x1025
-comma
-l_string|&quot;Acer laptop&quot;
-comma
-id|ALC883_ACER
-)paren
-comma
+multiline_comment|/* SND_PCI_QUIRK_VENDOR(0x1025, &quot;Acer laptop&quot;, ALC883_ACER), */
 "&t;"
 id|SND_PCI_QUIRK
 c_func
