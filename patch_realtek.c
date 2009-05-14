@@ -41223,6 +41223,11 @@ r_case
 l_int|0x106b3f00
 suffix:colon
 multiline_comment|/* Macbook 5,1 */
+"&t;&t;"
+r_case
+l_int|0x106b4000
+suffix:colon
+multiline_comment|/* Macbook Pro 5,1 - FIXME: HP jack sense&n;&t;&t;&t;&t;  *   seems not working, so apparently&n;&t;&t;&t;&t;  *   no perfect solution yet&n;&t;&t;&t;&t;  */
 "&t;&t;&t;"
 id|board_config
 op_assign
