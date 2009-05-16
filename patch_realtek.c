@@ -652,8 +652,10 @@ id|num_init_verbs
 suffix:semicolon
 "&t;"
 r_char
-op_star
 id|stream_name_analog
+(braket
+l_int|16
+)braket
 suffix:semicolon
 "&t;"
 multiline_comment|/* analog PCM stream */
@@ -683,8 +685,10 @@ id|stream_analog_alt_capture
 suffix:semicolon
 "&t;"
 r_char
-op_star
 id|stream_name_digital
+(braket
+l_int|16
+)braket
 suffix:semicolon
 "&t;"
 multiline_comment|/* digital PCM stream */
@@ -15524,10 +15528,28 @@ r_goto
 id|skip_analog
 suffix:semicolon
 "&t;"
+id|snprintf
+c_func
+(paren
+id|spec-&gt;stream_name_analog
+comma
+r_sizeof
+(paren
+id|spec-&gt;stream_name_analog
+)paren
+comma
+"&t;&t;"
+l_string|&quot;%s Analog&quot;
+comma
+id|codec-&gt;chip_name
+)paren
+suffix:semicolon
+"&t;"
 id|info-&gt;name
 op_assign
 id|spec-&gt;stream_name_analog
 suffix:semicolon
+"&t;"
 "&t;"
 r_if
 c_cond
@@ -15710,6 +15732,24 @@ op_logical_or
 id|spec-&gt;dig_in_nid
 )paren
 (brace
+"&t;&t;"
+id|snprintf
+c_func
+(paren
+id|spec-&gt;stream_name_digital
+comma
+"&t;&t;&t;"
+r_sizeof
+(paren
+id|spec-&gt;stream_name_digital
+)paren
+comma
+"&t;&t;&t;"
+l_string|&quot;%s Digital&quot;
+comma
+id|codec-&gt;chip_name
+)paren
+suffix:semicolon
 "&t;&t;"
 id|codec-&gt;num_pcms
 op_assign
@@ -23503,11 +23543,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC880 Analog&quot;
-suffix:semicolon
-"&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
 op_amp
@@ -23524,11 +23559,6 @@ id|spec-&gt;stream_analog_alt_capture
 op_assign
 op_amp
 id|alc880_pcm_analog_alt_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC880 Digital&quot;
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
@@ -33370,11 +33400,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC260 Analog&quot;
-suffix:semicolon
-"&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
 op_amp
@@ -33385,11 +33410,6 @@ id|spec-&gt;stream_analog_capture
 op_assign
 op_amp
 id|alc260_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC260 Digital&quot;
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
@@ -41429,41 +41449,6 @@ id|board_config
 )braket
 )paren
 suffix:semicolon
-"&t;"
-r_if
-c_cond
-(paren
-id|codec-&gt;vendor_id
-op_eq
-l_int|0x10ec0885
-)paren
-(brace
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC885 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC885 Digital&quot;
-suffix:semicolon
-"&t;"
-)brace
-r_else
-(brace
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC882 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC882 Digital&quot;
-suffix:semicolon
-"&t;"
-)brace
 "&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
@@ -54114,41 +54099,6 @@ suffix:colon
 r_if
 c_cond
 (paren
-id|codec-&gt;revision_id
-op_eq
-l_int|0x100101
-)paren
-(brace
-"&t;&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC1200 Analog&quot;
-suffix:semicolon
-"&t;&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC1200 Digital&quot;
-suffix:semicolon
-"&t;&t;"
-)brace
-r_else
-(brace
-"&t;&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC888 Analog&quot;
-suffix:semicolon
-"&t;&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC888 Digital&quot;
-suffix:semicolon
-"&t;&t;"
-)brace
-"&t;&t;"
-r_if
-c_cond
-(paren
 op_logical_neg
 id|spec-&gt;num_adc_nids
 )paren
@@ -54201,16 +54151,6 @@ r_case
 l_int|0x10ec0889
 suffix:colon
 "&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC889 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC889 Digital&quot;
-suffix:semicolon
-"&t;&t;"
 r_if
 c_cond
 (paren
@@ -54258,16 +54198,8 @@ suffix:semicolon
 "&t;"
 r_default
 suffix:colon
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC883 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC883 Digital&quot;
-suffix:semicolon
+(brace
+)brace
 "&t;&t;"
 r_if
 c_cond
@@ -66176,11 +66108,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC262 Analog&quot;
-suffix:semicolon
-"&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
 op_amp
@@ -66191,11 +66118,6 @@ id|spec-&gt;stream_analog_capture
 op_assign
 op_amp
 id|alc262_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC262 Digital&quot;
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
@@ -72279,41 +72201,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-id|codec-&gt;vendor_id
-op_eq
-l_int|0x10ec0267
-)paren
-(brace
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC267 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC267 Digital&quot;
-suffix:semicolon
-"&t;"
-)brace
-r_else
-(brace
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC268 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC268 Digital&quot;
-suffix:semicolon
-"&t;"
-)brace
-"&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
 op_amp
@@ -77356,11 +77243,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC269 Analog&quot;
-suffix:semicolon
-"&t;"
 r_if
 c_cond
 (paren
@@ -77401,11 +77283,6 @@ id|alc269_pcm_analog_capture
 suffix:semicolon
 "&t;"
 )brace
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC269 Digital&quot;
-suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
 op_assign
@@ -84177,11 +84054,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC861 Analog&quot;
-suffix:semicolon
-"&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
 op_amp
@@ -84192,11 +84064,6 @@ id|spec-&gt;stream_analog_capture
 op_assign
 op_amp
 id|alc861_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC861 Digital&quot;
 suffix:semicolon
 "&t;"
 id|spec-&gt;stream_digital_playback
@@ -89559,16 +89426,6 @@ l_int|0x10ec0660
 )paren
 (brace
 "&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC660-VD Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC660-VD Digital&quot;
-suffix:semicolon
-"&t;&t;"
 multiline_comment|/* always turn on EAPD */
 "&t;&t;"
 id|add_verb
@@ -89578,20 +89435,6 @@ id|spec
 comma
 id|alc660vd_eapd_verbs
 )paren
-suffix:semicolon
-"&t;"
-)brace
-r_else
-(brace
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC861VD Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC861VD Digital&quot;
 suffix:semicolon
 "&t;"
 )brace
@@ -101914,62 +101757,6 @@ id|board_config
 )braket
 )paren
 suffix:semicolon
-"&t;"
-r_if
-c_cond
-(paren
-id|codec-&gt;vendor_id
-op_eq
-l_int|0x10ec0663
-)paren
-(brace
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC663 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC663 Digital&quot;
-suffix:semicolon
-"&t;"
-)brace
-r_else
-r_if
-c_cond
-(paren
-id|codec-&gt;vendor_id
-op_eq
-l_int|0x10ec0272
-)paren
-(brace
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC272 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC272 Digital&quot;
-suffix:semicolon
-"&t;"
-)brace
-r_else
-(brace
-"&t;&t;"
-id|spec-&gt;stream_name_analog
-op_assign
-l_string|&quot;ALC662 Analog&quot;
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_name_digital
-op_assign
-l_string|&quot;ALC662 Digital&quot;
-suffix:semicolon
-"&t;"
-)brace
 "&t;"
 id|spec-&gt;stream_analog_playback
 op_assign
