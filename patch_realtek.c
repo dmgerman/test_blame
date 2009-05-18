@@ -23406,9 +23406,11 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC880, &quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -33263,9 +33265,12 @@ id|snd_printd
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC260, &quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+"&t;&t;&t;"
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -41299,10 +41304,12 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC882, &quot;
-"&t;&t;"
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+"&t;&t;&t;"
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;&t;"
@@ -53948,9 +53955,11 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC883, &quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -65961,9 +65970,11 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC262, &quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -72097,9 +72108,11 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC268, &quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -77106,9 +77119,11 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC269, &quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -83917,9 +83932,11 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC861, &quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -89280,9 +89297,11 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC660VD/&quot;
-"&t;&t;&t;"
-l_string|&quot;ALC861VD, trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
+"&t;&t;"
+l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -101621,9 +101640,11 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for ALC662, &quot;
+l_string|&quot;hda_codec: Unknown model for %s, &quot;
 "&t;&t;"
 l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+comma
+id|codec-&gt;chip_name
 )paren
 suffix:semicolon
 "&t;&t;"
