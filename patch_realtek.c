@@ -72411,6 +72411,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1854
+comma
+l_int|0x1775
+comma
+l_string|&quot;LG R510&quot;
+comma
+id|ALC268_DELL
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x103c
 comma
 l_int|0x30cc
