@@ -43185,7 +43185,7 @@ l_int|0x17
 comma
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
-id|PhIN_OUT
+id|PIN_OUT
 )brace
 comma
 "&t;"
@@ -53836,7 +53836,7 @@ comma
 dot
 id|init_hook
 op_assign
-id|alc883_tagra_automute
+id|alc883_tagra_init_hook
 comma
 "&t;"
 )brace
