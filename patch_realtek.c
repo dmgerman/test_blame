@@ -52161,6 +52161,20 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x0146
+comma
+l_string|&quot;Acer Aspire 6935G&quot;
+comma
+"&t;&t;"
+id|ALC888_ACER_ASPIRE_8930G
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x0157
 comma
 l_string|&quot;Acer X3200&quot;
