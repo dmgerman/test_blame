@@ -45912,7 +45912,7 @@ multiline_comment|/* end */
 suffix:semicolon
 r_struct
 id|snd_kcontrol_new
-id|alc883_tagra_mixer
+id|alc883_targa_mixer
 (braket
 )braket
 op_assign
@@ -46141,7 +46141,7 @@ multiline_comment|/* end */
 suffix:semicolon
 r_struct
 id|snd_kcontrol_new
-id|alc883_tagra_2ch_mixer
+id|alc883_targa_2ch_mixer
 (braket
 )braket
 op_assign
@@ -48625,7 +48625,7 @@ multiline_comment|/* end */
 suffix:semicolon
 r_struct
 id|hda_verb
-id|alc883_tagra_verbs
+id|alc883_targa_verbs
 (braket
 )braket
 op_assign
@@ -49849,8 +49849,8 @@ id|codec
 suffix:semicolon
 )brace
 multiline_comment|/* toggle speaker-output according to the hp-jack state */
-macro_line|#define alc883_tagra_init_hook&t;&t;alc882_targa_init_hook
-macro_line|#define alc883_tagra_unsol_event&t;alc882_targa_unsol_event
+macro_line|#define alc883_targa_init_hook&t;&t;alc882_targa_init_hook
+macro_line|#define alc883_targa_unsol_event&t;alc882_targa_unsol_event
 r_void
 id|alc883_clevo_m720_mic_automute
 c_func
@@ -53564,7 +53564,7 @@ dot
 id|mixers
 op_assign
 (brace
-id|alc883_tagra_mixer
+id|alc883_targa_mixer
 comma
 id|alc883_chmode_mixer
 )brace
@@ -53576,7 +53576,7 @@ op_assign
 (brace
 id|alc883_init_verbs
 comma
-id|alc883_tagra_verbs
+id|alc883_targa_verbs
 )brace
 comma
 "&t;&t;"
@@ -53634,13 +53634,13 @@ comma
 dot
 id|unsol_event
 op_assign
-id|alc883_tagra_unsol_event
+id|alc883_targa_unsol_event
 comma
 "&t;&t;"
 dot
 id|init_hook
 op_assign
-id|alc883_tagra_init_hook
+id|alc883_targa_init_hook
 comma
 "&t;"
 )brace
@@ -53656,7 +53656,7 @@ dot
 id|mixers
 op_assign
 (brace
-id|alc883_tagra_2ch_mixer
+id|alc883_targa_2ch_mixer
 )brace
 comma
 "&t;&t;"
@@ -53666,7 +53666,7 @@ op_assign
 (brace
 id|alc883_init_verbs
 comma
-id|alc883_tagra_verbs
+id|alc883_targa_verbs
 )brace
 comma
 "&t;&t;"
@@ -53734,13 +53734,13 @@ comma
 dot
 id|unsol_event
 op_assign
-id|alc883_tagra_unsol_event
+id|alc883_targa_unsol_event
 comma
 "&t;&t;"
 dot
 id|init_hook
 op_assign
-id|alc883_tagra_init_hook
+id|alc883_targa_init_hook
 comma
 "&t;"
 )brace
@@ -53771,7 +53771,7 @@ comma
 id|alc880_gpio3_init_verbs
 comma
 "&t;&t;&t;&t;"
-id|alc883_tagra_verbs
+id|alc883_targa_verbs
 )brace
 comma
 "&t;&t;"
@@ -53857,13 +53857,13 @@ comma
 dot
 id|unsol_event
 op_assign
-id|alc883_tagra_unsol_event
+id|alc883_targa_unsol_event
 comma
 "&t;&t;"
 dot
 id|init_hook
 op_assign
-id|alc883_tagra_init_hook
+id|alc883_targa_init_hook
 comma
 "&t;"
 )brace
@@ -54883,7 +54883,7 @@ dot
 id|mixers
 op_assign
 (brace
-id|alc883_tagra_2ch_mixer
+id|alc883_targa_2ch_mixer
 )brace
 comma
 "&t;&t;"
