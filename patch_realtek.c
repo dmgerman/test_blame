@@ -4010,7 +4010,7 @@ suffix:semicolon
 "&t;"
 )brace
 )brace
-macro_line|#if 0 /* it&squot;s broken in some acses -- temporarily disabled */
+macro_line|#if 0 /* it&squot;s broken in some cases -- temporarily disabled */
 r_void
 id|alc_mic_automute
 c_func
@@ -5079,7 +5079,7 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* invalid SSID, check the special NID pin defcfg instead */
 "&t;"
-multiline_comment|/*&n;&t; * 31~30&t;: port conetcivity&n;&t; * 29~21&t;: reserve&n;&t; * 20&t;&t;: PCBEEP input&n;&t; * 19~16&t;: Check sum (15:1)&n;&t; * 15~1&t;&t;: Custom&n;&t; * 0&t;&t;: override&n;&t;*/
+multiline_comment|/*&n;&t; * 31~30&t;: port connectivity&n;&t; * 29~21&t;: reserve&n;&t; * 20&t;&t;: PCBEEP input&n;&t; * 19~16&t;: Check sum (15:1)&n;&t; * 15~1&t;&t;: Custom&n;&t; * 0&t;&t;: override&n;&t;*/
 "&t;"
 id|nid
 op_assign
@@ -34578,7 +34578,7 @@ id|alc882_sixstack_ch8_init
 comma
 )brace
 suffix:semicolon
-multiline_comment|/*&n; * macbook pro ALC885 can switch LineIn to LineOut without loosing Mic&n; */
+multiline_comment|/*&n; * macbook pro ALC885 can switch LineIn to LineOut without losing Mic&n; */
 multiline_comment|/*&n; * 2ch mode&n; */
 r_struct
 id|hda_verb
@@ -39638,7 +39638,7 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc882_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identiacal with ALC880 */
+multiline_comment|/* pcm configuration: identical with ALC880 */
 macro_line|#define alc882_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc882_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc882_pcm_digital_playback&t;alc880_pcm_digital_playback
@@ -51762,7 +51762,7 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc883_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identiacal with ALC880 */
+multiline_comment|/* pcm configuration: identical with ALC880 */
 macro_line|#define alc883_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc883_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc883_pcm_analog_alt_capture&t;alc880_pcm_analog_alt_capture
@@ -66365,7 +66365,7 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc262_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identiacal with ALC880 */
+multiline_comment|/* pcm configuration: identical with ALC880 */
 macro_line|#define alc262_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc262_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc262_pcm_digital_playback&t;alc880_pcm_digital_playback
@@ -73423,7 +73423,7 @@ id|dac_vol2
 )paren
 suffix:semicolon
 )brace
-multiline_comment|/* pcm configuration: identiacal with ALC880 */
+multiline_comment|/* pcm configuration: identical with ALC880 */
 macro_line|#define alc268_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc268_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc268_pcm_analog_alt_capture&t;alc880_pcm_analog_alt_capture
@@ -78927,7 +78927,7 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc269_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identiacal with ALC880 */
+multiline_comment|/* pcm configuration: identical with ALC880 */
 macro_line|#define alc269_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc269_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc269_pcm_digital_playback&t;alc880_pcm_digital_playback
@@ -84344,7 +84344,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-multiline_comment|/* pcm configuration: identiacal with ALC880 */
+multiline_comment|/* pcm configuration: identical with ALC880 */
 macro_line|#define alc861_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc861_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc861_pcm_digital_playback&t;alc880_pcm_digital_playback
@@ -87230,7 +87230,7 @@ comma
 l_int|0x05
 )brace
 suffix:semicolon
-multiline_comment|/* dac_nids for ALC660vd are in a different order - according to&n; * Realtek&squot;s driver.&n; * This should probably tesult in a different mixer for 6stack models&n; * of ALC660vd codecs, but for now there is only 3stack mixer&n; * - and it is the same as in 861vd.&n; * adc_nids in ALC660vd are (is) the same as in 861vd&n; */
+multiline_comment|/* dac_nids for ALC660vd are in a different order - according to&n; * Realtek&squot;s driver.&n; * This should probably result in a different mixer for 6stack models&n; * of ALC660vd codecs, but for now there is only 3stack mixer&n; * - and it is the same as in 861vd.&n; * adc_nids in ALC660vd are (is) the same as in 861vd&n; */
 id|hda_nid_t
 id|alc660vd_dac_nids
 (braket
@@ -89890,7 +89890,7 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc861vd_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identiacal with ALC880 */
+multiline_comment|/* pcm configuration: identical with ALC880 */
 macro_line|#define alc861vd_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc861vd_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc861vd_pcm_digital_playback&t;alc880_pcm_digital_playback
@@ -91032,7 +91032,7 @@ c_cond
 (paren
 id|pin
 )paren
-multiline_comment|/* connect to front and  use dac 0 */
+multiline_comment|/* connect to front and use dac 0 */
 "&t;&t;"
 id|alc861vd_auto_set_output_and_unmute
 c_func
@@ -100004,7 +100004,7 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc662_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identiacal with ALC880 */
+multiline_comment|/* pcm configuration: identical with ALC880 */
 macro_line|#define alc662_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc662_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc662_pcm_digital_playback&t;alc880_pcm_digital_playback
