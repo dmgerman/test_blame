@@ -52163,6 +52163,14 @@ l_string|&quot;acer-aspire-4930g&quot;
 comma
 "&t;"
 (braket
+id|ALC888_ACER_ASPIRE_6530G
+)braket
+"&t;"
+op_assign
+l_string|&quot;acer-aspire-6530g&quot;
+comma
+"&t;"
+(braket
 id|ALC888_ACER_ASPIRE_8930G
 )braket
 "&t;"
