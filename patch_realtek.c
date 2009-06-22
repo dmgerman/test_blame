@@ -69068,6 +69068,13 @@ comma
 multiline_comment|/* ADC0 */
 "&t;&t;"
 dot
+id|num_adc_nids
+op_assign
+l_int|1
+comma
+multiline_comment|/* single ADC */
+"&t;&t;"
+dot
 id|dig_out_nid
 op_assign
 id|ALC262_DIGOUT_NID
