@@ -568,28 +568,6 @@ id|ALC883_MODEL_LAST
 comma
 )brace
 suffix:semicolon
-multiline_comment|/* styles of capture selection */
-r_enum
-(brace
-"&t;"
-id|CAPT_MUX
-op_assign
-l_int|0
-comma
-"&t;"
-multiline_comment|/* only mux based */
-"&t;"
-id|CAPT_MIX
-comma
-"&t;"
-multiline_comment|/* only mixer based */
-"&t;"
-id|CAPT_1MUX_MIX
-comma
-"&t;"
-multiline_comment|/* first mux and other mixers */
-)brace
-suffix:semicolon
 multiline_comment|/* for GPIO Poll */
 macro_line|#define GPIO_MASK&t;0x03
 multiline_comment|/* extra amp-initialization sequence types */
@@ -768,12 +746,6 @@ id|dig_in_nid
 suffix:semicolon
 "&t;&t;"
 multiline_comment|/* digital-in NID; optional */
-"&t;"
-r_int
-id|capture_style
-suffix:semicolon
-"&t;&t;"
-multiline_comment|/* capture style (CAPT_*) */
 "&t;"
 multiline_comment|/* capture source */
 "&t;"
@@ -1329,6 +1301,11 @@ id|adc_idx
 )braket
 suffix:semicolon
 "&t;"
+r_int
+r_int
+id|type
+suffix:semicolon
+"&t;"
 id|mux_idx
 op_assign
 id|adc_idx
@@ -1350,21 +1327,29 @@ id|mux_idx
 )braket
 suffix:semicolon
 "&t;"
+id|type
+op_assign
+(paren
+id|get_wcaps
+c_func
+(paren
+id|codec
+comma
+id|nid
+)paren
+op_amp
+id|AC_WCAP_TYPE
+)paren
+op_rshift
+id|AC_WCAP_TYPE_SHIFT
+suffix:semicolon
+"&t;"
 r_if
 c_cond
 (paren
-id|spec-&gt;capture_style
-op_logical_and
-"&t;"
-op_logical_neg
-(paren
-id|spec-&gt;capture_style
+id|type
 op_eq
-id|CAPT_1MUX_MIX
-op_logical_and
-op_logical_neg
-id|adc_idx
-)paren
+id|AC_WID_AUD_MIX
 )paren
 (brace
 "&t;&t;"
@@ -42523,12 +42508,6 @@ op_amp
 id|alc882_pcm_digital_capture
 suffix:semicolon
 "&t;"
-id|spec-&gt;capture_style
-op_assign
-id|CAPT_MIX
-suffix:semicolon
-multiline_comment|/* matrix-style capture */
-"&t;"
 r_if
 c_cond
 (paren
@@ -57378,12 +57357,6 @@ op_assign
 id|alc883_capsrc_nids
 suffix:semicolon
 "&t;&t;"
-id|spec-&gt;capture_style
-op_assign
-id|CAPT_MIX
-suffix:semicolon
-multiline_comment|/* matrix-style capture */
-"&t;&t;"
 id|spec-&gt;init_amp
 op_assign
 id|ALC_INIT_DEFAULT
@@ -57433,12 +57406,6 @@ op_assign
 id|alc889_capsrc_nids
 suffix:semicolon
 "&t;&t;"
-id|spec-&gt;capture_style
-op_assign
-id|CAPT_1MUX_MIX
-suffix:semicolon
-multiline_comment|/* 1mux/Nmix-style&n;&t;&t;&t;&t;&t;&t;&t;capture */
-"&t;&t;"
 r_break
 suffix:semicolon
 "&t;"
@@ -57482,12 +57449,6 @@ id|spec-&gt;capsrc_nids
 op_assign
 id|alc883_capsrc_nids
 suffix:semicolon
-"&t;&t;"
-id|spec-&gt;capture_style
-op_assign
-id|CAPT_MIX
-suffix:semicolon
-multiline_comment|/* matrix-style capture */
 "&t;&t;"
 r_break
 suffix:semicolon
@@ -69653,11 +69614,6 @@ id|spec-&gt;stream_digital_capture
 op_assign
 op_amp
 id|alc262_pcm_digital_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;capture_style
-op_assign
-id|CAPT_MIX
 suffix:semicolon
 "&t;"
 r_if
@@ -93006,11 +92962,6 @@ op_assign
 id|alc861vd_capsrc_nids
 suffix:semicolon
 "&t;"
-id|spec-&gt;capture_style
-op_assign
-id|CAPT_MIX
-suffix:semicolon
-"&t;"
 id|set_capture_mixer
 c_func
 (paren
@@ -105325,11 +105276,6 @@ suffix:semicolon
 id|spec-&gt;capsrc_nids
 op_assign
 id|alc662_capsrc_nids
-suffix:semicolon
-"&t;"
-id|spec-&gt;capture_style
-op_assign
-id|CAPT_MIX
 suffix:semicolon
 "&t;"
 r_if
