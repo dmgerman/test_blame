@@ -7010,7 +7010,7 @@ multiline_comment|/* Interal mic only available on one ADC */
 dot
 id|num_items
 op_assign
-l_int|3
+l_int|5
 comma
 "&t;&t;"
 dot
@@ -7026,9 +7026,23 @@ l_int|0x0
 comma
 "&t;&t;&t;"
 (brace
+l_string|&quot;Line In&quot;
+comma
+l_int|0x2
+)brace
+comma
+"&t;&t;&t;"
+(brace
 l_string|&quot;CD&quot;
 comma
 l_int|0x4
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Input Mix&quot;
+comma
+l_int|0xa
 )brace
 comma
 "&t;&t;&t;"
@@ -7050,7 +7064,7 @@ comma
 dot
 id|num_items
 op_assign
-l_int|2
+l_int|4
 comma
 "&t;&t;"
 dot
@@ -7066,9 +7080,23 @@ l_int|0x0
 comma
 "&t;&t;&t;"
 (brace
+l_string|&quot;Line In&quot;
+comma
+l_int|0x2
+)brace
+comma
+"&t;&t;&t;"
+(brace
 l_string|&quot;CD&quot;
 comma
 l_int|0x4
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_string|&quot;Input Mix&quot;
+comma
+l_int|0xa
 )brace
 comma
 "&t;&t;"
@@ -47136,6 +47164,32 @@ comma
 l_int|0x0f
 comma
 l_int|2
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Line Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x02
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Line Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x02
 comma
 id|HDA_INPUT
 )paren
