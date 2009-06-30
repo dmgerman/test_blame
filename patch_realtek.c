@@ -53734,8 +53734,6 @@ l_int|0
 )paren
 suffix:semicolon
 )brace
-macro_line|#define alc882_is_input_pin(nid)&t;alc880_is_input_pin(nid)
-macro_line|#define ALC882_PIN_CD_NID&t;&t;ALC880_PIN_CD_NID
 r_void
 id|alc882_auto_init_analog_input
 c_func
@@ -53801,8 +53799,7 @@ id|codec
 comma
 id|nid
 comma
-id|AUTO_PIN_FRONT_MIC
-multiline_comment|/*i*/
+id|i
 )paren
 suffix:semicolon
 "&t;&t;"
