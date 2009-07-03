@@ -38257,8 +38257,6 @@ comma
 )brace
 )brace
 suffix:semicolon
-multiline_comment|/* HACK - expand to two elements */
-macro_line|#define alc882_init_verbs&t;alc882_base_init_verbs, alc882_adc1_init_verbs
 r_struct
 id|hda_verb
 id|alc882_eapd_verbs
@@ -49584,7 +49582,10 @@ dot
 id|init_verbs
 op_assign
 (brace
-id|alc882_init_verbs
+id|alc882_base_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc882_adc1_init_verbs
 )brace
 comma
 "&t;&t;"
@@ -49668,7 +49669,10 @@ dot
 id|init_verbs
 op_assign
 (brace
-id|alc882_init_verbs
+id|alc882_base_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc882_adc1_init_verbs
 )brace
 comma
 "&t;&t;"
@@ -49746,8 +49750,11 @@ dot
 id|init_verbs
 op_assign
 (brace
-id|alc882_init_verbs
+id|alc882_base_init_verbs
 comma
+id|alc882_adc1_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc882_eapd_verbs
 )brace
 comma
@@ -49814,11 +49821,13 @@ dot
 id|init_verbs
 op_assign
 (brace
-id|alc882_init_verbs
+id|alc882_base_init_verbs
 comma
-id|alc882_eapd_verbs
+id|alc882_adc1_init_verbs
 comma
 "&t;&t;&t;&t;"
+id|alc882_eapd_verbs
+comma
 id|alc880_gpio1_init_verbs
 )brace
 comma
@@ -50241,8 +50250,11 @@ dot
 id|init_verbs
 op_assign
 (brace
-id|alc882_init_verbs
+id|alc882_base_init_verbs
 comma
+id|alc882_adc1_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc882_targa_verbs
 )brace
 comma
@@ -50355,8 +50367,11 @@ dot
 id|init_verbs
 op_assign
 (brace
-id|alc882_init_verbs
+id|alc882_base_init_verbs
 comma
+id|alc882_adc1_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc882_asus_a7j_verbs
 )brace
 comma
@@ -50457,11 +50472,13 @@ dot
 id|init_verbs
 op_assign
 (brace
-id|alc882_init_verbs
+id|alc882_base_init_verbs
 comma
-id|alc882_eapd_verbs
+id|alc882_adc1_init_verbs
 comma
 "&t;&t;&t;&t;"
+id|alc882_eapd_verbs
+comma
 id|alc880_gpio1_init_verbs
 comma
 "&t;&t;&t;&t;"
