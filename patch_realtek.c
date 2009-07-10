@@ -50254,6 +50254,8 @@ comma
 id|alc882_adc1_init_verbs
 comma
 "&t;&t;&t;&t;"
+id|alc880_gpio3_init_verbs
+comma
 id|alc882_targa_verbs
 )brace
 comma
