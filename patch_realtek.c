@@ -24327,10 +24327,9 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
+"&t;&t;"
 id|codec-&gt;chip_name
 )paren
 suffix:semicolon
@@ -34184,9 +34183,7 @@ id|snd_printd
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
 "&t;&t;&t;"
 id|codec-&gt;chip_name
@@ -56376,9 +56373,7 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
 "&t;&t;"
 id|codec-&gt;chip_name
@@ -68838,10 +68833,9 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
+"&t;&t;"
 id|codec-&gt;chip_name
 )paren
 suffix:semicolon
@@ -75124,10 +75118,9 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
+"&t;&t;"
 id|codec-&gt;chip_name
 )paren
 suffix:semicolon
@@ -79955,10 +79948,9 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
+"&t;&t;"
 id|codec-&gt;chip_name
 )paren
 suffix:semicolon
@@ -87190,10 +87182,9 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
+"&t;&t;"
 id|codec-&gt;chip_name
 )paren
 suffix:semicolon
@@ -92555,10 +92546,9 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
+"&t;&t;"
 id|codec-&gt;chip_name
 )paren
 suffix:semicolon
@@ -104893,10 +104883,9 @@ id|printk
 c_func
 (paren
 id|KERN_INFO
-l_string|&quot;hda_codec: Unknown model for %s, &quot;
-"&t;&t;"
-l_string|&quot;trying auto-probe from BIOS...&bslash;n&quot;
+l_string|&quot;hda_codec: %s: BIOS auto-probing.&bslash;n&quot;
 comma
+"&t;&t;"
 id|codec-&gt;chip_name
 )paren
 suffix:semicolon
