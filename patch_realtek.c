@@ -2001,13 +2001,6 @@ suffix:semicolon
 r_while
 c_loop
 (paren
-id|alc_pin_mode_values
-(braket
-id|i
-)braket
-op_ne
-id|pinctl
-op_logical_and
 id|i
 op_le
 id|alc_pin_mode_max
@@ -2015,6 +2008,13 @@ c_func
 (paren
 id|dir
 )paren
+op_logical_and
+id|alc_pin_mode_values
+(braket
+id|i
+)braket
+op_ne
+id|pinctl
 )paren
 "&t;&t;"
 id|i
