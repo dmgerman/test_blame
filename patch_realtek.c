@@ -90753,9 +90753,9 @@ l_int|0x1179
 comma
 l_int|0xff01
 comma
-l_string|&quot;DALLAS&quot;
+l_string|&quot;Toshiba A135&quot;
 comma
-id|ALC861VD_DALLAS
+id|ALC861VD_LENOVO
 )paren
 comma
 "&t;"
