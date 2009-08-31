@@ -36262,10 +36262,10 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/*&n; * 6ch mode&n; */
+multiline_comment|/*&n; * 4ch mode&n; */
 r_struct
 id|hda_verb
-id|alc885_mbp_ch6_init
+id|alc885_mbp_ch4_init
 (braket
 )braket
 op_assign
@@ -36331,7 +36331,7 @@ multiline_comment|/* end */
 suffix:semicolon
 r_struct
 id|hda_channel_mode
-id|alc885_mbp_6ch_modes
+id|alc885_mbp_4ch_modes
 (braket
 l_int|2
 )braket
@@ -36346,9 +36346,9 @@ id|alc885_mbp_ch2_init
 comma
 "&t;"
 (brace
-l_int|6
+l_int|4
 comma
-id|alc885_mbp_ch6_init
+id|alc885_mbp_ch4_init
 )brace
 comma
 )brace
@@ -37696,7 +37696,7 @@ op_assign
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Playback Volume&quot;
+l_string|&quot;Speaker Playback Volume&quot;
 comma
 l_int|0x0c
 comma
@@ -37708,7 +37708,7 @@ comma
 "&t;"
 id|HDA_BIND_MUTE
 (paren
-l_string|&quot;Front Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x0c
 comma
@@ -37718,11 +37718,12 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|HDA_CODEC_MUTE
+id|HDA_CODEC_VOLUME
+c_func
 (paren
-l_string|&quot;Speaker Playback Switch&quot;
+l_string|&quot;Headphone Playback Volume&quot;
 comma
-l_int|0x14
+l_int|0x0e
 comma
 l_int|0x00
 comma
@@ -37730,10 +37731,22 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
+id|HDA_BIND_MUTE
+(paren
+l_string|&quot;Headphone Playback Switch&quot;
+comma
+l_int|0x0e
+comma
+l_int|0x02
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line-Out Playback Volume&quot;
+l_string|&quot;Surround Playback Volume&quot;
 comma
 l_int|0x0d
 comma
@@ -41070,6 +41083,43 @@ l_int|1
 )brace
 comma
 "&t;"
+multiline_comment|/* HP mixer */
+"&t;"
+(brace
+l_int|0x0e
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_OUT_ZERO
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0e
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|0
+)paren
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0e
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_MUTE
+c_func
+(paren
+l_int|1
+)paren
+)brace
+comma
+"&t;"
 multiline_comment|/* Front Pin: output 0 (0x0c) */
 "&t;"
 (brace
@@ -41099,7 +41149,7 @@ l_int|0x00
 )brace
 comma
 "&t;"
-multiline_comment|/* HP Pin: output 0 (0x0d) */
+multiline_comment|/* HP Pin: output 0 (0x0e) */
 "&t;"
 (brace
 l_int|0x15
@@ -41115,7 +41165,7 @@ l_int|0x15
 comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
-id|AMP_OUT_MUTE
+id|AMP_OUT_UNMUTE
 )brace
 comma
 "&t;"
@@ -41124,7 +41174,7 @@ l_int|0x15
 comma
 id|AC_VERB_SET_CONNECT_SEL
 comma
-l_int|0x00
+l_int|0x02
 )brace
 comma
 "&t;"
@@ -51896,11 +51946,7 @@ comma
 dot
 id|num_dacs
 op_assign
-id|ARRAY_SIZE
-c_func
-(paren
-id|alc882_dac_nids
-)paren
+l_int|2
 comma
 "&t;&t;"
 dot
@@ -51910,9 +51956,15 @@ id|alc882_dac_nids
 comma
 "&t;&t;"
 dot
+id|hp_nid
+op_assign
+l_int|0x04
+comma
+"&t;&t;"
+dot
 id|channel_mode
 op_assign
-id|alc885_mbp_6ch_modes
+id|alc885_mbp_4ch_modes
 comma
 "&t;&t;"
 dot
@@ -51921,7 +51973,7 @@ op_assign
 id|ARRAY_SIZE
 c_func
 (paren
-id|alc885_mbp_6ch_modes
+id|alc885_mbp_4ch_modes
 )paren
 comma
 "&t;&t;"
