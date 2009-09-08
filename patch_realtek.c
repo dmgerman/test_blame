@@ -75427,6 +75427,8 @@ id|ALC268_DELL
 )paren
 comma
 "&t;"
+multiline_comment|/* almost compatible with toshiba but with optional digital outs;&n;&t; * auto-probing seems working fine&n;&t; */
+"&t;"
 id|SND_PCI_QUIRK_MASK
 c_func
 (paren
@@ -75439,7 +75441,7 @@ comma
 l_string|&quot;HP TX25xx series&quot;
 comma
 "&t;&t;&t;"
-id|ALC268_TOSHIBA
+id|ALC268_AUTO
 )paren
 comma
 "&t;"
