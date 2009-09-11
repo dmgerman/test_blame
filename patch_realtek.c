@@ -80087,6 +80087,15 @@ id|ALC269_LIFEBOOK
 "&t;&t;"
 op_assign
 l_string|&quot;lifebook&quot;
+comma
+"&t;"
+(braket
+id|ALC269_AUTO
+)braket
+"&t;&t;&t;"
+op_assign
+l_string|&quot;auto&quot;
+comma
 )brace
 suffix:semicolon
 r_struct
