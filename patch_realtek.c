@@ -45181,6 +45181,19 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
+id|HDA_BIND_MUTE
+c_func
+(paren
+l_string|&quot;Front Playback Switch&quot;
+comma
+l_int|0x0c
+comma
+l_int|2
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
 id|HDA_CODEC_MUTE
 c_func
 (paren
@@ -45197,7 +45210,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Front Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x1b
 comma
@@ -45410,6 +45423,19 @@ id|HDA_OUTPUT
 )paren
 comma
 "&t;"
+id|HDA_BIND_MUTE
+c_func
+(paren
+l_string|&quot;Front Playback Switch&quot;
+comma
+l_int|0x0c
+comma
+l_int|2
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
 id|HDA_CODEC_MUTE
 c_func
 (paren
@@ -45426,7 +45452,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Front Playback Switch&quot;
+l_string|&quot;Speaker Playback Switch&quot;
 comma
 l_int|0x1b
 comma
@@ -45496,6 +45522,84 @@ comma
 l_int|0x0b
 comma
 l_int|0x0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Int Mic Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x1
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Int Mic Boost&quot;
+comma
+l_int|0x19
+comma
+l_int|0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Int Mic Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x1
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+(brace
+)brace
+multiline_comment|/* end */
+)brace
+suffix:semicolon
+r_struct
+id|snd_kcontrol_new
+id|alc883_targa_8ch_mixer
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Side Playback Volume&quot;
+comma
+l_int|0x0f
+comma
+l_int|0x0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_BIND_MUTE
+c_func
+(paren
+l_string|&quot;Side Playback Switch&quot;
+comma
+l_int|0x0f
+comma
+l_int|2
 comma
 id|HDA_INPUT
 )paren
@@ -53784,8 +53888,11 @@ dot
 id|mixers
 op_assign
 (brace
-id|alc883_base_mixer
+id|alc883_targa_mixer
 comma
+id|alc883_targa_8ch_mixer
+comma
+"&t;&t;&t;"
 id|alc883_chmode_mixer
 )brace
 comma
