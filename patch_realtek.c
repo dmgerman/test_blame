@@ -101625,6 +101625,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1179
+comma
+l_int|0xff6e
+comma
+l_string|&quot;Toshiba NB200&quot;
+comma
+id|ALC663_ASUS_MODE4
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x144d
 comma
 l_int|0xca00
