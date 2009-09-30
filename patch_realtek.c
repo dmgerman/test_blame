@@ -76037,7 +76037,7 @@ op_assign
 (brace
 id|alc268_acer_mixer
 comma
-id|alc268_capture_nosrc_mixer
+id|alc268_capture_alt_mixer
 comma
 "&t;&t;&t;"
 id|alc268_beep_mixer
