@@ -77220,6 +77220,11 @@ r_int
 id|i
 suffix:semicolon
 "&t;&t;"
+id|spec-&gt;capsrc_nids
+op_assign
+id|alc268_capsrc_nids
+suffix:semicolon
+"&t;&t;"
 multiline_comment|/* get type */
 "&t;&t;"
 id|wcap
@@ -77258,6 +77263,19 @@ id|ARRAY_SIZE
 c_func
 (paren
 id|alc268_adc_nids_alt
+)paren
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;auto_mic
+)paren
+"&t;&t;&t;&t;"
+id|fixup_automic_adc
+c_func
+(paren
+id|codec
 )paren
 suffix:semicolon
 "&t;&t;&t;"
@@ -77319,11 +77337,6 @@ id|alc268_capture_mixer
 suffix:semicolon
 "&t;&t;"
 )brace
-"&t;&t;"
-id|spec-&gt;capsrc_nids
-op_assign
-id|alc268_capsrc_nids
-suffix:semicolon
 "&t;&t;"
 multiline_comment|/* set default input source */
 "&t;&t;"
