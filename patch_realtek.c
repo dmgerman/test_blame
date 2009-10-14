@@ -104870,7 +104870,7 @@ id|nid
 suffix:semicolon
 )brace
 multiline_comment|/* create playback/capture controls for input pins */
-macro_line|#define alc662_auto_create_input_ctls &bslash;&n;&t;alc880_auto_create_input_ctls
+macro_line|#define alc662_auto_create_input_ctls &bslash;&n;&t;alc882_auto_create_input_ctls
 r_void
 id|alc662_auto_set_output_and_unmute
 c_func
