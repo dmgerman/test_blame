@@ -11383,7 +11383,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-id|HDA_CODEC_MUTE
+id|HDA_CODEC_MUTE_BEEP
 c_func
 (paren
 l_string|&quot;Beep Playback Switch&quot;
