@@ -75604,14 +75604,17 @@ id|ALC268_DELL
 )paren
 comma
 "&t;"
-id|SND_PCI_QUIRK
+id|SND_PCI_QUIRK_MASK
 c_func
 (paren
 l_int|0x1028
 comma
+l_int|0xfff0
+comma
 l_int|0x02b0
 comma
-l_string|&quot;Dell Inspiron Mini9&quot;
+"&t;&t;&t;"
+l_string|&quot;Dell Inspiron Mini9/Vostro A90&quot;
 comma
 id|ALC268_DELL
 )paren
