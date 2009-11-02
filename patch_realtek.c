@@ -3977,6 +3977,16 @@ r_int
 id|i
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|nid
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
 id|pincap
 op_assign
 id|snd_hda_query_pin_caps
