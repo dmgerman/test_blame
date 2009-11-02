@@ -161,6 +161,7 @@ suffix:semicolon
 id|put_cpu_var
 c_func
 (paren
+id|return_notifier_list
 )paren
 suffix:semicolon
 )brace
