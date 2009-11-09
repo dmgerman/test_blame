@@ -3977,6 +3977,16 @@ r_int
 id|i
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|nid
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
 id|pincap
 op_assign
 id|snd_hda_query_pin_caps
@@ -40532,7 +40542,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-multiline_comment|/* FIXME: this looks suspicious...&n;&t;HDA_CODEC_VOLUME(&quot;Beep Playback Volume&quot;, 0x0b, 0x02, HDA_INPUT),&n;&t;HDA_CODEC_MUTE(&quot;Beep Playback Switch&quot;, 0x0b, 0x02, HDA_INPUT),&n;&t;*/
+multiline_comment|/* FIXME: this looks suspicious...&n;&t;HDA_CODEC_VOLUME(&quot;PC Speaker Playback Volume&quot;, 0x0b, 0x02, HDA_INPUT),&n;&t;HDA_CODEC_MUTE(&quot;PC Speaker Playback Switch&quot;, 0x0b, 0x02, HDA_INPUT),&n;&t;*/
 "&t;"
 (brace
 )brace
@@ -68702,6 +68712,19 @@ id|ALC262_TOSHIBA_S06
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x9035
+comma
+l_string|&quot;Sony VAIO VGN-FW170J&quot;
+comma
+id|ALC262_AUTO
+)paren
+comma
+"&t;"
 id|SND_PCI_QUIRK_MASK
 c_func
 (paren
@@ -75604,14 +75627,17 @@ id|ALC268_DELL
 )paren
 comma
 "&t;"
-id|SND_PCI_QUIRK
+id|SND_PCI_QUIRK_MASK
 c_func
 (paren
 l_int|0x1028
 comma
+l_int|0xfff0
+comma
 l_int|0x02b0
 comma
-l_string|&quot;Dell Inspiron Mini9&quot;
+"&t;&t;&t;"
+l_string|&quot;Dell Inspiron Mini9/Vostro A90&quot;
 comma
 id|ALC268_DELL
 )paren
@@ -104870,7 +104896,7 @@ id|nid
 suffix:semicolon
 )brace
 multiline_comment|/* create playback/capture controls for input pins */
-macro_line|#define alc662_auto_create_input_ctls &bslash;&n;&t;alc880_auto_create_input_ctls
+macro_line|#define alc662_auto_create_input_ctls &bslash;&n;&t;alc882_auto_create_input_ctls
 r_void
 id|alc662_auto_set_output_and_unmute
 c_func
