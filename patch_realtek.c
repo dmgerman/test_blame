@@ -33900,9 +33900,10 @@ l_int|0x280a
 comma
 l_string|&quot;HP d5750&quot;
 comma
-id|ALC260_HP_3013
+id|ALC260_AUTO
 )paren
 comma
+multiline_comment|/* no quirk */
 "&t;"
 id|SND_PCI_QUIRK
 c_func
