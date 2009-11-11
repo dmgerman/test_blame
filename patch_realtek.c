@@ -52058,7 +52058,7 @@ id|ALC885_MB5
 )paren
 comma
 "&t;"
-multiline_comment|/* FIXME: HP jack sense seems not working for MBP 5,1, so apparently&n;&t; * no perfect solution yet&n;&t; */
+multiline_comment|/* FIXME: HP jack sense seems not working for MBP 5,1 or 5,2,&n;&t; * so apparently no perfect solution yet&n;&t; */
 "&t;"
 id|SND_PCI_QUIRK
 c_func
@@ -52068,6 +52068,19 @@ comma
 l_int|0x4000
 comma
 l_string|&quot;MacbookPro 5,1&quot;
+comma
+id|ALC885_MB5
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x106b
+comma
+l_int|0x4600
+comma
+l_string|&quot;MacbookPro 5,2&quot;
 comma
 id|ALC885_MB5
 )paren
