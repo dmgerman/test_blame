@@ -11678,6 +11678,13 @@ c_func
 (paren
 id|codec
 comma
+"&t;&t;&t;&t;&t;"
+id|get_amp_nid_
+c_func
+(paren
+id|spec-&gt;beep_amp
+)paren
+comma
 id|kctl
 )paren
 suffix:semicolon
