@@ -22738,11 +22738,7 @@ id|val
 "&t;&t;"
 id|knew-&gt;subdevice
 op_assign
-(paren
-l_int|1
-op_lshift
-l_int|31
-)paren
+id|HDA_SUBDEV_NID_FLAG
 op_or
 id|get_amp_nid_
 c_func
