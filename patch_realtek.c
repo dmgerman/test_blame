@@ -40484,7 +40484,7 @@ id|HDA_INPUT
 )paren
 comma
 "&t;"
-multiline_comment|/* FIXME: this looks suspicious...&n;&t;HDA_CODEC_VOLUME(&quot;PC Speaker Playback Volume&quot;, 0x0b, 0x02, HDA_INPUT),&n;&t;HDA_CODEC_MUTE(&quot;PC Speaker Playback Switch&quot;, 0x0b, 0x02, HDA_INPUT),&n;&t;*/
+multiline_comment|/* FIXME: this looks suspicious...&n;&t;HDA_CODEC_VOLUME(&quot;Beep Playback Volume&quot;, 0x0b, 0x02, HDA_INPUT),&n;&t;HDA_CODEC_MUTE(&quot;Beep Playback Switch&quot;, 0x0b, 0x02, HDA_INPUT),&n;&t;*/
 "&t;"
 (brace
 )brace
