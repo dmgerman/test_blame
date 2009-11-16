@@ -11361,6 +11361,7 @@ op_star
 id|codec
 )paren
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_HDA_INPUT_BEEP
 multiline_comment|/* additional beep mixers; the actual parameters are overwritten at build */
 r_struct
 id|snd_kcontrol_new
@@ -11401,6 +11402,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+macro_line|#endif
 r_int
 id|alc_build_controls
 c_func
@@ -11608,6 +11610,7 @@ id|err
 suffix:semicolon
 "&t;"
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_INPUT_BEEP
 "&t;"
 multiline_comment|/* create beep controls if needed */
 "&t;"
@@ -11704,6 +11707,7 @@ suffix:semicolon
 )brace
 "&t;"
 )brace
+macro_line|#endif
 "&t;"
 multiline_comment|/* if we have no master control, let&squot;s create it */
 "&t;"
@@ -25331,7 +25335,11 @@ suffix:semicolon
 "&t;"
 )brace
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_INPUT_BEEP
 macro_line|#define set_beep_amp(spec, nid, idx, dir) &bslash;&n;&t;((spec)-&gt;beep_amp = HDA_COMPOSE_AMP_VAL(nid, 3, idx, dir))
+macro_line|#else
+macro_line|#define set_beep_amp(spec, nid, idx, dir) /* NOP */
+macro_line|#endif
 multiline_comment|/*&n; * OK, here we have finally the patch for ALC880&n; */
 r_int
 id|patch_alc880
