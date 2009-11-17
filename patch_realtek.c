@@ -68682,6 +68682,7 @@ comma
 id|ALC262_AUTO
 )paren
 comma
+macro_line|#if 0 /* disable the quirk since model=auto works better in recent versions */
 "&t;"
 id|SND_PCI_QUIRK_MASK
 c_func
@@ -68698,6 +68699,7 @@ comma
 id|ALC262_SONY_ASSAMD
 )paren
 comma
+macro_line|#endif
 "&t;"
 id|SND_PCI_QUIRK
 c_func
