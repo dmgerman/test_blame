@@ -50420,7 +50420,7 @@ comma
 l_string|&quot;Acer Aspire 5930G&quot;
 comma
 "&t;&t;"
-id|ALC888_ACER_ASPIRE_4930G
+id|ALC888_ACER_ASPIRE_6530G
 )paren
 comma
 "&t;"
