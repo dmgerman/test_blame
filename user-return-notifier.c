@@ -11,7 +11,6 @@ comma
 id|return_notifier_list
 )paren
 suffix:semicolon
-macro_line|#define URN_LIST_HEAD per_cpu(return_notifier_list, raw_smp_processor_id())
 multiline_comment|/*&n; * Request a notification when the current cpu returns to userspace.  Must be&n; * called in atomic context.  The notifier will also be called in atomic&n; * context.&n; */
 r_void
 id|user_return_notifier_register
@@ -40,7 +39,11 @@ op_amp
 id|urn-&gt;link
 comma
 op_amp
-id|URN_LIST_HEAD
+id|__get_cpu_var
+c_func
+(paren
+id|return_notifier_list
+)paren
 )paren
 suffix:semicolon
 )brace
@@ -77,7 +80,11 @@ id|hlist_empty
 c_func
 (paren
 op_amp
-id|URN_LIST_HEAD
+id|__get_cpu_var
+c_func
+(paren
+id|return_notifier_list
+)paren
 )paren
 )paren
 "&t;&t;"
