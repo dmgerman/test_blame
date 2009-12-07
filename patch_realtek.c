@@ -24872,20 +24872,11 @@ op_assign
 id|spec-&gt;slave_dig_outs
 suffix:semicolon
 "&t;&t;&t;"
-id|spec-&gt;slave_dig_outs
-(braket
-id|i
-l_int|1
-)braket
-op_assign
-id|dig_nid
-suffix:semicolon
-"&t;&t;&t;"
 r_if
 c_cond
 (paren
 id|i
-op_eq
+op_ge
 id|ARRAY_SIZE
 c_func
 (paren
@@ -24895,6 +24886,15 @@ l_int|1
 )paren
 "&t;&t;&t;&t;"
 r_break
+suffix:semicolon
+"&t;&t;&t;"
+id|spec-&gt;slave_dig_outs
+(braket
+id|i
+l_int|1
+)braket
+op_assign
+id|dig_nid
 suffix:semicolon
 "&t;&t;"
 )brace
@@ -33900,9 +33900,10 @@ l_int|0x280a
 comma
 l_string|&quot;HP d5750&quot;
 comma
-id|ALC260_HP_3013
+id|ALC260_AUTO
 )paren
 comma
+multiline_comment|/* no quirk */
 "&t;"
 id|SND_PCI_QUIRK
 c_func
@@ -52057,7 +52058,7 @@ id|ALC885_MB5
 )paren
 comma
 "&t;"
-multiline_comment|/* FIXME: HP jack sense seems not working for MBP 5,1, so apparently&n;&t; * no perfect solution yet&n;&t; */
+multiline_comment|/* FIXME: HP jack sense seems not working for MBP 5,1 or 5,2,&n;&t; * so apparently no perfect solution yet&n;&t; */
 "&t;"
 id|SND_PCI_QUIRK
 c_func
@@ -52067,6 +52068,19 @@ comma
 l_int|0x4000
 comma
 l_string|&quot;MacbookPro 5,1&quot;
+comma
+id|ALC885_MB5
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x106b
+comma
+l_int|0x4600
+comma
+l_string|&quot;MacbookPro 5,2&quot;
 comma
 id|ALC885_MB5
 )paren
@@ -57853,20 +57867,11 @@ op_assign
 id|spec-&gt;slave_dig_outs
 suffix:semicolon
 "&t;&t;&t;"
-id|spec-&gt;slave_dig_outs
-(braket
-id|i
-l_int|1
-)braket
-op_assign
-id|dig_nid
-suffix:semicolon
-"&t;&t;&t;"
 r_if
 c_cond
 (paren
 id|i
-op_eq
+op_ge
 id|ARRAY_SIZE
 c_func
 (paren
@@ -57876,6 +57881,15 @@ l_int|1
 )paren
 "&t;&t;&t;&t;"
 r_break
+suffix:semicolon
+"&t;&t;&t;"
+id|spec-&gt;slave_dig_outs
+(braket
+id|i
+l_int|1
+)braket
+op_assign
+id|dig_nid
 suffix:semicolon
 "&t;&t;"
 )brace
@@ -68709,6 +68723,32 @@ comma
 l_string|&quot;Sony VAIO Z21MN&quot;
 comma
 id|ALC262_TOSHIBA_S06
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x9035
+comma
+l_string|&quot;Sony VAIO VGN-FW170J&quot;
+comma
+id|ALC262_AUTO
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x9047
+comma
+l_string|&quot;Sony VAIO Type G&quot;
+comma
+id|ALC262_AUTO
 )paren
 comma
 "&t;"
