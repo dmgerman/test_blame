@@ -23200,6 +23200,10 @@ id|knew-&gt;subdevice
 op_assign
 id|HDA_SUBDEV_NID_FLAG
 op_or
+"&t;&t;&t;&t;"
+id|HDA_SUBDEV_AMP_FLAG
+op_or
+"&t;&t;&t;&t;"
 id|get_amp_nid_
 c_func
 (paren
@@ -64556,6 +64560,8 @@ id|subdevice
 op_assign
 id|HDA_SUBDEV_NID_FLAG
 op_or
+id|HDA_SUBDEV_AMP_FLAG
+op_or
 l_int|0x14
 comma
 "&t;&t;"
@@ -64841,6 +64847,8 @@ dot
 id|subdevice
 op_assign
 id|HDA_SUBDEV_NID_FLAG
+op_or
+id|HDA_SUBDEV_AMP_FLAG
 op_or
 l_int|0x1b
 comma
@@ -72726,6 +72734,8 @@ id|subdevice
 op_assign
 id|HDA_SUBDEV_NID_FLAG
 op_or
+id|HDA_SUBDEV_AMP_FLAG
+op_or
 l_int|0x14
 comma
 "&t;&t;"
@@ -72821,6 +72831,8 @@ dot
 id|subdevice
 op_assign
 id|HDA_SUBDEV_NID_FLAG
+op_or
+id|HDA_SUBDEV_AMP_FLAG
 op_or
 l_int|0x14
 comma
@@ -72943,6 +72955,8 @@ dot
 id|subdevice
 op_assign
 id|HDA_SUBDEV_NID_FLAG
+op_or
+id|HDA_SUBDEV_AMP_FLAG
 op_or
 l_int|0x14
 comma
@@ -78663,6 +78677,8 @@ id|subdevice
 op_assign
 id|HDA_SUBDEV_NID_FLAG
 op_or
+id|HDA_SUBDEV_AMP_FLAG
+op_or
 l_int|0x14
 comma
 "&t;&t;"
@@ -78823,6 +78839,8 @@ dot
 id|subdevice
 op_assign
 id|HDA_SUBDEV_NID_FLAG
+op_or
+id|HDA_SUBDEV_AMP_FLAG
 op_or
 l_int|0x14
 comma
