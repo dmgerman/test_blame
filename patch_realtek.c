@@ -11300,6 +11300,12 @@ comma
 l_string|&quot;IEC958 Playback Switch&quot;
 comma
 "&t;"
+l_string|&quot;Line-Out Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;PCM Playback Switch&quot;
+comma
+"&t;"
 l_int|NULL
 comma
 )brace
