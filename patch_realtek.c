@@ -102168,6 +102168,19 @@ id|ALC663_ASUS_H13
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x8086
+comma
+l_int|0xd604
+comma
+l_string|&quot;Intel mobo&quot;
+comma
+id|ALC662_3ST_2ch_DIG
+)paren
+comma
+"&t;"
 (brace
 )brace
 )brace
