@@ -33712,6 +33712,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x007f
+comma
+l_string|&quot;Acer&quot;
+comma
+id|ALC260_WILL
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x008f
 comma
 l_string|&quot;Acer&quot;
@@ -35802,7 +35815,7 @@ comma
 "&t;&t;"
 multiline_comment|/* Line 2 (0x03) unused */
 "&t;&t;"
-multiline_comment|/* CD (0x04) unused? */
+multiline_comment|/* CD (0x04) unsused? */
 "&t;"
 )brace
 comma
