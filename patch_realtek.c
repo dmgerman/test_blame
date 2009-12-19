@@ -35821,7 +35821,7 @@ comma
 "&t;&t;"
 multiline_comment|/* Line 2 (0x03) unused */
 "&t;&t;"
-multiline_comment|/* CD (0x04) unused? */
+multiline_comment|/* CD (0x04) unsused? */
 "&t;"
 )brace
 comma
@@ -54226,6 +54226,18 @@ id|alc889_adc_nids
 comma
 "&t;&t;"
 dot
+id|capsrc_nids
+op_assign
+id|alc889_capsrc_nids
+comma
+"&t;&t;"
+dot
+id|capsrc_nids
+op_assign
+id|alc889_capsrc_nids
+comma
+"&t;&t;"
+dot
 id|dig_out_nid
 op_assign
 id|ALC883_DIGOUT_NID
@@ -63286,6 +63298,38 @@ comma
 )brace
 suffix:semicolon
 r_struct
+id|hda_verb
+id|alc262_lenovo_3000_init_verbs
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+multiline_comment|/* Front Mic pin: input vref at 50% */
+"&t;"
+(brace
+l_int|0x19
+comma
+id|AC_VERB_SET_PIN_WIDGET_CONTROL
+comma
+id|PIN_VREF50
+)brace
+comma
+"&t;"
+(brace
+l_int|0x19
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_OUT_MUTE
+)brace
+comma
+"&t;"
+(brace
+)brace
+)brace
+suffix:semicolon
+r_struct
 id|hda_input_mux
 id|alc262_fujitsu_capture_source
 op_assign
@@ -70501,6 +70545,9 @@ id|alc262_EAPD_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc262_lenovo_3000_unsol_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc262_lenovo_3000_init_verbs
 )brace
 comma
 "&t;&t;"
