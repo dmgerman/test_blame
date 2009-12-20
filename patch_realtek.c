@@ -7505,25 +7505,6 @@ comma
 l_int|0x0000
 )brace
 comma
-multiline_comment|/* Enable amplifiers */
-"&t;"
-(brace
-l_int|0x14
-comma
-id|AC_VERB_SET_EAPD_BTLENABLE
-comma
-l_int|0x02
-)brace
-comma
-"&t;"
-(brace
-l_int|0x15
-comma
-id|AC_VERB_SET_EAPD_BTLENABLE
-comma
-l_int|0x02
-)brace
-comma
 multiline_comment|/* DMIC fix&n; * This laptop has a stereo digital microphone. The mics are only 1cm apart&n; * which makes the stereo useless. However, either the mic or the ALC889&n; * makes the signal become a difference/sum signal instead of standard&n; * stereo, which is annoying. So instead we flip this bit which makes the&n; * codec replicate the sum signal to both channels, turning it into a&n; * normal mono mic.&n; */
 multiline_comment|/*  DMIC_CONTROL? Init value = 0x0001 */
 "&t;"
@@ -55181,6 +55162,9 @@ id|alc880_gpio1_init_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc889_acer_aspire_8930g_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc889_eapd_verbs
 )brace
 comma
 "&t;&t;"
