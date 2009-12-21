@@ -77644,11 +77644,9 @@ suffix:semicolon
 "&t;"
 id|spec
 op_assign
-id|kcalloc
+id|kzalloc
 c_func
 (paren
-l_int|1
-comma
 r_sizeof
 (paren
 op_star
