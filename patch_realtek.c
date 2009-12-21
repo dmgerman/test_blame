@@ -36174,7 +36174,7 @@ comma
 "&t;&t;"
 multiline_comment|/* Line 2 (0x03) unused */
 "&t;&t;"
-multiline_comment|/* CD (0x04) unsused? */
+multiline_comment|/* CD (0x04) unused? */
 "&t;"
 )brace
 comma
@@ -54576,18 +54576,6 @@ dot
 id|adc_nids
 op_assign
 id|alc889_adc_nids
-comma
-"&t;&t;"
-dot
-id|capsrc_nids
-op_assign
-id|alc889_capsrc_nids
-comma
-"&t;&t;"
-dot
-id|capsrc_nids
-op_assign
-id|alc889_capsrc_nids
 comma
 "&t;&t;"
 dot
