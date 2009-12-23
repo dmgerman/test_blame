@@ -12165,7 +12165,7 @@ suffix:semicolon
 "&t;&t;"
 id|err
 op_assign
-id|snd_hda_add_nids
+id|snd_hda_add_nid
 c_func
 (paren
 id|codec
@@ -12175,9 +12175,9 @@ comma
 id|i
 comma
 id|nids
-comma
-"&t;&t;&t;&t;"
-id|spec-&gt;input_mux-&gt;num_items
+(braket
+id|i
+)braket
 )paren
 suffix:semicolon
 "&t;&t;"
