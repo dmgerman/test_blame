@@ -104149,9 +104149,9 @@ l_int|0x1179
 comma
 l_int|0xff6e
 comma
-l_string|&quot;Toshiba NB200&quot;
+l_string|&quot;Toshiba NB20x&quot;
 comma
-id|ALC663_ASUS_MODE4
+id|ALC662_AUTO
 )paren
 comma
 "&t;"
