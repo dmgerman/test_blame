@@ -75271,6 +75271,10 @@ suffix:semicolon
 r_case
 l_int|0x15
 suffix:colon
+"&t;"
+r_case
+l_int|0x21
+suffix:colon
 "&t;&t;"
 id|dac
 op_assign
