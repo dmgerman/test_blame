@@ -55771,6 +55771,12 @@ l_int|1
 comma
 "&t;&t;"
 dot
+id|const_channel_count
+op_assign
+l_int|6
+comma
+"&t;&t;"
+dot
 id|num_mux_defs
 op_assign
 "&t;&t;&t;"
