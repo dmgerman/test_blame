@@ -4998,6 +4998,7 @@ suffix:semicolon
 "&t;&t;&t;"
 r_break
 suffix:semicolon
+macro_line|#if 0 /* XXX: This may cause the silent output on speaker on some machines */
 "&t;&t;"
 r_case
 l_int|0x10ec0267
@@ -5078,6 +5079,7 @@ suffix:semicolon
 "&t;&t;&t;"
 r_break
 suffix:semicolon
+macro_line|#endif /* XXX */
 "&t;&t;"
 )brace
 "&t;&t;"
