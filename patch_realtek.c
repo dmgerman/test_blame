@@ -55768,6 +55768,12 @@ l_int|1
 comma
 "&t;&t;"
 dot
+id|const_channel_count
+op_assign
+l_int|6
+comma
+"&t;&t;"
+dot
 id|num_mux_defs
 op_assign
 "&t;&t;&t;"
@@ -61266,9 +61272,8 @@ id|spec-&gt;autocfg.speaker_pins
 l_int|0
 )braket
 op_assign
-l_int|0x0c
+l_int|0x14
 suffix:semicolon
-multiline_comment|/* HACK: not actually a pin */
 )brace
 r_struct
 id|snd_kcontrol_new
@@ -70921,7 +70926,7 @@ comma
 dot
 id|unsol_event
 op_assign
-id|alc_automute_amp_unsol_event
+id|alc_sku_unsol_event
 comma
 "&t;&t;"
 dot
@@ -70933,7 +70938,7 @@ comma
 dot
 id|init_hook
 op_assign
-id|alc_automute_amp
+id|alc_inithook
 comma
 "&t;"
 )brace
