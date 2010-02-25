@@ -83621,13 +83621,13 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
-l_int|0x1734
+l_int|0x104d
 comma
-l_int|0x115d
+l_int|0x9071
 comma
-l_string|&quot;FSC Amilo&quot;
+l_string|&quot;SONY XTB&quot;
 comma
-id|ALC269_FUJITSU
+id|ALC269_DMIC
 )paren
 comma
 "&t;"
@@ -83641,6 +83641,84 @@ comma
 l_string|&quot;Lifebook ICH9M-based&quot;
 comma
 id|ALC269_LIFEBOOK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x152d
+comma
+l_int|0x1778
+comma
+l_string|&quot;Quanta ON1&quot;
+comma
+id|ALC269_DMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1734
+comma
+l_int|0x115d
+comma
+l_string|&quot;FSC Amilo&quot;
+comma
+id|ALC269_FUJITSU
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
+l_int|0x3be9
+comma
+l_string|&quot;Quanta Wistron&quot;
+comma
+id|ALC269_AMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
+l_int|0x3bf8
+comma
+l_string|&quot;Quanta FL1&quot;
+comma
+id|ALC269_AMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17ff
+comma
+l_int|0x059a
+comma
+l_string|&quot;Quanta EL3&quot;
+comma
+id|ALC269_DMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17ff
+comma
+l_int|0x059b
+comma
+l_string|&quot;Quanta JR1&quot;
+comma
+id|ALC269_DMIC
 )paren
 comma
 "&t;"
