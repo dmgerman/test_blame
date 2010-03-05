@@ -26116,6 +26116,8 @@ suffix:semicolon
 "&t;"
 id|hda_nid_t
 id|pin
+op_assign
+l_int|0
 suffix:semicolon
 "&t;"
 r_int
