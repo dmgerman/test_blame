@@ -79067,7 +79067,7 @@ c_func
 id|codec
 comma
 "&t;&t;&t;"
-id|ALC882_MODEL_LAST
+id|ALC268_MODEL_LAST
 comma
 id|alc268_models
 comma
