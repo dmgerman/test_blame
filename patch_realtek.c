@@ -53393,6 +53393,19 @@ c_func
 (paren
 l_int|0x1462
 comma
+l_int|0x4570
+comma
+l_string|&quot;MSI Wind Top AE2220&quot;
+comma
+id|ALC883_TARGA_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1462
+comma
 l_int|0x6510
 comma
 l_string|&quot;MSI GX620&quot;
@@ -53502,6 +53515,19 @@ comma
 l_string|&quot;MSI&quot;
 comma
 id|ALC883_6ST_DIG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1462
+comma
+l_int|0x7437
+comma
+l_string|&quot;MSI NetOn AP1900&quot;
+comma
+id|ALC883_TARGA_DIG
 )paren
 comma
 "&t;"
