@@ -35262,7 +35262,7 @@ comma
 dot
 id|adc_nids
 op_assign
-id|alc260_adc_nids
+id|alc260_dual_adc_nids
 comma
 "&t;&t;"
 dot
