@@ -53884,7 +53884,7 @@ l_int|0xd601
 comma
 l_string|&quot;D102GGC&quot;
 comma
-id|ALC883_3ST_6ch
+id|ALC882_6ST_DIG
 )paren
 comma
 "&t;"
