@@ -26869,6 +26869,9 @@ l_string|&quot;hda_codec: %s: no valid ADC found;&quot;
 "&t;&t;"
 l_string|&quot; using fallback 0x%x&bslash;n&quot;
 comma
+"&t;&t;"
+id|codec-&gt;chip_name
+comma
 id|fallback_adc
 )paren
 suffix:semicolon
