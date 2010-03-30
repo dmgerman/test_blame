@@ -83790,7 +83790,7 @@ suffix:semicolon
 "&t;&t;"
 multiline_comment|/* mic2 vref pin is used for mute LED control */
 "&t;&t;"
-id|snd_hda_codec_write
+id|snd_hda_codec_update_cache
 c_func
 (paren
 id|codec
@@ -83799,9 +83799,10 @@ l_int|0x19
 comma
 l_int|0
 comma
-"&t;&t;&t;&t;"
+"&t;&t;&t;&t;&t;"
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
+"&t;&t;&t;&t;&t;"
 id|pinval
 )paren
 suffix:semicolon
