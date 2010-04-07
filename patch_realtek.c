@@ -60113,17 +60113,6 @@ r_int
 id|idx
 suffix:semicolon
 "&t;"
-id|printk
-c_func
-(paren
-l_string|&quot;XXX set output pin %x, dac %x&bslash;n&quot;
-comma
-id|nid
-comma
-id|dac
-)paren
-suffix:semicolon
-"&t;"
 multiline_comment|/* set as output */
 "&t;"
 id|alc_set_pin_output
