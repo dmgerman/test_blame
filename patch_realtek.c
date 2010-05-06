@@ -62351,20 +62351,6 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|codec-&gt;vendor_id
-op_eq
-l_int|0x10ec0888
-)paren
-"&t;&t;"
-id|spec-&gt;init_amp
-op_assign
-id|ALC_INIT_DEFAULT
-suffix:semicolon
-multiline_comment|/* always initialize */
-"&t;"
-r_if
-c_cond
-(paren
 op_logical_neg
 id|spec-&gt;adc_nids
 op_logical_and
