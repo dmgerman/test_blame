@@ -55335,6 +55335,19 @@ c_func
 (paren
 l_int|0x106b
 comma
+l_int|0x3000
+comma
+l_string|&quot;iMac&quot;
+comma
+id|ALC889A_MB31
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x106b
+comma
 l_int|0x3600
 comma
 l_string|&quot;Macbook 3,1&quot;
