@@ -55348,6 +55348,19 @@ c_func
 (paren
 l_int|0x106b
 comma
+l_int|0x3200
+comma
+l_string|&quot;iMac 7,1 Aluminum&quot;
+comma
+id|ALC882_ASUS_A7M
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x106b
+comma
 l_int|0x3400
 comma
 l_string|&quot;MacBookAir 1,1&quot;
