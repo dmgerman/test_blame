@@ -12601,6 +12601,15 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* assign Capture Source enums to NID */
 "&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;capsrc_nids
+op_logical_or
+id|spec-&gt;adc_nids
+)paren
+(brace
+"&t;&t;"
 id|kctl
 op_assign
 id|snd_hda_find_mixer_ctl
@@ -12611,14 +12620,14 @@ comma
 l_string|&quot;Capture Source&quot;
 )paren
 suffix:semicolon
-"&t;"
+"&t;&t;"
 r_if
 c_cond
 (paren
 op_logical_neg
 id|kctl
 )paren
-"&t;&t;"
+"&t;&t;&t;"
 id|kctl
 op_assign
 id|snd_hda_find_mixer_ctl
@@ -12629,7 +12638,7 @@ comma
 l_string|&quot;Input Source&quot;
 )paren
 suffix:semicolon
-"&t;"
+"&t;&t;"
 r_for
 c_loop
 (paren
@@ -12647,26 +12656,26 @@ id|i
 op_increment
 )paren
 (brace
-"&t;&t;"
+"&t;&t;&t;"
 id|hda_nid_t
 op_star
 id|nids
 op_assign
 id|spec-&gt;capsrc_nids
 suffix:semicolon
-"&t;&t;"
+"&t;&t;&t;"
 r_if
 c_cond
 (paren
 op_logical_neg
 id|nids
 )paren
-"&t;&t;&t;"
+"&t;&t;&t;&t;"
 id|nids
 op_assign
 id|spec-&gt;adc_nids
 suffix:semicolon
-"&t;&t;"
+"&t;&t;&t;"
 id|err
 op_assign
 id|snd_hda_add_nid
@@ -12684,7 +12693,7 @@ id|i
 )braket
 )paren
 suffix:semicolon
-"&t;&t;"
+"&t;&t;&t;"
 r_if
 c_cond
 (paren
@@ -12692,10 +12701,12 @@ id|err
 OL
 l_int|0
 )paren
-"&t;&t;&t;"
+"&t;&t;&t;&t;"
 r_return
 id|err
 suffix:semicolon
+"&t;&t;"
+)brace
 "&t;"
 )brace
 "&t;"
