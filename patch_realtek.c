@@ -37938,7 +37938,7 @@ comma
 (brace
 l_string|&quot;Line&quot;
 comma
-l_int|0x2
+l_int|0x7
 )brace
 comma
 "&t;&t;"
@@ -40689,7 +40689,7 @@ l_string|&quot;Line Playback Volume&quot;
 comma
 l_int|0x0b
 comma
-l_int|0x02
+l_int|0x07
 comma
 id|HDA_INPUT
 )paren
@@ -40701,7 +40701,7 @@ l_string|&quot;Line Playback Switch&quot;
 comma
 l_int|0x0b
 comma
-l_int|0x02
+l_int|0x07
 comma
 id|HDA_INPUT
 )paren
@@ -43554,7 +43554,7 @@ comma
 id|AMP_IN_UNMUTE
 c_func
 (paren
-l_int|1
+l_int|0x1
 )paren
 )brace
 comma
@@ -43567,7 +43567,7 @@ comma
 id|AMP_IN_MUTE
 c_func
 (paren
-l_int|3
+l_int|0x7
 )paren
 )brace
 comma
@@ -43580,20 +43580,7 @@ comma
 id|AMP_IN_MUTE
 c_func
 (paren
-l_int|2
-)paren
-)brace
-comma
-"&t;"
-(brace
-l_int|0x24
-comma
-id|AC_VERB_SET_AMP_GAIN_MUTE
-comma
-id|AMP_IN_MUTE
-c_func
-(paren
-l_int|4
+l_int|0x4
 )paren
 )brace
 comma
