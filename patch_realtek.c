@@ -12180,6 +12180,8 @@ r_struct
 id|snd_kcontrol
 op_star
 id|kctl
+op_assign
+l_int|NULL
 suffix:semicolon
 "&t;"
 r_struct
