@@ -593,6 +593,20 @@ id|ALC882_MODEL_LAST
 comma
 )brace
 suffix:semicolon
+multiline_comment|/* ALC680 models */
+r_enum
+(brace
+"&t;"
+id|ALC680_BASE
+comma
+"&t;"
+id|ALC680_AUTO
+comma
+"&t;"
+id|ALC680_MODEL_LAST
+comma
+)brace
+suffix:semicolon
 multiline_comment|/* for GPIO Poll */
 macro_line|#define GPIO_MASK&t;0x03
 multiline_comment|/* extra amp-initialization sequence types */
@@ -114335,7 +114349,15 @@ id|ALC680_BASE
 )braket
 "&t;&t;"
 op_assign
-l_string|&quot;alc680_base&quot;
+l_string|&quot;base&quot;
+comma
+"&t;"
+(braket
+id|ALC680_AUTO
+)braket
+"&t;&t;"
+op_assign
+l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
