@@ -5645,6 +5645,12 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
+id|spec-&gt;cdefine.enable_pcbeep
+op_assign
+l_int|1
+suffix:semicolon
+multiline_comment|/* assume always enabled */
+"&t;"
 id|ass
 op_assign
 id|codec-&gt;subsystem_id
@@ -5665,19 +5671,10 @@ op_amp
 l_int|1
 )paren
 )paren
-(brace
-"&t;&t;"
-id|spec-&gt;cdefine.enable_pcbeep
-op_assign
-l_int|1
-suffix:semicolon
-multiline_comment|/* assume always enabled */
 "&t;&t;"
 r_goto
 id|do_sku
 suffix:semicolon
-"&t;"
-)brace
 "&t;"
 id|nid
 op_assign
