@@ -38658,7 +38658,7 @@ l_int|0x0
 comma
 "&t;&t;"
 (brace
-l_string|&quot;iMic&quot;
+l_string|&quot;Int Mic&quot;
 comma
 l_int|0x1
 )brace
@@ -49663,7 +49663,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;iMic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -49676,7 +49676,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;iMic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
