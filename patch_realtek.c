@@ -78673,6 +78673,18 @@ suffix:semicolon
 r_default
 suffix:colon
 "&t;&t;"
+id|snd_printd
+c_func
+(paren
+id|KERN_WARNING
+l_string|&quot;hda_codec: &quot;
+"&t;&t;&t;"
+l_string|&quot;ignoring pin 0x%x as unknown&bslash;n&quot;
+comma
+id|nid
+)paren
+suffix:semicolon
+"&t;&t;"
 r_return
 l_int|0
 suffix:semicolon
