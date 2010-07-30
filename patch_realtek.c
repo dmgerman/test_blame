@@ -78564,6 +78564,10 @@ l_int|0x15
 suffix:colon
 "&t;"
 r_case
+l_int|0x1b
+suffix:colon
+"&t;"
+r_case
 l_int|0x21
 suffix:colon
 multiline_comment|/* ALC269vb has this pin, too */
