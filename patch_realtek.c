@@ -112514,7 +112514,7 @@ suffix:semicolon
 id|hda_nid_t
 id|srcs
 (braket
-l_int|4
+id|HDA_MAX_CONNECTIONS
 )braket
 suffix:semicolon
 "&t;"
