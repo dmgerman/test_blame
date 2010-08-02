@@ -78999,6 +78999,11 @@ suffix:semicolon
 "&t;"
 )brace
 r_else
+r_if
+c_cond
+(paren
+id|nid
+)paren
 (brace
 "&t;&t;"
 id|err
