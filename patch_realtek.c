@@ -38479,6 +38479,12 @@ op_amp
 id|alc260_pcm_analog_capture
 suffix:semicolon
 "&t;"
+id|spec-&gt;stream_analog_alt_capture
+op_assign
+op_amp
+id|alc260_pcm_analog_capture
+suffix:semicolon
+"&t;"
 id|spec-&gt;stream_digital_playback
 op_assign
 op_amp
