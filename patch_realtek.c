@@ -4357,12 +4357,14 @@ id|new_adc
 "&t;&t;"
 multiline_comment|/* stream is running, let&squot;s swap the current ADC */
 "&t;&t;"
-id|snd_hda_codec_cleanup_stream
+id|__snd_hda_codec_cleanup_stream
 c_func
 (paren
 id|codec
 comma
 id|spec-&gt;cur_adc
+comma
+l_int|1
 )paren
 suffix:semicolon
 "&t;&t;"
