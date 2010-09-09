@@ -3308,8 +3308,8 @@ r_if
 c_cond
 (paren
 id|auto_pin_type
-op_le
-id|AUTO_PIN_FRONT_MIC
+op_eq
+id|AUTO_PIN_MIC
 )paren
 (brace
 "&t;&t;"
@@ -5785,7 +5785,7 @@ id|i
 dot
 id|type
 op_ge
-id|AUTO_PIN_LINE
+id|AUTO_PIN_LINE_IN
 )paren
 "&t;&t;&t;"
 r_return
@@ -62526,7 +62526,7 @@ id|i
 dot
 id|type
 OG
-id|AUTO_PIN_FRONT_MIC
+id|AUTO_PIN_MIC
 )paren
 "&t;&t;&t;"
 r_break
@@ -116081,7 +116081,7 @@ l_int|1
 dot
 id|type
 op_assign
-id|AUTO_PIN_LINE
+id|AUTO_PIN_LINE_IN
 suffix:semicolon
 )brace
 r_void
