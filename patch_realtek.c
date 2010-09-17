@@ -6326,7 +6326,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|get_defcfg_connect
+id|snd_hda_get_input_pin_attr
 c_func
 (paren
 id|defcfg
@@ -6335,7 +6335,7 @@ id|defcfg
 (brace
 "&t;&t;"
 r_case
-id|AC_JACK_PORT_FIXED
+id|INPUT_PIN_ATTR_INT
 suffix:colon
 "&t;&t;&t;"
 r_if
@@ -6357,8 +6357,17 @@ r_break
 suffix:semicolon
 "&t;&t;"
 r_case
-id|AC_JACK_PORT_COMPLEX
+id|INPUT_PIN_ATTR_UNUSED
 suffix:colon
+"&t;&t;&t;"
+r_return
+suffix:semicolon
+multiline_comment|/* invalid entry */
+"&t;&t;"
+r_default
+suffix:colon
+(brace
+)brace
 "&t;&t;&t;"
 r_if
 c_cond
@@ -6377,13 +6386,6 @@ suffix:semicolon
 "&t;&t;&t;"
 r_break
 suffix:semicolon
-"&t;&t;"
-r_default
-suffix:colon
-"&t;&t;&t;"
-r_return
-suffix:semicolon
-multiline_comment|/* invalid entry */
 "&t;&t;"
 )brace
 "&t;"
