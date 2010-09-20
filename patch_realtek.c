@@ -1129,6 +1129,12 @@ r_int
 id|init_amp
 suffix:semicolon
 "&t;"
+r_int
+id|codec_variant
+suffix:semicolon
+"&t;"
+multiline_comment|/* flag for other variants */
+"&t;"
 multiline_comment|/* for virtual master */
 "&t;"
 id|hda_nid_t
@@ -86956,6 +86962,20 @@ r_return
 l_int|0
 suffix:semicolon
 )brace
+multiline_comment|/* different alc269-variants */
+r_enum
+(brace
+"&t;"
+id|ALC269_TYPE_NORMAL
+comma
+"&t;"
+id|ALC269_TYPE_ALC259
+comma
+"&t;"
+id|ALC269_TYPE_ALC271X
+comma
+)brace
+suffix:semicolon
 multiline_comment|/*&n; * BIOS auto configuration&n; */
 r_int
 id|alc269_parse_auto_config
@@ -87099,19 +87119,9 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-(paren
-id|alc_read_coef_idx
-c_func
-(paren
-id|codec
-comma
-l_int|0
-)paren
-op_amp
-l_int|0x00f0
-)paren
-op_eq
-l_int|0x0010
+id|spec-&gt;codec_variant
+op_ne
+id|ALC269_TYPE_NORMAL
 )paren
 (brace
 "&t;&t;"
@@ -89698,12 +89708,6 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
-r_int
-id|is_alc269vb
-op_assign
-l_int|0
-suffix:semicolon
-"&t;"
 id|spec
 op_assign
 id|kzalloc
@@ -89774,6 +89778,7 @@ id|spec-&gt;cdefine.platform_type
 op_eq
 l_int|1
 )paren
+(brace
 "&t;&t;&t;"
 id|alc_codec_rename
 c_func
@@ -89783,8 +89788,15 @@ comma
 l_string|&quot;ALC271X&quot;
 )paren
 suffix:semicolon
+"&t;&t;&t;"
+id|spec-&gt;codec_variant
+op_assign
+id|ALC269_TYPE_ALC271X
+suffix:semicolon
 "&t;&t;"
+)brace
 r_else
+(brace
 "&t;&t;&t;"
 id|alc_codec_rename
 c_func
@@ -89794,11 +89806,13 @@ comma
 l_string|&quot;ALC259&quot;
 )paren
 suffix:semicolon
-"&t;&t;"
-id|is_alc269vb
+"&t;&t;&t;"
+id|spec-&gt;codec_variant
 op_assign
-l_int|1
+id|ALC269_TYPE_ALC259
 suffix:semicolon
+"&t;&t;"
+)brace
 "&t;"
 )brace
 r_else
@@ -90113,8 +90127,9 @@ multiline_comment|/* wasn&squot;t filled automatically? use default */
 r_if
 c_cond
 (paren
-op_logical_neg
-id|is_alc269vb
+id|spec-&gt;codec_variant
+op_ne
+id|ALC269_TYPE_NORMAL
 )paren
 (brace
 "&t;&t;&t;"
