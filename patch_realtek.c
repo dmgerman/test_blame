@@ -87825,25 +87825,10 @@ id|alc269_fixup_tbl
 op_assign
 (brace
 "&t;"
-id|SND_PCI_QUIRK
+id|SND_PCI_QUIRK_VENDOR
 c_func
 (paren
 l_int|0x104d
-comma
-l_int|0x9071
-comma
-l_string|&quot;Sony VAIO&quot;
-comma
-id|ALC269_FIXUP_SONY_VAIO
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x104d
-comma
-l_int|0x9077
 comma
 l_string|&quot;Sony VAIO&quot;
 comma
