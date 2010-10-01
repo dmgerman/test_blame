@@ -116068,6 +116068,19 @@ c_func
 (paren
 l_int|0x17aa
 comma
+l_int|0x38af
+comma
+l_string|&quot;Lenovo Ideapad Y550P&quot;
+comma
+id|ALC662_FIXUP_IDEAPAD
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
 l_int|0x3a0d
 comma
 l_string|&quot;Lenovo Ideapad Y550&quot;
