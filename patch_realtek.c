@@ -62450,6 +62450,9 @@ comma
 "&t;"
 id|PINFIX_PB_M5210
 comma
+"&t;"
+id|PINFIX_ACER_ASPIRE_7736
+comma
 )brace
 suffix:semicolon
 r_const
@@ -62545,6 +62548,21 @@ comma
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|PINFIX_ACER_ASPIRE_7736
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|sku
+op_assign
+id|ALC_FIXUP_SKU_IGNORE
+comma
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_struct
@@ -62578,6 +62596,19 @@ comma
 l_string|&quot;Abit AW9D-MAX&quot;
 comma
 id|PINFIX_ABIT_AW9D_MAX
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
+l_int|0x0296
+comma
+l_string|&quot;Acer Aspire 7736z&quot;
+comma
+id|PINFIX_ACER_ASPIRE_7736
 )paren
 comma
 "&t;"
