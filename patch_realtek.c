@@ -64668,6 +64668,13 @@ id|spec-&gt;init_hook
 op_assign
 id|alc882_auto_init
 suffix:semicolon
+"&t;"
+id|alc_init_jacks
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 "&t;"
 r_if
@@ -77186,6 +77193,13 @@ id|spec-&gt;init_hook
 op_assign
 id|alc262_auto_init
 suffix:semicolon
+"&t;"
+id|alc_init_jacks
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 "&t;"
 r_if
@@ -83607,6 +83621,13 @@ op_assign
 id|alc268_auto_init
 suffix:semicolon
 "&t;"
+id|alc_init_jacks
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+"&t;"
 r_return
 l_int|0
 suffix:semicolon
@@ -85973,6 +85994,15 @@ comma
 id|bits
 )paren
 suffix:semicolon
+"&t;"
+id|alc_report_jack
+c_func
+(paren
+id|codec
+comma
+id|nid
+)paren
+suffix:semicolon
 )brace
 multiline_comment|/* unsolicited event for HP jack sensing */
 r_void
@@ -87595,13 +87625,6 @@ id|codec
 suffix:semicolon
 "&t;"
 id|alc_auto_init_digital
-c_func
-(paren
-id|codec
-)paren
-suffix:semicolon
-"&t;"
-id|alc_init_jacks
 c_func
 (paren
 id|codec
@@ -90509,6 +90532,13 @@ id|ALC269_AUTO
 id|spec-&gt;init_hook
 op_assign
 id|alc269_auto_init
+suffix:semicolon
+"&t;"
+id|alc_init_jacks
+c_func
+(paren
+id|codec
+)paren
 suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 "&t;"
@@ -116830,6 +116860,13 @@ l_int|0
 suffix:semicolon
 "&t;"
 )brace
+"&t;"
+id|alc_init_jacks
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 "&t;"
 r_if
