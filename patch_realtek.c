@@ -114521,6 +114521,20 @@ l_int|0x02
 suffix:semicolon
 "&t;"
 r_else
+r_if
+c_cond
+(paren
+id|nid
+op_eq
+l_int|0x26
+)paren
+multiline_comment|/* ALC887-VD has this DAC too */
+"&t;&t;"
+r_return
+l_int|0x25
+suffix:semicolon
+"&t;"
+r_else
 "&t;&t;"
 r_return
 l_int|0
@@ -114548,7 +114562,7 @@ id|dac
 id|hda_nid_t
 id|mix
 (braket
-l_int|4
+l_int|5
 )braket
 suffix:semicolon
 "&t;"
