@@ -7352,6 +7352,9 @@ suffix:semicolon
 r_case
 l_int|5
 suffix:colon
+"&t;"
+r_default
+suffix:colon
 "&t;&t;"
 id|spec-&gt;init_amp
 op_assign
