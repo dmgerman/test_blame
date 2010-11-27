@@ -57199,19 +57199,6 @@ c_func
 (paren
 l_int|0x17c0
 comma
-l_int|0x4071
-comma
-l_string|&quot;MEDION MD2&quot;
-comma
-id|ALC883_MEDION_MD2
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x17c0
-comma
 l_int|0x4085
 comma
 l_string|&quot;MEDION MD96630&quot;
