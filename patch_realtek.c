@@ -23805,6 +23805,19 @@ c_func
 (paren
 l_int|0x1854
 comma
+l_int|0x005f
+comma
+l_string|&quot;LG P1 Express&quot;
+comma
+id|ALC880_LG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1854
+comma
 l_int|0x0068
 comma
 l_string|&quot;LG w1&quot;
@@ -63753,23 +63766,6 @@ r_return
 l_int|0
 suffix:semicolon
 )brace
-r_int
-id|alc861vd_auto_create_multi_out_ctls
-c_func
-(paren
-r_struct
-id|alc_spec
-op_star
-id|spec
-comma
-"&t;&t;&t;&t;&t;"
-r_const
-r_struct
-id|auto_pin_cfg
-op_star
-id|cfg
-)paren
-suffix:semicolon
 multiline_comment|/* almost identical with ALC880 parser... */
 r_int
 id|alc882_parse_auto_config
@@ -63869,28 +63865,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-id|codec-&gt;vendor_id
-op_eq
-l_int|0x10ec0887
-)paren
-"&t;&t;"
-id|err
-op_assign
-id|alc861vd_auto_create_multi_out_ctls
-c_func
-(paren
-id|spec
-comma
-op_amp
-id|spec-&gt;autocfg
-)paren
-suffix:semicolon
-"&t;"
-r_else
-"&t;&t;"
 id|err
 op_assign
 id|alc880_auto_create_multi_out_ctls
@@ -88192,6 +88166,9 @@ comma
 "&t;"
 id|ALC269_FIXUP_DELL_M101Z
 comma
+"&t;"
+id|ALC269_FIXUP_LENOVO_EDGE14
+comma
 )brace
 suffix:semicolon
 r_const
@@ -88283,6 +88260,21 @@ comma
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|ALC269_FIXUP_LENOVO_EDGE14
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|sku
+op_assign
+id|ALC_FIXUP_SKU_IGNORE
+comma
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_struct
@@ -88314,6 +88306,19 @@ comma
 l_string|&quot;Dell M101z&quot;
 comma
 id|ALC269_FIXUP_DELL_M101Z
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
+l_int|0x21b8
+comma
+l_string|&quot;Thinkpad Edge 14&quot;
+comma
+id|ALC269_FIXUP_LENOVO_EDGE14
 )paren
 comma
 "&t;"
@@ -102001,7 +102006,7 @@ macro_line|#define alc861vd_auto_init_input_src&t;alc882_auto_init_input_src
 macro_line|#define alc861vd_idx_to_mixer_vol(nid)&t;&t;((nid) + 0x02)
 macro_line|#define alc861vd_idx_to_mixer_switch(nid)&t;((nid) + 0x0c)
 multiline_comment|/* add playback controls from the parsed DAC table */
-multiline_comment|/* Based on ALC880 version. But ALC861VD and ALC887 have separate,&n; * different NIDs for mute/unmute switch and volume control */
+multiline_comment|/* Based on ALC880 version. But ALC861VD has separate,&n; * different NIDs for mute/unmute switch and volume control */
 r_int
 id|alc861vd_auto_create_multi_out_ctls
 c_func
