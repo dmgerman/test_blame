@@ -53018,8 +53018,6 @@ op_assign
 l_int|0x17
 suffix:semicolon
 )brace
-multiline_comment|/* auto-toggle front mic */
-multiline_comment|/*&n;static void alc883_mitac_mic_automute(struct hda_codec *codec)&n;{&n;&t;unsigned char bits = snd_hda_jack_detect(codec, 0x18) ? HDA_AMP_MUTE : 0;&n;&n;&t;snd_hda_codec_amp_stereo(codec, 0x0b, HDA_INPUT, 1, HDA_AMP_MUTE, bits);&n;}&n;*/
 r_struct
 id|hda_verb
 id|alc883_mitac_verbs
