@@ -88215,7 +88215,7 @@ comma
 id|ALC269_FIXUP_DELL_M101Z
 comma
 "&t;"
-id|ALC269_FIXUP_LENOVO_EDGE14
+id|ALC269_FIXUP_SKU_IGNORE
 comma
 "&t;"
 id|ALC269_FIXUP_ASUS_G73JW
@@ -88313,7 +88313,7 @@ comma
 comma
 "&t;"
 (braket
-id|ALC269_FIXUP_LENOVO_EDGE14
+id|ALC269_FIXUP_SKU_IGNORE
 )braket
 op_assign
 (brace
@@ -88403,7 +88403,20 @@ l_int|0x21b8
 comma
 l_string|&quot;Thinkpad Edge 14&quot;
 comma
-id|ALC269_FIXUP_LENOVO_EDGE14
+id|ALC269_FIXUP_SKU_IGNORE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
+l_int|0x20f2
+comma
+l_string|&quot;Thinkpad SL410/510&quot;
+comma
+id|ALC269_FIXUP_SKU_IGNORE
 )paren
 comma
 "&t;"
