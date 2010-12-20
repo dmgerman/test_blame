@@ -10094,7 +10094,7 @@ op_assign
 (brace
 "&t;&t;&t;"
 (brace
-l_string|&quot;Ext Mic&quot;
+l_string|&quot;Mic&quot;
 comma
 l_int|0x0
 )brace
@@ -10148,7 +10148,7 @@ op_assign
 (brace
 "&t;&t;&t;"
 (brace
-l_string|&quot;Ext Mic&quot;
+l_string|&quot;Mic&quot;
 comma
 l_int|0x0
 )brace
@@ -13744,7 +13744,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Ext Mic Playback Volume&quot;
+l_string|&quot;Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -13757,7 +13757,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Ext Mic Playback Switch&quot;
+l_string|&quot;Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -78999,7 +78999,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Ext Mic Boost&quot;
+l_string|&quot;Mic Boost&quot;
 comma
 l_int|0x18
 comma
@@ -98110,7 +98110,7 @@ op_assign
 (brace
 "&t;&t;"
 (brace
-l_string|&quot;Ext Mic&quot;
+l_string|&quot;Mic&quot;
 comma
 l_int|0x0
 )brace
@@ -98988,7 +98988,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/* Pin assignment: Speaker=0x14, HP = 0x15,&n; *                 Ext Mic=0x18, Internal Mic = 0x19, CD = 0x1c, PC Beep = 0x1d&n; */
+multiline_comment|/* Pin assignment: Speaker=0x14, HP = 0x15,&n; *                 Mic=0x18, Internal Mic = 0x19, CD = 0x1c, PC Beep = 0x1d&n; */
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_dallas_mixer
@@ -99052,7 +99052,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Ext Mic Boost&quot;
+l_string|&quot;Mic Boost&quot;
 comma
 l_int|0x18
 comma
@@ -99065,7 +99065,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Ext Mic Playback Volume&quot;
+l_string|&quot;Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -99078,7 +99078,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Ext Mic Playback Switch&quot;
+l_string|&quot;Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111228,7 +111228,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Ext Mic Playback Volume&quot;
+l_string|&quot;Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -111241,7 +111241,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Ext Mic Playback Switch&quot;
+l_string|&quot;Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111254,7 +111254,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Ext Mic Boost&quot;
+l_string|&quot;Mic Boost&quot;
 comma
 l_int|0x18
 comma
