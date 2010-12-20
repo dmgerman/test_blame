@@ -104951,7 +104951,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;e-Mic Boost&quot;
+l_string|&quot;Mic Boost&quot;
 comma
 l_int|0x18
 comma
@@ -104964,7 +104964,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;e-Mic Playback Volume&quot;
+l_string|&quot;Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -104977,7 +104977,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;e-Mic Playback Switch&quot;
+l_string|&quot;Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -104990,7 +104990,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;i-Mic Boost&quot;
+l_string|&quot;Internal Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -105003,7 +105003,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;i-Mic Playback Volume&quot;
+l_string|&quot;Internal Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -105016,7 +105016,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;i-Mic Playback Switch&quot;
+l_string|&quot;Internal Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -106100,7 +106100,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;i-Mic Playback Volume&quot;
+l_string|&quot;Internal Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -106113,7 +106113,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;i-Mic Playback Switch&quot;
+l_string|&quot;Internal Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -106204,7 +106204,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;i-Mic Playback Volume&quot;
+l_string|&quot;Internal Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -106217,7 +106217,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;i-Mic Playback Switch&quot;
+l_string|&quot;Internal Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111083,7 +111083,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;e-Mic/LineIn Boost&quot;
+l_string|&quot;Mic/LineIn Boost&quot;
 comma
 l_int|0x18
 comma
@@ -111096,7 +111096,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;e-Mic/LineIn Playback Volume&quot;
+l_string|&quot;Mic/LineIn Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -111109,7 +111109,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;e-Mic/LineIn Playback Switch&quot;
+l_string|&quot;Mic/LineIn Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111122,7 +111122,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;i-Mic Boost&quot;
+l_string|&quot;Internal Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -111135,7 +111135,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;i-Mic Playback Volume&quot;
+l_string|&quot;Internal Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -111148,7 +111148,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;i-Mic Playback Switch&quot;
+l_string|&quot;Internal Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
