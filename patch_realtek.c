@@ -521,6 +521,9 @@ comma
 id|ALC883_MEDION
 comma
 "&t;"
+id|ALC883_MEDION_MD2
+comma
+"&t;"
 id|ALC883_MEDION_WIM2160
 comma
 "&t;"
@@ -7627,22 +7630,6 @@ suffix:semicolon
 )brace
 suffix:semicolon
 r_struct
-id|alc_model_fixup
-(brace
-"&t;"
-r_const
-r_int
-id|id
-suffix:semicolon
-"&t;"
-r_const
-r_char
-op_star
-id|name
-suffix:semicolon
-)brace
-suffix:semicolon
-r_struct
 id|alc_fixup
 (brace
 "&t;"
@@ -7664,33 +7651,10 @@ id|hda_verb
 op_star
 id|verbs
 suffix:semicolon
-"&t;"
-r_void
-(paren
-op_star
-id|func
-)paren
-(paren
-r_struct
-id|hda_codec
-op_star
-id|codec
-comma
-r_const
-r_struct
-id|alc_fixup
-op_star
-id|fix
-comma
-"&t;&t;"
-r_int
-id|pre_init
-)paren
-suffix:semicolon
 )brace
 suffix:semicolon
 r_void
-id|__alc_pick_fixup
+id|alc_pick_fixup
 c_func
 (paren
 r_struct
@@ -7701,15 +7665,16 @@ comma
 "&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|snd_pci_quirk
 op_star
-id|fix
+id|quirk
 comma
 "&t;&t;&t;"
 r_const
-r_char
+r_struct
+id|alc_fixup
 op_star
-id|modelname
+id|fix
 comma
 "&t;&t;&t;"
 r_int
@@ -7728,6 +7693,32 @@ r_struct
 id|alc_spec
 op_star
 id|spec
+suffix:semicolon
+"&t;"
+id|quirk
+op_assign
+id|snd_pci_quirk_lookup
+c_func
+(paren
+id|codec-&gt;bus-&gt;pci
+comma
+id|quirk
+)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|quirk
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
+id|fix
+op_add_assign
+id|quirk-&gt;value
 suffix:semicolon
 "&t;"
 id|cfg
@@ -7754,7 +7745,7 @@ comma
 "&t;&t;&t;"
 id|codec-&gt;chip_name
 comma
-id|modelname
+id|quirk-&gt;name
 )paren
 suffix:semicolon
 macro_line|#endif
@@ -7795,7 +7786,7 @@ comma
 "&t;&t;&t;"
 id|codec-&gt;chip_name
 comma
-id|modelname
+id|quirk-&gt;name
 )paren
 suffix:semicolon
 macro_line|#endif
@@ -7843,7 +7834,7 @@ comma
 "&t;&t;&t;"
 id|codec-&gt;chip_name
 comma
-id|modelname
+id|quirk-&gt;name
 )paren
 suffix:semicolon
 macro_line|#endif
@@ -7854,240 +7845,6 @@ c_func
 id|codec-&gt;spec
 comma
 id|fix-&gt;verbs
-)paren
-suffix:semicolon
-"&t;"
-)brace
-"&t;"
-r_if
-c_cond
-(paren
-id|fix-&gt;func
-)paren
-(brace
-macro_line|#ifdef CONFIG_SND_DEBUG_VERBOSE
-"&t;&t;"
-id|snd_printdd
-c_func
-(paren
-id|KERN_INFO
-l_string|&quot;hda_codec: %s: Apply fix-func for %s&bslash;n&quot;
-comma
-"&t;&t;&t;"
-id|codec-&gt;chip_name
-comma
-id|modelname
-)paren
-suffix:semicolon
-macro_line|#endif
-"&t;&t;"
-id|fix
-op_member_access_from_pointer
-id|func
-c_func
-(paren
-id|codec
-comma
-id|fix
-comma
-id|pre_init
-)paren
-suffix:semicolon
-"&t;"
-)brace
-)brace
-r_void
-id|alc_pick_fixup
-c_func
-(paren
-r_struct
-id|hda_codec
-op_star
-id|codec
-comma
-"&t;&t;&t;&t;"
-r_const
-r_struct
-id|snd_pci_quirk
-op_star
-id|quirk
-comma
-"&t;&t;&t;&t;"
-r_const
-r_struct
-id|alc_fixup
-op_star
-id|fix
-comma
-"&t;&t;&t;&t;"
-r_int
-id|pre_init
-)paren
-(brace
-"&t;"
-id|quirk
-op_assign
-id|snd_pci_quirk_lookup
-c_func
-(paren
-id|codec-&gt;bus-&gt;pci
-comma
-id|quirk
-)paren
-suffix:semicolon
-"&t;"
-r_if
-c_cond
-(paren
-id|quirk
-)paren
-(brace
-"&t;&t;"
-id|fix
-op_add_assign
-id|quirk-&gt;value
-suffix:semicolon
-macro_line|#ifdef CONFIG_SND_DEBUG_VERBOSE
-"&t;&t;"
-id|__alc_pick_fixup
-c_func
-(paren
-id|codec
-comma
-id|fix
-comma
-id|quirk-&gt;name
-comma
-id|pre_init
-)paren
-suffix:semicolon
-macro_line|#else
-"&t;&t;"
-id|__alc_pick_fixup
-c_func
-(paren
-id|codec
-comma
-id|fix
-comma
-l_int|NULL
-comma
-id|pre_init
-)paren
-suffix:semicolon
-macro_line|#endif
-"&t;"
-)brace
-)brace
-r_void
-id|alc_pick_fixup_model
-c_func
-(paren
-r_struct
-id|hda_codec
-op_star
-id|codec
-comma
-"&t;&t;&t;&t;"
-r_const
-r_struct
-id|alc_model_fixup
-op_star
-id|models
-comma
-"&t;&t;&t;&t;"
-r_const
-r_struct
-id|snd_pci_quirk
-op_star
-id|quirk
-comma
-"&t;&t;&t;&t;"
-r_const
-r_struct
-id|alc_fixup
-op_star
-id|fix
-comma
-"&t;&t;&t;&t;"
-r_int
-id|pre_init
-)paren
-(brace
-"&t;"
-r_if
-c_cond
-(paren
-id|codec-&gt;modelname
-op_logical_and
-id|models
-)paren
-(brace
-"&t;&t;"
-r_while
-c_loop
-(paren
-id|models-&gt;name
-)paren
-(brace
-"&t;&t;&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|strcmp
-c_func
-(paren
-id|codec-&gt;modelname
-comma
-id|models-&gt;name
-)paren
-)paren
-(brace
-"&t;&t;&t;&t;"
-id|fix
-op_add_assign
-id|models-&gt;id
-suffix:semicolon
-"&t;&t;&t;&t;"
-r_break
-suffix:semicolon
-"&t;&t;&t;"
-)brace
-"&t;&t;&t;"
-id|models
-op_increment
-suffix:semicolon
-"&t;&t;"
-)brace
-"&t;&t;"
-id|__alc_pick_fixup
-c_func
-(paren
-id|codec
-comma
-id|fix
-comma
-id|codec-&gt;modelname
-comma
-id|pre_init
-)paren
-suffix:semicolon
-"&t;"
-)brace
-r_else
-(brace
-"&t;&t;"
-id|alc_pick_fixup
-c_func
-(paren
-id|codec
-comma
-id|quirk
-comma
-id|fix
-comma
-id|pre_init
 )paren
 suffix:semicolon
 "&t;"
@@ -10094,7 +9851,7 @@ op_assign
 (brace
 "&t;&t;&t;"
 (brace
-l_string|&quot;Mic&quot;
+l_string|&quot;Ext Mic&quot;
 comma
 l_int|0x0
 )brace
@@ -10122,7 +9879,7 @@ l_int|0xa
 comma
 "&t;&t;&t;"
 (brace
-l_string|&quot;Internal Mic&quot;
+l_string|&quot;Int Mic&quot;
 comma
 l_int|0xb
 )brace
@@ -10148,7 +9905,7 @@ op_assign
 (brace
 "&t;&t;&t;"
 (brace
-l_string|&quot;Mic&quot;
+l_string|&quot;Ext Mic&quot;
 comma
 l_int|0x0
 )brace
@@ -13744,7 +13501,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Playback Volume&quot;
+l_string|&quot;Ext Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -13757,7 +13514,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Mic Playback Switch&quot;
+l_string|&quot;Ext Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -13770,7 +13527,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -13783,7 +13540,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -16616,7 +16373,7 @@ comma
 suffix:semicolon
 multiline_comment|/* auto-toggle front mic */
 r_void
-id|alc88x_simple_mic_automute
+id|alc880_uniwill_mic_automute
 c_func
 (paren
 r_struct
@@ -16735,7 +16492,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc88x_simple_mic_automute
+id|alc880_uniwill_mic_automute
 c_func
 (paren
 id|codec
@@ -16773,7 +16530,7 @@ r_case
 id|ALC880_MIC_EVENT
 suffix:colon
 "&t;&t;"
-id|alc88x_simple_mic_automute
+id|alc880_uniwill_mic_automute
 c_func
 (paren
 id|codec
@@ -40508,7 +40265,7 @@ l_int|0x0
 comma
 "&t;&t;"
 (brace
-l_string|&quot;Internal Mic&quot;
+l_string|&quot;Int Mic&quot;
 comma
 l_int|0x1
 )brace
@@ -40557,7 +40314,7 @@ l_int|0x0
 comma
 "&t;&t;"
 (brace
-l_string|&quot;Internal Mic&quot;
+l_string|&quot;Int Mic&quot;
 comma
 l_int|0x1
 )brace
@@ -49365,7 +49122,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -49378,7 +49135,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -49391,7 +49148,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -49508,7 +49265,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -49521,7 +49278,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -49534,7 +49291,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -51175,7 +50932,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -51188,7 +50945,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -51201,7 +50958,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -51253,7 +51010,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -51266,7 +51023,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -51279,7 +51036,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -51513,7 +51270,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -51526,11 +51283,141 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
 l_int|0x1
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+(brace
+)brace
+multiline_comment|/* end */
+)brace
+suffix:semicolon
+r_struct
+id|snd_kcontrol_new
+id|alc883_medion_md2_mixer
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Front Playback Volume&quot;
+comma
+l_int|0x0c
+comma
+l_int|0x0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Headphone Playback Switch&quot;
+comma
+l_int|0x14
+comma
+l_int|0x0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Front Playback Switch&quot;
+comma
+l_int|0x15
+comma
+l_int|0x0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;CD Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x04
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;CD Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x04
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Mic Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Mic Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x0
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME
+c_func
+(paren
+l_string|&quot;Line Playback Volume&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x02
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_MUTE
+c_func
+(paren
+l_string|&quot;Line Playback Switch&quot;
+comma
+l_int|0x0b
+comma
+l_int|0x02
 comma
 id|HDA_INPUT
 )paren
@@ -53018,6 +52905,8 @@ op_assign
 l_int|0x17
 suffix:semicolon
 )brace
+multiline_comment|/* auto-toggle front mic */
+multiline_comment|/*&n;static void alc883_mitac_mic_automute(struct hda_codec *codec)&n;{&n;&t;unsigned char bits = snd_hda_jack_detect(codec, 0x18) ? HDA_AMP_MUTE : 0;&n;&n;&t;snd_hda_codec_amp_stereo(codec, 0x0b, HDA_INPUT, 1, HDA_AMP_MUTE, bits);&n;}&n;*/
 r_struct
 id|hda_verb
 id|alc883_mitac_verbs
@@ -54362,9 +54251,68 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+r_struct
+id|hda_verb
+id|alc883_medion_md2_verbs
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+(brace
+l_int|0x0c
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_UNMUTE
+c_func
+(paren
+l_int|0
+)paren
+)brace
+comma
+"&t;"
+(brace
+l_int|0x0c
+comma
+id|AC_VERB_SET_AMP_GAIN_MUTE
+comma
+id|AMP_IN_UNMUTE
+c_func
+(paren
+l_int|1
+)paren
+)brace
+comma
+"&t;"
+(brace
+l_int|0x14
+comma
+id|AC_VERB_SET_PIN_WIDGET_CONTROL
+comma
+id|PIN_HP
+)brace
+comma
+"&t;"
+(brace
+l_int|0x14
+comma
+id|AC_VERB_SET_UNSOLICITED_ENABLE
+comma
+id|ALC880_HP_EVENT
+op_or
+id|AC_USRSP_EN
+)brace
+comma
+"&t;"
+(brace
+)brace
+multiline_comment|/* end */
+)brace
+suffix:semicolon
 multiline_comment|/* toggle speaker-output according to the hp-jack state */
 r_void
-id|alc883_lenovo_nb0763_setup
+id|alc883_medion_md2_setup
 c_func
 (paren
 r_struct
@@ -54401,6 +54349,56 @@ suffix:semicolon
 multiline_comment|/* toggle speaker-output according to the hp-jack state */
 macro_line|#define alc883_targa_init_hook&t;&t;alc882_targa_init_hook
 macro_line|#define alc883_targa_unsol_event&t;alc882_targa_unsol_event
+r_void
+id|alc883_clevo_m720_mic_automute
+c_func
+(paren
+r_struct
+id|hda_codec
+op_star
+id|codec
+)paren
+(brace
+"&t;"
+r_int
+r_int
+id|present
+suffix:semicolon
+"&t;"
+id|present
+op_assign
+id|snd_hda_jack_detect
+c_func
+(paren
+id|codec
+comma
+l_int|0x18
+)paren
+suffix:semicolon
+"&t;"
+id|snd_hda_codec_amp_stereo
+c_func
+(paren
+id|codec
+comma
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|1
+comma
+"&t;&t;&t;&t;"
+id|HDA_AMP_MUTE
+comma
+id|present
+ques
+c_cond
+id|HDA_AMP_MUTE
+suffix:colon
+l_int|0
+)paren
+suffix:semicolon
+)brace
 r_void
 id|alc883_clevo_m720_setup
 c_func
@@ -54454,7 +54452,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc88x_simple_mic_automute
+id|alc883_clevo_m720_mic_automute
 c_func
 (paren
 id|codec
@@ -54490,7 +54488,7 @@ r_case
 id|ALC880_MIC_EVENT
 suffix:colon
 "&t;&t;"
-id|alc88x_simple_mic_automute
+id|alc883_clevo_m720_mic_automute
 c_func
 (paren
 id|codec
@@ -55852,6 +55850,14 @@ id|ALC883_MEDION
 "&t;&t;"
 op_assign
 l_string|&quot;medion&quot;
+comma
+"&t;"
+(braket
+id|ALC883_MEDION_MD2
+)braket
+"&t;"
+op_assign
+l_string|&quot;medion-md2&quot;
 comma
 "&t;"
 (braket
@@ -60727,6 +60733,96 @@ comma
 comma
 "&t;"
 (braket
+id|ALC883_MEDION_MD2
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|mixers
+op_assign
+(brace
+id|alc883_medion_md2_mixer
+)brace
+comma
+"&t;&t;"
+dot
+id|init_verbs
+op_assign
+(brace
+id|alc883_init_verbs
+comma
+id|alc883_medion_md2_verbs
+)brace
+comma
+"&t;&t;"
+dot
+id|num_dacs
+op_assign
+id|ARRAY_SIZE
+c_func
+(paren
+id|alc883_dac_nids
+)paren
+comma
+"&t;&t;"
+dot
+id|dac_nids
+op_assign
+id|alc883_dac_nids
+comma
+"&t;&t;"
+dot
+id|dig_out_nid
+op_assign
+id|ALC883_DIGOUT_NID
+comma
+"&t;&t;"
+dot
+id|num_channel_mode
+op_assign
+id|ARRAY_SIZE
+c_func
+(paren
+id|alc883_3ST_2ch_modes
+)paren
+comma
+"&t;&t;"
+dot
+id|channel_mode
+op_assign
+id|alc883_3ST_2ch_modes
+comma
+"&t;&t;"
+dot
+id|input_mux
+op_assign
+op_amp
+id|alc883_capture_source
+comma
+"&t;&t;"
+dot
+id|unsol_event
+op_assign
+id|alc_automute_amp_unsol_event
+comma
+"&t;&t;"
+dot
+id|setup
+op_assign
+id|alc883_medion_md2_setup
+comma
+"&t;&t;"
+dot
+id|init_hook
+op_assign
+id|alc_automute_amp
+comma
+"&t;"
+)brace
+comma
+"&t;"
+(braket
 id|ALC883_MEDION_WIM2160
 )braket
 op_assign
@@ -61254,7 +61350,7 @@ comma
 dot
 id|setup
 op_assign
-id|alc883_lenovo_nb0763_setup
+id|alc883_medion_md2_setup
 comma
 "&t;&t;"
 dot
@@ -68798,7 +68894,7 @@ l_int|0x0
 comma
 "&t;&t;"
 (brace
-l_string|&quot;Internal Mic&quot;
+l_string|&quot;Int Mic&quot;
 comma
 l_int|0x1
 )brace
@@ -69694,7 +69790,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -69707,7 +69803,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -69720,7 +69816,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -69955,7 +70051,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -69968,7 +70064,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -69981,7 +70077,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -78999,7 +79095,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Ext Mic Boost&quot;
 comma
 l_int|0x18
 comma
@@ -79012,7 +79108,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -88116,6 +88212,9 @@ r_enum
 id|ALC269_FIXUP_SONY_VAIO
 comma
 "&t;"
+id|ALC275_FIX_SONY_VAIO_GPIO2
+comma
+"&t;"
 id|ALC269_FIXUP_DELL_M101Z
 comma
 "&t;"
@@ -88159,6 +88258,59 @@ comma
 id|AC_VERB_SET_PIN_WIDGET_CONTROL
 comma
 id|PIN_VREFGRD
+)brace
+comma
+"&t;&t;&t;"
+(brace
+)brace
+"&t;&t;"
+)brace
+"&t;"
+)brace
+comma
+"&t;"
+(braket
+id|ALC275_FIX_SONY_VAIO_GPIO2
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|verbs
+op_assign
+(paren
+r_const
+r_struct
+id|hda_verb
+(braket
+)braket
+)paren
+(brace
+"&t;&t;&t;"
+(brace
+l_int|0x01
+comma
+id|AC_VERB_SET_GPIO_MASK
+comma
+l_int|0x04
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_int|0x01
+comma
+id|AC_VERB_SET_GPIO_DIRECTION
+comma
+l_int|0x04
+)brace
+comma
+"&t;&t;&t;"
+(brace
+l_int|0x01
+comma
+id|AC_VERB_SET_GPIO_DATA
+comma
+l_int|0x00
 )brace
 comma
 "&t;&t;&t;"
@@ -88282,6 +88434,45 @@ comma
 l_string|&quot;Sony VAIO&quot;
 comma
 id|ALC269_FIXUP_SONY_VAIO
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x9073
+comma
+l_string|&quot;Sony VAIO&quot;
+comma
+id|ALC275_FIX_SONY_VAIO_GPIO2
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x907b
+comma
+l_string|&quot;Sony VAIO&quot;
+comma
+id|ALC275_FIX_SONY_VAIO_GPIO2
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x9084
+comma
+l_string|&quot;Sony VAIO&quot;
+comma
+id|ALC275_FIX_SONY_VAIO_GPIO2
 )paren
 comma
 "&t;"
@@ -98110,14 +98301,14 @@ op_assign
 (brace
 "&t;&t;"
 (brace
-l_string|&quot;Mic&quot;
+l_string|&quot;Ext Mic&quot;
 comma
 l_int|0x0
 )brace
 comma
 "&t;&t;"
 (brace
-l_string|&quot;Internal Mic&quot;
+l_string|&quot;Int Mic&quot;
 comma
 l_int|0x1
 )brace
@@ -98988,7 +99179,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
-multiline_comment|/* Pin assignment: Speaker=0x14, HP = 0x15,&n; *                 Mic=0x18, Internal Mic = 0x19, CD = 0x1c, PC Beep = 0x1d&n; */
+multiline_comment|/* Pin assignment: Speaker=0x14, HP = 0x15,&n; *                 Ext Mic=0x18, Int Mic = 0x19, CD = 0x1c, PC Beep = 0x1d&n; */
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_dallas_mixer
@@ -99052,7 +99243,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Ext Mic Boost&quot;
 comma
 l_int|0x18
 comma
@@ -99065,7 +99256,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Playback Volume&quot;
+l_string|&quot;Ext Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -99078,7 +99269,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Mic Playback Switch&quot;
+l_string|&quot;Ext Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -99091,7 +99282,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -99104,7 +99295,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -99117,7 +99308,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -100058,6 +100249,66 @@ comma
 )brace
 suffix:semicolon
 r_void
+id|alc861vd_lenovo_mic_automute
+c_func
+(paren
+r_struct
+id|hda_codec
+op_star
+id|codec
+)paren
+(brace
+"&t;"
+r_int
+r_int
+id|present
+suffix:semicolon
+"&t;"
+r_int
+r_char
+id|bits
+suffix:semicolon
+"&t;"
+id|present
+op_assign
+id|snd_hda_jack_detect
+c_func
+(paren
+id|codec
+comma
+l_int|0x18
+)paren
+suffix:semicolon
+"&t;"
+id|bits
+op_assign
+id|present
+ques
+c_cond
+id|HDA_AMP_MUTE
+suffix:colon
+l_int|0
+suffix:semicolon
+"&t;"
+id|snd_hda_codec_amp_stereo
+c_func
+(paren
+id|codec
+comma
+l_int|0x0b
+comma
+id|HDA_INPUT
+comma
+l_int|1
+comma
+"&t;&t;&t;&t;"
+id|HDA_AMP_MUTE
+comma
+id|bits
+)paren
+suffix:semicolon
+)brace
+r_void
 id|alc861vd_lenovo_setup
 c_func
 (paren
@@ -100110,7 +100361,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc88x_simple_mic_automute
+id|alc861vd_lenovo_mic_automute
 c_func
 (paren
 id|codec
@@ -100146,7 +100397,7 @@ r_case
 id|ALC880_MIC_EVENT
 suffix:colon
 "&t;&t;"
-id|alc88x_simple_mic_automute
+id|alc861vd_lenovo_mic_automute
 c_func
 (paren
 id|codec
@@ -104951,7 +105202,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;e-Mic Boost&quot;
 comma
 l_int|0x18
 comma
@@ -104964,7 +105215,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Playback Volume&quot;
+l_string|&quot;e-Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -104977,7 +105228,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Mic Playback Switch&quot;
+l_string|&quot;e-Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -104990,7 +105241,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;i-Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -105003,7 +105254,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;i-Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -105016,7 +105267,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;i-Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -106100,7 +106351,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;i-Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -106113,7 +106364,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;i-Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -106204,7 +106455,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;i-Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -106217,7 +106468,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;i-Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111083,7 +111334,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic/LineIn Boost&quot;
+l_string|&quot;e-Mic/LineIn Boost&quot;
 comma
 l_int|0x18
 comma
@@ -111096,7 +111347,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic/LineIn Playback Volume&quot;
+l_string|&quot;e-Mic/LineIn Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -111109,7 +111360,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Mic/LineIn Playback Switch&quot;
+l_string|&quot;e-Mic/LineIn Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111122,7 +111373,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;i-Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -111135,7 +111386,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;i-Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -111148,7 +111399,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;i-Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111228,7 +111479,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Playback Volume&quot;
+l_string|&quot;Ext Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -111241,7 +111492,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Mic Playback Switch&quot;
+l_string|&quot;Ext Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111254,7 +111505,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Ext Mic Boost&quot;
 comma
 l_int|0x18
 comma
@@ -111267,7 +111518,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Volume&quot;
+l_string|&quot;Int Mic Playback Volume&quot;
 comma
 l_int|0x0b
 comma
@@ -111280,7 +111531,7 @@ comma
 id|HDA_CODEC_MUTE
 c_func
 (paren
-l_string|&quot;Internal Mic Playback Switch&quot;
+l_string|&quot;Int Mic Playback Switch&quot;
 comma
 l_int|0x0b
 comma
@@ -111293,7 +111544,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x19
 comma
@@ -116458,78 +116709,6 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-r_void
-id|alc272_fixup_mario
-c_func
-(paren
-r_struct
-id|hda_codec
-op_star
-id|codec
-comma
-"&t;&t;&t;"
-r_const
-r_struct
-id|alc_fixup
-op_star
-id|fix
-comma
-r_int
-id|pre_init
-)paren
-(brace
-"&t;"
-r_if
-c_cond
-(paren
-id|snd_hda_override_amp_caps
-c_func
-(paren
-id|codec
-comma
-l_int|0x2
-comma
-id|HDA_OUTPUT
-comma
-"&t;&t;&t;&t;"
-(paren
-l_int|0x3b
-op_lshift
-id|AC_AMPCAP_OFFSET_SHIFT
-)paren
-op_or
-"&t;&t;&t;&t;"
-(paren
-l_int|0x3b
-op_lshift
-id|AC_AMPCAP_NUM_STEPS_SHIFT
-)paren
-op_or
-"&t;&t;&t;&t;"
-(paren
-l_int|0x03
-op_lshift
-id|AC_AMPCAP_STEP_SIZE_SHIFT
-)paren
-op_or
-"&t;&t;&t;&t;"
-(paren
-l_int|0
-op_lshift
-id|AC_AMPCAP_MUTE_SHIFT
-)paren
-)paren
-)paren
-"&t;&t;"
-id|printk
-c_func
-(paren
-id|KERN_WARNING
-"&t;&t;"
-l_string|&quot;hda_codec: failed to override amp caps for NID 0x2&bslash;n&quot;
-)paren
-suffix:semicolon
-)brace
 r_enum
 (brace
 "&t;"
@@ -116537,9 +116716,6 @@ id|ALC662_FIXUP_ASPIRE
 comma
 "&t;"
 id|ALC662_FIXUP_IDEAPAD
-comma
-"&t;"
-id|ALC272_FIXUP_MARIO
 comma
 )brace
 suffix:semicolon
@@ -116619,20 +116795,6 @@ multiline_comment|/* subwoofer */
 "&t;"
 )brace
 comma
-"&t;"
-(braket
-id|ALC272_FIXUP_MARIO
-)braket
-op_assign
-(brace
-"&t;&t;"
-dot
-id|func
-op_assign
-id|alc272_fixup_mario
-comma
-"&t;"
-)brace
 )brace
 suffix:semicolon
 r_struct
@@ -116693,32 +116855,6 @@ l_string|&quot;Lenovo Ideapad Y550&quot;
 comma
 id|ALC662_FIXUP_IDEAPAD
 )paren
-comma
-"&t;"
-(brace
-)brace
-)brace
-suffix:semicolon
-r_const
-r_struct
-id|alc_model_fixup
-id|alc662_fixup_models
-(braket
-)braket
-op_assign
-(brace
-"&t;"
-(brace
-dot
-id|id
-op_assign
-id|ALC272_FIXUP_MARIO
-comma
-dot
-id|name
-op_assign
-l_string|&quot;mario&quot;
-)brace
 comma
 "&t;"
 (brace
@@ -117268,14 +117404,11 @@ op_assign
 id|alc662_auto_init
 suffix:semicolon
 "&t;&t;"
-id|alc_pick_fixup_model
+id|alc_pick_fixup
 c_func
 (paren
 id|codec
 comma
-id|alc662_fixup_models
-comma
-"&t;&t;&t;&t;"
 id|alc662_fixup_tbl
 comma
 id|alc662_fixups
@@ -117901,7 +118034,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Int Mic Boost&quot;
 comma
 l_int|0x12
 comma
