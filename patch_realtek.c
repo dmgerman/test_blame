@@ -88426,17 +88426,6 @@ id|alc269_fixup_tbl
 op_assign
 (brace
 "&t;"
-id|SND_PCI_QUIRK_VENDOR
-c_func
-(paren
-l_int|0x104d
-comma
-l_string|&quot;Sony VAIO&quot;
-comma
-id|ALC269_FIXUP_SONY_VAIO
-)paren
-comma
-"&t;"
 id|SND_PCI_QUIRK
 c_func
 (paren
@@ -88473,6 +88462,17 @@ comma
 l_string|&quot;Sony VAIO&quot;
 comma
 id|ALC275_FIX_SONY_VAIO_GPIO2
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK_VENDOR
+c_func
+(paren
+l_int|0x104d
+comma
+l_string|&quot;Sony VAIO&quot;
+comma
+id|ALC269_FIXUP_SONY_VAIO
 )paren
 comma
 "&t;"
