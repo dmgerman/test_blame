@@ -10555,7 +10555,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -10746,7 +10746,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -42730,7 +42730,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -42769,7 +42769,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -42957,7 +42957,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line Boost&quot;
+l_string|&quot;Line Boost Volume&quot;
 comma
 l_int|0x1a
 comma
@@ -42970,7 +42970,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -43146,7 +43146,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line Boost&quot;
+l_string|&quot;Line Boost Volume&quot;
 comma
 l_int|0x15
 comma
@@ -43159,7 +43159,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -43310,7 +43310,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line Boost&quot;
+l_string|&quot;Line Boost Volume&quot;
 comma
 l_int|0x15
 comma
@@ -43466,7 +43466,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -43622,7 +43622,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -43661,7 +43661,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -43844,7 +43844,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -43974,7 +43974,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -49196,7 +49196,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -49235,7 +49235,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -49339,7 +49339,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -49378,7 +49378,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -49482,7 +49482,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -49521,7 +49521,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -49664,7 +49664,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -49703,7 +49703,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -49932,7 +49932,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -49971,7 +49971,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -50201,7 +50201,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -50240,7 +50240,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -50470,7 +50470,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x1b
 comma
@@ -50509,7 +50509,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -50738,7 +50738,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -50777,7 +50777,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -51019,7 +51019,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -51149,7 +51149,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -51188,7 +51188,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -51266,7 +51266,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -51383,7 +51383,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -51849,7 +51849,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -51979,7 +51979,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -52222,7 +52222,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -52261,7 +52261,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -52460,7 +52460,7 @@ multiline_comment|/* Boost mixers */
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -52473,7 +52473,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line Boost&quot;
+l_string|&quot;Line Boost Volume&quot;
 comma
 l_int|0x1a
 comma
@@ -52605,7 +52605,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -52822,7 +52822,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -63654,7 +63654,7 @@ r_sizeof
 id|label
 )paren
 comma
-l_string|&quot;%s Boost&quot;
+l_string|&quot;%s Boost Volume&quot;
 comma
 "&t;&t;&t;&t;"
 id|hda_get_autocfg_input_label
@@ -64971,7 +64971,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -65010,7 +65010,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -65521,7 +65521,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -65560,7 +65560,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -65777,7 +65777,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x1a
 comma
@@ -65881,7 +65881,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Rear Mic Boost&quot;
+l_string|&quot;Rear Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -66021,7 +66021,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -66658,7 +66658,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -66697,7 +66697,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -66830,7 +66830,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -66869,7 +66869,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -67328,7 +67328,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -67367,7 +67367,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -68539,7 +68539,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -69655,7 +69655,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -69694,7 +69694,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -69916,7 +69916,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -69955,7 +69955,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -70046,7 +70046,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -70085,7 +70085,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -70243,7 +70243,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -70256,7 +70256,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Headphone Mic Boost&quot;
+l_string|&quot;Headphone Mic Boost Volume&quot;
 comma
 l_int|0x15
 comma
@@ -77471,7 +77471,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -77484,7 +77484,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -77497,7 +77497,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line In Boost&quot;
+l_string|&quot;Line In Boost Volume&quot;
 comma
 l_int|0x1a
 comma
@@ -77553,7 +77553,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -77566,7 +77566,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -77579,7 +77579,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line In Boost&quot;
+l_string|&quot;Line In Boost Volume&quot;
 comma
 l_int|0x1a
 comma
@@ -78143,7 +78143,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -78156,7 +78156,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -78169,7 +78169,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line In Boost&quot;
+l_string|&quot;Line In Boost Volume&quot;
 comma
 l_int|0x1a
 comma
@@ -78263,7 +78263,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -78276,7 +78276,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line In Boost&quot;
+l_string|&quot;Line In Boost Volume&quot;
 comma
 l_int|0x1a
 comma
@@ -78770,7 +78770,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -78783,7 +78783,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -78999,7 +78999,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -79012,7 +79012,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -83922,7 +83922,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -83961,7 +83961,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -84110,7 +84110,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -84149,7 +84149,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -84269,7 +84269,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -84308,7 +84308,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -84347,7 +84347,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Dock Mic Boost&quot;
+l_string|&quot;Dock Mic Boost Volume&quot;
 comma
 l_int|0x1b
 comma
@@ -84568,7 +84568,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -84581,7 +84581,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;IntMic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -84633,7 +84633,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -84685,7 +84685,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -84698,7 +84698,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;IntMic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -84750,7 +84750,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -98622,7 +98622,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -98661,7 +98661,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -98804,7 +98804,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -98843,7 +98843,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -98988,7 +98988,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -99027,7 +99027,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Front Mic Boost&quot;
+l_string|&quot;Front Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -99158,7 +99158,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -99197,7 +99197,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -105057,7 +105057,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -105096,7 +105096,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -111189,7 +111189,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic/LineIn Boost&quot;
+l_string|&quot;Mic/LineIn Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -111228,7 +111228,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -111360,7 +111360,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -111399,7 +111399,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x19
 comma
@@ -118007,7 +118007,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Internal Mic Boost&quot;
+l_string|&quot;Internal Mic Boost Volume&quot;
 comma
 l_int|0x12
 comma
@@ -118020,7 +118020,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Mic Boost&quot;
+l_string|&quot;Mic Boost Volume&quot;
 comma
 l_int|0x18
 comma
@@ -118033,7 +118033,7 @@ comma
 id|HDA_CODEC_VOLUME
 c_func
 (paren
-l_string|&quot;Line In Boost&quot;
+l_string|&quot;Line In Boost Volume&quot;
 comma
 l_int|0x19
 comma
