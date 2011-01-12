@@ -9398,6 +9398,15 @@ l_int|0x00
 comma
 "&t;"
 (brace
+l_int|0x15
+comma
+id|AC_VERB_SET_EAPD_BTLENABLE
+comma
+l_int|2
+)brace
+comma
+"&t;"
+(brace
 )brace
 )brace
 suffix:semicolon
