@@ -88352,6 +88352,15 @@ l_int|0x00
 comma
 "&t;&t;&t;"
 (brace
+l_int|0x19
+comma
+id|AC_VERB_SET_PIN_WIDGET_CONTROL
+comma
+id|PIN_VREFGRD
+)brace
+comma
+"&t;&t;&t;"
+(brace
 )brace
 "&t;&t;"
 )brace
