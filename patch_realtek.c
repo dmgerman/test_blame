@@ -116746,6 +116746,16 @@ id|pre_init
 r_if
 c_cond
 (paren
+op_logical_neg
+id|pre_init
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
 id|snd_hda_override_amp_caps
 c_func
 (paren
