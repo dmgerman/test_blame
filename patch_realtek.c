@@ -7758,6 +7758,9 @@ comma
 "&t;"
 id|ALC_FIXUP_ACT_PROBE
 comma
+"&t;"
+id|ALC_FIXUP_ACT_INIT
+comma
 )brace
 suffix:semicolon
 r_void
@@ -19608,6 +19611,15 @@ id|init_hook
 c_func
 (paren
 id|codec
+)paren
+suffix:semicolon
+"&t;"
+id|alc_apply_fixup
+c_func
+(paren
+id|codec
+comma
+id|ALC_FIXUP_ACT_INIT
 )paren
 suffix:semicolon
 "&t;"
@@ -88404,7 +88416,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_PROBE
+id|ALC_FIXUP_ACT_INIT
 )paren
 "&t;&t;"
 r_return
