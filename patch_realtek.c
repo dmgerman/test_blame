@@ -88178,6 +88178,15 @@ r_int
 id|coef
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|pre_init
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
 id|coef
 op_assign
 id|alc_read_coef_idx
