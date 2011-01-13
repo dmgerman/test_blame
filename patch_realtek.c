@@ -63829,23 +63829,6 @@ r_return
 l_int|0
 suffix:semicolon
 )brace
-r_int
-id|alc861vd_auto_create_multi_out_ctls
-c_func
-(paren
-r_struct
-id|alc_spec
-op_star
-id|spec
-comma
-"&t;&t;&t;&t;&t;"
-r_const
-r_struct
-id|auto_pin_cfg
-op_star
-id|cfg
-)paren
-suffix:semicolon
 multiline_comment|/* almost identical with ALC880 parser... */
 r_int
 id|alc882_parse_auto_config
@@ -63945,28 +63928,6 @@ r_return
 id|err
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-id|codec-&gt;vendor_id
-op_eq
-l_int|0x10ec0887
-)paren
-"&t;&t;"
-id|err
-op_assign
-id|alc861vd_auto_create_multi_out_ctls
-c_func
-(paren
-id|spec
-comma
-op_amp
-id|spec-&gt;autocfg
-)paren
-suffix:semicolon
-"&t;"
-r_else
-"&t;&t;"
 id|err
 op_assign
 id|alc880_auto_create_multi_out_ctls
@@ -74164,41 +74125,6 @@ l_int|0x0121141f
 )brace
 comma
 multiline_comment|/* rear HP */
-"&t;&t;&t;"
-(brace
-)brace
-"&t;&t;"
-)brace
-"&t;"
-)brace
-comma
-"&t;"
-(braket
-id|PINFIX_PB_M5210
-)braket
-op_assign
-(brace
-"&t;&t;"
-dot
-id|verbs
-op_assign
-(paren
-r_const
-r_struct
-id|hda_verb
-(braket
-)braket
-)paren
-(brace
-"&t;&t;&t;"
-(brace
-l_int|0x19
-comma
-id|AC_VERB_SET_PIN_WIDGET_CONTROL
-comma
-id|PIN_VREF50
-)brace
-comma
 "&t;&t;&t;"
 (brace
 )brace
@@ -88282,7 +88208,7 @@ r_enum
 id|ALC269_FIXUP_SONY_VAIO
 comma
 "&t;"
-id|ALC275_FIX_SONY_VAIO_GPIO2
+id|ALC275_FIXUP_SONY_VAIO_GPIO2
 comma
 "&t;"
 id|ALC269_FIXUP_DELL_M101Z
@@ -88346,7 +88272,7 @@ comma
 comma
 "&t;"
 (braket
-id|ALC275_FIX_SONY_VAIO_GPIO2
+id|ALC275_FIXUP_SONY_VAIO_GPIO2
 )braket
 op_assign
 (brace
@@ -88622,7 +88548,7 @@ l_int|0x9073
 comma
 l_string|&quot;Sony VAIO&quot;
 comma
-id|ALC275_FIX_SONY_VAIO_GPIO2
+id|ALC275_FIXUP_SONY_VAIO_GPIO2
 )paren
 comma
 "&t;"
@@ -102332,7 +102258,7 @@ macro_line|#define alc861vd_auto_init_input_src&t;alc882_auto_init_input_src
 macro_line|#define alc861vd_idx_to_mixer_vol(nid)&t;&t;((nid) + 0x02)
 macro_line|#define alc861vd_idx_to_mixer_switch(nid)&t;((nid) + 0x0c)
 multiline_comment|/* add playback controls from the parsed DAC table */
-multiline_comment|/* Based on ALC880 version. But ALC861VD and ALC887 have separate,&n; * different NIDs for mute/unmute switch and volume control */
+multiline_comment|/* Based on ALC880 version. But ALC861VD has separate,&n; * different NIDs for mute/unmute switch and volume control */
 r_int
 id|alc861vd_auto_create_multi_out_ctls
 c_func
