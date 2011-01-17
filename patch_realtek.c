@@ -14097,6 +14097,7 @@ multiline_comment|/*&n; * slave controls for virtual master&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc_slave_vols
 (braket
 )braket
@@ -14140,6 +14141,7 @@ suffix:semicolon
 r_const
 r_char
 op_star
+r_const
 id|alc_slave_sws
 (braket
 )braket
@@ -23376,6 +23378,7 @@ multiline_comment|/*&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc880_models
 (braket
 id|ALC880_MODEL_LAST
@@ -27038,6 +27041,7 @@ id|cfg
 r_const
 r_char
 op_star
+r_const
 id|chname
 (braket
 l_int|4
@@ -38685,6 +38689,7 @@ multiline_comment|/*&n; * ALC260 configurations&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc260_models
 (braket
 id|ALC260_MODEL_LAST
@@ -55934,6 +55939,7 @@ multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc882_models
 (braket
 id|ALC882_MODEL_LAST
@@ -74722,6 +74728,7 @@ multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc262_models
 (braket
 id|ALC262_MODEL_LAST
@@ -82028,6 +82035,7 @@ multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc268_models
 (braket
 id|ALC268_MODEL_LAST
@@ -88909,6 +88917,7 @@ multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc269_models
 (braket
 id|ALC269_MODEL_LAST
@@ -95856,6 +95865,7 @@ suffix:semicolon
 r_const
 r_char
 op_star
+r_const
 id|chname
 (braket
 l_int|4
@@ -97046,6 +97056,7 @@ multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc861_models
 (braket
 id|ALC861_MODEL_LAST
@@ -101153,6 +101164,7 @@ multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc861vd_models
 (braket
 id|ALC861VD_MODEL_LAST
@@ -102533,12 +102545,14 @@ id|cfg
 r_const
 r_char
 op_star
+r_const
 id|chname
 (braket
 l_int|4
 )braket
 op_assign
 (brace
+"&t;&t;"
 l_string|&quot;Front&quot;
 comma
 l_string|&quot;Surround&quot;
@@ -102546,6 +102560,7 @@ comma
 l_string|&quot;CLFE&quot;
 comma
 l_string|&quot;Side&quot;
+"&t;"
 )brace
 suffix:semicolon
 "&t;"
@@ -111854,6 +111869,7 @@ multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc662_models
 (braket
 id|ALC662_MODEL_LAST
@@ -115550,6 +115566,7 @@ suffix:semicolon
 r_const
 r_char
 op_star
+r_const
 id|chname
 (braket
 l_int|4
@@ -119804,6 +119821,7 @@ multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
 op_star
+r_const
 id|alc680_models
 (braket
 id|ALC680_MODEL_LAST
