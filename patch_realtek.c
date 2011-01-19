@@ -7790,6 +7790,7 @@ id|id
 op_assign
 id|spec-&gt;fixup_id
 suffix:semicolon
+macro_line|#ifdef CONFIG_SND_DEBUG_VERBOSE
 "&t;"
 r_const
 r_char
@@ -7798,6 +7799,7 @@ id|modelname
 op_assign
 id|spec-&gt;fixup_name
 suffix:semicolon
+macro_line|#endif
 "&t;"
 r_int
 id|depth
