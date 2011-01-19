@@ -88893,6 +88893,19 @@ c_func
 (paren
 l_int|0x17aa
 comma
+l_int|0x21e9
+comma
+l_string|&quot;Thinkpad Edge 14&quot;
+comma
+id|ALC269_FIXUP_SKU_IGNORE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
 l_int|0x20f2
 comma
 l_string|&quot;Thinkpad SL410/510&quot;
