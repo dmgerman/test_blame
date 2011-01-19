@@ -74953,6 +74953,22 @@ l_int|0x103c
 comma
 l_int|0xff00
 comma
+l_int|0x1500
+comma
+l_string|&quot;HP z series&quot;
+comma
+"&t;&t;&t;"
+id|ALC262_HP_BPC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK_MASK
+c_func
+(paren
+l_int|0x103c
+comma
+l_int|0xff00
+comma
 l_int|0x1700
 comma
 l_string|&quot;HP xw series&quot;
