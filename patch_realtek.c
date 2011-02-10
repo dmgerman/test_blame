@@ -117562,6 +117562,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x0308
+comma
+l_string|&quot;Acer Aspire 8942G&quot;
+comma
+id|ALC662_FIXUP_ASPIRE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x038b
 comma
 l_string|&quot;Acer Aspire 8943G&quot;
