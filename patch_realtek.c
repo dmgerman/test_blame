@@ -89439,9 +89439,9 @@ l_int|0x1043
 comma
 l_int|0x12b3
 comma
-l_string|&quot;ASUS N82Jv&quot;
+l_string|&quot;ASUS N82JV&quot;
 comma
-id|ALC269_AMIC
+id|ALC269VB_AMIC
 )paren
 comma
 "&t;"
