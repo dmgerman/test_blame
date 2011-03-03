@@ -10838,9 +10838,9 @@ c_func
 (paren
 l_string|&quot;Center Playback Volume&quot;
 comma
-l_int|0x0f
+l_int|0x0e
 comma
-l_int|2
+l_int|1
 comma
 l_int|0x0
 comma
@@ -10854,7 +10854,37 @@ c_func
 (paren
 l_string|&quot;Center Playback Switch&quot;
 comma
-l_int|0x0f
+l_int|0x0e
+comma
+l_int|1
+comma
+l_int|2
+comma
+id|HDA_INPUT
+)paren
+comma
+"&t;"
+id|HDA_CODEC_VOLUME_MONO
+c_func
+(paren
+l_string|&quot;LFE Playback Volume&quot;
+comma
+l_int|0x0e
+comma
+l_int|2
+comma
+l_int|0x0
+comma
+id|HDA_OUTPUT
+)paren
+comma
+"&t;"
+id|HDA_BIND_MUTE_MONO
+c_func
+(paren
+l_string|&quot;LFE Playback Switch&quot;
+comma
+l_int|0x0e
 comma
 l_int|2
 comma
@@ -10867,7 +10897,7 @@ comma
 id|HDA_CODEC_VOLUME_MONO
 c_func
 (paren
-l_string|&quot;LFE Playback Volume&quot;
+l_string|&quot;Internal LFE Playback Volume&quot;
 comma
 l_int|0x0f
 comma
@@ -10882,37 +10912,11 @@ comma
 id|HDA_BIND_MUTE_MONO
 c_func
 (paren
-l_string|&quot;LFE Playback Switch&quot;
+l_string|&quot;Internal LFE Playback Switch&quot;
 comma
 l_int|0x0f
 comma
 l_int|1
-comma
-l_int|2
-comma
-id|HDA_INPUT
-)paren
-comma
-"&t;"
-id|HDA_CODEC_VOLUME
-c_func
-(paren
-l_string|&quot;Side Playback Volume&quot;
-comma
-l_int|0x0e
-comma
-l_int|0x0
-comma
-id|HDA_OUTPUT
-)paren
-comma
-"&t;"
-id|HDA_BIND_MUTE
-c_func
-(paren
-l_string|&quot;Side Playback Switch&quot;
-comma
-l_int|0x0e
 comma
 l_int|2
 comma
