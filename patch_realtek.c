@@ -62747,6 +62747,9 @@ r_enum
 id|PINFIX_ABIT_AW9D_MAX
 comma
 "&t;"
+id|PINFIX_LENOVO_Y530
+comma
+"&t;"
 id|PINFIX_PB_M5210
 comma
 "&t;"
@@ -62810,6 +62813,54 @@ l_int|0x01016011
 )brace
 comma
 multiline_comment|/* clfe */
+"&t;&t;&t;"
+(brace
+)brace
+"&t;&t;"
+)brace
+"&t;"
+)brace
+comma
+"&t;"
+(braket
+id|PINFIX_LENOVO_Y530
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|ALC_FIXUP_PINS
+comma
+"&t;&t;"
+dot
+id|v.pins
+op_assign
+(paren
+r_const
+r_struct
+id|alc_pincfg
+(braket
+)braket
+)paren
+(brace
+"&t;&t;&t;"
+(brace
+l_int|0x15
+comma
+l_int|0x99130112
+)brace
+comma
+multiline_comment|/* rear int speakers */
+"&t;&t;&t;"
+(brace
+l_int|0x16
+comma
+l_int|0x99130111
+)brace
+comma
+multiline_comment|/* subwoofer */
 "&t;&t;&t;"
 (brace
 )brace
@@ -62900,6 +62951,19 @@ comma
 l_string|&quot;Packard-Bell M5120&quot;
 comma
 id|PINFIX_PB_M5210
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
+l_int|0x3a0d
+comma
+l_string|&quot;Lenovo Y530&quot;
+comma
+id|PINFIX_LENOVO_Y530
 )paren
 comma
 "&t;"
