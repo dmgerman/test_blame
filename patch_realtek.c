@@ -82061,6 +82061,7 @@ l_int|1
 suffix:semicolon
 )brace
 macro_line|#define alc268_auto_init_analog_input&t;alc882_auto_init_analog_input
+macro_line|#define alc268_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
 id|alc268_auto_init
@@ -82103,6 +82104,13 @@ id|codec
 suffix:semicolon
 "&t;"
 id|alc268_auto_init_analog_input
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+"&t;"
+id|alc268_auto_init_input_src
 c_func
 (paren
 id|codec
@@ -84045,67 +84053,6 @@ id|alc268_capture_mixer
 suffix:semicolon
 "&t;&t;"
 )brace
-"&t;&t;"
-multiline_comment|/* set default input source */
-"&t;&t;"
-r_for
-c_loop
-(paren
-id|i
-op_assign
-l_int|0
-suffix:semicolon
-id|i
-OL
-id|spec-&gt;num_adc_nids
-suffix:semicolon
-id|i
-op_increment
-)paren
-"&t;&t;&t;"
-id|snd_hda_codec_write_cache
-c_func
-(paren
-id|codec
-comma
-id|alc268_capsrc_nids
-(braket
-id|i
-)braket
-comma
-"&t;&t;&t;&t;"
-l_int|0
-comma
-id|AC_VERB_SET_CONNECT_SEL
-comma
-"&t;&t;&t;&t;"
-id|i
-OL
-id|spec-&gt;num_mux_defs
-ques
-c_cond
-"&t;&t;&t;&t;"
-id|spec-&gt;input_mux
-(braket
-id|i
-)braket
-dot
-id|items
-(braket
-l_int|0
-)braket
-dot
-id|index
-suffix:colon
-"&t;&t;&t;&t;"
-id|spec-&gt;input_mux-&gt;items
-(braket
-l_int|0
-)braket
-dot
-id|index
-)paren
-suffix:semicolon
 "&t;"
 )brace
 "&t;"
@@ -88029,35 +87976,6 @@ id|alc269_adc_candidates
 )paren
 suffix:semicolon
 "&t;"
-multiline_comment|/* set default input source */
-"&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;dual_adc_switch
-)paren
-"&t;&t;"
-id|select_or_unmute_capsrc
-c_func
-(paren
-id|codec
-comma
-id|spec-&gt;capsrc_nids
-(braket
-l_int|0
-)braket
-comma
-"&t;&t;&t;&t;&t;"
-id|spec-&gt;input_mux-&gt;items
-(braket
-l_int|0
-)braket
-dot
-id|index
-)paren
-suffix:semicolon
-"&t;"
 id|err
 op_assign
 id|alc_auto_add_mic_boost
@@ -88103,6 +88021,7 @@ suffix:semicolon
 macro_line|#define alc269_auto_init_multi_out&t;alc268_auto_init_multi_out
 macro_line|#define alc269_auto_init_hp_out&t;&t;alc268_auto_init_hp_out
 macro_line|#define alc269_auto_init_analog_input&t;alc882_auto_init_analog_input
+macro_line|#define alc269_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
 id|alc269_auto_init
@@ -88138,6 +88057,20 @@ id|codec
 suffix:semicolon
 "&t;"
 id|alc269_auto_init_analog_input
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;dual_adc_switch
+)paren
+"&t;&t;"
+id|alc269_auto_init_input_src
 c_func
 (paren
 id|codec
