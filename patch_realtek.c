@@ -83932,10 +83932,6 @@ l_int|0x07
 )paren
 suffix:semicolon
 "&t;&t;"
-r_int
-id|i
-suffix:semicolon
-"&t;&t;"
 id|spec-&gt;capsrc_nids
 op_assign
 id|alc268_capsrc_nids
