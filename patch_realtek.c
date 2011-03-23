@@ -5720,9 +5720,8 @@ r_case
 l_int|0x10ec0887
 suffix:colon
 "&t;&t;"
-r_case
-l_int|0x10ec0889
-suffix:colon
+multiline_comment|/*case 0x10ec0889:*/
+multiline_comment|/* this causes an SPDIF problem */
 "&t;&t;&t;"
 id|alc889_coef_init
 c_func
