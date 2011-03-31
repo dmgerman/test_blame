@@ -53,7 +53,7 @@ c_func
 id|user_return_notifier_register
 )paren
 suffix:semicolon
-multiline_comment|/*&n; * Removes a registered user return notifier.  Must be called from atomic&n; * context, and from the same cpu registration occured in.&n; */
+multiline_comment|/*&n; * Removes a registered user return notifier.  Must be called from atomic&n; * context, and from the same cpu registration occurred in.&n; */
 r_void
 id|user_return_notifier_unregister
 c_func
