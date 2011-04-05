@@ -2013,7 +2013,7 @@ r_return
 id|err
 suffix:semicolon
 )brace
-multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidentally treating the % as&n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour as of&n; * March 2006.&n; */
+multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidently treating the % as&n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour as of&n; * March 2006.&n; */
 r_char
 op_star
 id|alc_pin_mode_names
@@ -56585,7 +56585,7 @@ l_int|0x103c
 comma
 l_int|0x2a3d
 comma
-l_string|&quot;HP Pavilion&quot;
+l_string|&quot;HP Pavillion&quot;
 comma
 id|ALC883_6ST_DIG
 )paren
@@ -56900,19 +56900,6 @@ comma
 l_int|NULL
 comma
 id|ALC883_3ST_6ch
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1458
-comma
-l_int|0xa002
-comma
-l_string|&quot;Gigabyte P35 DS3R&quot;
-comma
-id|ALC882_6ST_DIG
 )paren
 comma
 "&t;"
@@ -62857,6 +62844,9 @@ comma
 "&t;"
 id|PINFIX_ACER_ASPIRE_7736
 comma
+"&t;"
+id|PINFIX_GIGABYTE_880GM
+comma
 )brace
 suffix:semicolon
 r_const
@@ -63033,6 +63023,46 @@ comma
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|PINFIX_GIGABYTE_880GM
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|ALC_FIXUP_PINS
+comma
+"&t;&t;"
+dot
+id|v.pins
+op_assign
+(paren
+r_const
+r_struct
+id|alc_pincfg
+(braket
+)braket
+)paren
+(brace
+"&t;&t;&t;"
+(brace
+l_int|0x14
+comma
+l_int|0x1114410
+)brace
+comma
+multiline_comment|/* set as speaker */
+"&t;&t;&t;"
+(brace
+)brace
+"&t;&t;"
+)brace
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_struct
@@ -63092,6 +63122,19 @@ comma
 l_string|&quot;Acer Aspire 7736z&quot;
 comma
 id|PINFIX_ACER_ASPIRE_7736
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1458
+comma
+l_int|0xa002
+comma
+l_string|&quot;Gigabyte&quot;
+comma
+id|PINFIX_GIGABYTE_880GM
 )paren
 comma
 "&t;"
@@ -104193,12 +104236,12 @@ macro_line|#define ALC662_DIGIN_NID&t;0x0a
 id|hda_nid_t
 id|alc662_dac_nids
 (braket
-l_int|4
+l_int|3
 )braket
 op_assign
 (brace
 "&t;"
-multiline_comment|/* front, rear, clfe, rear_surr */
+multiline_comment|/* front, rear, clfe */
 "&t;"
 l_int|0x02
 comma
@@ -112007,7 +112050,7 @@ id|ALC662_5ST_DIG
 )braket
 "&t;"
 op_assign
-l_string|&quot;6stack-dig&quot;
+l_string|&quot;5stack-dig&quot;
 comma
 "&t;"
 (braket
@@ -112998,20 +113041,6 @@ comma
 l_string|&quot;Samsung NC10&quot;
 comma
 id|ALC272_SAMSUNG_NC10
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1458
-comma
-l_int|0xa002
-comma
-l_string|&quot;Gigabyte 945GCM-S2L&quot;
-comma
-"&t;&t;"
-id|ALC662_3ST_6ch_DIG
 )paren
 comma
 "&t;"
@@ -117223,6 +117252,9 @@ comma
 "&t;"
 id|ALC662_FIXUP_CZC_P10T
 comma
+"&t;"
+id|ALC662_FIXUP_GIGABYTE
+comma
 )brace
 suffix:semicolon
 r_const
@@ -117375,6 +117407,46 @@ comma
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|ALC662_FIXUP_GIGABYTE
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|ALC_FIXUP_PINS
+comma
+"&t;&t;"
+dot
+id|v.pins
+op_assign
+(paren
+r_const
+r_struct
+id|alc_pincfg
+(braket
+)braket
+)paren
+(brace
+"&t;&t;&t;"
+(brace
+l_int|0x14
+comma
+l_int|0x1114410
+)brace
+comma
+multiline_comment|/* set as speaker */
+"&t;&t;&t;"
+(brace
+)brace
+"&t;&t;"
+)brace
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_struct
@@ -117421,6 +117493,19 @@ comma
 l_string|&quot;Samsung R720&quot;
 comma
 id|ALC662_FIXUP_IDEAPAD
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1458
+comma
+l_int|0xa002
+comma
+l_string|&quot;Gigabyte&quot;
+comma
+id|ALC662_FIXUP_GIGABYTE
 )paren
 comma
 "&t;"
