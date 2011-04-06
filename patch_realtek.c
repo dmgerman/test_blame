@@ -114915,7 +114915,7 @@ comma
 dot
 id|dac_nids
 op_assign
-id|alc662_dac_nids
+id|alc272_dac_nids
 comma
 "&t;&t;"
 dot
@@ -115020,7 +115020,7 @@ comma
 dot
 id|dac_nids
 op_assign
-id|alc662_dac_nids
+id|alc272_dac_nids
 comma
 "&t;&t;"
 dot
