@@ -5585,6 +5585,10 @@ suffix:colon
 r_case
 l_int|0x10ec0889
 suffix:colon
+"&t;&t;"
+r_case
+l_int|0x10ec0892
+suffix:colon
 "&t;&t;&t;"
 id|set_eapd
 c_func
@@ -21353,6 +21357,10 @@ suffix:colon
 "&t;"
 r_case
 l_int|0x10ec0889
+suffix:colon
+"&t;"
+r_case
+l_int|0x10ec0892
 suffix:colon
 "&t;&t;"
 id|set_eapd
@@ -107656,6 +107664,18 @@ l_int|0
 )brace
 comma
 "&t;"
+(brace
+)brace
+)brace
+suffix:semicolon
+r_struct
+id|hda_verb
+id|alc662_eapd_init_verbs
+(braket
+)braket
+op_assign
+(brace
+"&t;"
 multiline_comment|/* always trun on EAPD */
 "&t;"
 (brace
@@ -113170,6 +113190,8 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+id|alc662_eapd_init_verbs
 )brace
 comma
 "&t;&t;"
@@ -113248,6 +113270,8 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+id|alc662_eapd_init_verbs
 )brace
 comma
 "&t;&t;"
@@ -113332,6 +113356,8 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+id|alc662_eapd_init_verbs
 )brace
 comma
 "&t;&t;"
@@ -113404,6 +113430,8 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+id|alc662_eapd_init_verbs
 )brace
 comma
 "&t;&t;"
@@ -113481,6 +113509,10 @@ op_assign
 (brace
 id|alc662_init_verbs
 comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc662_sue_init_verbs
 )brace
 comma
@@ -113558,6 +113590,9 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc662_eeepc_sue_init_verbs
@@ -113639,6 +113674,9 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc662_eeepc_ep20_sue_init_verbs
@@ -113726,6 +113764,9 @@ op_assign
 id|alc662_init_verbs
 comma
 "&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc662_ecs_init_verbs
 )brace
 comma
@@ -113803,6 +113844,10 @@ op_assign
 (brace
 id|alc662_init_verbs
 comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc663_m51va_init_verbs
 )brace
 comma
@@ -113886,6 +113931,10 @@ op_assign
 (brace
 id|alc662_init_verbs
 comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc663_g71v_init_verbs
 )brace
 comma
@@ -113969,6 +114018,10 @@ op_assign
 (brace
 id|alc662_init_verbs
 comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc663_m51va_init_verbs
 )brace
 comma
@@ -114040,6 +114093,10 @@ op_assign
 (brace
 id|alc662_init_verbs
 comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc663_g50v_init_verbs
 )brace
 comma
@@ -114135,6 +114192,9 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc663_21jd_amic_init_verbs
@@ -114233,6 +114293,9 @@ op_assign
 id|alc662_init_verbs
 comma
 "&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc662_1bjd_amic_init_verbs
 )brace
 comma
@@ -114321,6 +114384,9 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc663_two_hp_amic_m1_init_verbs
@@ -114419,6 +114485,9 @@ op_assign
 id|alc662_init_verbs
 comma
 "&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc663_21jd_amic_init_verbs
 )brace
 comma
@@ -114513,6 +114582,9 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc663_15jd_amic_init_verbs
@@ -114611,6 +114683,9 @@ op_assign
 id|alc662_init_verbs
 comma
 "&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc663_two_hp_amic_m2_init_verbs
 )brace
 comma
@@ -114705,6 +114780,9 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc663_mode7_init_verbs
@@ -114803,6 +114881,9 @@ op_assign
 id|alc662_init_verbs
 comma
 "&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc663_mode8_init_verbs
 )brace
 comma
@@ -114898,6 +114979,10 @@ op_assign
 (brace
 id|alc662_init_verbs
 comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc272_dell_init_verbs
 )brace
 comma
@@ -115003,6 +115088,10 @@ op_assign
 (brace
 id|alc662_init_verbs
 comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
+comma
+"&t;&t;&t;&t;"
 id|alc272_dell_zm1_init_verbs
 )brace
 comma
@@ -115097,6 +115186,9 @@ id|init_verbs
 op_assign
 (brace
 id|alc662_init_verbs
+comma
+"&t;&t;&t;&t;"
+id|alc662_eapd_init_verbs
 comma
 "&t;&t;&t;&t;"
 id|alc663_21jd_amic_init_verbs
