@@ -88257,14 +88257,6 @@ id|codec
 )paren
 (brace
 "&t;"
-r_struct
-id|alc_spec
-op_star
-id|spec
-op_assign
-id|codec-&gt;spec
-suffix:semicolon
-"&t;"
 r_if
 c_cond
 (paren
