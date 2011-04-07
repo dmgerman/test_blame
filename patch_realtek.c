@@ -88158,7 +88158,6 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-macro_line|#ifdef SND_HDA_NEEDS_RESUME
 r_void
 id|alc269_toggle_power_output
 c_func
@@ -88221,18 +88220,14 @@ id|val
 )paren
 suffix:semicolon
 )brace
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-r_int
-id|alc269_suspend
+r_void
+id|alc269_shutup
 c_func
 (paren
 r_struct
 id|hda_codec
 op_star
 id|codec
-comma
-id|pm_message_t
-id|state
 )paren
 (brace
 "&t;"
@@ -88307,36 +88302,8 @@ l_int|150
 suffix:semicolon
 "&t;"
 )brace
-"&t;"
-id|alc_shutup
-c_func
-(paren
-id|codec
-)paren
-suffix:semicolon
-"&t;"
-r_if
-c_cond
-(paren
-id|spec
-op_logical_and
-id|spec-&gt;power_hook
-)paren
-"&t;&t;"
-id|spec
-op_member_access_from_pointer
-id|power_hook
-c_func
-(paren
-id|codec
-)paren
-suffix:semicolon
-"&t;"
-r_return
-l_int|0
-suffix:semicolon
 )brace
-macro_line|#endif /* CONFIG_SND_HDA_POWER_SAVE */
+macro_line|#ifdef SND_HDA_NEEDS_RESUME
 r_int
 id|alc269_resume
 c_func
@@ -91538,13 +91505,6 @@ id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-"&t;"
-id|codec-&gt;patch_ops.suspend
-op_assign
-id|alc269_suspend
-suffix:semicolon
-macro_line|#endif
 macro_line|#ifdef SND_HDA_NEEDS_RESUME
 "&t;"
 id|codec-&gt;patch_ops.resume
@@ -91564,6 +91524,11 @@ id|ALC269_AUTO
 id|spec-&gt;init_hook
 op_assign
 id|alc269_auto_init
+suffix:semicolon
+"&t;"
+id|spec-&gt;shutup
+op_assign
+id|alc269_shutup
 suffix:semicolon
 "&t;"
 id|alc_init_jacks
