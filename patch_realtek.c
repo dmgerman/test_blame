@@ -84204,6 +84204,8 @@ l_int|0x09
 comma
 l_int|0x07
 comma
+l_int|0x11
+comma
 )brace
 suffix:semicolon
 macro_line|#define alc269_modes&t;&t;alc260_modes
