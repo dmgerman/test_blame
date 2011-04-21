@@ -2013,7 +2013,7 @@ r_return
 id|err
 suffix:semicolon
 )brace
-multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidently treating the % as&n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour as of&n; * March 2006.&n; */
+multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidentally treating the % as&n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour as of&n; * March 2006.&n; */
 r_char
 op_star
 id|alc_pin_mode_names
@@ -56585,7 +56585,7 @@ l_int|0x103c
 comma
 l_int|0x2a3d
 comma
-l_string|&quot;HP Pavillion&quot;
+l_string|&quot;HP Pavilion&quot;
 comma
 id|ALC883_6ST_DIG
 )paren
