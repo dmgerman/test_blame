@@ -117411,6 +117411,9 @@ comma
 "&t;"
 id|ALC662_FIXUP_GIGABYTE
 comma
+"&t;"
+id|ALC662_FIXUP_SKU_IGNORE
+comma
 )brace
 suffix:semicolon
 r_const
@@ -117603,6 +117606,27 @@ multiline_comment|/* set as speaker */
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|ALC662_FIXUP_SKU_IGNORE
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|ALC_FIXUP_SKU
+comma
+"&t;&t;"
+dot
+id|v.sku
+op_assign
+id|ALC_FIXUP_SKU_IGNORE
+comma
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_struct
@@ -117623,6 +117647,19 @@ comma
 l_string|&quot;Acer Aspire 8942G&quot;
 comma
 id|ALC662_FIXUP_ASPIRE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
+l_int|0x031c
+comma
+l_string|&quot;Gateway NV79&quot;
+comma
+id|ALC662_FIXUP_SKU_IGNORE
 )paren
 comma
 "&t;"
