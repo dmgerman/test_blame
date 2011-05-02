@@ -768,6 +768,7 @@ id|alc_spec
 "&t;"
 multiline_comment|/* codec parameterization */
 "&t;"
+r_const
 r_struct
 id|snd_kcontrol_new
 op_star
@@ -784,6 +785,7 @@ r_int
 id|num_mixers
 suffix:semicolon
 "&t;"
+r_const
 r_struct
 id|snd_kcontrol_new
 op_star
@@ -825,24 +827,28 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* analog PCM stream */
 "&t;"
+r_const
 r_struct
 id|hda_pcm_stream
 op_star
 id|stream_analog_playback
 suffix:semicolon
 "&t;"
+r_const
 r_struct
 id|hda_pcm_stream
 op_star
 id|stream_analog_capture
 suffix:semicolon
 "&t;"
+r_const
 r_struct
 id|hda_pcm_stream
 op_star
 id|stream_analog_alt_playback
 suffix:semicolon
 "&t;"
+r_const
 r_struct
 id|hda_pcm_stream
 op_star
@@ -858,12 +864,14 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* digital PCM stream */
 "&t;"
+r_const
 r_struct
 id|hda_pcm_stream
 op_star
 id|stream_digital_playback
 suffix:semicolon
 "&t;"
+r_const
 r_struct
 id|hda_pcm_stream
 op_star
@@ -1294,6 +1302,7 @@ r_struct
 id|alc_config_preset
 (brace
 "&t;"
+r_const
 r_struct
 id|snd_kcontrol_new
 op_star
@@ -1304,6 +1313,7 @@ l_int|5
 suffix:semicolon
 multiline_comment|/* should be identical size&n;&t;&t;&t;&t;&t;     * with spec&n;&t;&t;&t;&t;&t;     */
 "&t;"
+r_const
 r_struct
 id|snd_kcontrol_new
 op_star
@@ -1439,6 +1449,7 @@ op_star
 suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 "&t;"
+r_const
 r_struct
 id|hda_amp_list
 op_star
@@ -2133,8 +2144,10 @@ id|err
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * Control the mode of pin widget settings via the mixer.  &quot;pc&quot; is used&n; * instead of &quot;%&quot; to avoid consequences of accidentally treating the % as&n; * being part of a format specifier.  Maximum allowed length of a value is&n; * 63 characters plus NULL terminator.&n; *&n; * Note: some retasking pin complexes seem to ignore requests for input&n; * states other than HiZ (eg: PIN_VREFxx) and revert to HiZ if any of these&n; * are requested.  Therefore order this list so that this behaviour will not&n; * cause problems when mixer clients move through the enum sequentially.&n; * NIDs 0x0f and 0x10 have been observed to have this behaviour as of&n; * March 2006.&n; */
+r_const
 r_char
 op_star
+r_const
 id|alc_pin_mode_names
 (braket
 )braket
@@ -2154,6 +2167,7 @@ l_string|&quot;Headphone out&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_int
 r_char
 id|alc_pin_mode_values
@@ -2181,6 +2195,7 @@ macro_line|#define ALC_PIN_DIR_INOUT           0x02
 macro_line|#define ALC_PIN_DIR_IN_NOMICBIAS    0x03
 macro_line|#define ALC_PIN_DIR_INOUT_NOMICBIAS 0x04
 multiline_comment|/* Info about the pin modes supported by the different pin direction modes.&n; * For each direction the minimum and maximum values are given.&n; */
+r_const
 r_int
 r_char
 id|alc_pin_mode_dir_info
@@ -3725,6 +3740,7 @@ id|alc_spec
 op_star
 id|spec
 comma
+r_const
 r_struct
 id|snd_kcontrol_new
 op_star
@@ -4079,6 +4095,7 @@ id|codec
 suffix:semicolon
 )brace
 multiline_comment|/* Enable GPIO mask and set output */
+r_const
 r_struct
 id|hda_verb
 id|alc_gpio1_init_verbs
@@ -4118,6 +4135,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc_gpio2_init_verbs
@@ -4157,6 +4175,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc_gpio3_init_verbs
@@ -6783,6 +6802,7 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc_automute_mode_enum
@@ -9701,6 +9721,7 @@ suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC888&n; */
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_4ST_ch2_intel_init
@@ -9763,6 +9784,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 4ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_4ST_ch4_intel_init
@@ -9825,6 +9847,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_4ST_ch6_intel_init
@@ -9887,6 +9910,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 8ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_4ST_ch8_intel_init
@@ -9948,6 +9972,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc888_4ST_8ch_intel_modes
@@ -9987,6 +10012,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * ALC888 Fujitsu Siemens Amillo xa3530&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_fujitsu_xa3530_verbs
@@ -10368,6 +10394,7 @@ id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC888 Acer Aspire 4930G model&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_acer_aspire_4930g_verbs
@@ -10482,6 +10509,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * ALC888 Acer Aspire 6530G model&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_acer_aspire_6530g_verbs
@@ -10663,6 +10691,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; *ALC888 Acer Aspire 7730G model&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_acer_aspire_7730G_verbs
@@ -10828,6 +10857,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * ALC889 Acer Aspire 8930G model&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc889_acer_aspire_8930g_verbs
@@ -11051,6 +11081,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc888_2_capture_sources
@@ -11149,6 +11180,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc888_acer_aspire_6530_sources
@@ -11261,6 +11293,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc889_capture_sources
@@ -11420,6 +11453,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc888_base_mixer
@@ -11663,6 +11697,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc888_acer_aspire_4930g_mixer
@@ -11910,6 +11945,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc889_acer_aspire_8930g_mixer
@@ -12402,6 +12438,7 @@ comma
 suffix:semicolon
 macro_line|#define ALC880_DIGOUT_NID&t;0x06
 macro_line|#define ALC880_DIGIN_NID&t;0x0a
+r_const
 r_struct
 id|hda_input_mux
 id|alc880_capture_source
@@ -12453,6 +12490,7 @@ comma
 suffix:semicolon
 multiline_comment|/* channel source setting (2/6 channel selection for 3-stack) */
 multiline_comment|/* 2ch mode */
+r_const
 r_struct
 id|hda_verb
 id|alc880_threestack_ch2_init
@@ -12507,6 +12545,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* 6ch mode */
+r_const
 r_struct
 id|hda_verb
 id|alc880_threestack_ch6_init
@@ -12560,6 +12599,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc880_threestack_modes
@@ -12584,6 +12624,7 @@ id|alc880_threestack_ch6_init
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_three_stack_mixer
@@ -13308,8 +13349,8 @@ suffix:semicolon
 )brace
 macro_line|#define _DEFINE_CAPMIX(num) &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;.name = &quot;Capture Switch&quot;, &bslash;&n;&t;&t;.access = SNDRV_CTL_ELEM_ACCESS_READWRITE, &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_cap_sw_info, &bslash;&n;&t;&t;.get = alc_cap_sw_get, &bslash;&n;&t;&t;.put = alc_cap_sw_put, &bslash;&n;&t;}, &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;.name = &quot;Capture Volume&quot;, &bslash;&n;&t;&t;.access = (SNDRV_CTL_ELEM_ACCESS_READWRITE | &bslash;&n;&t;&t;&t;   SNDRV_CTL_ELEM_ACCESS_TLV_READ | &bslash;&n;&t;&t;&t;   SNDRV_CTL_ELEM_ACCESS_TLV_CALLBACK), &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_cap_vol_info, &bslash;&n;&t;&t;.get = alc_cap_vol_get, &bslash;&n;&t;&t;.put = alc_cap_vol_put, &bslash;&n;&t;&t;.tlv = { .c = alc_cap_vol_tlv }, &bslash;&n;&t;}
 macro_line|#define _DEFINE_CAPSRC(num) &bslash;&n;&t;{ &bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER, &bslash;&n;&t;&t;/* .name = &quot;Capture Source&quot;, */ &bslash;&n;&t;&t;.name = &quot;Input Source&quot;, &bslash;&n;&t;&t;.count = num, &bslash;&n;&t;&t;.info = alc_mux_enum_info, &bslash;&n;&t;&t;.get = alc_mux_enum_get, &bslash;&n;&t;&t;.put = alc_mux_enum_put, &bslash;&n;&t;}
-macro_line|#define DEFINE_CAPMIX(num) &bslash;&n;static struct snd_kcontrol_new alc_capture_mixer ## num[] = { &bslash;&n;&t;_DEFINE_CAPMIX(num),&t;&t;&t;&t;      &bslash;&n;&t;_DEFINE_CAPSRC(num),&t;&t;&t;&t;      &bslash;&n;&t;{ } /* end */&t;&t;&t;&t;&t;      &bslash;&n;}
-macro_line|#define DEFINE_CAPMIX_NOSRC(num) &bslash;&n;static struct snd_kcontrol_new alc_capture_mixer_nosrc ## num[] = { &bslash;&n;&t;_DEFINE_CAPMIX(num),&t;&t;&t;&t;&t;    &bslash;&n;&t;{ } /* end */&t;&t;&t;&t;&t;&t;    &bslash;&n;}
+macro_line|#define DEFINE_CAPMIX(num) &bslash;&n;static const struct snd_kcontrol_new alc_capture_mixer ## num[] = { &bslash;&n;&t;_DEFINE_CAPMIX(num),&t;&t;&t;&t;      &bslash;&n;&t;_DEFINE_CAPSRC(num),&t;&t;&t;&t;      &bslash;&n;&t;{ } /* end */&t;&t;&t;&t;&t;      &bslash;&n;}
+macro_line|#define DEFINE_CAPMIX_NOSRC(num) &bslash;&n;static const struct snd_kcontrol_new alc_capture_mixer_nosrc ## num[] = { &bslash;&n;&t;_DEFINE_CAPMIX(num),&t;&t;&t;&t;&t;    &bslash;&n;&t;{ } /* end */&t;&t;&t;&t;&t;&t;    &bslash;&n;}
 multiline_comment|/* up to three ADCs */
 id|DEFINE_CAPMIX
 c_func
@@ -13349,6 +13390,7 @@ l_int|3
 suffix:semicolon
 multiline_comment|/*&n; * ALC880 5-stack model&n; *&n; * DAC: Front = 0x02 (0x0c), Surr = 0x05 (0x0f), CLFE = 0x04 (0x0d),&n; *      Side = 0x02 (0xd)&n; * Pin assignment: Front = 0x14, Surr = 0x17, CLFE = 0x16&n; *                 Line-In/Side = 0x1a, Mic = 0x18, F-Mic = 0x1b, HP = 0x19&n; */
 multiline_comment|/* additional mixers to alc880_three_stack_mixer */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_five_stack_mixer
@@ -13390,6 +13432,7 @@ multiline_comment|/* end */
 suffix:semicolon
 multiline_comment|/* channel source setting (6/8 channel selection for 5-stack) */
 multiline_comment|/* 6ch mode */
+r_const
 r_struct
 id|hda_verb
 id|alc880_fivestack_ch6_init
@@ -13424,6 +13467,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* 8ch mode */
+r_const
 r_struct
 id|hda_verb
 id|alc880_fivestack_ch8_init
@@ -13457,6 +13501,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc880_fivestack_modes
@@ -13501,6 +13546,7 @@ comma
 l_int|0x05
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc880_6stack_capture_source
@@ -13551,6 +13597,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* fixed 8-channels */
+r_const
 r_struct
 id|hda_channel_mode
 id|alc880_sixstack_modes
@@ -13568,6 +13615,7 @@ l_int|NULL
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_six_stack_mixer
@@ -13877,6 +13925,7 @@ l_int|0x04
 )brace
 suffix:semicolon
 multiline_comment|/* fixed 6 channels */
+r_const
 r_struct
 id|hda_channel_mode
 id|alc880_w810_modes
@@ -13894,6 +13943,7 @@ l_int|NULL
 )brace
 suffix:semicolon
 multiline_comment|/* Pin assignment: Front = 0x14, Surr = 0x15, CLFE = 0x16, HP = 0x1b */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_w810_base_mixer
@@ -14046,6 +14096,7 @@ l_int|0x02
 suffix:semicolon
 macro_line|#define ALC880_Z71V_HP_DAC&t;0x03
 multiline_comment|/* fixed 2 channels */
+r_const
 r_struct
 id|hda_channel_mode
 id|alc880_2_jack_modes
@@ -14062,6 +14113,7 @@ l_int|NULL
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_z71v_mixer
@@ -14192,6 +14244,7 @@ l_int|0x03
 )brace
 suffix:semicolon
 macro_line|#define ALC880_F1734_HP_DAC&t;0x02
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_f1734_mixer
@@ -14309,6 +14362,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc880_f1734_capture_source
@@ -14347,6 +14401,7 @@ suffix:semicolon
 multiline_comment|/*&n; * ALC880 ASUS model&n; *&n; * DAC: HP/Front = 0x02 (0x0c), Surr = 0x03 (0x0d), CLFE = 0x04 (0x0e)&n; * Pin assignment: HP/Front = 0x14, Surr = 0x15, CLFE = 0x16,&n; *  Mic = 0x18, Line = 0x1a&n; */
 macro_line|#define alc880_asus_dac_nids&t;alc880_w810_dac_nids&t;/* identical with w810 */
 macro_line|#define alc880_asus_modes&t;alc880_threestack_modes&t;/* 2/6 channel mode */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_asus_mixer
@@ -14587,6 +14642,7 @@ multiline_comment|/* end */
 suffix:semicolon
 multiline_comment|/*&n; * ALC880 ASUS W1V model&n; *&n; * DAC: HP/Front = 0x02 (0x0c), Surr = 0x03 (0x0d), CLFE = 0x04 (0x0e)&n; * Pin assignment: HP/Front = 0x14, Surr = 0x15, CLFE = 0x16,&n; *  Mic = 0x18, Line = 0x1a, Line2 = 0x1b&n; */
 multiline_comment|/* additional mixers to alc880_asus_mixer */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_asus_w1v_mixer
@@ -14627,6 +14683,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* TCL S700 */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_tcl_s700_mixer
@@ -14758,6 +14815,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Uniwill */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_uniwill_mixer
@@ -15022,6 +15080,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_fujitsu_mixer
@@ -15165,6 +15224,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_uniwill_p53_mixer
@@ -15369,6 +15429,7 @@ id|codec
 suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_INPUT_BEEP
 multiline_comment|/* additional beep mixers; the actual parameters are overwritten at build */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc_beep_mixer
@@ -15436,6 +15497,7 @@ op_assign
 l_int|NULL
 suffix:semicolon
 "&t;"
+r_const
 r_struct
 id|snd_kcontrol_new
 op_star
@@ -15650,6 +15712,7 @@ id|spec-&gt;beep_amp
 )paren
 (brace
 "&t;&t;"
+r_const
 r_struct
 id|snd_kcontrol_new
 op_star
@@ -16375,6 +16438,7 @@ suffix:semicolon
 )brace
 multiline_comment|/*&n; * initialize the codec volumes, etc&n; */
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_volume_init_verbs
@@ -16699,6 +16763,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 3-stack pin configuration:&n; * front = 0x14, mic/clfe = 0x18, HP = 0x19, line/surr = 0x1a, f-mic = 0x1b&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_3stack_init_verbs
@@ -16857,6 +16922,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 5-stack pin configuration:&n; * front = 0x14, surround = 0x17, clfe = 0x16, mic = 0x18, HP = 0x19,&n; * line-in/side = 0x1a, f-mic = 0x1b&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_5stack_init_verbs
@@ -17061,6 +17127,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * W810 pin configuration:&n; * front = 0x14, surround = 0x15, clfe = 0x16, HP = 0x1b&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_w810_init_verbs
@@ -17157,6 +17224,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * Z71V pin configuration:&n; * Speaker-out = 0x14, HP = 0x15, Mic = 0x18, Line-in = 0x1a, Mic2 = 0x1b (?)&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_z71v_init_verbs
@@ -17242,6 +17310,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6-stack pin configuration:&n; * front = 0x14, surr = 0x15, clfe = 0x16, side = 0x17, mic = 0x18,&n; * f-mic = 0x19, line = 0x1a, HP = 0x1b&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_6stack_init_verbs
@@ -17418,6 +17487,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * Uniwill pin configuration:&n; * HP = 0x14, InternalSpeaker = 0x15, mic = 0x18, internal mic = 0x19,&n; * line = 0x1a&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_uniwill_init_verbs
@@ -17704,6 +17774,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n;* Uniwill P53&n;* HP = 0x14, InternalSpeaker = 0x15, mic = 0x19,&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_uniwill_p53_init_verbs
@@ -17958,6 +18029,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc880_beep_init_verbs
@@ -18348,6 +18420,7 @@ id|res
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * F1734 pin configuration:&n; * HP = 0x14, speaker-out = 0x15, mic = 0x18&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_f1734_init_verbs
@@ -18545,6 +18618,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * ASUS pin configuration:&n; * HP/front = 0x14, surr = 0x15, clfe = 0x16, mic = 0x18, line = 0x1a&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_asus_init_verbs
@@ -18751,6 +18825,7 @@ macro_line|#define alc880_gpio1_init_verbs&t;alc_gpio1_init_verbs
 macro_line|#define alc880_gpio2_init_verbs&t;alc_gpio2_init_verbs
 macro_line|#define alc880_gpio3_init_verbs&t;alc_gpio3_init_verbs
 multiline_comment|/* Clevo m520g init */
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_clevo_init_verbs
@@ -18913,6 +18988,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc880_pin_tcl_S700_init_verbs
@@ -19047,6 +19123,7 @@ l_int|0x03
 )brace
 suffix:semicolon
 multiline_comment|/* seems analog CD is not working */
+r_const
 r_struct
 id|hda_input_mux
 id|alc880_lg_capture_source
@@ -19090,6 +19167,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* 2,4,6 channel modes */
+r_const
 r_struct
 id|hda_verb
 id|alc880_lg_ch2_init
@@ -19122,6 +19200,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc880_lg_ch4_init
@@ -19154,6 +19233,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc880_lg_ch6_init
@@ -19186,6 +19266,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc880_lg_ch_modes
@@ -19217,6 +19298,7 @@ id|alc880_lg_ch6_init
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_lg_mixer
@@ -19455,6 +19537,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc880_lg_init_verbs
@@ -19727,6 +19810,7 @@ id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * LG LW20&n; *&n; * Pin assignment:&n; *   Speaker-out: 0x14&n; *   Mic-In: 0x18&n; *   Built-in Mic-In: 0x19&n; *   Line-In: 0x1b&n; *   HP-Out: 0x1a&n; *   SPDIF-Out: 0x1e&n; */
+r_const
 r_struct
 id|hda_input_mux
 id|alc880_lg_lw_capture_source
@@ -19770,6 +19854,7 @@ comma
 )brace
 suffix:semicolon
 macro_line|#define alc880_lg_lw_modes alc880_threestack_modes
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_lg_lw_mixer
@@ -20008,6 +20093,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc880_lg_lw_init_verbs
@@ -20243,6 +20329,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_medion_rim_mixer
@@ -20334,6 +20421,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc880_medion_rim_capture_source
@@ -20369,6 +20457,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc880_medion_rim_init_verbs
@@ -20648,6 +20737,7 @@ id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+r_const
 r_struct
 id|hda_amp_list
 id|alc880_loopbacks
@@ -20706,6 +20796,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_amp_list
 id|alc880_lg_loopbacks
@@ -21526,6 +21617,7 @@ r_return
 l_int|0
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_pcm_stream
 id|dualmic_pcm_analog_capture
@@ -21578,6 +21670,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; */
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc880_pcm_analog_playback
@@ -21630,6 +21723,7 @@ id|alc880_playback_pcm_cleanup
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc880_pcm_analog_capture
@@ -21657,6 +21751,7 @@ comma
 multiline_comment|/* NID is set in alc_build_pcms */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc880_pcm_analog_alt_playback
@@ -21684,6 +21779,7 @@ comma
 multiline_comment|/* NID is set in alc_build_pcms */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc880_pcm_analog_alt_capture
@@ -21731,6 +21827,7 @@ id|alc880_alt_capture_pcm_cleanup
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc880_pcm_digital_playback
@@ -21789,6 +21886,7 @@ id|alc880_dig_playback_pcm_cleanup
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc880_pcm_digital_capture
@@ -21817,6 +21915,7 @@ multiline_comment|/* NID is set in alc_build_pcms */
 )brace
 suffix:semicolon
 multiline_comment|/* Used by alc_build_pcms to flag that a PCM has no playback stream */
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc_pcm_null_stream
@@ -22722,6 +22821,7 @@ suffix:semicolon
 )brace
 macro_line|#endif
 multiline_comment|/*&n; */
+r_const
 r_struct
 id|hda_codec_ops
 id|alc_patch_ops
@@ -22866,6 +22966,7 @@ comma
 l_int|0x05
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc880_test_capture_source
@@ -22936,6 +23037,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc880_test_modes
@@ -23702,6 +23804,7 @@ suffix:semicolon
 )brace
 macro_line|#define PIN_CTL_TEST(xname,nid) {&t;&t;&t;&bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER,&t;&bslash;&n;&t;&t;&t;.name = xname,&t;&t;       &bslash;&n;&t;&t;&t;.subdevice = HDA_SUBDEV_NID_FLAG | nid, &bslash;&n;&t;&t;&t;.info = alc_test_pin_ctl_info, &bslash;&n;&t;&t;&t;.get = alc_test_pin_ctl_get,   &bslash;&n;&t;&t;&t;.put = alc_test_pin_ctl_put,   &bslash;&n;&t;&t;&t;.private_value = nid&t;       &bslash;&n;&t;&t;&t;}
 macro_line|#define PIN_SRC_TEST(xname,nid) {&t;&t;&t;&bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER,&t;&bslash;&n;&t;&t;&t;.name = xname,&t;&t;       &bslash;&n;&t;&t;&t;.subdevice = HDA_SUBDEV_NID_FLAG | nid, &bslash;&n;&t;&t;&t;.info = alc_test_pin_src_info, &bslash;&n;&t;&t;&t;.get = alc_test_pin_src_get,   &bslash;&n;&t;&t;&t;.put = alc_test_pin_src_put,   &bslash;&n;&t;&t;&t;.private_value = nid&t;       &bslash;&n;&t;&t;&t;}
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_test_mixer
@@ -24092,6 +24195,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc880_test_init_verbs
@@ -24744,6 +24848,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc880_cfg_tbl
@@ -25682,6 +25787,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * ALC880 codec presets&n; */
+r_const
 r_struct
 id|alc_config_preset
 id|alc880_presets
@@ -27601,6 +27707,7 @@ id|ALC_CTL_BIND_MUTE
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc880_control_templates
@@ -30945,6 +31052,7 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
+r_const
 r_struct
 id|snd_kcontrol_new
 op_star
@@ -31491,6 +31599,7 @@ suffix:semicolon
 )brace
 macro_line|#ifdef CONFIG_SND_HDA_INPUT_BEEP
 macro_line|#define set_beep_amp(spec, nid, idx, dir) &bslash;&n;&t;((spec)-&gt;beep_amp = HDA_COMPOSE_AMP_VAL(nid, 3, idx, dir))
+r_const
 r_struct
 id|snd_pci_quirk
 id|beep_white_list
@@ -32072,6 +32181,7 @@ l_int|0x05
 suffix:semicolon
 macro_line|#define ALC260_DIGOUT_NID&t;0x03
 macro_line|#define ALC260_DIGIN_NID&t;0x06
+r_const
 r_struct
 id|hda_input_mux
 id|alc260_capture_source
@@ -32122,6 +32232,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* On Fujitsu S702x laptops capture only makes sense from Mic/LineIn jack,&n; * headphone jack and the internal CD lines since these are the only pins at&n; * which audio can appear.  For flexibility, also allow the option of&n; * recording the mixer output on the second ADC (ADC0 doesn&squot;t have a&n; * connection to the mixer output).&n; */
+r_const
 r_struct
 id|hda_input_mux
 id|alc260_fujitsu_capture_sources
@@ -32220,6 +32331,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Acer TravelMate(/Extensa/Aspire) notebooks have similar configuration to&n; * the Fujitsu S702x, but jacks are marked differently.&n; */
+r_const
 r_struct
 id|hda_input_mux
 id|alc260_acer_capture_sources
@@ -32332,6 +32444,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Maxdata Favorit 100XS */
+r_const
 r_struct
 id|hda_input_mux
 id|alc260_favorit100_capture_sources
@@ -32416,6 +32529,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * This is just place-holder, so there&squot;s something for alc_build_pcms to look&n; * at when it calculates the maximum number of channels. ALC260 has no mixer&n; * element which allows changing the channel mode, so the verb list is&n; * never used.&n; */
+r_const
 r_struct
 id|hda_channel_mode
 id|alc260_modes
@@ -32434,6 +32548,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Mixer combinations&n; *&n; * basic: base_output + input + pc_beep + capture&n; * HP: base_output + input + capture_alt&n; * HP_3013: hp_3013 + input + capture&n; * fujitsu: fujitsu + capture&n; * acer: acer + capture&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_base_output_mixer
@@ -32529,6 +32644,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_input_mixer
@@ -32816,6 +32932,7 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_hp_output_mixer
@@ -32955,6 +33072,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc260_hp_unsol_verbs
@@ -33032,6 +33150,7 @@ op_assign
 id|ALC_AUTOMUTE_PIN
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_hp_3013_mixer
@@ -33249,6 +33368,7 @@ op_assign
 id|ALC_AUTOMUTE_PIN
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc260_dc7600_bind_master_vol
@@ -33312,6 +33432,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc260_dc7600_bind_switch
@@ -33362,6 +33483,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_hp_dc7600_mixer
@@ -33421,6 +33543,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc260_hp_3013_unsol_verbs
@@ -33507,6 +33630,7 @@ id|ALC_AUTOMUTE_PIN
 suffix:semicolon
 )brace
 multiline_comment|/* Fujitsu S702x series laptops.  ALC260 pin usage: Mic/Line jack = 0x12,&n; * HP jack = 0x14, CD audio =  0x16, internal speaker = 0x10.&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_fujitsu_mixer
@@ -33647,6 +33771,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Mixer for Acer TravelMate(/Extensa/Aspire) notebooks.  Note that current&n; * versions of the ALC260 don&squot;t act on requests to enable mic bias from NID&n; * 0x0f (used to drive the headphone jack in these laptops).  The ALC260&n; * datasheet doesn&squot;t mention this restriction.  At this stage it&squot;s not clear&n; * whether this behaviour is intentional or is a hardware bug in chip&n; * revisions available in early 2006.  Therefore for now allow the&n; * &quot;Headphone Jack Mode&quot; control to span all choices, but if it turns out&n; * that the lack of mic bias for this NID is intentional we could change the&n; * mode from ALC_PIN_DIR_INOUT to ALC_PIN_DIR_INOUT_NOMICBIAS.&n; *&n; * In addition, Acer TravelMate(/Extensa/Aspire) notebooks in early 2006&n; * don&squot;t appear to make the mic bias available from the &quot;line&quot; jack, even&n; * though the NID used for this jack (0x14) can supply it.  The theory is&n; * that perhaps Acer have included blocking capacitors between the ALC260&n; * and the output jack.  If this turns out to be the case for all such&n; * models the &quot;Line Jack Mode&quot; mode could be changed from ALC_PIN_DIR_INOUT&n; * to ALC_PIN_DIR_INOUT_NOMICBIAS.&n; *&n; * The C20x Tablet series have a mono internal speaker which is controlled&n; * via the chip&squot;s Mono sum widget and pin complex, so include the necessary&n; * controls for such models.  On models without a &quot;mono speaker&quot; the control&n; * won&squot;t do anything.&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_acer_mixer
@@ -33830,6 +33955,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Maxdata Favorit 100XS: one output and one input (0x12) jack&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_favorit100_mixer
@@ -33918,6 +34044,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Packard bell V7900  ALC260 pin usage: HP = 0x0f, Mic jack = 0x12,&n; * Line In jack = 0x14, CD audio =  0x16, pc beep = 0x17.&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_will_mixer
@@ -34058,6 +34185,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Replacer 672V ALC260 pin usage: Mic jack = 0x12,&n; * Line In jack = 0x14, ATAPI Mic = 0x13, speaker = 0x0f.&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_replacer_672v_mixer
@@ -34198,6 +34326,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * initialization verbs&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc260_init_verbs
@@ -34594,6 +34723,7 @@ comma
 )brace
 suffix:semicolon
 macro_line|#if 0 /* should be identical with alc260_init_verbs? */
+r_const
 r_struct
 id|hda_verb
 id|alc260_hp_init_verbs
@@ -34929,6 +35059,7 @@ comma
 )brace
 suffix:semicolon
 macro_line|#endif
+r_const
 r_struct
 id|hda_verb
 id|alc260_hp_3013_init_verbs
@@ -35264,6 +35395,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Initialisation sequence for ALC260 as configured in Fujitsu S702x&n; * laptops.  ALC260 pin usage: Mic/Line jack = 0x12, HP jack = 0x14, CD&n; * audio = 0x16, internal speaker = 0x10.&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc260_fujitsu_init_verbs
@@ -35750,6 +35882,7 @@ multiline_comment|/* HP-pin pin */
 )brace
 suffix:semicolon
 multiline_comment|/* Initialisation sequence for ALC260 as configured in Acer TravelMate and&n; * similar laptops (adapted from Fujitsu init verbs).&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc260_acer_init_verbs
@@ -36265,6 +36398,7 @@ multiline_comment|/* HP-pin pin */
 )brace
 suffix:semicolon
 multiline_comment|/* Initialisation sequence for Maxdata Favorit 100XS&n; * (adapted from Acer init verbs).&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc260_favorit100_init_verbs
@@ -36766,6 +36900,7 @@ multiline_comment|/* HP-pin pin */
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc260_will_verbs
@@ -36832,6 +36967,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc260_replacer_672v_verbs
@@ -37049,6 +37185,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc260_hp_dc7600_verbs
@@ -37186,6 +37323,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* For testing the ALC260, each input MUX needs its own definition since&n; * the signal assignments are different.  This assumes that the first ADC&n; * is NID 0x04.&n; */
+r_const
 r_struct
 id|hda_input_mux
 id|alc260_test_capture_sources
@@ -37337,6 +37475,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc260_test_mixer
@@ -37780,6 +37919,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc260_test_init_verbs
@@ -39152,6 +39292,7 @@ suffix:semicolon
 )brace
 macro_line|#define alc260_auto_init_input_src&t;alc880_auto_init_input_src
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc260_volume_init_verbs
@@ -39651,6 +39792,7 @@ id|codec
 suffix:semicolon
 )brace
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+r_const
 r_struct
 id|hda_amp_list
 id|alc260_loopbacks
@@ -39768,6 +39910,7 @@ multiline_comment|/* speaker */
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc260_fixup_tbl
@@ -39896,6 +40039,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc260_cfg_tbl
@@ -40169,6 +40313,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc260_presets
@@ -41571,6 +41716,7 @@ macro_line|#define ALC882_DIGIN_NID&t;0x0a
 macro_line|#define ALC883_DIGOUT_NID&t;ALC882_DIGOUT_NID
 macro_line|#define ALC883_DIGIN_NID&t;ALC882_DIGIN_NID
 macro_line|#define ALC1200_DIGOUT_NID&t;0x10
+r_const
 r_struct
 id|hda_channel_mode
 id|alc882_ch_modes
@@ -41677,6 +41823,7 @@ suffix:semicolon
 macro_line|#define alc889_capsrc_nids&t;alc882_capsrc_nids
 multiline_comment|/* input MUX */
 multiline_comment|/* FIXME: should be a matrix-type input source selection */
+r_const
 r_struct
 id|hda_input_mux
 id|alc882_capture_source
@@ -41727,6 +41874,7 @@ comma
 )brace
 suffix:semicolon
 macro_line|#define alc883_capture_source&t;alc882_capture_source
+r_const
 r_struct
 id|hda_input_mux
 id|alc889_capture_source
@@ -41769,6 +41917,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|mb5_capture_source
@@ -41811,6 +41960,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|macmini3_capture_source
@@ -41846,6 +41996,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc883_3stack_6ch_intel
@@ -41895,6 +42046,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc883_lenovo_101e_capture_source
@@ -41930,6 +42082,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc883_lenovo_nb0763_capture_source
@@ -41979,6 +42132,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc883_fujitsu_pi2515_capture_source
@@ -42014,6 +42168,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc883_lenovo_sky_capture_source
@@ -42056,6 +42211,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc883_asus_eee1601_capture_source
@@ -42091,6 +42247,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc889A_mb31_capture_source
@@ -42132,6 +42289,7 @@ multiline_comment|/* CD (0x04) unused? */
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc889A_imac91_capture_source
@@ -42169,6 +42327,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_channel_mode
 id|alc883_3ST_2ch_modes
@@ -42186,6 +42345,7 @@ l_int|NULL
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc882_3ST_ch2_init
@@ -42236,6 +42396,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 4ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc882_3ST_ch4_init
@@ -42295,6 +42456,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc882_3ST_ch6_init
@@ -42362,6 +42524,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc882_3ST_6ch_modes
@@ -42395,6 +42558,7 @@ comma
 suffix:semicolon
 macro_line|#define alc883_3ST_6ch_modes&t;alc882_3ST_6ch_modes
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_3ST_ch2_clevo_init
@@ -42454,6 +42618,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 4ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_3ST_ch4_clevo_init
@@ -42522,6 +42687,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_3ST_ch6_clevo_init
@@ -42598,6 +42764,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc883_3ST_6ch_clevo_modes
@@ -42630,6 +42797,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc882_sixstack_ch6_init
@@ -42680,6 +42848,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 8ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc882_sixstack_ch8_init
@@ -42729,6 +42898,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc882_sixstack_modes
@@ -42754,6 +42924,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Macbook Air 2,1 */
+r_const
 r_struct
 id|hda_channel_mode
 id|alc885_mba21_ch_modes
@@ -42772,6 +42943,7 @@ comma
 suffix:semicolon
 multiline_comment|/*&n; * macbook pro ALC885 can switch LineIn to LineOut without losing Mic&n; */
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc885_mbp_ch2_init
@@ -42821,6 +42993,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 4ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc885_mbp_ch4_init
@@ -42887,6 +43060,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc885_mbp_4ch_modes
@@ -42912,6 +43086,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch&n; * Speakers/Woofer/HP = Front&n; * LineIn = Input&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc885_mb5_ch2_init
@@ -42944,6 +43119,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; * Speakers/HP = Front&n; * Woofer = LFE&n; * LineIn = Surround&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc885_mb5_ch6_init
@@ -42984,6 +43160,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc885_mb5_6ch_modes
@@ -43010,6 +43187,7 @@ comma
 suffix:semicolon
 macro_line|#define alc885_macmini3_6ch_modes&t;alc885_mb5_6ch_modes
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_4ST_ch2_init
@@ -43078,6 +43256,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 4ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_4ST_ch4_init
@@ -43155,6 +43334,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_4ST_ch6_init
@@ -43241,6 +43421,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 8ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_4ST_ch8_init
@@ -43335,6 +43516,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc883_4ST_8ch_modes
@@ -43374,6 +43556,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_3ST_ch2_intel_init
@@ -43424,6 +43607,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 4ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_3ST_ch4_intel_init
@@ -43483,6 +43667,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_3ST_ch6_intel_init
@@ -43550,6 +43735,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc883_3ST_6ch_intel_modes
@@ -43582,6 +43768,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc889_ch2_intel_init
@@ -43650,6 +43837,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc889_ch6_intel_init
@@ -43718,6 +43906,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 8ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc889_ch8_intel_init
@@ -43794,6 +43983,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc889_8ch_intel_modes
@@ -43826,6 +44016,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_sixstack_ch6_init
@@ -43876,6 +44067,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 8ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_sixstack_ch8_init
@@ -43925,6 +44117,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc883_sixstack_modes
@@ -43950,6 +44143,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Pin assignment: Front=0x14, Rear=0x15, CLFE=0x16, Side=0x17&n; *                 Mic=0x18, Front Mic=0x19, Line-In=0x1a, HP=0x1b&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc882_base_mixer
@@ -44245,6 +44439,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Macbook Air 2,1 same control for HP and internal Speaker */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc885_mba21_mixer
@@ -44280,6 +44475,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc885_mbp3_mixer
@@ -44432,6 +44628,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc885_mb5_mixer
@@ -44621,6 +44818,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc885_macmini3_mixer
@@ -44772,6 +44970,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc885_imac91_mixer
@@ -44811,6 +45010,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc882_w2jc_mixer
@@ -44941,6 +45141,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc882_targa_mixer
@@ -45124,6 +45325,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Pin assignment: Front=0x14, HP = 0x15, Front = 0x16, ???&n; *                 Front Mic=0x18, Line In = 0x1a, Line In = 0x1b, CD = 0x1c&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc882_asus_a7j_mixer
@@ -45306,6 +45508,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc882_asus_a7m_mixer
@@ -45449,6 +45652,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc882_chmode_mixer
@@ -45497,6 +45701,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc882_base_init_verbs
@@ -45919,6 +46124,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc882_adc1_init_verbs
@@ -46009,6 +46215,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc882_eapd_verbs
@@ -46041,6 +46248,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc889_eapd_verbs
@@ -46071,6 +46279,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc_hp15_unsol_verbs
@@ -46103,6 +46312,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc885_init_verbs
@@ -46509,6 +46719,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc885_init_input_verbs
@@ -46561,6 +46772,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Unmute Selector 24h and set the default input to front mic */
+r_const
 r_struct
 id|hda_verb
 id|alc889_init_input_verbs
@@ -46593,6 +46805,7 @@ comma
 suffix:semicolon
 macro_line|#define alc883_init_verbs&t;alc882_base_init_verbs
 multiline_comment|/* Mac Pro test */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc882_macpro_mixer
@@ -46673,6 +46886,7 @@ multiline_comment|/* FIXME: this looks suspicious...&n;&t;HDA_CODEC_VOLUME(&quot
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc882_macpro_init_verbs
@@ -47068,6 +47282,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Macbook 5,1 */
+r_const
 r_struct
 id|hda_verb
 id|alc885_mb5_init_verbs
@@ -47448,6 +47663,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Macmini 3,1 */
+r_const
 r_struct
 id|hda_verb
 id|alc885_macmini3_init_verbs
@@ -47820,6 +48036,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc885_mba21_init_verbs
@@ -47965,6 +48182,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Macbook Pro rev3 */
+r_const
 r_struct
 id|hda_verb
 id|alc885_mbp3_init_verbs
@@ -48465,6 +48683,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* iMac 9,1 */
+r_const
 r_struct
 id|hda_verb
 id|alc885_imac91_init_verbs
@@ -48932,6 +49151,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* iMac 24 mixer. */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc885_imac24_mixer
@@ -48972,6 +49192,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* iMac 24 init verbs. */
+r_const
 r_struct
 id|hda_verb
 id|alc885_imac24_init_verbs
@@ -49299,6 +49520,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc882_targa_verbs
@@ -49524,6 +49746,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc882_asus_a7j_verbs
@@ -49650,6 +49873,7 @@ multiline_comment|/* HP */
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc882_asus_a7m_verbs
@@ -50018,6 +50242,7 @@ id|codec
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc883_auto_init_verbs
@@ -50285,6 +50510,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* 2ch mode (Speaker:front, Subwoofer:CLFE, Line:input, Headphones:front) */
+r_const
 r_struct
 id|hda_verb
 id|alc889A_mb31_ch2_init
@@ -50339,6 +50565,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* 4ch mode (Speaker:front, Subwoofer:CLFE, Line:CLFE, Headphones:front) */
+r_const
 r_struct
 id|hda_verb
 id|alc889A_mb31_ch4_init
@@ -50393,6 +50620,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* 5ch mode (Speaker:front, Subwoofer:CLFE, Line:input, Headphones:rear) */
+r_const
 r_struct
 id|hda_verb
 id|alc889A_mb31_ch5_init
@@ -50447,6 +50675,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* 6ch mode (Speaker:front, Subwoofer:off, Line:CLFE, Headphones:Rear) */
+r_const
 r_struct
 id|hda_verb
 id|alc889A_mb31_ch6_init
@@ -50500,6 +50729,7 @@ multiline_comment|/* Line on */
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc889A_mb31_6ch_modes
@@ -50538,6 +50768,7 @@ id|alc889A_mb31_ch6_init
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_medion_eapd_verbs
@@ -50570,6 +50801,7 @@ comma
 )brace
 suffix:semicolon
 macro_line|#define alc883_base_mixer&t;alc882_base_mixer
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_mitac_mixer
@@ -50760,6 +50992,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_clevo_m720_mixer
@@ -50903,6 +51136,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_2ch_fujitsu_pi2515_mixer
@@ -51046,6 +51280,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_3ST_2ch_mixer
@@ -51228,6 +51463,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_3ST_6ch_mixer
@@ -51496,6 +51732,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_3ST_6ch_intel_mixer
@@ -51765,6 +52002,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc885_8ch_intel_mixer
@@ -52034,6 +52272,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_fivestack_mixer
@@ -52302,6 +52541,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_targa_mixer
@@ -52544,6 +52784,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_targa_2ch_mixer
@@ -52713,6 +52954,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_targa_8ch_mixer
@@ -52791,6 +53033,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_lenovo_101e_2ch_mixer
@@ -52908,6 +53151,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_lenovo_nb0763_mixer
@@ -53038,6 +53282,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_medion_wim2160_mixer
@@ -53129,6 +53374,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_medion_wim2160_verbs
@@ -53267,6 +53513,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_acer_aspire_mixer
@@ -53384,6 +53631,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc888_acer_aspire_6530_mixer
@@ -53514,6 +53762,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc888_lenovo_sky_mixer
@@ -53796,6 +54045,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc889A_mb31_mixer
@@ -54049,6 +54299,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_vaiott_mixer
@@ -54140,6 +54391,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc883_bind_cap_vol
@@ -54190,6 +54442,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc883_bind_cap_switch
@@ -54240,6 +54493,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_asus_eee1601_mixer
@@ -54357,6 +54611,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_asus_eee1601_cap_mixer
@@ -54433,6 +54688,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc883_chmode_mixer
@@ -54535,6 +54791,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc883_mitac_verbs
@@ -54603,6 +54860,7 @@ multiline_comment|/* {0x18, AC_VERB_SET_UNSOLICITED_ENABLE, ALC880_MIC_EVENT | A
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_clevo_m540r_verbs
@@ -54644,6 +54902,7 @@ multiline_comment|/*&n;&t;{0x15, AC_VERB_SET_UNSOLICITED_ENABLE, ALC880_HP_EVENT
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_clevo_m720_verbs
@@ -54721,6 +54980,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_2ch_fujitsu_pi2515_verbs
@@ -54787,6 +55047,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_targa_verbs
@@ -54967,6 +55228,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_lenovo_101e_verbs
@@ -55010,6 +55272,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_lenovo_nb0763_verbs
@@ -55058,6 +55321,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc888_lenovo_ms7195_verbs
@@ -55128,6 +55392,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_haier_w66_verbs
@@ -55214,6 +55479,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc888_lenovo_sky_verbs
@@ -55321,6 +55587,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc888_6st_dell_verbs
@@ -55344,6 +55611,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc883_vaiott_verbs
@@ -55451,6 +55719,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc888_3st_hp_verbs
@@ -55509,6 +55778,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_3st_hp_2ch_init
@@ -55559,6 +55829,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 4ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_3st_hp_4ch_init
@@ -55618,6 +55889,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc888_3st_hp_6ch_init
@@ -55685,6 +55957,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc888_3st_hp_modes
@@ -56152,6 +56425,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc883_acer_eapd_verbs
@@ -56462,6 +56736,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc888_asus_m90v_verbs
@@ -56624,6 +56899,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc888_asus_eee1601_verbs
@@ -56767,6 +57043,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc889A_mb31_verbs
@@ -57415,6 +57692,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc882_cfg_tbl
@@ -58733,6 +59011,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* codec SSID table for Intel Mac */
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc882_ssid_cfg_tbl
@@ -59008,6 +59287,7 @@ comma
 multiline_comment|/* terminator */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc882_presets
@@ -64124,6 +64404,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc882_fixup_tbl
@@ -66425,6 +66706,7 @@ op_assign
 l_int|0x22
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_base_mixer
@@ -66745,6 +67027,7 @@ suffix:semicolon
 macro_line|#define alc262_hp_master_sw_get&t;&t;alc260_hp_master_sw_get
 macro_line|#define alc262_hp_master_sw_put&t;&t;alc260_hp_master_sw_put
 macro_line|#define ALC262_HP_MASTER_SWITCH&t;&t;&t;&t;&t;&bslash;&n;&t;{&t;&t;&t;&t;&t;&t;&t;&bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER,&t;&t;&bslash;&n;&t;&t;.name = &quot;Master Playback Switch&quot;,&t;&t;&bslash;&n;&t;&t;.info = snd_ctl_boolean_mono_info,&t;&t;&bslash;&n;&t;&t;.get = alc262_hp_master_sw_get,&t;&t;&t;&bslash;&n;&t;&t;.put = alc262_hp_master_sw_put,&t;&t;&t;&bslash;&n;&t;}, &bslash;&n;&t;{&t;&t;&t;&t;&t;&t;&t;&bslash;&n;&t;&t;.iface = NID_MAPPING,&t;&t;&t;&t;&bslash;&n;&t;&t;.name = &quot;Master Playback Switch&quot;,&t;&t;&bslash;&n;&t;&t;.private_value = 0x15 | (0x16 &lt;&lt; 8) | (0x1b &lt;&lt; 16),&t;&bslash;&n;&t;}
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_HP_BPC_mixer
@@ -66988,6 +67271,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_HP_BPC_WildWest_mixer
@@ -67179,6 +67463,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_HP_BPC_WildWest_option_mixer
@@ -67277,6 +67562,7 @@ op_assign
 id|ALC_AUTOMUTE_PIN
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_hp_t5735_mixer
@@ -67381,6 +67667,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_hp_t5735_verbs
@@ -67422,6 +67709,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_hp_rp5700_mixer
@@ -67513,6 +67801,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_hp_rp5700_verbs
@@ -67647,6 +67936,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc262_hp_rp5700_capture_source
@@ -67680,6 +67970,7 @@ macro_line|#define alc262_hippo_master_update&t;alc262_hp_master_update
 macro_line|#define alc262_hippo_master_sw_get&t;alc262_hp_master_sw_get
 macro_line|#define alc262_hippo_master_sw_put&t;alc262_hp_master_sw_put
 macro_line|#define ALC262_HIPPO_MASTER_SWITCH&t;&t;&t;&t;&bslash;&n;&t;{&t;&t;&t;&t;&t;&t;&t;&bslash;&n;&t;&t;.iface = SNDRV_CTL_ELEM_IFACE_MIXER,&t;&t;&bslash;&n;&t;&t;.name = &quot;Master Playback Switch&quot;,&t;&t;&bslash;&n;&t;&t;.info = snd_ctl_boolean_mono_info,&t;&t;&bslash;&n;&t;&t;.get = alc262_hippo_master_sw_get,&t;&t;&bslash;&n;&t;&t;.put = alc262_hippo_master_sw_put,&t;&t;&bslash;&n;&t;},&t;&t;&t;&t;&t;&t;&t;&bslash;&n;&t;{&t;&t;&t;&t;&t;&t;&t;&bslash;&n;&t;&t;.iface = NID_MAPPING,&t;&t;&t;&t;&bslash;&n;&t;&t;.name = &quot;Master Playback Switch&quot;,&t;&t;&bslash;&n;&t;&t;.subdevice = SUBDEV_HP(0) | (SUBDEV_LINE(0) &lt;&lt; 8) | &bslash;&n;&t;&t;&t;     (SUBDEV_SPEAKER(0) &lt;&lt; 16), &bslash;&n;&t;}
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_hippo_mixer
@@ -67852,6 +68143,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_hippo1_mixer
@@ -68102,6 +68394,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_sony_mixer
@@ -68183,6 +68476,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_benq_t31_mixer
@@ -68277,6 +68571,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_tyan_mixer
@@ -68446,6 +68741,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_tyan_verbs
@@ -68576,6 +68872,7 @@ suffix:semicolon
 macro_line|#define alc262_capture_mixer&t;&t;alc882_capture_mixer
 macro_line|#define alc262_capture_alt_mixer&t;alc882_capture_alt_mixer
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc262_init_verbs
@@ -69169,6 +69466,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_eapd_verbs
@@ -69199,6 +69497,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_hippo1_unsol_verbs
@@ -69258,6 +69557,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_sony_unsol_verbs
@@ -69319,6 +69619,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_toshiba_s06_mixer
@@ -69397,6 +69698,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_toshiba_s06_verbs
@@ -69556,6 +69858,7 @@ id|ALC_AUTOMUTE_PIN
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * nec model&n; *  0x15 = headphone&n; *  0x16 = internal speaker&n; *  0x18 = external mic&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_nec_mixer
@@ -69664,6 +69967,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_nec_verbs
@@ -69741,6 +70045,7 @@ comma
 suffix:semicolon
 multiline_comment|/*&n; * fujitsu model&n; *  0x14 = headphone/spdif-out, 0x15 = internal speaker,&n; *  0x1b = port replicator headphone out&n; */
 macro_line|#define ALC_HP_EVENT&t;0x37
+r_const
 r_struct
 id|hda_verb
 id|alc262_fujitsu_unsol_verbs
@@ -69793,6 +70098,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_lenovo_3000_unsol_verbs
@@ -69825,6 +70131,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_lenovo_3000_init_verbs
@@ -69857,6 +70164,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc262_fujitsu_capture_source
@@ -69899,6 +70207,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc262_HP_capture_source
@@ -69955,6 +70264,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc262_HP_D7000_capture_source
@@ -70058,6 +70368,7 @@ id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
 multiline_comment|/* bind volumes of both NID 0x0c and 0x0d */
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc262_fujitsu_bind_master_vol
@@ -70108,6 +70419,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_fujitsu_mixer
@@ -70354,6 +70666,7 @@ op_assign
 id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_lenovo_3000_mixer
@@ -70524,6 +70837,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_toshiba_rx1_mixer
@@ -70629,6 +70943,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* additional init verbs for Benq laptops */
+r_const
 r_struct
 id|hda_verb
 id|alc262_EAPD_verbs
@@ -70659,6 +70974,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_benq_t31_EAPD_verbs
@@ -70708,6 +71024,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Samsung Q1 Ultra Vista model setup */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_ultra_mixer
@@ -70799,6 +71116,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_ultra_verbs
@@ -71250,6 +71568,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_input_mux
 id|alc262_ultra_capture_source
@@ -71387,6 +71706,7 @@ r_return
 id|ret
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc262_ultra_capture_mixer
@@ -72164,6 +72484,7 @@ suffix:semicolon
 )brace
 macro_line|#define alc262_auto_create_input_ctls &bslash;&n;&t;alc882_auto_create_input_ctls
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc262_volume_init_verbs
@@ -72640,6 +72961,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_HP_BPC_init_verbs
@@ -73567,6 +73889,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_HP_BPC_WildWest_init_verbs
@@ -74364,6 +74687,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc262_toshiba_rx1_unsol_verbs
@@ -74558,6 +74882,7 @@ multiline_comment|/* rear HP */
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc262_fixup_tbl
@@ -75064,6 +75389,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc262_cfg_tbl
@@ -75593,6 +75919,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc262_presets
@@ -77930,6 +78257,7 @@ comma
 l_int|0x24
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_base_mixer
@@ -78035,6 +78363,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_toshiba_mixer
@@ -78118,6 +78447,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* bind Beep switches of both NID 0x0f and 0x10 */
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc268_bind_beep_sw
@@ -78168,6 +78498,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_beep_mixer
@@ -78203,6 +78534,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc268_eapd_verbs
@@ -78234,6 +78566,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Toshiba specific */
+r_const
 r_struct
 id|hda_verb
 id|alc268_toshiba_verbs
@@ -78260,6 +78593,7 @@ multiline_comment|/* end */
 suffix:semicolon
 multiline_comment|/* Acer specific */
 multiline_comment|/* bind volumes of both NID 0x02 and 0x03 */
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc268_acer_bind_master_vol
@@ -78357,6 +78691,7 @@ suffix:semicolon
 )brace
 macro_line|#define alc268_acer_master_sw_get&t;alc262_hp_master_sw_get
 macro_line|#define alc268_acer_master_sw_put&t;alc262_hp_master_sw_put
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_acer_aspire_one_mixer
@@ -78437,6 +78772,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_acer_mixer
@@ -78543,6 +78879,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_acer_dmic_mixer
@@ -78636,6 +78973,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc268_acer_aspire_one_verbs
@@ -78706,6 +79044,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc268_acer_verbs
@@ -78864,6 +79203,7 @@ op_assign
 l_int|1
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_dell_mixer
@@ -78956,6 +79296,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc268_dell_verbs
@@ -79079,6 +79420,7 @@ op_assign
 id|ALC_AUTOMUTE_PIN
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc267_quanta_il1_mixer
@@ -79195,6 +79537,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc267_quanta_il1_verbs
@@ -79300,6 +79643,7 @@ id|ALC_AUTOMUTE_PIN
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc268_base_init_verbs
@@ -79580,6 +79924,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc268_volume_init_verbs
@@ -79755,6 +80100,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_capture_nosrc_mixer
@@ -79794,6 +80140,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_capture_alt_mixer
@@ -79840,6 +80187,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_capture_mixer
@@ -79916,6 +80264,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc268_capture_source
@@ -79965,6 +80314,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc268_acer_capture_source
@@ -80007,6 +80357,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc268_acer_dmic_capture_source
@@ -80050,6 +80401,7 @@ comma
 )brace
 suffix:semicolon
 macro_line|#ifdef CONFIG_SND_DEBUG
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc268_test_mixer
@@ -82030,6 +82382,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc268_cfg_tbl
@@ -82234,6 +82587,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Toshiba laptops have no unique PCI SSID but only codec SSID */
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc268_ssid_cfg_tbl
@@ -82288,6 +82642,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc268_presets
@@ -83981,6 +84336,7 @@ comma
 suffix:semicolon
 macro_line|#define alc269_modes&t;&t;alc260_modes
 macro_line|#define alc269_capture_source&t;alc880_lg_lw_capture_source
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269_base_mixer
@@ -84152,6 +84508,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269_quanta_fl1_mixer
@@ -84311,6 +84668,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269_lifebook_mixer
@@ -84509,6 +84867,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269_laptop_mixer
@@ -84574,6 +84933,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269vb_laptop_mixer
@@ -84639,6 +84999,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269_asus_mixer
@@ -84679,6 +85040,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* capture mixer elements */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269_laptop_analog_capture_mixer
@@ -84744,6 +85106,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269_laptop_digital_capture_mixer
@@ -84796,6 +85159,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269vb_laptop_analog_capture_mixer
@@ -84861,6 +85225,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc269vb_laptop_digital_capture_mixer
@@ -84915,6 +85280,7 @@ multiline_comment|/* end */
 suffix:semicolon
 multiline_comment|/* FSC amilo */
 macro_line|#define alc269_fujitsu_mixer&t;alc269_laptop_mixer
+r_const
 r_struct
 id|hda_verb
 id|alc269_quanta_fl1_verbs
@@ -84985,6 +85351,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc269_lifebook_verbs
@@ -85592,6 +85959,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc269_laptop_dmic_init_verbs
@@ -85679,6 +86047,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc269_laptop_amic_init_verbs
@@ -85757,6 +86126,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc269vb_laptop_dmic_init_verbs
@@ -85844,6 +86214,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc269vb_laptop_amic_init_verbs
@@ -85931,6 +86302,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc271_acer_dmic_verbs
@@ -86350,6 +86722,7 @@ l_int|1
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc269_init_verbs
@@ -86588,6 +86961,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc269vb_init_verbs
@@ -86836,6 +87210,7 @@ macro_line|#define alc269_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc269_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc269_pcm_digital_playback&t;alc880_pcm_digital_playback
 macro_line|#define alc269_pcm_digital_capture&t;alc880_pcm_digital_capture
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc269_44k_pcm_analog_playback
@@ -86895,6 +87270,7 @@ id|alc880_playback_pcm_cleanup
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc269_44k_pcm_analog_capture
@@ -88031,6 +88407,7 @@ id|action
 )paren
 (brace
 "&t;"
+r_const
 r_struct
 id|hda_verb
 id|verbs
@@ -88472,6 +88849,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc269_fixup_tbl
@@ -88718,6 +89096,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc269_cfg_tbl
@@ -89396,6 +89775,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc269_presets
@@ -91217,6 +91597,7 @@ suffix:semicolon
 )brace
 multiline_comment|/*&n; *  ALC861 channel source setting (2/6 channel selection for 3-stack)&n; */
 multiline_comment|/*&n; * set the path ways for 2 channel output&n; * need to set the codec line out and mic 1 pin widgets to inputs&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861_threestack_ch2_init
@@ -91300,6 +91681,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; * need to set the codec line out and mic 1 pin widgets to outputs&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861_threestack_ch6_init
@@ -91400,6 +91782,7 @@ macro_line|#endif
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc861_threestack_modes
@@ -91425,6 +91808,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Set mic1 as input and unmute the mixer */
+r_const
 r_struct
 id|hda_verb
 id|alc861_uniwill_m31_ch2_init
@@ -91466,6 +91850,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Set mic1 as output and mute mixer */
+r_const
 r_struct
 id|hda_verb
 id|alc861_uniwill_m31_ch4_init
@@ -91506,6 +91891,7 @@ multiline_comment|/*mic*/
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc861_uniwill_m31_modes
@@ -91531,6 +91917,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Set mic1 and line-in as input and unmute the mixer */
+r_const
 r_struct
 id|hda_verb
 id|alc861_asus_ch2_init
@@ -91614,6 +92001,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Set mic1 nad line-in as output and mute mixer */
+r_const
 r_struct
 id|hda_verb
 id|alc861_asus_ch6_init
@@ -91718,6 +92106,7 @@ macro_line|#endif
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc861_asus_modes
@@ -91743,6 +92132,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* patch-ALC861 */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861_base_mixer
@@ -91933,6 +92323,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861_3ST_mixer
@@ -92157,6 +92548,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861_toshiba_mixer
@@ -92210,6 +92602,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861_uniwill_m31_mixer
@@ -92434,6 +92827,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861_asus_mixer
@@ -92693,6 +93087,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* additional mixer */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861_asus_laptop_mixer
@@ -92732,6 +93127,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861_base_init_verbs
@@ -93197,6 +93593,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc861_threestack_init_verbs
@@ -93635,6 +94032,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc861_uniwill_m31_init_verbs
@@ -94075,6 +94473,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc861_asus_init_verbs
@@ -94529,6 +94928,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* additional init verbs for ASUS laptops */
+r_const
 r_struct
 id|hda_verb
 id|alc861_asus_laptop_init_verbs
@@ -94566,6 +94966,7 @@ multiline_comment|/* mute line-in */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861_auto_init_verbs
@@ -94965,6 +95366,7 @@ multiline_comment|/* set Mic 1 */
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc861_toshiba_init_verbs
@@ -95100,6 +95502,7 @@ macro_line|#define alc861_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc861_pcm_digital_playback&t;alc880_pcm_digital_playback
 macro_line|#define alc861_pcm_digital_capture&t;alc880_pcm_digital_capture
 macro_line|#define ALC861_DIGOUT_NID&t;0x07
+r_const
 r_struct
 id|hda_channel_mode
 id|alc861_8ch_modes
@@ -95166,6 +95569,7 @@ l_int|0x08
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc861_capture_source
@@ -96797,6 +97201,7 @@ id|codec
 suffix:semicolon
 )brace
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+r_const
 r_struct
 id|hda_amp_list
 id|alc861_loopbacks
@@ -96932,6 +97337,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc861_cfg_tbl
@@ -97134,6 +97540,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc861_presets
@@ -97941,6 +98348,7 @@ multiline_comment|/* speaker */
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc861_fixup_tbl
@@ -98399,6 +98807,7 @@ l_int|0x22
 suffix:semicolon
 multiline_comment|/* input MUX */
 multiline_comment|/* FIXME: should be a matrix-type input source selection */
+r_const
 r_struct
 id|hda_input_mux
 id|alc861vd_capture_source
@@ -98448,6 +98857,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc861vd_dallas_capture_source
@@ -98483,6 +98893,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc861vd_hp_capture_source
@@ -98519,6 +98930,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_channel_mode
 id|alc861vd_3stack_2ch_modes
@@ -98536,6 +98948,7 @@ l_int|NULL
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861vd_6stack_ch6_init
@@ -98586,6 +98999,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 8ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861vd_6stack_ch8_init
@@ -98635,6 +99049,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc861vd_6stack_modes
@@ -98659,6 +99074,7 @@ id|alc861vd_6stack_ch8_init
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_chmode_mixer
@@ -98708,6 +99124,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Pin assignment: Front=0x14, Rear=0x15, CLFE=0x16, Side=0x17&n; *                 Mic=0x18, Front Mic=0x19, Line-In=0x1a, HP=0x1b&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_6st_mixer
@@ -99004,6 +99421,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_3st_mixer
@@ -99186,6 +99604,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_lenovo_mixer
@@ -99345,6 +99764,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Pin assignment: Speaker=0x14, HP = 0x15,&n; *                 Mic=0x18, Internal Mic = 0x19, CD = 0x1c, PC Beep = 0x1d&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_dallas_mixer
@@ -99489,6 +99909,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/* Pin assignment: Speaker=0x14, Line-out = 0x15,&n; *                 Front Mic=0x18, ATAPI Mic = 0x19,&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc861vd_hp_mixer
@@ -99607,6 +100028,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861vd_volume_init_verbs
@@ -99915,6 +100337,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 3-stack pin configuration:&n; * front = 0x14, mic/clfe = 0x18, HP = 0x19, line/surr = 0x1a, f-mic = 0x1b&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861vd_3stack_init_verbs
@@ -100059,6 +100482,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6-stack pin configuration:&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc861vd_6stack_init_verbs
@@ -100289,6 +100713,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc861vd_eapd_verbs
@@ -100310,6 +100735,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc660vd_eapd_verbs
@@ -100340,6 +100766,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc861vd_lenovo_unsol_verbs
@@ -100539,6 +100966,7 @@ suffix:semicolon
 "&t;"
 )brace
 )brace
+r_const
 r_struct
 id|hda_verb
 id|alc861vd_dallas_verbs
@@ -101068,6 +101496,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc861vd_cfg_tbl
@@ -101253,6 +101682,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc861vd_presets
@@ -103519,6 +103949,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc861vd_fixup_tbl
@@ -104047,6 +104478,7 @@ l_int|0x23
 suffix:semicolon
 multiline_comment|/* input MUX */
 multiline_comment|/* FIXME: should be a matrix-type input source selection */
+r_const
 r_struct
 id|hda_input_mux
 id|alc662_capture_source
@@ -104096,6 +104528,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc662_lenovo_101e_capture_source
@@ -104131,6 +104564,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_input_mux
 id|alc663_capture_source
@@ -104174,6 +104608,7 @@ comma
 )brace
 suffix:semicolon
 macro_line|#if 0 /* set to 1 for testing other input sources below */
+r_const
 r_struct
 id|hda_input_mux
 id|alc272_nc10_capture_source
@@ -104309,6 +104744,7 @@ comma
 suffix:semicolon
 macro_line|#endif
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_channel_mode
 id|alc662_3ST_2ch_modes
@@ -104326,6 +104762,7 @@ l_int|NULL
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc662_3ST_ch2_init
@@ -104376,6 +104813,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc662_3ST_ch6_init
@@ -104443,6 +104881,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc662_3ST_6ch_modes
@@ -104468,6 +104907,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 2ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc662_sixstack_ch6_init
@@ -104509,6 +104949,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * 6ch mode&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc662_sixstack_ch8_init
@@ -104549,6 +104990,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_channel_mode
 id|alc662_5stack_modes
@@ -104574,6 +105016,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Pin assignment: Front=0x14, Rear=0x15, CLFE=0x16, Side=0x17&n; *                 Mic=0x18, Front Mic=0x19, Line-In=0x1a, HP=0x1b&n; */
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_base_mixer
@@ -104820,6 +105263,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_3ST_2ch_mixer
@@ -104976,6 +105420,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_3ST_6ch_mixer
@@ -105218,6 +105663,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_lenovo_101e_mixer
@@ -105348,6 +105794,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_eeepc_p701_mixer
@@ -105455,6 +105902,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_eeepc_ep20_mixer
@@ -105592,6 +106040,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc663_asus_bind_master_vol
@@ -105642,6 +106091,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc663_asus_one_bind_switch
@@ -105692,6 +106142,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_m51va_mixer
@@ -105751,6 +106202,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc663_asus_tree_bind_switch
@@ -105814,6 +106266,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_two_hp_m1_mixer
@@ -105899,6 +106352,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc663_asus_four_bind_switch
@@ -105962,6 +106416,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_two_hp_m2_mixer
@@ -106047,6 +106502,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_1bjd_mixer
@@ -106151,6 +106607,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc663_asus_two_bind_master_vol
@@ -106201,6 +106658,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc663_asus_two_bind_switch
@@ -106251,6 +106709,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_asus_21jd_clfe_mixer
@@ -106337,6 +106796,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_asus_15jd_clfe_mixer
@@ -106422,6 +106882,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_g71v_mixer
@@ -106552,6 +107013,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_g50v_mixer
@@ -106682,6 +107144,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc663_asus_mode7_8_all_bind_switch
@@ -106771,6 +107234,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc663_asus_mode7_8_sp_bind_switch
@@ -106821,6 +107285,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_mode7_mixer
@@ -106942,6 +107407,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc663_mode8_mixer
@@ -107037,6 +107503,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_chmode_mixer
@@ -107085,6 +107552,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc662_init_verbs
@@ -107391,6 +107859,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc662_eapd_init_verbs
@@ -107423,6 +107892,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc662_sue_init_verbs
@@ -107457,6 +107927,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc662_eeepc_sue_init_verbs
@@ -107492,6 +107963,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* Set Unsolicited Event*/
+r_const
 r_struct
 id|hda_verb
 id|alc662_eeepc_ep20_sue_init_verbs
@@ -107524,6 +107996,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_m51va_init_verbs
@@ -107631,6 +108104,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_21jd_amic_init_verbs
@@ -107720,6 +108194,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc662_1bjd_amic_init_verbs
@@ -107818,6 +108293,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_15jd_amic_init_verbs
@@ -107907,6 +108383,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_two_hp_amic_m1_init_verbs
@@ -108045,6 +108522,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_two_hp_amic_m2_init_verbs
@@ -108183,6 +108661,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_g71v_init_verbs
@@ -108271,6 +108750,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_g50v_init_verbs
@@ -108334,6 +108814,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc662_ecs_init_verbs
@@ -108390,6 +108871,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc272_dell_zm1_init_verbs
@@ -108515,6 +108997,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc272_dell_init_verbs
@@ -108640,6 +109123,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_mode7_init_verbs
@@ -108803,6 +109287,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_verb
 id|alc663_mode8_init_verbs
@@ -108975,6 +109460,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_auto_capture_mixer
@@ -109014,6 +109500,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc272_auto_capture_mixer
@@ -110059,6 +110546,7 @@ l_int|1
 suffix:semicolon
 )brace
 macro_line|#define alc663_g50v_setup&t;alc663_m51va_setup
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc662_ecs_mixer
@@ -110166,6 +110654,7 @@ comma
 multiline_comment|/* end */
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc272_nc10_mixer
@@ -110509,6 +110998,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc662_cfg_tbl
@@ -111467,6 +111957,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc662_presets
@@ -116191,6 +116682,7 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc_auto_channel_mode_enum
@@ -117119,6 +117611,7 @@ comma
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc662_fixup_tbl
@@ -118317,6 +118810,7 @@ r_return
 l_int|0
 suffix:semicolon
 )brace
+r_const
 r_struct
 id|hda_pcm_stream
 id|alc680_pcm_analog_auto_capture
@@ -118364,6 +118858,7 @@ id|alc680_capture_pcm_cleanup
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc680_base_mixer
@@ -118469,6 +118964,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc680_bind_cap_vol
@@ -118532,6 +119028,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|hda_bind_ctls
 id|alc680_bind_cap_switch
@@ -118595,6 +119092,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_kcontrol_new
 id|alc680_master_capture_mixer
@@ -118629,6 +119127,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * generic initialization of ADC, input mixers and output mixers&n; */
+r_const
 r_struct
 id|hda_verb
 id|alc680_init_verbs
@@ -119815,6 +120314,7 @@ l_string|&quot;auto&quot;
 comma
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|snd_pci_quirk
 id|alc680_cfg_tbl
@@ -119840,6 +120340,7 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
 r_struct
 id|alc_config_preset
 id|alc680_presets
@@ -120222,6 +120723,7 @@ l_int|0
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * patch entries&n; */
+r_const
 r_struct
 id|hda_codec_preset
 id|snd_hda_preset_realtek
