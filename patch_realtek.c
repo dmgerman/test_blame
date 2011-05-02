@@ -911,11 +911,13 @@ r_int
 id|num_adc_nids
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 op_star
 id|adc_nids
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 op_star
 id|capsrc_nids
@@ -1336,6 +1338,7 @@ r_int
 id|num_dacs
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 op_star
 id|dac_nids
@@ -1353,6 +1356,7 @@ suffix:semicolon
 "&t;&t;"
 multiline_comment|/* optional */
 "&t;"
+r_const
 id|hda_nid_t
 op_star
 id|slave_dig_outs
@@ -1363,11 +1367,13 @@ r_int
 id|num_adc_nids
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 op_star
 id|adc_nids
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 op_star
 id|capsrc_nids
@@ -12382,6 +12388,7 @@ id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC880 3-stack model&n; *&n; * DAC: Front = 0x02 (0x0c), Surr = 0x05 (0x0f), CLFE = 0x04 (0x0e)&n; * Pin assignment: Front = 0x14, Line-In/Surr = 0x1a, Mic/CLFE = 0x18,&n; *                 F-Mic = 0x1b, HP = 0x19&n; */
+r_const
 id|hda_nid_t
 id|alc880_dac_nids
 (braket
@@ -12401,6 +12408,7 @@ comma
 l_int|0x03
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc880_adc_nids
 (braket
@@ -12420,6 +12428,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* The datasheet says the node 0x07 is connected from inputs,&n; * but it shows zero connection in the real implementation on some devices.&n; * Note: this is a 915GAV bug, fixed on 915GLV&n; */
+r_const
 id|hda_nid_t
 id|alc880_adc_nids_alt
 (braket
@@ -13527,6 +13536,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * ALC880 6-stack model&n; *&n; * DAC: Front = 0x02 (0x0c), Surr = 0x03 (0x0d), CLFE = 0x04 (0x0e),&n; *      Side = 0x05 (0x0f)&n; * Pin assignment: Front = 0x14, Surr = 0x15, CLFE = 0x16, Side = 0x17,&n; *   Mic = 0x18, F-Mic = 0x19, Line = 0x1a, HP = 0x1b&n; */
+r_const
 id|hda_nid_t
 id|alc880_6st_dac_nids
 (braket
@@ -13907,6 +13917,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * ALC880 W810 model&n; *&n; * W810 has rear IO for:&n; * Front (DAC 02)&n; * Surround (DAC 03)&n; * Center/LFE (DAC 04)&n; * Digital out (06)&n; *&n; * The system also has a pair of internal speakers, and a headphone jack.&n; * These are both connected to Line2 on the codec, hence to DAC 02.&n; *&n; * There is a variable resistor to control the speaker or headphone&n; * volume. This is a hardware-only device without a software API.&n; *&n; * Plugging headphones in will disable the internal speakers. This is&n; * implemented in hardware, not via the driver using jack sense. In&n; * a similar fashion, plugging into the rear socket marked &quot;front&quot; will&n; * disable both the speakers and headphones.&n; *&n; * For input, there&squot;s a microphone jack, and an &quot;audio in&quot; jack.&n; * These may not do anything useful with this driver yet, because I&n; * haven&squot;t setup any initialization verbs for these yet...&n; */
+r_const
 id|hda_nid_t
 id|alc880_w810_dac_nids
 (braket
@@ -14083,6 +14094,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * Z710V model&n; *&n; * DAC: Front = 0x02 (0x0c), HP = 0x03 (0x0d)&n; * Pin assignment: Front = 0x14, HP = 0x15, Mic = 0x18, Mic2 = 0x19(?),&n; *                 Line = 0x1a&n; */
+r_const
 id|hda_nid_t
 id|alc880_z71v_dac_nids
 (braket
@@ -14232,6 +14244,7 @@ multiline_comment|/* end */
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * ALC880 F1734 model&n; *&n; * DAC: HP = 0x02 (0x0c), Front = 0x03 (0x0d)&n; * Pin assignment: HP = 0x14, Front = 0x15, Mic = 0x18&n; */
+r_const
 id|hda_nid_t
 id|alc880_f1734_dac_nids
 (braket
@@ -15974,6 +15987,7 @@ op_increment
 )paren
 (brace
 "&t;&t;&t;"
+r_const
 id|hda_nid_t
 op_star
 id|nids
@@ -19107,6 +19121,7 @@ comma
 suffix:semicolon
 multiline_comment|/*&n; * LG m1 express dual&n; *&n; * Pin assignment:&n; *   Rear Line-In/Out (blue): 0x14&n; *   Build-in Mic-In: 0x15&n; *   Speaker-out: 0x17&n; *   HP-Out (green): 0x1b&n; *   Mic-In/Out (red): 0x19&n; *   SPDIF-Out: 0x1e&n; */
 multiline_comment|/* To make 5.1 output working (green=Front, blue=Surr, red=CLFE) */
+r_const
 id|hda_nid_t
 id|alc880_lg_dac_nids
 (braket
@@ -22949,6 +22964,7 @@ suffix:semicolon
 )brace
 multiline_comment|/*&n; * Test configuration for debugging&n; *&n; * Almost all inputs/outputs are enabled.  I/O pins can be configured via&n; * enum controls.&n; */
 macro_line|#ifdef CONFIG_SND_DEBUG
+r_const
 id|hda_nid_t
 id|alc880_test_dac_nids
 (braket
@@ -23093,8 +23109,10 @@ id|uinfo
 )paren
 (brace
 "&t;"
+r_const
 r_char
 op_star
+r_const
 id|texts
 (braket
 )braket
@@ -23383,6 +23401,7 @@ id|hda_nid_t
 id|kcontrol-&gt;private_value
 suffix:semicolon
 "&t;"
+r_const
 r_int
 r_int
 id|ctls
@@ -23555,8 +23574,10 @@ id|uinfo
 )paren
 (brace
 "&t;"
+r_const
 r_char
 op_star
+r_const
 id|texts
 (braket
 )braket
@@ -30137,6 +30158,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc880_ignore
 (braket
@@ -31204,6 +31226,7 @@ id|hda_codec
 op_star
 id|codec
 comma
+r_const
 id|hda_nid_t
 op_star
 id|nids
@@ -32121,6 +32144,7 @@ l_int|0
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC260 support&n; */
+r_const
 id|hda_nid_t
 id|alc260_dac_nids
 (braket
@@ -32135,6 +32159,7 @@ l_int|0x02
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc260_adc_nids
 (braket
@@ -32149,6 +32174,7 @@ l_int|0x04
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc260_adc_nids_alt
 (braket
@@ -32164,6 +32190,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/* NIDs used when simultaneous access to both ADCs makes sense.  Note that&n; * alc260_capture_mixer assumes ADC0 (nid 0x04) is the first ADC.&n; */
+r_const
 id|hda_nid_t
 id|alc260_dual_adc_nids
 (braket
@@ -37296,6 +37323,7 @@ comma
 suffix:semicolon
 multiline_comment|/* Test configuration for debugging, modelled after the ALC880 test&n; * configuration.&n; */
 macro_line|#ifdef CONFIG_SND_DEBUG
+r_const
 id|hda_nid_t
 id|alc260_test_dac_nids
 (braket
@@ -37308,6 +37336,7 @@ l_int|0x02
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc260_test_adc_nids
 (braket
@@ -39558,6 +39587,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc260_ignore
 (braket
@@ -41734,6 +41764,7 @@ l_int|NULL
 )brace
 suffix:semicolon
 multiline_comment|/* DACs */
+r_const
 id|hda_nid_t
 id|alc882_dac_nids
 (braket
@@ -41758,6 +41789,7 @@ multiline_comment|/* ADCs */
 macro_line|#define alc882_adc_nids&t;&t;alc880_adc_nids
 macro_line|#define alc882_adc_nids_alt&t;alc880_adc_nids_alt
 macro_line|#define alc883_adc_nids&t;&t;alc882_adc_nids_alt
+r_const
 id|hda_nid_t
 id|alc883_adc_nids_alt
 (braket
@@ -41768,6 +41800,7 @@ op_assign
 l_int|0x08
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc883_adc_nids_rev
 (braket
@@ -41781,6 +41814,7 @@ l_int|0x08
 )brace
 suffix:semicolon
 macro_line|#define alc889_adc_nids&t;&t;alc880_adc_nids
+r_const
 id|hda_nid_t
 id|alc882_capsrc_nids
 (braket
@@ -41795,6 +41829,7 @@ comma
 l_int|0x22
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc882_capsrc_nids_alt
 (braket
@@ -41808,6 +41843,7 @@ l_int|0x22
 )brace
 suffix:semicolon
 macro_line|#define alc883_capsrc_nids&t;alc882_capsrc_nids_alt
+r_const
 id|hda_nid_t
 id|alc883_capsrc_nids_rev
 (braket
@@ -57266,6 +57302,7 @@ macro_line|#define alc882_pcm_analog_playback&t;alc880_pcm_analog_playback
 macro_line|#define alc882_pcm_analog_capture&t;alc880_pcm_analog_capture
 macro_line|#define alc882_pcm_digital_playback&t;alc880_pcm_digital_playback
 macro_line|#define alc882_pcm_digital_capture&t;alc880_pcm_digital_capture
+r_const
 id|hda_nid_t
 id|alc883_slave_dig_outs
 (braket
@@ -57279,6 +57316,7 @@ l_int|0
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc1200_slave_dig_outs
 (braket
@@ -65567,6 +65605,7 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc882_ignore
 (braket
@@ -66683,6 +66722,7 @@ macro_line|#define alc262_capsrc_nids&t;alc882_capsrc_nids
 macro_line|#define alc262_capsrc_nids_alt&t;alc882_capsrc_nids_alt
 macro_line|#define alc262_modes&t;&t;alc260_modes
 macro_line|#define alc262_capture_source&t;alc882_capture_source
+r_const
 id|hda_nid_t
 id|alc262_dmic_adc_nids
 (braket
@@ -66696,6 +66736,7 @@ multiline_comment|/* ADC0 */
 l_int|0x09
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc262_dmic_capsrc_nids
 (braket
@@ -74940,6 +74981,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc262_ignore
 (braket
@@ -78202,6 +78244,7 @@ suffix:semicolon
 multiline_comment|/*&n; *  ALC268 channel source setting (2 channel)&n; */
 macro_line|#define ALC268_DIGOUT_NID&t;ALC880_DIGOUT_NID
 macro_line|#define alc268_modes&t;&t;alc260_modes
+r_const
 id|hda_nid_t
 id|alc268_dac_nids
 (braket
@@ -78217,6 +78260,7 @@ comma
 l_int|0x03
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc268_adc_nids
 (braket
@@ -78232,6 +78276,7 @@ comma
 l_int|0x07
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc268_adc_nids_alt
 (braket
@@ -78245,6 +78290,7 @@ multiline_comment|/* ADC0 */
 l_int|0x08
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc268_capsrc_nids
 (braket
@@ -81968,6 +82014,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc268_ignore
 (braket
@@ -84265,6 +84312,7 @@ suffix:semicolon
 multiline_comment|/*&n; *  ALC269 channel source setting (2 channel)&n; */
 macro_line|#define ALC269_DIGOUT_NID&t;ALC880_DIGOUT_NID
 macro_line|#define alc269_dac_nids&t;&t;alc260_dac_nids
+r_const
 id|hda_nid_t
 id|alc269_adc_nids
 (braket
@@ -84279,6 +84327,7 @@ l_int|0x08
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc269_capsrc_nids
 (braket
@@ -84291,6 +84340,7 @@ l_int|0x23
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc269vb_adc_nids
 (braket
@@ -84305,6 +84355,7 @@ l_int|0x09
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc269vb_capsrc_nids
 (braket
@@ -84317,6 +84368,7 @@ l_int|0x22
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc269_adc_candidates
 (braket
@@ -87670,6 +87722,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc269_ignore
 (braket
@@ -95519,6 +95572,7 @@ l_int|NULL
 )brace
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc861_dac_nids
 (braket
@@ -95538,6 +95592,7 @@ comma
 l_int|0x04
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc660_dac_nids
 (braket
@@ -95555,6 +95610,7 @@ comma
 l_int|0x06
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc861_adc_nids
 (braket
@@ -96877,6 +96933,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc861_ignore
 (braket
@@ -98744,6 +98801,7 @@ suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC861-VD support&n; *&n; * Based on ALC882&n; *&n; * In addition, an independent DAC&n; */
 macro_line|#define ALC861VD_DIGOUT_NID&t;0x06
+r_const
 id|hda_nid_t
 id|alc861vd_dac_nids
 (braket
@@ -98764,6 +98822,7 @@ l_int|0x05
 )brace
 suffix:semicolon
 multiline_comment|/* dac_nids for ALC660vd are in a different order - according to&n; * Realtek&squot;s driver.&n; * This should probably result in a different mixer for 6stack models&n; * of ALC660vd codecs, but for now there is only 3stack mixer&n; * - and it is the same as in 861vd.&n; * adc_nids in ALC660vd are (is) the same as in 861vd&n; */
+r_const
 id|hda_nid_t
 id|alc660vd_dac_nids
 (braket
@@ -98781,6 +98840,7 @@ comma
 l_int|0x03
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc861vd_adc_nids
 (braket
@@ -98795,6 +98855,7 @@ l_int|0x09
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc861vd_capsrc_nids
 (braket
@@ -103509,6 +103570,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc861vd_ignore
 (braket
@@ -104395,6 +104457,7 @@ suffix:semicolon
 multiline_comment|/*&n; * ALC662 support&n; *&n; * ALC662 is almost identical with ALC880 but has cleaner and more flexible&n; * configuration.  Each pin widget can choose any input DACs and a mixer.&n; * Each ADC is connected from a mixer of all inputs.  This makes possible&n; * 6-channel independent captures.&n; *&n; * In addition, an independent DAC for the multi-playback (not used in this&n; * driver yet).&n; */
 macro_line|#define ALC662_DIGOUT_NID&t;0x06
 macro_line|#define ALC662_DIGIN_NID&t;0x0a
+r_const
 id|hda_nid_t
 id|alc662_dac_nids
 (braket
@@ -104412,6 +104475,7 @@ comma
 l_int|0x04
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc272_dac_nids
 (braket
@@ -104425,6 +104489,7 @@ comma
 l_int|0x03
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc662_adc_nids
 (braket
@@ -104440,6 +104505,7 @@ comma
 l_int|0x08
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc272_adc_nids
 (braket
@@ -104454,6 +104520,7 @@ l_int|0x08
 comma
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc662_capsrc_nids
 (braket
@@ -104466,6 +104533,7 @@ comma
 l_int|0x23
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc272_capsrc_nids
 (braket
@@ -116919,6 +116987,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc662_ignore
 (braket
@@ -118444,6 +118513,7 @@ multiline_comment|/*&n; * ALC680 support&n; */
 macro_line|#define ALC680_DIGIN_NID&t;ALC880_DIGIN_NID
 macro_line|#define ALC680_DIGOUT_NID&t;ALC880_DIGOUT_NID
 macro_line|#define alc680_modes&t;&t;alc260_modes
+r_const
 id|hda_nid_t
 id|alc680_dac_nids
 (braket
@@ -118461,6 +118531,7 @@ comma
 l_int|0x04
 )brace
 suffix:semicolon
+r_const
 id|hda_nid_t
 id|alc680_adc_nids
 (braket
@@ -120057,6 +120128,7 @@ r_int
 id|err
 suffix:semicolon
 "&t;"
+r_const
 id|hda_nid_t
 id|alc680_ignore
 (braket
