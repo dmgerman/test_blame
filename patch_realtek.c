@@ -28104,7 +28104,7 @@ id|nid
 )paren
 suffix:semicolon
 "&t;&t;&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 id|i
 )braket
@@ -28196,7 +28196,7 @@ id|j
 )paren
 (brace
 "&t;&t;&t;&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 id|i
 )braket
@@ -38744,7 +38744,7 @@ op_assign
 id|spec-&gt;private_dac_nids
 suffix:semicolon
 "&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 l_int|0
 )braket
@@ -72118,7 +72118,7 @@ op_assign
 id|spec-&gt;private_dac_nids
 suffix:semicolon
 "&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 l_int|0
 )braket
@@ -80936,7 +80936,7 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 id|spec-&gt;multiout.num_dacs
 op_increment
@@ -95909,7 +95909,7 @@ id|dac
 r_continue
 suffix:semicolon
 "&t;&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 id|spec-&gt;multiout.num_dacs
 op_increment
@@ -114716,7 +114716,7 @@ id|dac
 r_continue
 suffix:semicolon
 "&t;&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 id|spec-&gt;multiout.num_dacs
 op_increment
@@ -116169,7 +116169,7 @@ id|num_pins
 op_increment
 suffix:semicolon
 "&t;&t;&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 id|spec-&gt;multiout.num_dacs
 op_increment
@@ -119658,7 +119658,7 @@ r_return
 id|err
 suffix:semicolon
 "&t;&t;"
-id|spec-&gt;multiout.dac_nids
+id|spec-&gt;private_dac_nids
 (braket
 id|spec-&gt;multiout.num_dacs
 op_increment
