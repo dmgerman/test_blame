@@ -22444,6 +22444,8 @@ c_cond
 id|spec-&gt;num_adc_nids
 OG
 l_int|1
+op_logical_and
+id|spec-&gt;stream_analog_alt_capture
 )paren
 (brace
 "&t;&t;&t;"
