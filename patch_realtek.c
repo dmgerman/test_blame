@@ -7534,16 +7534,12 @@ r_if
 c_cond
 (paren
 op_logical_neg
-(paren
-id|get_wcaps
+id|is_jack_detectable
 c_func
 (paren
 id|codec
 comma
 id|ext
-)paren
-op_amp
-id|AC_WCAP_UNSOL_CAP
 )paren
 )paren
 "&t;&t;"
