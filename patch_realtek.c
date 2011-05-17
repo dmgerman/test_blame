@@ -7300,7 +7300,7 @@ suffix:semicolon
 "&t;&t;"
 id|spec-&gt;automute_lines
 op_assign
-l_int|1
+id|spec-&gt;detect_line
 suffix:semicolon
 "&t;"
 )brace
