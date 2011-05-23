@@ -1,7 +1,7 @@
 macro_line|#include &lt;linux/user-return-notifier.h&gt;
 macro_line|#include &lt;linux/percpu.h&gt;
 macro_line|#include &lt;linux/sched.h&gt;
-macro_line|#include &lt;linux/module.h&gt;
+macro_line|#include &lt;linux/export.h&gt;
 id|DEFINE_PER_CPU
 c_func
 (paren
