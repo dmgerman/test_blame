@@ -15859,6 +15859,9 @@ id|codec
 comma
 "&t;&t;&t;&t;&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
+comma
+"&t;&t;&t;&t;&t;&t;"
+id|spec-&gt;multiout.dig_out_nid
 )paren
 suffix:semicolon
 "&t;&t;"
