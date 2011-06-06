@@ -15859,9 +15859,6 @@ id|codec
 comma
 "&t;&t;&t;&t;&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
-comma
-"&t;&t;&t;&t;&t;&t;"
-id|spec-&gt;multiout.dig_out_nid
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -82833,6 +82830,19 @@ comma
 l_string|&quot;Dell OEM&quot;
 comma
 id|ALC268_DELL
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
+l_int|0x02b0
+comma
+l_string|&quot;Dell Inspiron 910&quot;
+comma
+id|ALC268_AUTO
 )paren
 comma
 "&t;"
