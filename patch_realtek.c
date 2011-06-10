@@ -70388,7 +70388,7 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * fujitsu model&n; *  0x14 = headphone/spdif-out, 0x15 = internal speaker,&n; *  0x1b = port replicator headphone out&n; */
-macro_line|#define ALC_HP_EVENT&t;0x37
+macro_line|#define ALC_HP_EVENT&t;ALC880_HP_EVENT
 r_const
 r_struct
 id|hda_verb
