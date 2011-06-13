@@ -79501,14 +79501,6 @@ op_assign
 l_int|0x14
 suffix:semicolon
 "&t;"
-id|spec-&gt;automute_mixer_nid
-(braket
-l_int|0
-)braket
-op_assign
-l_int|0x0f
-suffix:semicolon
-"&t;"
 id|spec-&gt;automute
 op_assign
 l_int|1
@@ -79516,7 +79508,7 @@ suffix:semicolon
 "&t;"
 id|spec-&gt;automute_mode
 op_assign
-id|ALC_AUTOMUTE_MIXER
+id|ALC_AUTOMUTE_AMP
 suffix:semicolon
 "&t;"
 id|spec-&gt;ext_mic.pin
