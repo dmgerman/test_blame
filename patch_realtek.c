@@ -82895,19 +82895,6 @@ c_func
 (paren
 l_int|0x152d
 comma
-l_int|0x0763
-comma
-l_string|&quot;Diverse (CPR2000)&quot;
-comma
-id|ALC268_ACER
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x152d
-comma
 l_int|0x0771
 comma
 l_string|&quot;Quanta IL1&quot;
