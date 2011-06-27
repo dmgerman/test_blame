@@ -65151,6 +65151,11 @@ comma
 id|item
 suffix:semicolon
 "&t;&t;"
+r_int
+r_int
+id|wid_type
+suffix:semicolon
+"&t;&t;"
 multiline_comment|/* mute ADC */
 "&t;&t;"
 id|snd_hda_codec_write
@@ -65242,6 +65247,21 @@ l_int|0
 )braket
 suffix:semicolon
 "&t;&t;"
+id|wid_type
+op_assign
+id|get_wcaps_type
+c_func
+(paren
+id|get_wcaps
+c_func
+(paren
+id|codec
+comma
+id|nid
+)paren
+)paren
+suffix:semicolon
+"&t;&t;"
 r_for
 c_loop
 (paren
@@ -65326,20 +65346,22 @@ suffix:semicolon
 "&t;&t;&t;"
 )brace
 "&t;&t;&t;"
-multiline_comment|/* check if we have a selector or mixer&n;&t;&t;&t; * we could check for the widget type instead, but&n;&t;&t;&t; * just check for Amp-In presence (in case of mixer&n;&t;&t;&t; * without amp-in there is something wrong, this&n;&t;&t;&t; * function shouldn&squot;t be used or capsrc nid is wrong)&n;&t;&t;&t; */
+multiline_comment|/* initialize the mute status if mute-amp is present */
 "&t;&t;&t;"
 r_if
 c_cond
 (paren
-id|get_wcaps
+id|query_amp_caps
 c_func
 (paren
 id|codec
 comma
 id|nid
+comma
+id|HDA_INPUT
 )paren
 op_amp
-id|AC_WCAP_IN_AMP
+id|AC_AMPCAP_MUTE
 )paren
 "&t;&t;&t;&t;"
 id|snd_hda_codec_write
@@ -65359,10 +65381,14 @@ id|mute
 )paren
 suffix:semicolon
 "&t;&t;&t;"
-r_else
 r_if
 c_cond
 (paren
+id|wid_type
+op_eq
+id|AC_WID_AUD_SEL
+op_logical_and
+"&t;&t;&t;"
 id|mute
 op_ne
 id|AMP_IN_MUTE
@@ -81155,7 +81181,7 @@ comma
 id|AC_VERB_SET_AMP_GAIN_MUTE
 comma
 "&t;&t;&t;"
-id|AMP_OUT_MUTE
+id|AMP_OUT_ZERO
 )paren
 suffix:semicolon
 )brace
