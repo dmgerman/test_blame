@@ -29412,7 +29412,7 @@ id|PIN_OUT
 suffix:semicolon
 )brace
 r_void
-id|alc880_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 r_struct
@@ -30070,7 +30070,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc880_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -38829,7 +38829,6 @@ l_int|0
 )paren
 suffix:semicolon
 )brace
-macro_line|#define alc260_auto_init_analog_input&t;alc880_auto_init_analog_input
 macro_line|#define alc260_auto_init_input_src&t;alc880_auto_init_input_src
 r_int
 id|alc260_parse_auto_config
@@ -39042,7 +39041,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc260_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -63500,7 +63499,6 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * BIOS auto configuration&n; */
-macro_line|#define alc882_auto_init_analog_input&t;alc880_auto_init_analog_input
 r_void
 id|alc882_auto_init_input_src
 c_func
@@ -64452,7 +64450,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc882_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -73260,7 +73258,6 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
-macro_line|#define alc262_auto_init_analog_input&t;alc882_auto_init_analog_input
 macro_line|#define alc262_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
@@ -73296,7 +73293,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc262_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -80433,7 +80430,6 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
-macro_line|#define alc268_auto_init_analog_input&t;alc882_auto_init_analog_input
 macro_line|#define alc268_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
@@ -80476,7 +80472,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc268_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -86131,7 +86127,6 @@ suffix:semicolon
 )brace
 macro_line|#define alc269_auto_init_multi_out&t;alc268_auto_init_multi_out
 macro_line|#define alc269_auto_init_hp_out&t;&t;alc268_auto_init_hp_out
-macro_line|#define alc269_auto_init_analog_input&t;alc882_auto_init_analog_input
 macro_line|#define alc269_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
@@ -86167,7 +86162,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc269_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -94579,7 +94574,6 @@ l_int|0
 )paren
 suffix:semicolon
 )brace
-macro_line|#define alc861_auto_init_analog_input&t;alc880_auto_init_analog_input
 multiline_comment|/* parse the BIOS configuration and set up the alc_spec */
 multiline_comment|/* return 1 if successful, 0 if the proper config is not found,&n; * or a negative error code&n; */
 r_int
@@ -94889,7 +94883,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc861_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -100134,7 +100128,6 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * BIOS auto configuration&n; */
-macro_line|#define alc861vd_auto_init_analog_input&t;alc882_auto_init_analog_input
 macro_line|#define alc861vd_auto_init_input_src&t;alc882_auto_init_input_src
 macro_line|#define alc861vd_idx_to_mixer_vol(nid)&t;&t;((nid) + 0x02)
 macro_line|#define alc861vd_idx_to_mixer_switch(nid)&t;((nid) + 0x0c)
@@ -101147,7 +101140,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc861vd_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -113642,7 +113635,6 @@ l_int|0
 )paren
 suffix:semicolon
 )brace
-macro_line|#define alc662_auto_init_analog_input&t;alc882_auto_init_analog_input
 macro_line|#define alc662_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/*&n; * multi-io helper&n; */
 r_int
@@ -115090,7 +115082,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc662_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
@@ -118063,7 +118055,6 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
-macro_line|#define alc680_auto_init_analog_input&t;alc882_auto_init_analog_input
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
 id|alc680_auto_init
@@ -118098,7 +118089,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc680_auto_init_analog_input
+id|alc_auto_init_analog_input
 c_func
 (paren
 id|codec
