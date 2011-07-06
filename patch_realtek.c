@@ -21478,7 +21478,7 @@ suffix:semicolon
 macro_line|#endif
 multiline_comment|/*&n; * Analog playback callbacks&n; */
 r_int
-id|alc880_playback_pcm_open
+id|alc_playback_pcm_open
 c_func
 (paren
 r_struct
@@ -21525,7 +21525,7 @@ id|hinfo
 suffix:semicolon
 )brace
 r_int
-id|alc880_playback_pcm_prepare
+id|alc_playback_pcm_prepare
 c_func
 (paren
 r_struct
@@ -21584,7 +21584,7 @@ id|substream
 suffix:semicolon
 )brace
 r_int
-id|alc880_playback_pcm_cleanup
+id|alc_playback_pcm_cleanup
 c_func
 (paren
 r_struct
@@ -21627,7 +21627,7 @@ suffix:semicolon
 )brace
 multiline_comment|/*&n; * Digital out&n; */
 r_int
-id|alc880_dig_playback_pcm_open
+id|alc_dig_playback_pcm_open
 c_func
 (paren
 r_struct
@@ -21669,7 +21669,7 @@ id|spec-&gt;multiout
 suffix:semicolon
 )brace
 r_int
-id|alc880_dig_playback_pcm_prepare
+id|alc_dig_playback_pcm_prepare
 c_func
 (paren
 r_struct
@@ -21728,7 +21728,7 @@ id|substream
 suffix:semicolon
 )brace
 r_int
-id|alc880_dig_playback_pcm_cleanup
+id|alc_dig_playback_pcm_cleanup
 c_func
 (paren
 r_struct
@@ -21770,7 +21770,7 @@ id|spec-&gt;multiout
 suffix:semicolon
 )brace
 r_int
-id|alc880_dig_playback_pcm_close
+id|alc_dig_playback_pcm_close
 c_func
 (paren
 r_struct
@@ -21813,7 +21813,7 @@ suffix:semicolon
 )brace
 multiline_comment|/*&n; * Analog capture&n; */
 r_int
-id|alc880_alt_capture_pcm_prepare
+id|alc_alt_capture_pcm_prepare
 c_func
 (paren
 r_struct
@@ -21879,7 +21879,7 @@ l_int|0
 suffix:semicolon
 )brace
 r_int
-id|alc880_alt_capture_pcm_cleanup
+id|alc_alt_capture_pcm_cleanup
 c_func
 (paren
 r_struct
@@ -22112,7 +22112,7 @@ multiline_comment|/*&n; */
 r_const
 r_struct
 id|hda_pcm_stream
-id|alc880_pcm_analog_playback
+id|alc_pcm_analog_playback
 op_assign
 (brace
 "&t;"
@@ -22144,19 +22144,19 @@ op_assign
 dot
 id|open
 op_assign
-id|alc880_playback_pcm_open
+id|alc_playback_pcm_open
 comma
 "&t;&t;"
 dot
 id|prepare
 op_assign
-id|alc880_playback_pcm_prepare
+id|alc_playback_pcm_prepare
 comma
 "&t;&t;"
 dot
 id|cleanup
 op_assign
-id|alc880_playback_pcm_cleanup
+id|alc_playback_pcm_cleanup
 "&t;"
 )brace
 comma
@@ -22165,7 +22165,7 @@ suffix:semicolon
 r_const
 r_struct
 id|hda_pcm_stream
-id|alc880_pcm_analog_capture
+id|alc_pcm_analog_capture
 op_assign
 (brace
 "&t;"
@@ -22193,7 +22193,7 @@ suffix:semicolon
 r_const
 r_struct
 id|hda_pcm_stream
-id|alc880_pcm_analog_alt_playback
+id|alc_pcm_analog_alt_playback
 op_assign
 (brace
 "&t;"
@@ -22221,7 +22221,7 @@ suffix:semicolon
 r_const
 r_struct
 id|hda_pcm_stream
-id|alc880_pcm_analog_alt_capture
+id|alc_pcm_analog_alt_capture
 op_assign
 (brace
 "&t;"
@@ -22254,13 +22254,13 @@ op_assign
 dot
 id|prepare
 op_assign
-id|alc880_alt_capture_pcm_prepare
+id|alc_alt_capture_pcm_prepare
 comma
 "&t;&t;"
 dot
 id|cleanup
 op_assign
-id|alc880_alt_capture_pcm_cleanup
+id|alc_alt_capture_pcm_cleanup
 "&t;"
 )brace
 comma
@@ -22269,7 +22269,7 @@ suffix:semicolon
 r_const
 r_struct
 id|hda_pcm_stream
-id|alc880_pcm_digital_playback
+id|alc_pcm_digital_playback
 op_assign
 (brace
 "&t;"
@@ -22301,25 +22301,25 @@ op_assign
 dot
 id|open
 op_assign
-id|alc880_dig_playback_pcm_open
+id|alc_dig_playback_pcm_open
 comma
 "&t;&t;"
 dot
 id|close
 op_assign
-id|alc880_dig_playback_pcm_close
+id|alc_dig_playback_pcm_close
 comma
 "&t;&t;"
 dot
 id|prepare
 op_assign
-id|alc880_dig_playback_pcm_prepare
+id|alc_dig_playback_pcm_prepare
 comma
 "&t;&t;"
 dot
 id|cleanup
 op_assign
-id|alc880_dig_playback_pcm_cleanup
+id|alc_dig_playback_pcm_cleanup
 "&t;"
 )brace
 comma
@@ -22328,7 +22328,7 @@ suffix:semicolon
 r_const
 r_struct
 id|hda_pcm_stream
-id|alc880_pcm_digital_capture
+id|alc_pcm_digital_capture
 op_assign
 (brace
 "&t;"
@@ -22407,6 +22407,13 @@ op_assign
 id|spec-&gt;pcm_rec
 suffix:semicolon
 "&t;"
+r_const
+r_struct
+id|hda_pcm_stream
+op_star
+id|p
+suffix:semicolon
+"&t;"
 r_int
 id|i
 suffix:semicolon
@@ -22456,23 +22463,28 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;stream_analog_playback
+id|spec-&gt;multiout.dac_nids
+OG
+l_int|0
 )paren
 (brace
+"&t;&t;"
+id|p
+op_assign
+id|spec-&gt;stream_analog_playback
+suffix:semicolon
 "&t;&t;"
 r_if
 c_cond
 (paren
-id|snd_BUG_ON
-c_func
-(paren
 op_logical_neg
-id|spec-&gt;multiout.dac_nids
-)paren
+id|p
 )paren
 "&t;&t;&t;"
-r_return
-id|EINVAL
+id|p
+op_assign
+op_amp
+id|alc_pcm_analog_playback
 suffix:semicolon
 "&t;&t;"
 id|info-&gt;stream
@@ -22481,9 +22493,7 @@ id|SNDRV_PCM_STREAM_PLAYBACK
 )braket
 op_assign
 op_star
-(paren
-id|spec-&gt;stream_analog_playback
-)paren
+id|p
 suffix:semicolon
 "&t;&t;"
 id|info-&gt;stream
@@ -22504,23 +22514,26 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;stream_analog_capture
+id|spec-&gt;adc_nids
 )paren
 (brace
+"&t;&t;"
+id|p
+op_assign
+id|spec-&gt;stream_analog_capture
+suffix:semicolon
 "&t;&t;"
 r_if
 c_cond
 (paren
-id|snd_BUG_ON
-c_func
-(paren
 op_logical_neg
-id|spec-&gt;adc_nids
-)paren
+id|p
 )paren
 "&t;&t;&t;"
-r_return
-id|EINVAL
+id|p
+op_assign
+op_amp
+id|alc_pcm_analog_capture
 suffix:semicolon
 "&t;&t;"
 id|info-&gt;stream
@@ -22529,9 +22542,7 @@ id|SNDRV_PCM_STREAM_CAPTURE
 )braket
 op_assign
 op_star
-(paren
-id|spec-&gt;stream_analog_capture
-)paren
+id|p
 suffix:semicolon
 "&t;&t;"
 id|info-&gt;stream
@@ -22697,11 +22708,26 @@ r_if
 c_cond
 (paren
 id|spec-&gt;multiout.dig_out_nid
-op_logical_and
-"&t;&t;"
-id|spec-&gt;stream_digital_playback
 )paren
 (brace
+"&t;&t;&t;"
+id|p
+op_assign
+id|spec-&gt;stream_digital_playback
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|p
+)paren
+"&t;&t;&t;&t;"
+id|p
+op_assign
+op_amp
+id|alc_pcm_digital_playback
+suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
 (braket
@@ -22709,9 +22735,7 @@ id|SNDRV_PCM_STREAM_PLAYBACK
 )braket
 op_assign
 op_star
-(paren
-id|spec-&gt;stream_digital_playback
-)paren
+id|p
 suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
@@ -22730,11 +22754,26 @@ r_if
 c_cond
 (paren
 id|spec-&gt;dig_in_nid
-op_logical_and
-"&t;&t;"
-id|spec-&gt;stream_digital_capture
 )paren
 (brace
+"&t;&t;&t;"
+id|p
+op_assign
+id|spec-&gt;stream_digital_capture
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|p
+)paren
+"&t;&t;&t;&t;"
+id|p
+op_assign
+op_amp
+id|alc_pcm_digital_capture
+suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
 (braket
@@ -22742,9 +22781,7 @@ id|SNDRV_PCM_STREAM_CAPTURE
 )braket
 op_assign
 op_star
-(paren
-id|spec-&gt;stream_digital_capture
-)paren
+id|p
 suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
@@ -22785,20 +22822,11 @@ multiline_comment|/* Additional Analaog capture for index #2 */
 r_if
 c_cond
 (paren
-(paren
 id|spec-&gt;alt_dac_nid
-op_logical_and
-id|spec-&gt;stream_analog_alt_playback
-)paren
 op_logical_or
-"&t;"
-(paren
 id|spec-&gt;num_adc_nids
 OG
 l_int|1
-op_logical_and
-id|spec-&gt;stream_analog_alt_capture
-)paren
 )paren
 (brace
 "&t;&t;"
@@ -22826,14 +22854,31 @@ id|spec-&gt;alt_dac_nid
 )paren
 (brace
 "&t;&t;&t;"
+id|p
+op_assign
+id|spec-&gt;stream_analog_alt_playback
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|p
+)paren
+"&t;&t;&t;&t;"
+id|p
+op_assign
+op_amp
+id|alc_pcm_analog_alt_playback
+suffix:semicolon
+"&t;&t;&t;"
 id|info-&gt;stream
 (braket
 id|SNDRV_PCM_STREAM_PLAYBACK
 )braket
 op_assign
-"&t;&t;&t;&t;"
 op_star
-id|spec-&gt;stream_analog_alt_playback
+id|p
 suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
@@ -22878,19 +22923,34 @@ c_cond
 id|spec-&gt;num_adc_nids
 OG
 l_int|1
-op_logical_and
-id|spec-&gt;stream_analog_alt_capture
 )paren
 (brace
+"&t;&t;&t;"
+id|p
+op_assign
+id|spec-&gt;stream_analog_alt_capture
+suffix:semicolon
+"&t;&t;&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|p
+)paren
+"&t;&t;&t;&t;"
+id|p
+op_assign
+op_amp
+id|alc_pcm_analog_alt_capture
+suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
 (braket
 id|SNDRV_PCM_STREAM_CAPTURE
 )braket
 op_assign
-"&t;&t;&t;&t;"
 op_star
-id|spec-&gt;stream_analog_alt_capture
+id|p
 suffix:semicolon
 "&t;&t;&t;"
 id|info-&gt;stream
@@ -31642,36 +31702,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc880_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc880_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_alt_capture
-op_assign
-op_amp
-id|alc880_pcm_analog_alt_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc880_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc880_pcm_digital_capture
-suffix:semicolon
-"&t;"
 r_if
 c_cond
 (paren
@@ -38029,10 +38059,6 @@ multiline_comment|/* HP-pin pin */
 )brace
 suffix:semicolon
 macro_line|#endif
-macro_line|#define alc260_pcm_analog_playback&t;alc880_pcm_analog_alt_playback
-macro_line|#define alc260_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc260_pcm_digital_playback&t;alc880_pcm_digital_playback
-macro_line|#define alc260_pcm_digital_capture&t;alc880_pcm_digital_capture
 multiline_comment|/*&n; * for BIOS auto-configuration&n; */
 multiline_comment|/* convert from pin to volume-mixer widget */
 id|hda_nid_t
@@ -40760,36 +40786,6 @@ id|alc260_presets
 id|board_config
 )braket
 )paren
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc260_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc260_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_alt_capture
-op_assign
-op_amp
-id|alc260_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc260_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc260_pcm_digital_capture
 suffix:semicolon
 "&t;"
 r_if
@@ -56182,11 +56178,6 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc882_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identical with ALC880 */
-macro_line|#define alc882_pcm_analog_playback&t;alc880_pcm_analog_playback
-macro_line|#define alc882_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc882_pcm_digital_playback&t;alc880_pcm_digital_playback
-macro_line|#define alc882_pcm_digital_capture&t;alc880_pcm_digital_capture
 r_const
 id|hda_nid_t
 id|alc883_slave_dig_outs
@@ -64767,40 +64758,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc882_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc882_pcm_analog_capture
-suffix:semicolon
-"&t;"
-multiline_comment|/* FIXME: setup DAC5 */
-"&t;"
-multiline_comment|/*spec-&gt;stream_analog_alt_playback = &amp;alc880_pcm_analog_alt_playback;*/
-"&t;"
-id|spec-&gt;stream_analog_alt_capture
-op_assign
-op_amp
-id|alc880_pcm_analog_alt_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc882_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc882_pcm_digital_capture
-suffix:semicolon
-"&t;"
 r_if
 c_cond
 (paren
@@ -72749,11 +72706,6 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc262_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identical with ALC880 */
-macro_line|#define alc262_pcm_analog_playback&t;alc880_pcm_analog_playback
-macro_line|#define alc262_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc262_pcm_digital_playback&t;alc880_pcm_digital_playback
-macro_line|#define alc262_pcm_digital_capture&t;alc880_pcm_digital_capture
 multiline_comment|/*&n; * BIOS auto configuration&n; */
 r_int
 id|alc262_parse_auto_config
@@ -75757,30 +75709,6 @@ id|alc262_presets
 id|board_config
 )braket
 )paren
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc262_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc262_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc262_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc262_pcm_digital_capture
 suffix:semicolon
 "&t;"
 r_if
@@ -79760,11 +79688,6 @@ id|dac_vol2
 )paren
 suffix:semicolon
 )brace
-multiline_comment|/* pcm configuration: identical with ALC880 */
-macro_line|#define alc268_pcm_analog_playback&t;alc880_pcm_analog_playback
-macro_line|#define alc268_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc268_pcm_analog_alt_capture&t;alc880_pcm_analog_alt_capture
-macro_line|#define alc268_pcm_digital_playback&t;alc880_pcm_digital_playback
 multiline_comment|/*&n; * BIOS auto configuration&n; */
 r_int
 id|alc268_parse_auto_config
@@ -81745,30 +81668,6 @@ id|alc268_presets
 id|board_config
 )braket
 )paren
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc268_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc268_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_alt_capture
-op_assign
-op_amp
-id|alc268_pcm_analog_alt_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc268_pcm_digital_playback
 suffix:semicolon
 "&t;"
 id|has_beep
@@ -84928,11 +84827,6 @@ macro_line|#define alc269_auto_create_multi_out_ctls &bslash;&n;&t;alc268_auto_c
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc269_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identical with ALC880 */
-macro_line|#define alc269_pcm_analog_playback&t;alc880_pcm_analog_playback
-macro_line|#define alc269_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc269_pcm_digital_playback&t;alc880_pcm_digital_playback
-macro_line|#define alc269_pcm_digital_capture&t;alc880_pcm_digital_capture
 r_const
 r_struct
 id|hda_pcm_stream
@@ -84975,19 +84869,19 @@ op_assign
 dot
 id|open
 op_assign
-id|alc880_playback_pcm_open
+id|alc_playback_pcm_open
 comma
 "&t;&t;"
 dot
 id|prepare
 op_assign
-id|alc880_playback_pcm_prepare
+id|alc_playback_pcm_prepare
 comma
 "&t;&t;"
 dot
 id|cleanup
 op_assign
-id|alc880_playback_pcm_cleanup
+id|alc_playback_pcm_cleanup
 "&t;"
 )brace
 comma
@@ -89154,57 +89048,6 @@ id|alc269_44k_pcm_analog_capture
 suffix:semicolon
 "&t;"
 )brace
-r_else
-r_if
-c_cond
-(paren
-id|spec-&gt;dual_adc_switch
-)paren
-(brace
-"&t;&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc269_pcm_analog_playback
-suffix:semicolon
-"&t;&t;"
-multiline_comment|/* switch ADC dynamically */
-"&t;&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|dualmic_pcm_analog_capture
-suffix:semicolon
-"&t;"
-)brace
-r_else
-(brace
-"&t;&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc269_pcm_analog_playback
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc269_pcm_analog_capture
-suffix:semicolon
-"&t;"
-)brace
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc269_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc269_pcm_digital_capture
-suffix:semicolon
 "&t;"
 r_if
 c_cond
@@ -92852,11 +92695,6 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-multiline_comment|/* pcm configuration: identical with ALC880 */
-macro_line|#define alc861_pcm_analog_playback&t;alc880_pcm_analog_playback
-macro_line|#define alc861_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc861_pcm_digital_playback&t;alc880_pcm_digital_playback
-macro_line|#define alc861_pcm_digital_capture&t;alc880_pcm_digital_capture
 macro_line|#define ALC861_DIGOUT_NID&t;0x07
 r_const
 r_struct
@@ -95789,30 +95627,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc861_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc861_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc861_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc861_pcm_digital_capture
-suffix:semicolon
-"&t;"
 r_if
 c_cond
 (paren
@@ -98560,11 +98374,6 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc861vd_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identical with ALC880 */
-macro_line|#define alc861vd_pcm_analog_playback&t;alc880_pcm_analog_playback
-macro_line|#define alc861vd_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc861vd_pcm_digital_playback&t;alc880_pcm_digital_playback
-macro_line|#define alc861vd_pcm_digital_capture&t;alc880_pcm_digital_capture
 multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
@@ -101018,30 +100827,6 @@ id|alc660vd_eapd_verbs
 suffix:semicolon
 "&t;"
 )brace
-"&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc861vd_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc861vd_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc861vd_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc861vd_pcm_digital_capture
-suffix:semicolon
 "&t;"
 r_if
 c_cond
@@ -107559,11 +107344,6 @@ suffix:semicolon
 macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 macro_line|#define alc662_loopbacks&t;alc880_loopbacks
 macro_line|#endif
-multiline_comment|/* pcm configuration: identical with ALC880 */
-macro_line|#define alc662_pcm_analog_playback&t;alc880_pcm_analog_playback
-macro_line|#define alc662_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc662_pcm_digital_playback&t;alc880_pcm_digital_playback
-macro_line|#define alc662_pcm_digital_capture&t;alc880_pcm_digital_capture
 multiline_comment|/*&n; * configuration and preset&n; */
 r_const
 r_char
@@ -115348,30 +115128,6 @@ id|board_config
 )paren
 suffix:semicolon
 "&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc662_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc662_pcm_analog_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc662_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc662_pcm_digital_capture
-suffix:semicolon
-"&t;"
 r_if
 c_cond
 (paren
@@ -117312,12 +117068,6 @@ id|PIN_OUT
 )paren
 suffix:semicolon
 )brace
-multiline_comment|/* pcm configuration: identical with ALC880 */
-macro_line|#define alc680_pcm_analog_playback&t;alc880_pcm_analog_playback
-macro_line|#define alc680_pcm_analog_capture&t;alc880_pcm_analog_capture
-macro_line|#define alc680_pcm_analog_alt_capture&t;alc880_pcm_analog_alt_capture
-macro_line|#define alc680_pcm_digital_playback&t;alc880_pcm_digital_playback
-macro_line|#define alc680_pcm_digital_capture&t;alc880_pcm_digital_capture
 multiline_comment|/*&n; * BIOS auto configuration&n; */
 r_int
 id|alc680_parse_auto_config
@@ -117909,30 +117659,6 @@ id|alc680_presets
 id|board_config
 )braket
 )paren
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_playback
-op_assign
-op_amp
-id|alc680_pcm_analog_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_analog_capture
-op_assign
-op_amp
-id|alc680_pcm_analog_auto_capture
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_playback
-op_assign
-op_amp
-id|alc680_pcm_digital_playback
-suffix:semicolon
-"&t;"
-id|spec-&gt;stream_digital_capture
-op_assign
-op_amp
-id|alc680_pcm_digital_capture
 suffix:semicolon
 "&t;"
 r_if
