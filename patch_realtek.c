@@ -29753,155 +29753,6 @@ suffix:semicolon
 "&t;"
 )brace
 )brace
-r_void
-id|alc880_auto_init_input_src
-c_func
-(paren
-r_struct
-id|hda_codec
-op_star
-id|codec
-)paren
-(brace
-"&t;"
-r_struct
-id|alc_spec
-op_star
-id|spec
-op_assign
-id|codec-&gt;spec
-suffix:semicolon
-"&t;"
-r_int
-id|c
-suffix:semicolon
-"&t;"
-r_for
-c_loop
-(paren
-id|c
-op_assign
-l_int|0
-suffix:semicolon
-id|c
-OL
-id|spec-&gt;num_adc_nids
-suffix:semicolon
-id|c
-op_increment
-)paren
-(brace
-"&t;&t;"
-r_int
-r_int
-id|mux_idx
-suffix:semicolon
-"&t;&t;"
-r_const
-r_struct
-id|hda_input_mux
-op_star
-id|imux
-suffix:semicolon
-"&t;&t;"
-id|mux_idx
-op_assign
-id|c
-op_ge
-id|spec-&gt;num_mux_defs
-ques
-c_cond
-l_int|0
-suffix:colon
-id|c
-suffix:semicolon
-"&t;&t;"
-id|imux
-op_assign
-op_amp
-id|spec-&gt;input_mux
-(braket
-id|mux_idx
-)braket
-suffix:semicolon
-"&t;&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|imux-&gt;num_items
-op_logical_and
-id|mux_idx
-OG
-l_int|0
-)paren
-"&t;&t;&t;"
-id|imux
-op_assign
-op_amp
-id|spec-&gt;input_mux
-(braket
-l_int|0
-)braket
-suffix:semicolon
-"&t;&t;"
-r_if
-c_cond
-(paren
-id|imux
-)paren
-"&t;&t;&t;"
-id|snd_hda_codec_write
-c_func
-(paren
-id|codec
-comma
-id|spec-&gt;adc_nids
-(braket
-id|c
-)braket
-comma
-l_int|0
-comma
-"&t;&t;&t;&t;&t;"
-id|AC_VERB_SET_CONNECT_SEL
-comma
-"&t;&t;&t;&t;&t;"
-id|imux-&gt;items
-(braket
-l_int|0
-)braket
-dot
-id|index
-)paren
-suffix:semicolon
-"&t;&t;"
-id|snd_hda_codec_write
-c_func
-(paren
-id|codec
-comma
-id|spec-&gt;adc_nids
-(braket
-id|c
-)braket
-comma
-l_int|0
-comma
-"&t;&t;&t;&t;"
-id|AC_VERB_SET_AMP_GAIN_MUTE
-comma
-"&t;&t;&t;&t;"
-id|AMP_IN_MUTE
-c_func
-(paren
-l_int|0
-)paren
-)paren
-suffix:semicolon
-"&t;"
-)brace
-)brace
 r_int
 id|alc_auto_add_multi_channel_mode
 c_func
@@ -29926,6 +29777,16 @@ op_star
 suffix:semicolon
 r_void
 id|alc_remove_invalid_adc_nids
+c_func
+(paren
+r_struct
+id|hda_codec
+op_star
+id|codec
+)paren
+suffix:semicolon
+r_void
+id|alc_auto_init_input_src
 c_func
 (paren
 r_struct
@@ -30259,7 +30120,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc880_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 id|codec
@@ -38908,7 +38769,6 @@ l_int|0
 )paren
 suffix:semicolon
 )brace
-macro_line|#define alc260_auto_init_input_src&t;alc880_auto_init_input_src
 r_int
 id|alc260_parse_auto_config
 c_func
@@ -39141,7 +39001,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc260_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 id|codec
@@ -63534,7 +63394,7 @@ comma
 suffix:semicolon
 multiline_comment|/*&n; * BIOS auto configuration&n; */
 r_void
-id|alc882_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 r_struct
@@ -63556,6 +63416,15 @@ r_int
 id|c
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;dual_adc_switch
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
 r_for
 c_loop
 (paren
@@ -63574,11 +63443,6 @@ op_increment
 "&t;&t;"
 id|hda_nid_t
 id|nid
-op_assign
-id|spec-&gt;capsrc_nids
-(braket
-id|c
-)braket
 suffix:semicolon
 "&t;&t;"
 r_int
@@ -63606,6 +63470,23 @@ suffix:semicolon
 r_int
 r_int
 id|wid_type
+suffix:semicolon
+"&t;&t;"
+id|nid
+op_assign
+id|spec-&gt;capsrc_nids
+ques
+c_cond
+"&t;&t;&t;"
+id|spec-&gt;capsrc_nids
+(braket
+id|c
+)braket
+suffix:colon
+id|spec-&gt;adc_nids
+(braket
+id|c
+)braket
 suffix:semicolon
 "&t;&t;"
 multiline_comment|/* mute ADC */
@@ -64505,7 +64386,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc882_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 id|codec
@@ -73121,7 +73002,6 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
-macro_line|#define alc262_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
 id|alc262_auto_init
@@ -73163,7 +73043,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc262_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 id|codec
@@ -80100,7 +79980,7 @@ suffix:semicolon
 "&t;"
 id|spec-&gt;num_mux_defs
 op_assign
-l_int|2
+l_int|1
 suffix:semicolon
 "&t;"
 id|spec-&gt;input_mux
@@ -80166,7 +80046,6 @@ r_return
 l_int|1
 suffix:semicolon
 )brace
-macro_line|#define alc268_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
 id|alc268_auto_init
@@ -80215,7 +80094,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc268_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 id|codec
@@ -85738,7 +85617,6 @@ suffix:semicolon
 )brace
 macro_line|#define alc269_auto_init_multi_out&t;alc268_auto_init_multi_out
 macro_line|#define alc269_auto_init_hp_out&t;&t;alc268_auto_init_hp_out
-macro_line|#define alc269_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/* init callback for auto-configuration model -- overriding the default init */
 r_void
 id|alc269_auto_init
@@ -85780,14 +85658,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;dual_adc_switch
-)paren
-"&t;&t;"
-id|alc269_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 id|codec
@@ -99700,7 +99571,6 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * BIOS auto configuration&n; */
-macro_line|#define alc861vd_auto_init_input_src&t;alc882_auto_init_input_src
 macro_line|#define alc861vd_idx_to_mixer_vol(nid)&t;&t;((nid) + 0x02)
 macro_line|#define alc861vd_idx_to_mixer_switch(nid)&t;((nid) + 0x0c)
 multiline_comment|/* add playback controls from the parsed DAC table */
@@ -100733,7 +100603,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc861vd_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 id|codec
@@ -113209,7 +113079,6 @@ l_int|0
 )paren
 suffix:semicolon
 )brace
-macro_line|#define alc662_auto_init_input_src&t;alc882_auto_init_input_src
 multiline_comment|/*&n; * multi-io helper&n; */
 r_int
 id|alc_auto_fill_multi_ios
@@ -114677,7 +114546,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc662_auto_init_input_src
+id|alc_auto_init_input_src
 c_func
 (paren
 id|codec
