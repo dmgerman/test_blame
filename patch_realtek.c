@@ -9747,6 +9747,13 @@ op_increment
 )paren
 (brace
 "&t;&t;"
+id|hda_nid_t
+id|conn
+(braket
+l_int|4
+)braket
+suffix:semicolon
+"&t;&t;"
 id|err
 op_assign
 id|snd_hda_get_connections
@@ -9761,10 +9768,13 @@ id|i
 )braket
 comma
 "&t;&t;&t;&t;&t;"
-op_amp
-id|dig_nid
+id|conn
 comma
-l_int|1
+id|ARRAY_SIZE
+c_func
+(paren
+id|conn
+)paren
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -9778,6 +9788,15 @@ l_int|0
 "&t;&t;&t;"
 r_continue
 suffix:semicolon
+"&t;&t;"
+id|dig_nid
+op_assign
+id|conn
+(braket
+l_int|0
+)braket
+suffix:semicolon
+multiline_comment|/* assume the first element is audio-out */
 "&t;&t;"
 r_if
 c_cond
