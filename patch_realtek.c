@@ -729,6 +729,87 @@ suffix:semicolon
 )brace
 suffix:semicolon
 macro_line|#define ALC_MODEL_AUTO&t;&t;0&t;/* common for all chips */
+r_bool
+id|check_amp_caps
+c_func
+(paren
+r_struct
+id|hda_codec
+op_star
+id|codec
+comma
+id|hda_nid_t
+id|nid
+comma
+"&t;&t;&t;"
+r_int
+id|dir
+comma
+r_int
+r_int
+id|bits
+)paren
+(brace
+"&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|nid
+)paren
+"&t;&t;"
+r_return
+l_bool|false
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|get_wcaps
+c_func
+(paren
+id|codec
+comma
+id|nid
+)paren
+op_amp
+(paren
+l_int|1
+op_lshift
+(paren
+id|dir
+op_plus
+l_int|1
+)paren
+)paren
+)paren
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|query_amp_caps
+c_func
+(paren
+id|codec
+comma
+id|nid
+comma
+id|dir
+)paren
+op_amp
+id|bits
+)paren
+"&t;&t;&t;"
+r_return
+l_bool|true
+suffix:semicolon
+"&t;"
+r_return
+l_bool|false
+suffix:semicolon
+)brace
+macro_line|#define nid_has_mute(codec, nid, dir) &bslash;&n;&t;check_amp_caps(codec, nid, dir, AC_AMPCAP_MUTE)
+macro_line|#define nid_has_volume(codec, nid, dir) &bslash;&n;&t;check_amp_caps(codec, nid, dir, AC_AMPCAP_NUM_STEPS)
 multiline_comment|/*&n; * input MUX handling&n; */
 r_int
 id|alc_mux_enum_info
@@ -13187,6 +13268,20 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* unmute pin */
 "&t;"
+r_if
+c_cond
+(paren
+id|nid_has_mute
+c_func
+(paren
+id|codec
+comma
+id|nid
+comma
+id|HDA_OUTPUT
+)paren
+)paren
+"&t;&t;"
 id|snd_hda_codec_write
 c_func
 (paren
@@ -14699,8 +14794,6 @@ id|val
 suffix:semicolon
 )brace
 macro_line|#define alc_auto_add_stereo_sw(codec, pfx, cidx, nid)&t;&bslash;&n;&t;alc_auto_add_sw_ctl(codec, pfx, cidx, nid, 3)
-macro_line|#define nid_has_mute(codec, nid, dir) &bslash;&n;&t;(query_amp_caps(codec, nid, dir) &amp; AC_AMPCAP_MUTE)
-macro_line|#define nid_has_volume(codec, nid, dir) &bslash;&n;&t;(query_amp_caps(codec, nid, dir) &amp; AC_AMPCAP_NUM_STEPS)
 id|hda_nid_t
 id|alc_look_for_out_mute_nid
 c_func
@@ -17429,7 +17522,7 @@ multiline_comment|/* mute ADC */
 r_if
 c_cond
 (paren
-id|query_amp_caps
+id|nid_has_mute
 c_func
 (paren
 id|codec
@@ -17438,8 +17531,6 @@ id|nid
 comma
 id|HDA_INPUT
 )paren
-op_amp
-id|AC_AMPCAP_MUTE
 )paren
 (brace
 "&t;&t;"
@@ -17490,7 +17581,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|query_amp_caps
+id|nid_has_mute
 c_func
 (paren
 id|codec
@@ -17499,8 +17590,6 @@ id|nid
 comma
 id|HDA_OUTPUT
 )paren
-op_amp
-id|AC_AMPCAP_MUTE
 )paren
 "&t;&t;"
 id|snd_hda_codec_write
@@ -18185,8 +18274,7 @@ r_if
 c_cond
 (paren
 op_logical_neg
-(paren
-id|query_amp_caps
+id|nid_has_volume
 c_func
 (paren
 id|codec
@@ -18197,10 +18285,6 @@ l_int|0
 )braket
 comma
 id|HDA_INPUT
-)paren
-op_amp
-"&t;"
-id|AC_AMPCAP_NUM_STEPS
 )paren
 )paren
 (brace
@@ -18220,8 +18304,7 @@ r_if
 c_cond
 (paren
 op_logical_neg
-(paren
-id|query_amp_caps
+id|nid_has_volume
 c_func
 (paren
 id|codec
@@ -18232,10 +18315,6 @@ l_int|0
 )braket
 comma
 id|HDA_OUTPUT
-)paren
-op_amp
-"&t;&t;"
-id|AC_AMPCAP_NUM_STEPS
 )paren
 )paren
 "&t;&t;&t;"
