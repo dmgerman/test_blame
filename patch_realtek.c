@@ -4828,7 +4828,7 @@ id|imux-&gt;num_items
 )paren
 "&t;&t;&t;"
 r_return
-l_bool|false
+l_bool|true
 suffix:semicolon
 multiline_comment|/* no ADC-switch is needed */
 "&t;"
