@@ -14222,9 +14222,11 @@ suffix:semicolon
 id|again
 suffix:colon
 "&t;"
+multiline_comment|/* set num_dacs once to full for alc_auto_look_for_dac() */
+"&t;"
 id|spec-&gt;multiout.num_dacs
 op_assign
-l_int|0
+id|cfg-&gt;line_outs
 suffix:semicolon
 "&t;"
 id|spec-&gt;multiout.hp_nid
@@ -14428,6 +14430,13 @@ suffix:semicolon
 )brace
 "&t;"
 )brace
+"&t;"
+multiline_comment|/* re-count num_dacs and squash invalid entries */
+"&t;"
+id|spec-&gt;multiout.num_dacs
+op_assign
+l_int|0
+suffix:semicolon
 "&t;"
 r_for
 c_loop
