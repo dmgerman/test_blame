@@ -11790,7 +11790,7 @@ l_int|0
 suffix:semicolon
 )brace
 macro_line|#endif
-macro_line|#ifdef SND_HDA_NEEDS_RESUME
+macro_line|#ifdef CONFIG_PM
 r_int
 id|alc_resume
 c_func
@@ -11884,7 +11884,7 @@ id|unsol_event
 op_assign
 id|alc_unsol_event
 comma
-macro_line|#ifdef SND_HDA_NEEDS_RESUME
+macro_line|#ifdef CONFIG_PM
 "&t;"
 dot
 id|resume
@@ -22796,7 +22796,7 @@ suffix:semicolon
 "&t;"
 )brace
 )brace
-macro_line|#ifdef SND_HDA_NEEDS_RESUME
+macro_line|#ifdef CONFIG_PM
 r_int
 id|alc269_resume
 c_func
@@ -22945,7 +22945,7 @@ r_return
 l_int|0
 suffix:semicolon
 )brace
-macro_line|#endif /* SND_HDA_NEEDS_RESUME */
+macro_line|#endif /* CONFIG_PM */
 r_void
 id|alc269_fixup_hweq
 c_func
@@ -24712,7 +24712,7 @@ id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
 suffix:semicolon
-macro_line|#ifdef SND_HDA_NEEDS_RESUME
+macro_line|#ifdef CONFIG_PM
 "&t;"
 id|codec-&gt;patch_ops.resume
 op_assign
