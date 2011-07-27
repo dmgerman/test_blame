@@ -9375,6 +9375,8 @@ r_if
 c_cond
 (paren
 id|spec-&gt;cap_mixer
+op_logical_and
+id|spec-&gt;adc_nids
 )paren
 (brace
 "&t;&t;"
@@ -19358,8 +19360,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -19941,8 +19941,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -20728,8 +20726,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -21445,8 +21441,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -22236,8 +22230,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -24587,8 +24579,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -25219,8 +25209,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -25834,8 +25822,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -26914,8 +26900,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
@@ -27556,8 +27540,6 @@ id|spec-&gt;no_analog
 op_logical_and
 op_logical_neg
 id|spec-&gt;adc_nids
-op_logical_and
-id|spec-&gt;input_mux
 )paren
 (brace
 "&t;&t;"
