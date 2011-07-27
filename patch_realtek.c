@@ -4423,6 +4423,11 @@ id|cfg-&gt;speaker_pins
 (braket
 l_int|0
 )braket
+op_logical_and
+"&t;"
+id|cfg-&gt;line_out_type
+op_eq
+id|AUTO_PIN_SPEAKER_OUT
 )paren
 (brace
 "&t;&t;"
@@ -4456,6 +4461,11 @@ id|cfg-&gt;hp_pins
 (braket
 l_int|0
 )braket
+op_logical_and
+"&t;"
+id|cfg-&gt;line_out_type
+op_eq
+id|AUTO_PIN_HP_OUT
 )paren
 (brace
 "&t;&t;"
@@ -4569,6 +4579,12 @@ c_cond
 id|spec-&gt;automute
 op_logical_and
 id|cfg-&gt;line_out_pins
+(braket
+l_int|0
+)braket
+op_logical_and
+"&t;"
+id|cfg-&gt;speaker_pins
 (braket
 l_int|0
 )braket
