@@ -21970,7 +21970,7 @@ id|ALC268_MODEL_LAST
 comma
 id|alc268_models
 comma
-id|alc268_ssid_cfg_tbl
+l_int|NULL
 )paren
 suffix:semicolon
 "&t;"
