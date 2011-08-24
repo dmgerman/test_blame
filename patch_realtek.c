@@ -15545,6 +15545,15 @@ c_cond
 (paren
 op_logical_neg
 id|name
+op_logical_or
+op_logical_neg
+id|strcmp
+c_func
+(paren
+id|name
+comma
+l_string|&quot;CLFE&quot;
+)paren
 )paren
 (brace
 "&t;&t;&t;"
