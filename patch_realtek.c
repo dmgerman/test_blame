@@ -2742,6 +2742,25 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
+multiline_comment|/* check LO jack only when it&squot;s different from HP */
+"&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;autocfg.line_out_pins
+(braket
+l_int|0
+)braket
+op_eq
+id|spec-&gt;autocfg.hp_pins
+(braket
+l_int|0
+)braket
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
 id|spec-&gt;line_jack_present
 op_assign
 "&t;&t;"
