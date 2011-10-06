@@ -19975,9 +19975,10 @@ id|cfg-&gt;line_out_type
 op_eq
 id|AUTO_PIN_SPEAKER_OUT
 op_logical_and
+"&t;"
+id|cfg-&gt;line_outs
+op_le
 id|cfg-&gt;hp_outs
-OG
-l_int|0
 )paren
 (brace
 "&t;&t;"
