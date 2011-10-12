@@ -17213,7 +17213,7 @@ l_int|0
 suffix:semicolon
 id|i
 OL
-id|spec-&gt;autocfg.speaker_outs
+id|spec-&gt;autocfg.hp_outs
 suffix:semicolon
 id|i
 op_increment
