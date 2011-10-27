@@ -9,6 +9,7 @@ macro_line|#include &lt;sound/jack.h&gt;
 macro_line|#include &quot;hda_codec.h&quot;
 macro_line|#include &quot;hda_local.h&quot;
 macro_line|#include &quot;hda_beep.h&quot;
+macro_line|#include &quot;hda_jack.h&quot;
 multiline_comment|/* unsol event tags */
 macro_line|#define ALC_FRONT_EVENT&t;&t;0x01
 macro_line|#define ALC_DCVOL_EVENT&t;&t;0x02
@@ -3230,6 +3231,14 @@ op_rshift_assign
 l_int|26
 suffix:semicolon
 "&t;"
+id|snd_hda_jack_set_dirty_all
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+multiline_comment|/* FIXME: to be more fine-grained */
+"&t;"
 r_switch
 c_cond
 (paren
@@ -4808,21 +4817,13 @@ id|nid
 )paren
 suffix:semicolon
 "&t;&t;"
-id|snd_hda_codec_write_cache
+id|snd_hda_jack_detect_enable
 c_func
 (paren
 id|codec
 comma
 id|nid
 comma
-l_int|0
-comma
-"&t;&t;&t;&t;"
-id|AC_VERB_SET_UNSOLICITED_ENABLE
-comma
-"&t;&t;&t;&t;"
-id|AC_USRSP_EN
-op_or
 id|ALC_HP_EVENT
 )paren
 suffix:semicolon
@@ -4903,21 +4904,14 @@ id|nid
 )paren
 suffix:semicolon
 "&t;&t;&t;&t;"
-id|snd_hda_codec_write_cache
+id|snd_hda_jack_detect_enable
 c_func
 (paren
 id|codec
 comma
 id|nid
 comma
-l_int|0
-comma
-"&t;&t;&t;&t;&t;&t;"
-id|AC_VERB_SET_UNSOLICITED_ENABLE
-comma
-"&t;&t;&t;&t;&t;&t;"
-id|AC_USRSP_EN
-op_or
+"&t;&t;&t;&t;&t;&t;&t;"
 id|ALC_FRONT_EVENT
 )paren
 suffix:semicolon
@@ -5622,21 +5616,13 @@ multiline_comment|/* no corresponding imux */
 "&t;"
 )brace
 "&t;"
-id|snd_hda_codec_write_cache
+id|snd_hda_jack_detect_enable
 c_func
 (paren
 id|codec
 comma
 id|spec-&gt;ext_mic_pin
 comma
-l_int|0
-comma
-"&t;&t;&t;&t;"
-id|AC_VERB_SET_UNSOLICITED_ENABLE
-comma
-"&t;&t;&t;&t;"
-id|AC_USRSP_EN
-op_or
 id|ALC_MIC_EVENT
 )paren
 suffix:semicolon
@@ -5647,21 +5633,14 @@ c_cond
 id|spec-&gt;dock_mic_pin
 )paren
 "&t;&t;"
-id|snd_hda_codec_write_cache
+id|snd_hda_jack_detect_enable
 c_func
 (paren
 id|codec
 comma
 id|spec-&gt;dock_mic_pin
 comma
-l_int|0
-comma
-"&t;&t;&t;&t;"
-id|AC_VERB_SET_UNSOLICITED_ENABLE
-comma
-"&t;&t;&t;&t;"
-id|AC_USRSP_EN
-op_or
+"&t;&t;&t;&t;&t;"
 id|ALC_MIC_EVENT
 )paren
 suffix:semicolon
