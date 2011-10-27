@@ -711,6 +711,14 @@ l_int|1
 suffix:semicolon
 multiline_comment|/* HP/Mic-in sharing */
 "&t;"
+r_int
+r_int
+id|use_jack_tbl
+suffix:colon
+l_int|1
+suffix:semicolon
+multiline_comment|/* 1 for model=auto */
+"&t;"
 multiline_comment|/* auto-mute control */
 "&t;"
 r_int
@@ -3211,6 +3219,14 @@ id|res
 )paren
 (brace
 "&t;"
+r_struct
+id|alc_spec
+op_star
+id|spec
+op_assign
+id|codec-&gt;spec
+suffix:semicolon
+"&t;"
 r_if
 c_cond
 (paren
@@ -3231,13 +3247,22 @@ op_rshift_assign
 l_int|26
 suffix:semicolon
 "&t;"
-id|snd_hda_jack_set_dirty_all
+r_if
+c_cond
+(paren
+id|spec-&gt;use_jack_tbl
+)paren
+"&t;&t;"
+id|res
+op_assign
+id|snd_hda_jack_get_action
 c_func
 (paren
 id|codec
+comma
+id|res
 )paren
 suffix:semicolon
-multiline_comment|/* FIXME: to be more fine-grained */
 "&t;"
 r_switch
 c_cond
@@ -21153,6 +21178,11 @@ op_star
 id|spec
 op_assign
 id|codec-&gt;spec
+suffix:semicolon
+"&t;"
+id|spec-&gt;use_jack_tbl
+op_assign
+l_int|1
 suffix:semicolon
 "&t;"
 id|alc_auto_init_multi_out
