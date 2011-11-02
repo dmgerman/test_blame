@@ -13272,12 +13272,6 @@ id|spec-&gt;private_adc_nids
 )paren
 suffix:semicolon
 "&t;"
-r_bool
-id|indep_capsrc
-op_assign
-l_bool|false
-suffix:semicolon
-"&t;"
 r_int
 id|i
 comma
@@ -13436,11 +13430,6 @@ op_assign
 id|src
 suffix:semicolon
 "&t;&t;&t;&t;"
-id|indep_capsrc
-op_assign
-l_bool|true
-suffix:semicolon
-"&t;&t;&t;&t;"
 r_break
 suffix:semicolon
 "&t;&t;&t;"
@@ -13475,11 +13464,6 @@ id|nums
 )braket
 op_assign
 id|src
-suffix:semicolon
-"&t;&t;&t;&t;"
-id|indep_capsrc
-op_assign
-l_bool|true
 suffix:semicolon
 "&t;&t;&t;&t;"
 r_break
