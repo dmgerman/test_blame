@@ -12269,13 +12269,6 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|snd_hda_input_jack_free
-c_func
-(paren
-id|codec
-)paren
-suffix:semicolon
-"&t;"
 id|alc_free_kctls
 c_func
 (paren
