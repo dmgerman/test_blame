@@ -3,7 +3,6 @@ macro_line|#include &lt;linux/init.h&gt;
 macro_line|#include &lt;linux/delay.h&gt;
 macro_line|#include &lt;linux/slab.h&gt;
 macro_line|#include &lt;linux/pci.h&gt;
-macro_line|#include &lt;linux/module.h&gt;
 macro_line|#include &lt;sound/core.h&gt;
 macro_line|#include &lt;sound/jack.h&gt;
 macro_line|#include &quot;hda_codec.h&quot;
@@ -11168,6 +11167,10 @@ op_star
 id|p
 suffix:semicolon
 "&t;"
+r_bool
+id|have_multi_adcs
+suffix:semicolon
+"&t;"
 r_int
 id|i
 suffix:semicolon
@@ -11588,6 +11591,32 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* If the use of more than one ADC is requested for the current&n;&t; * model, configure a second analog capture-only PCM.&n;&t; */
 "&t;"
+id|have_multi_adcs
+op_assign
+(paren
+id|spec-&gt;num_adc_nids
+OG
+l_int|1
+)paren
+op_logical_and
+"&t;&t;"
+op_logical_neg
+id|spec-&gt;dyn_adc_switch
+op_logical_and
+op_logical_neg
+id|spec-&gt;auto_mic
+op_logical_and
+"&t;&t;"
+(paren
+op_logical_neg
+id|spec-&gt;input_mux
+op_logical_or
+id|spec-&gt;input_mux-&gt;num_items
+OG
+l_int|1
+)paren
+suffix:semicolon
+"&t;"
 multiline_comment|/* Additional Analaog capture for index #2 */
 "&t;"
 r_if
@@ -11595,9 +11624,7 @@ c_cond
 (paren
 id|spec-&gt;alt_dac_nid
 op_logical_or
-id|spec-&gt;num_adc_nids
-OG
-l_int|1
+id|have_multi_adcs
 )paren
 (brace
 "&t;&t;"
@@ -11691,9 +11718,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|spec-&gt;num_adc_nids
-OG
-l_int|1
+id|have_multi_adcs
 )paren
 (brace
 "&t;&t;&t;"
