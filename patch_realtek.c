@@ -7964,6 +7964,8 @@ r_int
 id|i
 comma
 id|err
+comma
+id|nums
 suffix:semicolon
 "&t;"
 id|hda_nid_t
@@ -7971,6 +7973,11 @@ id|dig_nid
 suffix:semicolon
 "&t;"
 multiline_comment|/* support multiple SPDIFs; the secondary is set up as a slave */
+"&t;"
+id|nums
+op_assign
+l_int|0
+suffix:semicolon
 "&t;"
 r_for
 c_loop
@@ -8023,7 +8030,7 @@ r_if
 c_cond
 (paren
 id|err
-OL
+op_le
 l_int|0
 )paren
 "&t;&t;&t;"
@@ -8043,7 +8050,7 @@ r_if
 c_cond
 (paren
 op_logical_neg
-id|i
+id|nums
 )paren
 (brace
 "&t;&t;&t;"
@@ -8072,7 +8079,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|i
+id|nums
 op_ge
 id|ARRAY_SIZE
 c_func
@@ -8087,7 +8094,7 @@ suffix:semicolon
 "&t;&t;&t;"
 id|spec-&gt;slave_dig_outs
 (braket
-id|i
+id|nums
 l_int|1
 )braket
 op_assign
@@ -8095,6 +8102,10 @@ id|dig_nid
 suffix:semicolon
 "&t;&t;"
 )brace
+"&t;&t;"
+id|nums
+op_increment
+suffix:semicolon
 "&t;"
 )brace
 "&t;"
