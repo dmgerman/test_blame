@@ -22365,19 +22365,22 @@ multiline_comment|/*&n; * Pin config fixes&n; */
 r_enum
 (brace
 "&t;"
-id|PINFIX_ABIT_AW9D_MAX
+id|ALC882_FIXUP_ABIT_AW9D_MAX
 comma
 "&t;"
-id|PINFIX_LENOVO_Y530
+id|ALC882_FIXUP_LENOVO_Y530
 comma
 "&t;"
-id|PINFIX_PB_M5210
+id|ALC882_FIXUP_PB_M5210
 comma
 "&t;"
-id|PINFIX_ACER_ASPIRE_7736
+id|ALC882_FIXUP_ACER_ASPIRE_7736
 comma
 "&t;"
-id|PINFIX_ASUS_W90V
+id|ALC882_FIXUP_ASUS_W90V
+comma
+"&t;"
+id|ALC889_FIXUP_VAIO_TT
 comma
 )brace
 suffix:semicolon
@@ -22391,7 +22394,7 @@ op_assign
 (brace
 "&t;"
 (braket
-id|PINFIX_ABIT_AW9D_MAX
+id|ALC882_FIXUP_ABIT_AW9D_MAX
 )braket
 op_assign
 (brace
@@ -22447,7 +22450,7 @@ multiline_comment|/* clfe */
 comma
 "&t;"
 (braket
-id|PINFIX_LENOVO_Y530
+id|ALC882_FIXUP_LENOVO_Y530
 )braket
 op_assign
 (brace
@@ -22495,7 +22498,7 @@ multiline_comment|/* subwoofer */
 comma
 "&t;"
 (braket
-id|PINFIX_PB_M5210
+id|ALC882_FIXUP_PB_M5210
 )braket
 op_assign
 (brace
@@ -22536,7 +22539,7 @@ comma
 comma
 "&t;"
 (braket
-id|PINFIX_ACER_ASPIRE_7736
+id|ALC882_FIXUP_ACER_ASPIRE_7736
 )braket
 op_assign
 (brace
@@ -22557,7 +22560,7 @@ comma
 comma
 "&t;"
 (braket
-id|PINFIX_ASUS_W90V
+id|ALC882_FIXUP_ASUS_W90V
 )braket
 op_assign
 (brace
@@ -22595,6 +22598,46 @@ multiline_comment|/* fix sequence for CLFE */
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|ALC889_FIXUP_VAIO_TT
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|ALC_FIXUP_PINS
+comma
+"&t;&t;"
+dot
+id|v.pins
+op_assign
+(paren
+r_const
+r_struct
+id|alc_pincfg
+(braket
+)braket
+)paren
+(brace
+"&t;&t;&t;"
+(brace
+l_int|0x17
+comma
+l_int|0x90170111
+)brace
+comma
+multiline_comment|/* hidden surround speaker */
+"&t;&t;&t;"
+(brace
+)brace
+"&t;&t;"
+)brace
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_const
@@ -22615,7 +22658,7 @@ l_int|0x0155
 comma
 l_string|&quot;Packard-Bell M5120&quot;
 comma
-id|PINFIX_PB_M5210
+id|ALC882_FIXUP_PB_M5210
 )paren
 comma
 "&t;"
@@ -22628,7 +22671,7 @@ l_int|0x1873
 comma
 l_string|&quot;ASUS W90V&quot;
 comma
-id|PINFIX_ASUS_W90V
+id|ALC882_FIXUP_ASUS_W90V
 )paren
 comma
 "&t;"
@@ -22641,7 +22684,7 @@ l_int|0x3a0d
 comma
 l_string|&quot;Lenovo Y530&quot;
 comma
-id|PINFIX_LENOVO_Y530
+id|ALC882_FIXUP_LENOVO_Y530
 )paren
 comma
 "&t;"
@@ -22654,7 +22697,7 @@ l_int|0x107a
 comma
 l_string|&quot;Abit AW9D-MAX&quot;
 comma
-id|PINFIX_ABIT_AW9D_MAX
+id|ALC882_FIXUP_ABIT_AW9D_MAX
 )paren
 comma
 "&t;"
@@ -22667,7 +22710,20 @@ l_int|0x0296
 comma
 l_string|&quot;Acer Aspire 7736z&quot;
 comma
-id|PINFIX_ACER_ASPIRE_7736
+id|ALC882_FIXUP_ACER_ASPIRE_7736
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x9047
+comma
+l_string|&quot;Sony Vaio TT&quot;
+comma
+id|ALC889_FIXUP_VAIO_TT
 )paren
 comma
 "&t;"
