@@ -23704,35 +23704,6 @@ l_int|0
 r_goto
 id|error
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_ENABLE_REALTEK_QUIRKS
-"&t;&t;"
-r_else
-r_if
-c_cond
-(paren
-op_logical_neg
-id|err
-)paren
-(brace
-"&t;&t;&t;"
-id|printk
-c_func
-(paren
-id|KERN_INFO
-"&t;&t;&t;"
-l_string|&quot;hda_codec: Cannot set up configuration &quot;
-"&t;&t;&t;"
-l_string|&quot;from BIOS.  Using base mode...&bslash;n&quot;
-)paren
-suffix:semicolon
-"&t;&t;&t;"
-id|board_config
-op_assign
-id|ALC262_BASIC
-suffix:semicolon
-"&t;&t;"
-)brace
-macro_line|#endif
 "&t;"
 )brace
 "&t;"
