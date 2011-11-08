@@ -1183,6 +1183,8 @@ r_int
 id|i
 comma
 id|type
+comma
+id|num_conns
 suffix:semicolon
 "&t;"
 id|hda_nid_t
@@ -1315,9 +1317,8 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* no selection? */
 "&t;"
-r_if
-c_cond
-(paren
+id|num_conns
+op_assign
 id|snd_hda_get_conn_list
 c_func
 (paren
@@ -1327,6 +1328,12 @@ id|nid
 comma
 l_int|NULL
 )paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|num_conns
 op_le
 l_int|1
 )paren
@@ -1361,6 +1368,17 @@ id|AC_WID_AUD_MIX
 "&t;&t;"
 multiline_comment|/* Matrix-mixer style (e.g. ALC882) */
 "&t;&t;"
+r_int
+id|active
+op_assign
+id|imux-&gt;items
+(braket
+id|idx
+)braket
+dot
+id|index
+suffix:semicolon
+"&t;&t;"
 r_for
 c_loop
 (paren
@@ -1370,7 +1388,7 @@ l_int|0
 suffix:semicolon
 id|i
 OL
-id|imux-&gt;num_items
+id|num_conns
 suffix:semicolon
 id|i
 op_increment
@@ -1384,7 +1402,7 @@ op_assign
 (paren
 id|i
 op_eq
-id|idx
+id|active
 )paren
 ques
 c_cond
@@ -1402,13 +1420,7 @@ id|nid
 comma
 id|HDA_INPUT
 comma
-"&t;&t;&t;&t;&t;&t;"
-id|imux-&gt;items
-(braket
 id|i
-)braket
-dot
-id|index
 comma
 "&t;&t;&t;&t;&t;&t;"
 id|HDA_AMP_MUTE
