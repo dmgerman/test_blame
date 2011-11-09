@@ -23035,6 +23035,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1025
+comma
+l_int|0x0296
+comma
+l_string|&quot;Acer Aspire 7736z&quot;
+comma
+id|ALC882_FIXUP_ACER_ASPIRE_7736
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1043
 comma
 l_int|0x13c2
@@ -23074,13 +23087,13 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
-l_int|0x17aa
+l_int|0x104d
 comma
-l_int|0x3a0d
+l_int|0x9047
 comma
-l_string|&quot;Lenovo Y530&quot;
+l_string|&quot;Sony Vaio TT&quot;
 comma
-id|ALC882_FIXUP_LENOVO_Y530
+id|ALC889_FIXUP_VAIO_TT
 )paren
 comma
 "&t;"
@@ -23124,32 +23137,6 @@ id|ALC882_FIXUP_ABIT_AW9D_MAX
 )paren
 comma
 "&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1025
-comma
-l_int|0x0296
-comma
-l_string|&quot;Acer Aspire 7736z&quot;
-comma
-id|ALC882_FIXUP_ACER_ASPIRE_7736
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x104d
-comma
-l_int|0x9047
-comma
-l_string|&quot;Sony Vaio TT&quot;
-comma
-id|ALC889_FIXUP_VAIO_TT
-)paren
-comma
-"&t;"
 id|SND_PCI_QUIRK_VENDOR
 c_func
 (paren
@@ -23171,6 +23158,19 @@ comma
 l_string|&quot;Medion laptop&quot;
 comma
 id|ALC883_FIXUP_EAPD
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
+l_int|0x3a0d
+comma
+l_string|&quot;Lenovo Y530&quot;
+comma
+id|ALC882_FIXUP_LENOVO_Y530
 )paren
 comma
 "&t;"
