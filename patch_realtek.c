@@ -13112,6 +13112,23 @@ r_return
 l_string|&quot;Speaker&quot;
 suffix:semicolon
 "&t;&t;"
+r_if
+c_cond
+(paren
+id|cfg-&gt;line_outs
+op_eq
+l_int|2
+)paren
+"&t;&t;&t;"
+r_return
+id|ch
+ques
+c_cond
+l_string|&quot;Bass Speaker&quot;
+suffix:colon
+l_string|&quot;Speaker&quot;
+suffix:semicolon
+"&t;&t;"
 r_break
 suffix:semicolon
 "&t;"
