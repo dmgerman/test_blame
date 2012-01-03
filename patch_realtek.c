@@ -28416,7 +28416,7 @@ comma
 comma
 "&t;"
 (braket
-id|ALC269_FIXUP_DMIC
+id|ALC269VB_FIXUP_DMIC
 )braket
 op_assign
 (brace
