@@ -16916,6 +16916,10 @@ c_cond
 id|spec-&gt;multi_ios
 OG
 l_int|0
+op_logical_and
+id|cfg-&gt;line_outs
+OL
+l_int|3
 )paren
 "&t;&t;"
 id|noutputs
