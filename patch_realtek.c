@@ -28844,19 +28844,6 @@ c_func
 (paren
 l_int|0x1043
 comma
-l_int|0x1113
-comma
-l_string|&quot;ASUS N63Jn&quot;
-comma
-id|ALC269_FIXUP_AMIC
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1043
-comma
 l_int|0x1143
 comma
 l_string|&quot;ASUS B53f&quot;
