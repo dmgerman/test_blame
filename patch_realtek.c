@@ -25385,9 +25385,6 @@ comma
 id|ALC262_FIXUP_TYAN
 comma
 "&t;"
-id|ALC262_FIXUP_TOSHIBA_RX1
-comma
-"&t;"
 id|ALC262_FIXUP_LENOVO_3000
 comma
 "&t;"
@@ -25537,75 +25534,6 @@ multiline_comment|/* int AUX */
 "&t;&t;&t;"
 (brace
 )brace
-"&t;&t;"
-)brace
-"&t;"
-)brace
-comma
-"&t;"
-(braket
-id|ALC262_FIXUP_TOSHIBA_RX1
-)braket
-op_assign
-(brace
-"&t;&t;"
-dot
-id|type
-op_assign
-id|ALC_FIXUP_PINS
-comma
-"&t;&t;"
-dot
-id|v.pins
-op_assign
-(paren
-r_const
-r_struct
-id|alc_pincfg
-(braket
-)braket
-)paren
-(brace
-"&t;&t;&t;"
-(brace
-l_int|0x14
-comma
-l_int|0x90170110
-)brace
-comma
-multiline_comment|/* speaker */
-"&t;&t;&t;"
-(brace
-l_int|0x15
-comma
-l_int|0x0421101f
-)brace
-comma
-multiline_comment|/* HP */
-"&t;&t;&t;"
-(brace
-l_int|0x1a
-comma
-l_int|0x40f000f0
-)brace
-comma
-multiline_comment|/* N/A */
-"&t;&t;&t;"
-(brace
-l_int|0x1b
-comma
-l_int|0x40f000f0
-)brace
-comma
-multiline_comment|/* N/A */
-"&t;&t;&t;"
-(brace
-l_int|0x1e
-comma
-l_int|0x40f000f0
-)brace
-comma
-multiline_comment|/* N/A */
 "&t;&t;"
 )brace
 "&t;"
@@ -25825,20 +25753,6 @@ comma
 l_string|&quot;Tyan Thunder n6650W&quot;
 comma
 id|ALC262_FIXUP_TYAN
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1179
-comma
-l_int|0x0001
-comma
-l_string|&quot;Toshiba dynabook SS RX1&quot;
-comma
-"&t;&t;"
-id|ALC262_FIXUP_TOSHIBA_RX1
 )paren
 comma
 "&t;"
