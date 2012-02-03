@@ -9087,6 +9087,12 @@ comma
 l_string|&quot;Line-Out Playback Volume&quot;
 comma
 "&t;"
+l_string|&quot;CLFE Playback Volume&quot;
+comma
+"&t;"
+l_string|&quot;Bass Speaker Playback Volume&quot;
+comma
+"&t;"
 l_string|&quot;PCM Playback Volume&quot;
 comma
 "&t;"
@@ -9132,6 +9138,12 @@ l_string|&quot;IEC958 Playback Switch&quot;
 comma
 "&t;"
 l_string|&quot;Line-Out Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;CLFE Playback Switch&quot;
+comma
+"&t;"
+l_string|&quot;Bass Speaker Playback Switch&quot;
 comma
 "&t;"
 l_string|&quot;PCM Playback Switch&quot;
