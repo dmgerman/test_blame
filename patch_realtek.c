@@ -30467,6 +30467,20 @@ c_func
 (paren
 l_int|0x1584
 comma
+l_int|0x0000
+comma
+l_string|&quot;Uniwill ECS M31EI&quot;
+comma
+id|PINFIX_ASUS_A6RP
+)paren
+comma
+"&t;"
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1584
+comma
 l_int|0x2b01
 comma
 l_string|&quot;Haier W18&quot;
