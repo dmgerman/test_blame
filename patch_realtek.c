@@ -9054,99 +9054,37 @@ r_const
 r_char
 op_star
 r_const
-id|alc_slave_vols
+id|alc_slave_pfxs
 (braket
 )braket
 op_assign
 (brace
 "&t;"
-l_string|&quot;Front Playback Volume&quot;
+l_string|&quot;Front&quot;
+comma
+l_string|&quot;Surround&quot;
+comma
+l_string|&quot;Center&quot;
+comma
+l_string|&quot;LFE&quot;
+comma
+l_string|&quot;Side&quot;
 comma
 "&t;"
-l_string|&quot;Surround Playback Volume&quot;
+l_string|&quot;Headphone&quot;
+comma
+l_string|&quot;Speaker&quot;
+comma
+l_string|&quot;Mono&quot;
+comma
+l_string|&quot;Line-Out&quot;
 comma
 "&t;"
-l_string|&quot;Center Playback Volume&quot;
+l_string|&quot;CLFE&quot;
 comma
-"&t;"
-l_string|&quot;LFE Playback Volume&quot;
+l_string|&quot;Bass Speaker&quot;
 comma
-"&t;"
-l_string|&quot;Side Playback Volume&quot;
-comma
-"&t;"
-l_string|&quot;Headphone Playback Volume&quot;
-comma
-"&t;"
-l_string|&quot;Speaker Playback Volume&quot;
-comma
-"&t;"
-l_string|&quot;Mono Playback Volume&quot;
-comma
-"&t;"
-l_string|&quot;Line-Out Playback Volume&quot;
-comma
-"&t;"
-l_string|&quot;CLFE Playback Volume&quot;
-comma
-"&t;"
-l_string|&quot;Bass Speaker Playback Volume&quot;
-comma
-"&t;"
-l_string|&quot;PCM Playback Volume&quot;
-comma
-"&t;"
-l_int|NULL
-comma
-)brace
-suffix:semicolon
-r_const
-r_char
-op_star
-r_const
-id|alc_slave_sws
-(braket
-)braket
-op_assign
-(brace
-"&t;"
-l_string|&quot;Front Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;Surround Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;Center Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;LFE Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;Side Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;Headphone Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;Speaker Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;Mono Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;IEC958 Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;Line-Out Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;CLFE Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;Bass Speaker Playback Switch&quot;
-comma
-"&t;"
-l_string|&quot;PCM Playback Switch&quot;
+l_string|&quot;PCM&quot;
 comma
 "&t;"
 l_int|NULL
@@ -9597,7 +9535,10 @@ comma
 "&t;&t;&t;&t;&t;"
 id|vmaster_tlv
 comma
-id|alc_slave_vols
+id|alc_slave_pfxs
+comma
+"&t;&t;&t;&t;&t;"
+l_string|&quot;Playback Volume&quot;
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -9645,7 +9586,10 @@ comma
 "&t;&t;&t;&t;&t;"
 l_int|NULL
 comma
-id|alc_slave_sws
+id|alc_slave_pfxs
+comma
+"&t;&t;&t;&t;&t;"
+l_string|&quot;Playback Switch&quot;
 )paren
 suffix:semicolon
 "&t;&t;"
