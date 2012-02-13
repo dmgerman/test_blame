@@ -31642,6 +31642,9 @@ comma
 "&t;"
 id|ALC662_FIXUP_ASUS_MODE8
 comma
+"&t;"
+id|ALC662_FIXUP_NO_JACK_DETECT
+comma
 )brace
 suffix:semicolon
 r_const
@@ -32539,6 +32542,27 @@ id|ALC662_FIXUP_SKU_IGNORE
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|ALC662_FIXUP_NO_JACK_DETECT
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|ALC_FIXUP_FUNC
+comma
+"&t;&t;"
+dot
+id|v.func
+op_assign
+id|alc_fixup_no_jack_detect
+comma
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_const
@@ -32612,6 +32636,19 @@ comma
 l_string|&quot;HP RP5800&quot;
 comma
 id|ALC662_FIXUP_HP_RP5800
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
+l_int|0x8469
+comma
+l_string|&quot;ASUS mobo&quot;
+comma
+id|ALC662_FIXUP_NO_JACK_DETECT
 )paren
 comma
 "&t;"
