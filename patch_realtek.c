@@ -23246,6 +23246,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1509
+comma
+l_int|0x4540
+comma
+l_string|&quot;Favorit 100XS&quot;
+comma
+id|ALC260_FIXUP_GPIO1
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x161f
 comma
 l_int|0x2057
