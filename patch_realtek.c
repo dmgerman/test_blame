@@ -29081,7 +29081,7 @@ comma
 id|ALC269_FIXUP_LENOVO_EAPD
 )paren
 comma
-macro_line|#if 1
+macro_line|#if 0
 "&t;"
 multiline_comment|/* Below is a quirk table taken from the old code.&n;&t; * Basically the device should work as is without the fixup table.&n;&t; * If BIOS doesn&squot;t give a proper info, enable the corresponding&n;&t; * fixup entry.&n;&t; */
 "&t;"
