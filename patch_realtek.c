@@ -25015,6 +25015,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1584
+comma
+l_int|0x9077
+comma
+l_string|&quot;Uniwill P53&quot;
+comma
+id|ALC880_FIXUP_VOL_KNOB
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x161f
 comma
 l_int|0x203d
