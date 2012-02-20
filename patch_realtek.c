@@ -24285,6 +24285,9 @@ multiline_comment|/*&n; * ALC880 fix-ups&n; */
 r_enum
 (brace
 "&t;"
+id|ALC880_FIXUP_GPIO1
+comma
+"&t;"
 id|ALC880_FIXUP_GPIO2
 comma
 "&t;"
@@ -24371,6 +24374,27 @@ id|alc880_fixups
 )braket
 op_assign
 (brace
+"&t;"
+(braket
+id|ALC880_FIXUP_GPIO1
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|ALC_FIXUP_VERBS
+comma
+"&t;&t;"
+dot
+id|v.verbs
+op_assign
+id|alc_gpio1_init_verbs
+comma
+"&t;"
+)brace
+comma
 "&t;"
 (braket
 id|ALC880_FIXUP_GPIO2
@@ -25237,6 +25261,19 @@ comma
 l_string|&quot;Coeus G610P&quot;
 comma
 id|ALC880_FIXUP_W810
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
+l_int|0x10b3
+comma
+l_string|&quot;ASUS W1V&quot;
+comma
+id|ALC880_FIXUP_GPIO1
 )paren
 comma
 "&t;"
