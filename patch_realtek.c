@@ -24317,6 +24317,9 @@ comma
 "&t;"
 id|ALC880_FIXUP_UNIWILL_DIG
 comma
+"&t;"
+id|ALC880_FIXUP_Z71V
+comma
 )brace
 suffix:semicolon
 multiline_comment|/* enable the volume-knob widget support on NID 0x21 */
@@ -25091,6 +25094,128 @@ comma
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|ALC880_FIXUP_Z71V
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|ALC_FIXUP_PINS
+comma
+"&t;&t;"
+dot
+id|v.pins
+op_assign
+(paren
+r_const
+r_struct
+id|alc_pincfg
+(braket
+)braket
+)paren
+(brace
+"&t;&t;&t;"
+multiline_comment|/* set up the whole pins as BIOS is utterly broken */
+"&t;&t;&t;"
+(brace
+l_int|0x14
+comma
+l_int|0x99030120
+)brace
+comma
+multiline_comment|/* speaker */
+"&t;&t;&t;"
+(brace
+l_int|0x15
+comma
+l_int|0x0121411f
+)brace
+comma
+multiline_comment|/* HP */
+"&t;&t;&t;"
+(brace
+l_int|0x16
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x17
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x18
+comma
+l_int|0x01a19950
+)brace
+comma
+multiline_comment|/* mic-in */
+"&t;&t;&t;"
+(brace
+l_int|0x19
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1a
+comma
+l_int|0x01813031
+)brace
+comma
+multiline_comment|/* line-in */
+"&t;&t;&t;"
+(brace
+l_int|0x1b
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1c
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1d
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1e
+comma
+l_int|0x0144111e
+)brace
+comma
+multiline_comment|/* SPDIF */
+"&t;&t;&t;"
+(brace
+)brace
+"&t;&t;"
+)brace
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_const
@@ -25112,6 +25237,19 @@ comma
 l_string|&quot;Coeus G610P&quot;
 comma
 id|ALC880_FIXUP_W810
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
+l_int|0x1964
+comma
+l_string|&quot;ASUS Z71V&quot;
+comma
+id|ALC880_FIXUP_Z71V
 )paren
 comma
 "&t;"
