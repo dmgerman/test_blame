@@ -25269,9 +25269,20 @@ c_func
 (paren
 l_int|0x1043
 comma
-l_int|0x10b3
+l_int|0x1964
 comma
-l_string|&quot;ASUS W1V&quot;
+l_string|&quot;ASUS Z71V&quot;
+comma
+id|ALC880_FIXUP_Z71V
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK_VENDOR
+c_func
+(paren
+l_int|0x1043
+comma
+l_string|&quot;ASUS&quot;
 comma
 id|ALC880_FIXUP_GPIO1
 )paren
@@ -25280,13 +25291,13 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
-l_int|0x1043
+l_int|0x1558
 comma
-l_int|0x1964
+l_int|0x5401
 comma
-l_string|&quot;ASUS Z71V&quot;
+l_string|&quot;Clevo GPIO2&quot;
 comma
-id|ALC880_FIXUP_Z71V
+id|ALC880_FIXUP_GPIO2
 )paren
 comma
 "&t;"
