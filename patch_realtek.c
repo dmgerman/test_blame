@@ -17498,6 +17498,25 @@ id|AUTO_PIN_SPEAKER_OUT
 "&t;&t;"
 multiline_comment|/* try multi-ios with HP + inputs */
 "&t;&t;"
+r_int
+id|offset
+op_assign
+l_int|0
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|cfg-&gt;line_outs
+op_ge
+l_int|3
+)paren
+"&t;&t;&t;"
+id|offset
+op_assign
+l_int|1
+suffix:semicolon
+"&t;&t;"
 id|err
 op_assign
 id|alc_auto_fill_multi_ios
@@ -17512,7 +17531,8 @@ l_int|0
 comma
 l_bool|false
 comma
-l_int|1
+"&t;&t;&t;&t;&t;"
+id|offset
 )paren
 suffix:semicolon
 "&t;&t;"
