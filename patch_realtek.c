@@ -754,6 +754,18 @@ r_struct
 id|hda_loopback_check
 id|loopback
 suffix:semicolon
+"&t;"
+r_int
+id|num_loopbacks
+suffix:semicolon
+"&t;"
+r_struct
+id|hda_amp_list
+id|loopback_list
+(braket
+l_int|8
+)braket
+suffix:semicolon
 macro_line|#endif
 "&t;"
 multiline_comment|/* for PLL fix */
@@ -13448,6 +13460,81 @@ id|ch
 )braket
 suffix:semicolon
 )brace
+macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+multiline_comment|/* add the powersave loopback-list entry */
+r_void
+id|add_loopback_list
+c_func
+(paren
+r_struct
+id|alc_spec
+op_star
+id|spec
+comma
+id|hda_nid_t
+id|mix
+comma
+r_int
+id|idx
+)paren
+(brace
+"&t;"
+r_struct
+id|hda_amp_list
+op_star
+id|list
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;num_loopbacks
+op_ge
+id|ARRAY_SIZE
+c_func
+(paren
+id|spec-&gt;loopback_list
+)paren
+l_int|1
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
+id|list
+op_assign
+id|spec-&gt;loopback_list
+op_plus
+id|spec-&gt;num_loopbacks
+suffix:semicolon
+"&t;"
+id|list-&gt;nid
+op_assign
+id|mix
+suffix:semicolon
+"&t;"
+id|list-&gt;dir
+op_assign
+id|HDA_INPUT
+suffix:semicolon
+"&t;"
+id|list-&gt;idx
+op_assign
+id|idx
+suffix:semicolon
+"&t;"
+id|spec-&gt;num_loopbacks
+op_increment
+suffix:semicolon
+"&t;"
+id|spec-&gt;loopback.amplist
+op_assign
+id|spec-&gt;loopback_list
+suffix:semicolon
+)brace
+macro_line|#else
+macro_line|#define add_loopback_list(spec, mix, idx) /* NOP */
+macro_line|#endif
 multiline_comment|/* create input playback/capture controls for the given pin */
 r_int
 id|new_analog_input
@@ -13561,6 +13648,17 @@ l_int|0
 "&t;&t;"
 r_return
 id|err
+suffix:semicolon
+"&t;"
+id|add_loopback_list
+c_func
+(paren
+id|spec
+comma
+id|mix_nid
+comma
+id|idx
+)paren
 suffix:semicolon
 "&t;"
 r_return
@@ -24253,67 +24351,6 @@ id|alc880_ssids
 )paren
 suffix:semicolon
 )brace
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-r_const
-r_struct
-id|hda_amp_list
-id|alc880_loopbacks
-(braket
-)braket
-op_assign
-(brace
-"&t;"
-(brace
-l_int|0x0b
-comma
-id|HDA_INPUT
-comma
-l_int|0
-)brace
-comma
-"&t;"
-(brace
-l_int|0x0b
-comma
-id|HDA_INPUT
-comma
-l_int|1
-)brace
-comma
-"&t;"
-(brace
-l_int|0x0b
-comma
-id|HDA_INPUT
-comma
-l_int|2
-)brace
-comma
-"&t;"
-(brace
-l_int|0x0b
-comma
-id|HDA_INPUT
-comma
-l_int|3
-)brace
-comma
-"&t;"
-(brace
-l_int|0x0b
-comma
-id|HDA_INPUT
-comma
-l_int|4
-)brace
-comma
-"&t;"
-(brace
-)brace
-multiline_comment|/* end */
-)brace
-suffix:semicolon
-macro_line|#endif
 multiline_comment|/*&n; * ALC880 fix-ups&n; */
 r_enum
 (brace
@@ -27020,20 +27057,6 @@ id|spec-&gt;init_hook
 op_assign
 id|alc_auto_init_std
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-"&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;loopback.amplist
-)paren
-"&t;&t;"
-id|spec-&gt;loopback.amplist
-op_assign
-id|alc880_loopbacks
-suffix:semicolon
-macro_line|#endif
 "&t;"
 id|alc_apply_fixup
 c_func
@@ -27115,67 +27138,6 @@ id|alc260_ssids
 )paren
 suffix:semicolon
 )brace
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-r_const
-r_struct
-id|hda_amp_list
-id|alc260_loopbacks
-(braket
-)braket
-op_assign
-(brace
-"&t;"
-(brace
-l_int|0x07
-comma
-id|HDA_INPUT
-comma
-l_int|0
-)brace
-comma
-"&t;"
-(brace
-l_int|0x07
-comma
-id|HDA_INPUT
-comma
-l_int|1
-)brace
-comma
-"&t;"
-(brace
-l_int|0x07
-comma
-id|HDA_INPUT
-comma
-l_int|2
-)brace
-comma
-"&t;"
-(brace
-l_int|0x07
-comma
-id|HDA_INPUT
-comma
-l_int|3
-)brace
-comma
-"&t;"
-(brace
-l_int|0x07
-comma
-id|HDA_INPUT
-comma
-l_int|4
-)brace
-comma
-"&t;"
-(brace
-)brace
-multiline_comment|/* end */
-)brace
-suffix:semicolon
-macro_line|#endif
 multiline_comment|/*&n; * Pin config fixes&n; */
 r_enum
 (brace
@@ -27962,20 +27924,6 @@ id|spec-&gt;shutup
 op_assign
 id|alc_eapd_shutup
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-"&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;loopback.amplist
-)paren
-"&t;&t;"
-id|spec-&gt;loopback.amplist
-op_assign
-id|alc260_loopbacks
-suffix:semicolon
-macro_line|#endif
 "&t;"
 id|alc_apply_fixup
 c_func
@@ -28004,9 +27952,6 @@ id|err
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC882/883/885/888/889 support&n; *&n; * ALC882 is almost identical with ALC880 but has cleaner and more flexible&n; * configuration.  Each pin widget can choose any input DACs and a mixer.&n; * Each ADC is connected from a mixer of all inputs.  This makes possible&n; * 6-channel independent captures.&n; *&n; * In addition, an independent DAC for the multi-playback (not used in this&n; * driver yet).&n; */
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-macro_line|#define alc882_loopbacks&t;alc880_loopbacks
-macro_line|#endif
 multiline_comment|/*&n; * Pin config fixes&n; */
 r_enum
 (brace
@@ -30662,20 +30607,6 @@ id|spec-&gt;init_hook
 op_assign
 id|alc_auto_init_std
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-"&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;loopback.amplist
-)paren
-"&t;&t;"
-id|spec-&gt;loopback.amplist
-op_assign
-id|alc882_loopbacks
-suffix:semicolon
-macro_line|#endif
 "&t;"
 id|alc_apply_fixup
 c_func
@@ -31197,9 +31128,6 @@ comma
 )brace
 )brace
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-macro_line|#define alc262_loopbacks&t;alc880_loopbacks
-macro_line|#endif
 multiline_comment|/*&n; */
 r_int
 id|patch_alc262
@@ -31517,20 +31445,6 @@ id|spec-&gt;shutup
 op_assign
 id|alc_eapd_shutup
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-"&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;loopback.amplist
-)paren
-"&t;&t;"
-id|spec-&gt;loopback.amplist
-op_assign
-id|alc262_loopbacks
-suffix:semicolon
-macro_line|#endif
 "&t;"
 id|alc_apply_fixup
 c_func
@@ -32101,9 +32015,6 @@ id|err
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC269&n; */
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-macro_line|#define alc269_loopbacks&t;alc880_loopbacks
-macro_line|#endif
 r_const
 r_struct
 id|hda_pcm_stream
@@ -35458,18 +35369,6 @@ macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
 r_if
 c_cond
 (paren
-op_logical_neg
-id|spec-&gt;loopback.amplist
-)paren
-"&t;&t;"
-id|spec-&gt;loopback.amplist
-op_assign
-id|alc269_loopbacks
-suffix:semicolon
-"&t;"
-r_if
-c_cond
-(paren
 id|alc269_mic2_for_mute_led
 c_func
 (paren
@@ -35563,58 +35462,6 @@ id|alc861_ssids
 )paren
 suffix:semicolon
 )brace
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-r_const
-r_struct
-id|hda_amp_list
-id|alc861_loopbacks
-(braket
-)braket
-op_assign
-(brace
-"&t;"
-(brace
-l_int|0x15
-comma
-id|HDA_INPUT
-comma
-l_int|0
-)brace
-comma
-"&t;"
-(brace
-l_int|0x15
-comma
-id|HDA_INPUT
-comma
-l_int|1
-)brace
-comma
-"&t;"
-(brace
-l_int|0x15
-comma
-id|HDA_INPUT
-comma
-l_int|2
-)brace
-comma
-"&t;"
-(brace
-l_int|0x15
-comma
-id|HDA_INPUT
-comma
-l_int|3
-)brace
-comma
-"&t;"
-(brace
-)brace
-multiline_comment|/* end */
-)brace
-suffix:semicolon
-macro_line|#endif
 multiline_comment|/* Pin config fixes */
 r_enum
 (brace
@@ -36215,18 +36062,6 @@ id|spec-&gt;power_hook
 op_assign
 id|alc_power_eapd
 suffix:semicolon
-"&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;loopback.amplist
-)paren
-"&t;&t;"
-id|spec-&gt;loopback.amplist
-op_assign
-id|alc861_loopbacks
-suffix:semicolon
 macro_line|#endif
 "&t;"
 id|alc_apply_fixup
@@ -36256,9 +36091,6 @@ id|err
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC861-VD support&n; *&n; * Based on ALC882&n; *&n; * In addition, an independent DAC&n; */
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-macro_line|#define alc861vd_loopbacks&t;alc880_loopbacks
-macro_line|#endif
 r_int
 id|alc861vd_parse_auto_config
 c_func
@@ -36789,20 +36621,6 @@ id|spec-&gt;shutup
 op_assign
 id|alc_eapd_shutup
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-"&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;loopback.amplist
-)paren
-"&t;&t;"
-id|spec-&gt;loopback.amplist
-op_assign
-id|alc861vd_loopbacks
-suffix:semicolon
-macro_line|#endif
 "&t;"
 id|alc_apply_fixup
 c_func
@@ -36831,9 +36649,6 @@ id|err
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * ALC662 support&n; *&n; * ALC662 is almost identical with ALC880 but has cleaner and more flexible&n; * configuration.  Each pin widget can choose any input DACs and a mixer.&n; * Each ADC is connected from a mixer of all inputs.  This makes possible&n; * 6-channel independent captures.&n; *&n; * In addition, an independent DAC for the multi-playback (not used in this&n; * driver yet).&n; */
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-macro_line|#define alc662_loopbacks&t;alc880_loopbacks
-macro_line|#endif
 multiline_comment|/*&n; * BIOS auto configuration&n; */
 r_int
 id|alc662_parse_auto_config
@@ -39318,20 +39133,6 @@ id|spec-&gt;shutup
 op_assign
 id|alc_eapd_shutup
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
-"&t;"
-r_if
-c_cond
-(paren
-op_logical_neg
-id|spec-&gt;loopback.amplist
-)paren
-"&t;&t;"
-id|spec-&gt;loopback.amplist
-op_assign
-id|alc662_loopbacks
-suffix:semicolon
-macro_line|#endif
 "&t;"
 id|alc_apply_fixup
 c_func
