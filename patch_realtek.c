@@ -1261,6 +1261,17 @@ id|hda_nid_t
 id|nid
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+op_logical_neg
+id|spec-&gt;input_mux
+)paren
+"&t;&t;"
+r_return
+l_int|0
+suffix:semicolon
+"&t;"
 id|mux_idx
 op_assign
 id|adc_idx
