@@ -3963,7 +3963,7 @@ l_string|&quot;Disabled&quot;
 comma
 l_string|&quot;Speaker Only&quot;
 comma
-l_string|&quot;Line-Out+Speaker&quot;
+l_string|&quot;Line Out+Speaker&quot;
 "&t;"
 )brace
 suffix:semicolon
@@ -9085,7 +9085,7 @@ comma
 l_string|&quot;Mono Playback Volume&quot;
 comma
 "&t;"
-l_string|&quot;Line-Out Playback Volume&quot;
+l_string|&quot;Line Out Playback Volume&quot;
 comma
 "&t;"
 l_string|&quot;CLFE Playback Volume&quot;
@@ -9138,7 +9138,7 @@ comma
 l_string|&quot;IEC958 Playback Switch&quot;
 comma
 "&t;"
-l_string|&quot;Line-Out Playback Switch&quot;
+l_string|&quot;Line Out Playback Switch&quot;
 comma
 "&t;"
 l_string|&quot;CLFE Playback Switch&quot;
