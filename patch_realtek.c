@@ -3340,7 +3340,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|res
+id|action
 op_eq
 id|ALC_DCVOL_EVENT
 )paren
