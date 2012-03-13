@@ -32670,6 +32670,8 @@ id|codec
 comma
 op_amp
 id|spec-&gt;vmaster_mute
+comma
+l_bool|true
 )paren
 suffix:semicolon
 "&t;&t;"
