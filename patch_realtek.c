@@ -1,4 +1,4 @@
-multiline_comment|/*&n; * Universal Interface for Intel High Definition Audio Codec&n; *&n; * HD audio interface patch for Realtek ALC codecs&n; *&n; * Copyright (c) 2004 Kailang Yang &lt;kailang@realtek.com.tw&gt;&n; *                    PeiSen Hou &lt;pshou@realtek.com.tw&gt;&n; *                    Takashi Iwai &lt;tiwai@suse.de&gt;&n; *                    Jonathan Woithe &lt;jwoithe@just42.net&gt;&n; *&n; *  This driver is free software; you can redistribute it and/or modify&n; *  it under the terms of the GNU General Public License as published by&n; *  the Free Software Foundation; either version 2 of the License, or&n; *  (at your option) any later version.&n; *&n; *  This driver is distributed in the hope that it will be useful,&n; *  but WITHOUT ANY WARRANTY; without even the implied warranty of&n; *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&n; *  GNU General Public License for more details.&n; *&n; *  You should have received a copy of the GNU General Public License&n; *  along with this program; if not, write to the Free Software&n; *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA&n; */
+multiline_comment|/*&n; * Universal Interface for Intel High Definition Audio Codec&n; *&n; * HD audio interface patch for Realtek ALC codecs&n; *&n; * Copyright (c) 2004 Kailang Yang &lt;kailang@realtek.com.tw&gt;&n; *                    PeiSen Hou &lt;pshou@realtek.com.tw&gt;&n; *                    Takashi Iwai &lt;tiwai@suse.de&gt;&n; *                    Jonathan Woithe &lt;jwoithe@physics.adelaide.edu.au&gt;&n; *&n; *  This driver is free software; you can redistribute it and/or modify&n; *  it under the terms of the GNU General Public License as published by&n; *  the Free Software Foundation; either version 2 of the License, or&n; *  (at your option) any later version.&n; *&n; *  This driver is distributed in the hope that it will be useful,&n; *  but WITHOUT ANY WARRANTY; without even the implied warranty of&n; *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&n; *  GNU General Public License for more details.&n; *&n; *  You should have received a copy of the GNU General Public License&n; *  along with this program; if not, write to the Free Software&n; *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA&n; */
 macro_line|#include &lt;linux/init.h&gt;
 macro_line|#include &lt;linux/delay.h&gt;
 macro_line|#include &lt;linux/slab.h&gt;
@@ -30117,6 +30117,58 @@ comma
 )brace
 )brace
 suffix:semicolon
+r_const
+r_struct
+id|alc_model_fixup
+id|alc882_fixup_models
+(braket
+)braket
+op_assign
+(brace
+"&t;"
+(brace
+dot
+id|id
+op_assign
+id|ALC882_FIXUP_ACER_ASPIRE_4930G
+comma
+dot
+id|name
+op_assign
+l_string|&quot;acer-aspire-4930g&quot;
+)brace
+comma
+"&t;"
+(brace
+dot
+id|id
+op_assign
+id|ALC882_FIXUP_ACER_ASPIRE_8930G
+comma
+dot
+id|name
+op_assign
+l_string|&quot;acer-aspire-8930g&quot;
+)brace
+comma
+"&t;"
+(brace
+dot
+id|id
+op_assign
+id|ALC883_FIXUP_ACER_EAPD
+comma
+dot
+id|name
+op_assign
+l_string|&quot;acer-aspire&quot;
+)brace
+comma
+"&t;"
+(brace
+)brace
+)brace
+suffix:semicolon
 multiline_comment|/*&n; * BIOS auto configuration&n; */
 multiline_comment|/* almost identical with ALC880 parser... */
 r_int
@@ -30298,10 +30350,11 @@ c_func
 (paren
 id|codec
 comma
-l_int|NULL
+id|alc882_fixup_models
 comma
 id|alc882_fixup_tbl
 comma
+"&t;&t;"
 id|alc882_fixups
 )paren
 suffix:semicolon
