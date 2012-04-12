@@ -30018,6 +30018,19 @@ c_func
 (paren
 l_int|0x106b
 comma
+l_int|0x4200
+comma
+l_string|&quot;Mac Pro 5,1&quot;
+comma
+id|ALC885_FIXUP_MACPRO_GPIO
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x106b
+comma
 l_int|0x4600
 comma
 l_string|&quot;MacbookPro 5,2&quot;
