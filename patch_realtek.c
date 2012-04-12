@@ -29704,6 +29704,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x026b
+comma
+l_string|&quot;Acer Aspire 8940G&quot;
+comma
+id|ALC882_FIXUP_ACER_ASPIRE_8930G
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x0296
 comma
 l_string|&quot;Acer Aspire 7736z&quot;
