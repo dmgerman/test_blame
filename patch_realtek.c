@@ -33872,6 +33872,19 @@ c_func
 (paren
 l_int|0x1043
 comma
+l_int|0x1427
+comma
+l_string|&quot;Asus Zenbook UX31E&quot;
+comma
+id|ALC269VB_FIXUP_DMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
 l_int|0x1a13
 comma
 l_string|&quot;Asus G73Jw&quot;
