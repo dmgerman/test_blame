@@ -12769,10 +12769,6 @@ r_int
 id|n
 suffix:semicolon
 "&t;&t;&t;"
-id|hda_nid_t
-id|conn_nid
-suffix:semicolon
-"&t;&t;&t;"
 id|type
 op_assign
 id|get_wcaps_type
