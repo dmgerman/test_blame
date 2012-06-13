@@ -9395,6 +9395,13 @@ id|spec-&gt;init_amp
 )paren
 suffix:semicolon
 "&t;"
+id|snd_hda_gen_apply_verbs
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+"&t;"
 id|alc_init_special_input_src
 c_func
 (paren
