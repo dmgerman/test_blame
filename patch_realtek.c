@@ -12141,9 +12141,6 @@ r_struct
 id|hda_codec
 op_star
 id|codec
-comma
-id|pm_message_t
-id|state
 )paren
 (brace
 "&t;"
