@@ -11308,6 +11308,17 @@ id|spec-&gt;multiout.dac_nids
 l_int|0
 )braket
 suffix:semicolon
+"&t;&t;"
+id|info-&gt;stream
+(braket
+id|SNDRV_PCM_STREAM_PLAYBACK
+)braket
+dot
+id|channels_max
+op_assign
+"&t;&t;&t;"
+id|spec-&gt;multiout.max_channels
+suffix:semicolon
 "&t;"
 )brace
 "&t;"
