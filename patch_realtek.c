@@ -34545,6 +34545,19 @@ c_func
 (paren
 l_int|0x17aa
 comma
+l_int|0x21f6
+comma
+l_string|&quot;Thinkpad T530&quot;
+comma
+id|ALC269_FIXUP_LENOVO_DOCK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
 l_int|0x2203
 comma
 l_string|&quot;Thinkpad X230 Tablet&quot;
