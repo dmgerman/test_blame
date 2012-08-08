@@ -33746,6 +33746,17 @@ id|v.func
 op_assign
 id|alc269_fixup_pcm_44k
 comma
+"&t;&t;"
+dot
+id|chained
+op_assign
+l_bool|true
+comma
+"&t;&t;"
+dot
+id|chain_id
+op_assign
+id|ALC269_FIXUP_QUANTA_MUTE
 "&t;"
 )brace
 comma
@@ -34600,19 +34611,6 @@ comma
 l_int|0x3bf8
 comma
 l_string|&quot;Quanta FL1&quot;
-comma
-id|ALC269_FIXUP_QUANTA_MUTE
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x17aa
-comma
-l_int|0x3bf8
-comma
-l_string|&quot;Lenovo Ideapd&quot;
 comma
 id|ALC269_FIXUP_PCM_44K
 )paren
