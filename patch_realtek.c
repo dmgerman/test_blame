@@ -10216,13 +10216,6 @@ id|ALC_FIXUP_ACT_INIT
 )paren
 suffix:semicolon
 "&t;"
-id|snd_hda_jack_report_sync
-c_func
-(paren
-id|codec
-)paren
-suffix:semicolon
-"&t;"
 id|hda_call_check_power_status
 c_func
 (paren
