@@ -520,7 +520,7 @@ op_star
 id|codec
 )paren
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#ifdef CONFIG_PM
 "&t;"
 r_void
 (paren
@@ -764,7 +764,7 @@ r_struct
 id|hda_vmaster_mute_hook
 id|vmaster_mute
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#ifdef CONFIG_PM
 "&t;"
 r_struct
 id|hda_loopback_check
@@ -10229,7 +10229,7 @@ r_return
 l_int|0
 suffix:semicolon
 )brace
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#ifdef CONFIG_PM
 r_int
 id|alc_check_power_status
 c_func
@@ -12113,7 +12113,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#ifdef CONFIG_PM
 r_void
 id|alc_power_eapd
 c_func
@@ -12293,7 +12293,7 @@ op_assign
 id|alc_resume
 comma
 macro_line|#endif
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#ifdef CONFIG_PM
 "&t;"
 dot
 id|suspend
@@ -13146,7 +13146,7 @@ id|ch
 )braket
 suffix:semicolon
 )brace
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#ifdef CONFIG_PM
 multiline_comment|/* add the powersave loopback-list entry */
 r_void
 id|add_loopback_list
@@ -36508,7 +36508,7 @@ id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
 suffix:semicolon
-macro_line|#ifdef CONFIG_SND_HDA_POWER_SAVE
+macro_line|#ifdef CONFIG_PM
 "&t;"
 id|spec-&gt;power_hook
 op_assign
