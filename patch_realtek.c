@@ -2881,6 +2881,17 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|spec-&gt;autocfg.line_out_type
+op_eq
+id|AUTO_PIN_SPEAKER_OUT
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
 multiline_comment|/* check LO jack only when it&squot;s different from HP */
 "&t;"
 r_if
