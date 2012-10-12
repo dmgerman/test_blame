@@ -9002,7 +9002,7 @@ id|spec-&gt;multiout.dig_out_nid
 "&t;&t;"
 id|err
 op_assign
-id|snd_hda_create_spdif_out_ctls
+id|snd_hda_create_dig_out_ctls
 c_func
 (paren
 id|codec
@@ -9012,6 +9012,14 @@ id|spec-&gt;multiout.dig_out_nid
 comma
 "&t;&t;&t;&t;&t;&t;"
 id|spec-&gt;multiout.dig_out_nid
+comma
+"&t;&t;&t;&t;&t;&t;"
+id|spec-&gt;pcm_rec
+(braket
+l_int|1
+)braket
+dot
+id|pcm_type
 )paren
 suffix:semicolon
 "&t;&t;"
