@@ -30239,6 +30239,19 @@ c_func
 (paren
 l_int|0x106b
 comma
+l_int|0x4300
+comma
+l_string|&quot;iMac 9,1&quot;
+comma
+id|ALC889_FIXUP_IMAC91_VREF
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x106b
+comma
 l_int|0x4600
 comma
 l_string|&quot;MacbookPro 5,2&quot;
