@@ -4593,7 +4593,7 @@ l_int|0
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * Check the availability of HP/line-out auto-mute;&n; * Set up appropriately if really supported&n; */
-r_void
+r_int
 id|alc_init_automute
 c_func
 (paren
@@ -4629,6 +4629,8 @@ suffix:semicolon
 "&t;"
 r_int
 id|i
+comma
+id|err
 suffix:semicolon
 "&t;"
 r_if
@@ -4680,6 +4682,7 @@ l_int|2
 multiline_comment|/* need two different output types */
 "&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 "&t;"
 r_if
@@ -4961,14 +4964,35 @@ id|spec-&gt;automute_speaker_possible
 op_logical_or
 id|spec-&gt;automute_lo_possible
 )paren
+(brace
 "&t;&t;"
 multiline_comment|/* create a control for automute mode */
 "&t;&t;"
+id|err
+op_assign
 id|alc_add_automute_mode_enum
 c_func
 (paren
 id|codec
 )paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
+OL
+l_int|0
+)paren
+"&t;&t;&t;"
+r_return
+id|err
+suffix:semicolon
+"&t;"
+)brace
+"&t;"
+r_return
+l_int|0
 suffix:semicolon
 )brace
 multiline_comment|/* return the position of NID in the list, or -1 if not found */
@@ -5490,7 +5514,7 @@ l_bool|true
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * Check the availability of auto-mic switch;&n; * Set up if really supported&n; */
-r_void
+r_int
 id|alc_init_auto_mic
 c_func
 (paren
@@ -5537,6 +5561,7 @@ id|spec-&gt;shared_mic_hp
 )paren
 "&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* no auto-mic for the shared I/O */
 "&t;"
@@ -5623,6 +5648,7 @@ id|fixed
 )paren
 "&t;&t;&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* already occupied */
 "&t;&t;&t;"
@@ -5640,6 +5666,7 @@ id|AUTO_PIN_MIC
 )paren
 "&t;&t;&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* invalid type */
 "&t;&t;&t;"
@@ -5656,6 +5683,7 @@ id|INPUT_PIN_ATTR_UNUSED
 suffix:colon
 "&t;&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* invalid entry */
 "&t;&t;"
@@ -5670,6 +5698,7 @@ id|dock
 )paren
 "&t;&t;&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* already occupied */
 "&t;&t;&t;"
@@ -5687,6 +5716,7 @@ id|AUTO_PIN_LINE_IN
 )paren
 "&t;&t;&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* invalid type */
 "&t;&t;&t;"
@@ -5710,6 +5740,7 @@ id|ext
 )paren
 "&t;&t;&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* already occupied */
 "&t;&t;&t;"
@@ -5727,6 +5758,7 @@ id|AUTO_PIN_MIC
 )paren
 "&t;&t;&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* invalid type */
 "&t;&t;&t;"
@@ -5775,6 +5807,7 @@ id|fixed
 )paren
 "&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 "&t;"
 r_if
@@ -5791,6 +5824,7 @@ id|ext
 )paren
 "&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* no unsol support */
 "&t;"
@@ -5810,6 +5844,7 @@ id|dock
 )paren
 "&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 multiline_comment|/* no unsol support */
 "&t;"
@@ -5847,6 +5882,7 @@ id|codec
 )paren
 "&t;&t;"
 r_return
+l_int|0
 suffix:semicolon
 "&t;"
 id|snd_printdd
@@ -5862,9 +5898,13 @@ comma
 id|dock
 )paren
 suffix:semicolon
+"&t;"
+r_return
+l_int|0
+suffix:semicolon
 )brace
 multiline_comment|/* check the availabilities of auto-mute and auto-mic switches */
-r_void
+r_int
 id|alc_auto_check_switches
 c_func
 (paren
@@ -5875,6 +5915,12 @@ id|codec
 )paren
 (brace
 "&t;"
+r_int
+id|err
+suffix:semicolon
+"&t;"
+id|err
+op_assign
 id|alc_init_automute
 c_func
 (paren
@@ -5882,11 +5928,41 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|err
+OL
+l_int|0
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
+"&t;"
+id|err
+op_assign
 id|alc_init_auto_mic
 c_func
 (paren
 id|codec
 )paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|err
+OL
+l_int|0
+)paren
+"&t;&t;"
+r_return
+id|err
+suffix:semicolon
+"&t;"
+r_return
+l_int|0
 suffix:semicolon
 )brace
 multiline_comment|/*&n; * Realtek SSID verification&n; */
@@ -23763,11 +23839,25 @@ id|spec-&gt;no_analog
 )paren
 (brace
 "&t;&t;"
+id|err
+op_assign
 id|alc_auto_check_switches
 c_func
 (paren
 id|codec
 )paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
+OL
+l_int|0
+)paren
+"&t;&t;&t;"
+r_return
+id|err
 suffix:semicolon
 "&t;&t;"
 id|err
