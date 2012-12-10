@@ -163,7 +163,7 @@ macro_line|#define ALC_FIXUP_ACT_PROBE&t;HDA_FIXUP_ACT_PROBE
 macro_line|#define ALC_FIXUP_ACT_INIT&t;HDA_FIXUP_ACT_INIT
 macro_line|#define ALC_FIXUP_ACT_BUILD&t;HDA_FIXUP_ACT_BUILD
 macro_line|#define MAX_NID_PATH_DEPTH&t;5
-multiline_comment|/* output-path: DAC -&gt; ... -&gt; pin&n; * idx[] contains the source index number of the next widget;&n; * e.g. idx[0] is the index of the DAC selected by path[1] widget&n; * multi[] indicates whether it&squot;s a selector widget with multi-connectors&n; * (i.e. the connection selection is mandatory)&n; * vol_ctl and mute_ctl contains the NIDs for the assigned mixers&n; */
+multiline_comment|/* output-path: DAC -&gt; ... -&gt; pin&n; * idx[i] contains the source index number to select on of the widget path[i];&n; * e.g. idx[1] is the index of the DAC (path[0]) selected by path[1] widget&n; * multi[] indicates whether it&squot;s a selector widget with multi-connectors&n; * (i.e. the connection selection is mandatory)&n; * vol_ctl and mute_ctl contains the NIDs for the assigned mixers&n; */
 r_struct
 id|nid_path
 (brace
@@ -15023,6 +15023,8 @@ suffix:semicolon
 id|path-&gt;idx
 (braket
 id|path-&gt;depth
+op_plus
+l_int|1
 )braket
 op_assign
 id|i
@@ -15053,6 +15055,8 @@ id|AC_WID_AUD_MIX
 id|path-&gt;multi
 (braket
 id|path-&gt;depth
+op_plus
+l_int|1
 )braket
 op_assign
 l_int|1
@@ -20535,14 +20539,9 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|i
-OG
-l_int|0
-op_logical_and
 id|path-&gt;multi
 (braket
 id|i
-l_int|1
 )braket
 )paren
 "&t;&t;&t;"
@@ -20562,7 +20561,6 @@ comma
 id|path-&gt;idx
 (braket
 id|i
-l_int|1
 )braket
 )paren
 suffix:semicolon
