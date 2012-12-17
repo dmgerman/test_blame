@@ -21413,6 +21413,8 @@ op_decrement
 r_if
 c_cond
 (paren
+id|enable
+op_logical_and
 id|path-&gt;multi
 (braket
 id|i
