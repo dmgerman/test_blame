@@ -23959,6 +23959,11 @@ op_assign
 id|spec
 suffix:semicolon
 "&t;"
+id|codec-&gt;single_adc_amp
+op_assign
+l_int|1
+suffix:semicolon
+"&t;"
 id|spec-&gt;mixer_nid
 op_assign
 id|mixer_nid
