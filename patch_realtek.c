@@ -36892,7 +36892,7 @@ id|codec
 comma
 l_int|0x18
 comma
-l_int|0x00001714
+l_int|0x00000734
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -36903,7 +36903,7 @@ id|codec
 comma
 l_int|0x19
 comma
-l_int|0x0000171c
+l_int|0x0000073c
 )paren
 suffix:semicolon
 "&t;"
