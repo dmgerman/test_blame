@@ -605,15 +605,6 @@ suffix:semicolon
 "&t;"
 r_int
 r_int
-id|auto_mic_valid_imux
-suffix:colon
-l_int|1
-suffix:semicolon
-"&t;"
-multiline_comment|/* valid imux for auto-mic */
-"&t;"
-r_int
-r_int
 id|automute_speaker
 suffix:colon
 l_int|1
@@ -2756,9 +2747,6 @@ c_cond
 (paren
 op_logical_neg
 id|spec-&gt;auto_mic
-op_logical_or
-op_logical_neg
-id|spec-&gt;auto_mic_valid_imux
 )paren
 "&t;&t;"
 r_return
@@ -4856,11 +4844,6 @@ comma
 "&t;&t;&t;&t;&t;&t;"
 id|alc_mic_automute
 )paren
-suffix:semicolon
-"&t;"
-id|spec-&gt;auto_mic_valid_imux
-op_assign
-l_int|1
 suffix:semicolon
 "&t;"
 r_return
