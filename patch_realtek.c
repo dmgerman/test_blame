@@ -493,6 +493,10 @@ id|hda_nid_t
 id|inv_dmic_pin
 suffix:semicolon
 "&t;"
+id|hda_nid_t
+id|shared_mic_vref_pin
+suffix:semicolon
+"&t;"
 multiline_comment|/* DAC list */
 "&t;"
 r_int
@@ -1299,6 +1303,8 @@ c_cond
 id|val
 op_eq
 id|AC_PINCTL_VREF_HIZ
+op_logical_and
+id|spec-&gt;shared_mic_vref_pin
 )paren
 (brace
 "&t;&t;"
@@ -1306,45 +1312,9 @@ r_const
 id|hda_nid_t
 id|vref_pin
 op_assign
-l_int|0x18
+id|spec-&gt;shared_mic_vref_pin
 suffix:semicolon
 "&t;&t;"
-multiline_comment|/* Sanity check pin 0x18 */
-"&t;&t;"
-r_if
-c_cond
-(paren
-id|get_wcaps_type
-c_func
-(paren
-id|get_wcaps
-c_func
-(paren
-id|codec
-comma
-id|vref_pin
-)paren
-)paren
-op_eq
-id|AC_WID_PIN
-op_logical_and
-"&t;&t;"
-id|get_defcfg_connect
-c_func
-(paren
-id|snd_hda_codec_get_pincfg
-c_func
-(paren
-id|codec
-comma
-id|vref_pin
-)paren
-)paren
-op_eq
-id|AC_JACK_PORT_NONE
-)paren
-(brace
-"&t;&t;&t;"
 r_int
 r_int
 id|vref_val
@@ -1357,7 +1327,7 @@ comma
 id|vref_pin
 )paren
 suffix:semicolon
-"&t;&t;&t;"
+"&t;&t;"
 r_if
 c_cond
 (paren
@@ -1365,7 +1335,7 @@ id|vref_val
 op_ne
 id|AC_PINCTL_VREF_HIZ
 )paren
-"&t;&t;&t;&t;"
+"&t;&t;&t;"
 id|snd_hda_set_pin_ctl
 c_func
 (paren
@@ -1385,8 +1355,6 @@ l_int|0
 )paren
 )paren
 suffix:semicolon
-"&t;&t;"
-)brace
 "&t;"
 )brace
 "&t;"
@@ -31545,6 +31513,11 @@ id|spec
 op_assign
 id|codec-&gt;spec
 suffix:semicolon
+"&t;"
+id|spec-&gt;shared_mic_vref_pin
+op_assign
+l_int|0x18
+suffix:semicolon
 macro_line|#if 0
 "&t;"
 multiline_comment|/* pshou 07/11/05  set a zero PCM sample to DAC when FIFO is&n;&t; * under-run&n;&t; */
@@ -36230,6 +36203,11 @@ suffix:semicolon
 id|spec
 op_assign
 id|codec-&gt;spec
+suffix:semicolon
+"&t;"
+id|spec-&gt;shared_mic_vref_pin
+op_assign
+l_int|0x18
 suffix:semicolon
 "&t;"
 id|alc_pick_fixup
