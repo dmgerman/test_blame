@@ -128,7 +128,6 @@ suffix:semicolon
 multiline_comment|/* cached input-pin control value */
 )brace
 suffix:semicolon
-macro_line|#define MAX_VOL_NIDS&t;0x40
 multiline_comment|/* make compatible with old code */
 macro_line|#define alc_apply_pincfgs&t;snd_hda_apply_pincfgs
 macro_line|#define alc_apply_fixup&t;&t;snd_hda_apply_fixup
@@ -370,11 +369,6 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* capture source */
 "&t;"
-r_int
-r_int
-id|num_mux_defs
-suffix:semicolon
-"&t;"
 r_struct
 id|hda_input_mux
 id|input_mux
@@ -411,10 +405,6 @@ suffix:semicolon
 "&t;"
 r_int
 id|num_channel_mode
-suffix:semicolon
-"&t;"
-r_int
-id|need_dac_fix
 suffix:semicolon
 "&t;"
 r_int
@@ -666,6 +656,14 @@ multiline_comment|/* other flags */
 "&t;"
 r_int
 r_int
+id|need_dac_fix
+suffix:colon
+l_int|1
+suffix:semicolon
+multiline_comment|/* need to limit DACs for multi channels */
+"&t;"
+r_int
+r_int
 id|no_analog
 suffix:colon
 l_int|1
@@ -679,27 +677,6 @@ suffix:colon
 l_int|1
 suffix:semicolon
 multiline_comment|/* switch ADCs (for ALC275) */
-"&t;"
-r_int
-r_int
-id|single_input_src
-suffix:colon
-l_int|1
-suffix:semicolon
-"&t;"
-r_int
-r_int
-id|vol_in_capsrc
-suffix:colon
-l_int|1
-suffix:semicolon
-multiline_comment|/* use capsrc volume (ADC has no vol) */
-"&t;"
-r_int
-r_int
-id|parse_flags
-suffix:semicolon
-multiline_comment|/* passed to snd_hda_parse_pin_defcfg() */
 "&t;"
 r_int
 r_int
@@ -733,18 +710,11 @@ l_int|1
 suffix:semicolon
 multiline_comment|/* Don&squot;t prefer HP pins to speaker pins */
 "&t;"
-multiline_comment|/* auto-mute control */
-"&t;"
 r_int
-id|automute_mode
+r_int
+id|parse_flags
 suffix:semicolon
-"&t;"
-id|hda_nid_t
-id|automute_mixer_nid
-(braket
-id|AUTO_CFG_MAX_OUTS
-)braket
-suffix:semicolon
+multiline_comment|/* passed to snd_hda_parse_pin_defcfg() */
 "&t;"
 r_int
 id|init_amp
@@ -2709,7 +2679,6 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-macro_line|#define get_connection_index(codec, mux, nid) &bslash;&n;&t;snd_hda_get_conn_index(codec, mux, nid, 0)
 multiline_comment|/* standard mic auto-switch helper */
 r_void
 id|alc_mic_automute
@@ -7903,7 +7872,6 @@ comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * build control elements&n; */
-macro_line|#define NID_MAPPING&t;&t;(-1)
 r_void
 id|alc_free_kctls
 c_func
