@@ -4126,12 +4126,36 @@ op_star
 id|temp
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|name
+)paren
+"&t;&t;"
 id|knew-&gt;name
 op_assign
 id|kstrdup
 c_func
 (paren
 id|name
+comma
+id|GFP_KERNEL
+)paren
+suffix:semicolon
+"&t;"
+r_else
+r_if
+c_cond
+(paren
+id|knew-&gt;name
+)paren
+"&t;&t;"
+id|knew-&gt;name
+op_assign
+id|kstrdup
+c_func
+(paren
+id|knew-&gt;name
 comma
 id|GFP_KERNEL
 )paren
@@ -4180,7 +4204,7 @@ c_func
 (paren
 id|spec
 comma
-l_string|&quot;Auto-Mute Mode&quot;
+l_int|NULL
 comma
 op_amp
 id|alc_automute_mode_enum
@@ -7670,6 +7694,12 @@ id|SNDRV_CTL_ELEM_IFACE_MIXER
 comma
 "&t;"
 dot
+id|name
+op_assign
+l_string|&quot;Inverted Internal Mic Capture Switch&quot;
+comma
+"&t;"
+dot
 id|info
 op_assign
 id|snd_ctl_boolean_mono_info
@@ -7719,9 +7749,8 @@ c_func
 (paren
 id|spec
 comma
-l_string|&quot;Inverted Internal Mic Capture Switch&quot;
+l_int|NULL
 comma
-"&t;&t;&t;"
 op_amp
 id|alc_inv_dmic_sw
 )paren
@@ -12953,7 +12982,7 @@ c_func
 (paren
 id|spec
 comma
-l_string|&quot;Input Source&quot;
+l_int|NULL
 comma
 op_amp
 id|cap_src_temp
@@ -13119,9 +13148,8 @@ c_func
 (paren
 id|spec
 comma
-l_string|&quot;Capture Volume&quot;
+l_int|NULL
 comma
-"&t;&t;&t;&t;&t;&t;"
 op_amp
 id|cap_vol_temp
 )paren
@@ -13169,9 +13197,8 @@ c_func
 (paren
 id|spec
 comma
-l_string|&quot;Capture Switch&quot;
+l_int|NULL
 comma
-"&t;&t;&t;&t;&t;&t;"
 op_amp
 id|cap_sw_temp
 )paren
@@ -22517,9 +22544,8 @@ c_func
 (paren
 id|spec
 comma
-l_string|&quot;Channel Mode&quot;
+l_int|NULL
 comma
-"&t;&t;&t;&t;"
 op_amp
 id|alc_auto_channel_mode_enum
 )paren
