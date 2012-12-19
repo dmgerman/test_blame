@@ -1411,9 +1411,6 @@ comma
 r_int
 r_int
 id|idx
-comma
-r_bool
-id|force
 )paren
 (brace
 "&t;"
@@ -1478,9 +1475,6 @@ id|adc_idx
 )braket
 op_eq
 id|idx
-op_logical_and
-op_logical_neg
-id|force
 )paren
 "&t;&t;"
 r_return
@@ -1709,8 +1703,6 @@ id|ucontrol-&gt;value.enumerated.item
 (braket
 l_int|0
 )braket
-comma
-l_bool|false
 )paren
 suffix:semicolon
 )brace
@@ -2804,8 +2796,6 @@ id|i
 )braket
 dot
 id|idx
-comma
-l_bool|false
 )paren
 suffix:semicolon
 "&t;&t;&t;"
@@ -2829,8 +2819,6 @@ l_int|0
 )braket
 dot
 id|idx
-comma
-l_bool|false
 )paren
 suffix:semicolon
 )brace
