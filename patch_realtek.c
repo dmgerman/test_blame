@@ -2898,6 +2898,15 @@ id|AC_AMP_SET_INPUT
 )paren
 suffix:semicolon
 "&t;"
+multiline_comment|/* flush all cached amps at first */
+"&t;"
+id|snd_hda_codec_resume_amp
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+"&t;"
 multiline_comment|/* we care only right channel */
 "&t;"
 id|val
