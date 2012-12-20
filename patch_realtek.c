@@ -2900,7 +2900,7 @@ suffix:semicolon
 "&t;"
 multiline_comment|/* flush all cached amps at first */
 "&t;"
-id|snd_hda_codec_resume_amp
+id|snd_hda_codec_flush_amp_cache
 c_func
 (paren
 id|codec
