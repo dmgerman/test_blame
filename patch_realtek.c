@@ -14264,7 +14264,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|HDA_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 (brace
 "&t;&t;"
@@ -14359,7 +14359,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|HDA_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 (brace
 "&t;&t;"
@@ -18477,7 +18477,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|HDA_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 "&t;&t;"
 r_return
