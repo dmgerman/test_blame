@@ -103,20 +103,6 @@ suffix:semicolon
 multiline_comment|/* Means that this sku is set by driver, not read from hw */
 )brace
 suffix:semicolon
-multiline_comment|/* make compatible with old code */
-macro_line|#define alc_apply_pincfgs&t;snd_hda_apply_pincfgs
-macro_line|#define alc_apply_fixup&t;&t;snd_hda_apply_fixup
-macro_line|#define alc_pick_fixup&t;&t;snd_hda_pick_fixup
-macro_line|#define alc_fixup&t;&t;hda_fixup
-macro_line|#define alc_pincfg&t;&t;hda_pintbl
-macro_line|#define alc_model_fixup&t;&t;hda_model_fixup
-macro_line|#define ALC_FIXUP_PINS&t;HDA_FIXUP_PINS
-macro_line|#define ALC_FIXUP_VERBS&t;HDA_FIXUP_VERBS
-macro_line|#define ALC_FIXUP_FUNC&t;HDA_FIXUP_FUNC
-macro_line|#define ALC_FIXUP_ACT_PRE_PROBE&t;HDA_FIXUP_ACT_PRE_PROBE
-macro_line|#define ALC_FIXUP_ACT_PROBE&t;HDA_FIXUP_ACT_PROBE
-macro_line|#define ALC_FIXUP_ACT_INIT&t;HDA_FIXUP_ACT_INIT
-macro_line|#define ALC_FIXUP_ACT_BUILD&t;HDA_FIXUP_ACT_BUILD
 r_struct
 id|alc_spec
 (brace
@@ -3357,7 +3343,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -3371,7 +3357,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 "&t;&t;"
 id|alc_add_inv_dmic_mixer
@@ -3610,12 +3596,12 @@ suffix:semicolon
 )brace
 macro_line|#endif
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_BUILD
+id|HDA_FIXUP_ACT_BUILD
 )paren
 suffix:semicolon
 "&t;"
@@ -3681,12 +3667,12 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_INIT
+id|HDA_FIXUP_ACT_INIT
 )paren
 suffix:semicolon
 "&t;"
@@ -4861,7 +4847,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -4875,7 +4861,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 "&t;&t;"
 id|snd_hda_jack_detect_enable_callback
@@ -4893,7 +4879,7 @@ suffix:semicolon
 )brace
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc880_fixups
 (braket
 )braket
@@ -4909,7 +4895,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -4930,7 +4916,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -4951,7 +4937,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -5014,7 +5000,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5023,7 +5009,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5069,7 +5055,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5078,7 +5064,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5123,7 +5109,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -5176,7 +5162,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -5241,7 +5227,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -5264,7 +5250,7 @@ multiline_comment|/* override all pins as BIOS on old Amilo is broken */
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5273,7 +5259,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5399,7 +5385,7 @@ multiline_comment|/* almost compatible with FUJITSU, but no bass and SPDIF */
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5408,7 +5394,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5534,7 +5520,7 @@ multiline_comment|/* need to fix HP and speaker pins to be parsed correctly */
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5543,7 +5529,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5591,7 +5577,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5600,7 +5586,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5653,7 +5639,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5662,7 +5648,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5775,7 +5761,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5784,7 +5770,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5897,7 +5883,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5906,7 +5892,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -5950,7 +5936,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -5959,7 +5945,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -6003,7 +5989,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -6012,7 +5998,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -6125,7 +6111,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -6134,7 +6120,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -6178,7 +6164,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -6187,7 +6173,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -6231,7 +6217,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -6240,7 +6226,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -6353,7 +6339,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -6362,7 +6348,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -6406,7 +6392,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -6415,7 +6401,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -7180,7 +7166,7 @@ comma
 suffix:semicolon
 r_const
 r_struct
-id|alc_model_fixup
+id|hda_model_fixup
 id|alc880_fixup_models
 (braket
 )braket
@@ -7324,7 +7310,7 @@ op_assign
 l_int|1
 suffix:semicolon
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -7338,12 +7324,12 @@ id|alc880_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -7426,12 +7412,12 @@ op_assign
 id|alc880_unsol_event
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -7582,7 +7568,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -7604,7 +7590,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 (brace
 "&t;&t;"
@@ -7671,7 +7657,7 @@ comma
 "&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -7690,7 +7676,7 @@ suffix:semicolon
 "&t;"
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 id|pincfgs
 (braket
 )braket
@@ -7794,10 +7780,10 @@ id|action
 (brace
 "&t;"
 r_case
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 suffix:colon
 "&t;&t;"
-id|alc_apply_pincfgs
+id|snd_hda_apply_pincfgs
 c_func
 (paren
 id|codec
@@ -7810,7 +7796,7 @@ r_break
 suffix:semicolon
 "&t;"
 r_case
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 suffix:colon
 "&t;&t;"
 id|spec-&gt;init_amp
@@ -7825,7 +7811,7 @@ suffix:semicolon
 )brace
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc260_fixups
 (braket
 )braket
@@ -7841,7 +7827,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -7850,7 +7836,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -7881,7 +7867,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -7890,7 +7876,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -7921,7 +7907,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -7984,7 +7970,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -8005,7 +7991,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -8038,7 +8024,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -8101,7 +8087,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -8134,7 +8120,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -8327,7 +8313,7 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -8340,12 +8326,12 @@ id|alc260_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -8428,12 +8414,12 @@ op_assign
 id|alc_eapd_shutup
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -8547,7 +8533,7 @@ comma
 "&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -8561,7 +8547,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_INIT
+id|HDA_FIXUP_ACT_INIT
 )paren
 "&t;&t;"
 r_return
@@ -8769,7 +8755,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -8783,7 +8769,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_INIT
+id|HDA_FIXUP_ACT_INIT
 )paren
 "&t;&t;"
 r_return
@@ -8824,7 +8810,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -8838,7 +8824,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 (brace
 "&t;&t;"
@@ -8929,7 +8915,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 (brace
 "&t;&t;"
@@ -9021,7 +9007,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -9060,7 +9046,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_INIT
+id|HDA_FIXUP_ACT_INIT
 )paren
 "&t;&t;"
 r_return
@@ -9180,7 +9166,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -9219,7 +9205,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_INIT
+id|HDA_FIXUP_ACT_INIT
 )paren
 "&t;&t;"
 r_return
@@ -9310,7 +9296,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -9332,7 +9318,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 "&t;&t;"
 id|spec-&gt;gen.no_primary_hp
@@ -9342,7 +9328,7 @@ suffix:semicolon
 )brace
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc882_fixups
 (braket
 )braket
@@ -9358,7 +9344,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -9367,7 +9353,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -9414,7 +9400,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -9423,7 +9409,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -9462,7 +9448,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9503,7 +9489,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -9524,7 +9510,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -9533,7 +9519,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -9564,7 +9550,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -9573,7 +9559,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -9604,7 +9590,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -9613,7 +9599,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -9644,7 +9630,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9694,7 +9680,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9746,7 +9732,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9798,7 +9784,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9850,7 +9836,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9871,7 +9857,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9892,7 +9878,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9913,7 +9899,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -9946,7 +9932,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -9967,7 +9953,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -9976,7 +9962,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -10028,7 +10014,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -10037,7 +10023,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -10091,7 +10077,7 @@ multiline_comment|/* additional init verbs for Acer Aspire 8930G */
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -10222,7 +10208,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -10243,7 +10229,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -10264,7 +10250,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -10297,7 +10283,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -10330,7 +10316,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -10351,7 +10337,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -11100,7 +11086,7 @@ comma
 suffix:semicolon
 r_const
 r_struct
-id|alc_model_fixup
+id|hda_model_fixup
 id|alc882_fixup_models
 (braket
 )braket
@@ -11322,7 +11308,7 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -11336,12 +11322,12 @@ id|alc882_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -11432,12 +11418,12 @@ op_assign
 id|alc_patch_ops
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -11540,7 +11526,7 @@ comma
 suffix:semicolon
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc262_fixups
 (braket
 )braket
@@ -11556,7 +11542,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -11565,7 +11551,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -11612,7 +11598,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -11621,7 +11607,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -11652,7 +11638,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -11661,7 +11647,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -11692,7 +11678,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -11746,7 +11732,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -11796,7 +11782,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -11846,7 +11832,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -11978,7 +11964,7 @@ comma
 suffix:semicolon
 r_const
 r_struct
-id|alc_model_fixup
+id|hda_model_fixup
 id|alc262_fixup_models
 (braket
 )braket
@@ -12146,7 +12132,7 @@ l_int|10
 )paren
 suffix:semicolon
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -12160,12 +12146,12 @@ id|alc262_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -12261,12 +12247,12 @@ op_assign
 id|alc_eapd_shutup
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -12441,7 +12427,7 @@ comma
 suffix:semicolon
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc268_fixups
 (braket
 )braket
@@ -12457,7 +12443,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -12478,7 +12464,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -12513,7 +12499,7 @@ comma
 suffix:semicolon
 r_const
 r_struct
-id|alc_model_fixup
+id|hda_model_fixup
 id|alc268_fixup_models
 (braket
 )braket
@@ -12736,7 +12722,7 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -12749,12 +12735,12 @@ id|alc268_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -12924,12 +12910,12 @@ op_assign
 id|alc_eapd_shutup
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -13674,7 +13660,7 @@ comma
 "&t;&t;&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -13696,7 +13682,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 "&t;&t;"
 id|spec-&gt;parse_flags
@@ -13716,7 +13702,7 @@ comma
 "&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -13734,7 +13720,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_INIT
+id|HDA_FIXUP_ACT_INIT
 )paren
 "&t;&t;"
 r_return
@@ -13776,7 +13762,7 @@ comma
 "&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -13882,7 +13868,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -13904,7 +13890,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 "&t;&t;"
 r_return
@@ -13936,7 +13922,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -13954,7 +13940,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_INIT
+id|HDA_FIXUP_ACT_INIT
 )paren
 "&t;&t;"
 r_return
@@ -14080,7 +14066,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -14102,7 +14088,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 "&t;&t;"
 r_return
@@ -14175,7 +14161,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -14197,7 +14183,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 (brace
 "&t;&t;"
@@ -14270,7 +14256,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -14292,7 +14278,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 (brace
 "&t;&t;"
@@ -14320,7 +14306,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -14369,7 +14355,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 "&t;&t;"
 id|snd_hda_jack_set_gating_jack
@@ -14467,7 +14453,7 @@ comma
 suffix:semicolon
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc269_fixups
 (braket
 )braket
@@ -14483,7 +14469,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -14524,7 +14510,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -14595,7 +14581,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -14647,7 +14633,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -14668,7 +14654,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -14677,7 +14663,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -14708,7 +14694,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -14749,7 +14735,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -14781,7 +14767,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -14802,7 +14788,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -14834,7 +14820,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -14855,7 +14841,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -14876,7 +14862,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -14885,7 +14871,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -14936,7 +14922,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -14945,7 +14931,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -15001,7 +14987,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -15010,7 +14996,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -15066,7 +15052,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -15075,7 +15061,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -15131,7 +15117,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -15140,7 +15126,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -15196,7 +15182,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -15217,7 +15203,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -15238,7 +15224,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -15259,7 +15245,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -15268,7 +15254,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -15319,7 +15305,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -15340,7 +15326,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -15349,7 +15335,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -15405,7 +15391,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -16395,7 +16381,7 @@ macro_line|#endif
 suffix:semicolon
 r_const
 r_struct
-id|alc_model_fixup
+id|hda_model_fixup
 id|alc269_fixup_models
 (braket
 )braket
@@ -16875,7 +16861,7 @@ op_assign
 l_int|0x18
 suffix:semicolon
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -16889,12 +16875,12 @@ id|alc269_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -17205,12 +17191,12 @@ op_assign
 id|alc269_shutup
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -17315,7 +17301,7 @@ comma
 "&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -17342,7 +17328,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_INIT
+id|HDA_FIXUP_ACT_INIT
 )paren
 "&t;&t;"
 r_return
@@ -17420,7 +17406,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -17434,7 +17420,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 "&t;&t;"
 id|codec-&gt;no_jack_detect
@@ -17444,7 +17430,7 @@ suffix:semicolon
 )brace
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc861_fixups
 (braket
 )braket
@@ -17460,7 +17446,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -17469,7 +17455,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -17508,7 +17494,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -17529,7 +17515,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -17550,7 +17536,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -17713,7 +17699,7 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -17726,12 +17712,12 @@ id|alc861_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -17816,12 +17802,12 @@ id|alc_power_eapd
 suffix:semicolon
 macro_line|#endif
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -17919,7 +17905,7 @@ comma
 "&t;&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -17933,7 +17919,7 @@ c_cond
 (paren
 id|action
 op_eq
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 (brace
 "&t;&t;"
@@ -17963,7 +17949,7 @@ suffix:semicolon
 )brace
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc861vd_fixups
 (braket
 )braket
@@ -17979,7 +17965,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -18040,7 +18026,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -18155,7 +18141,7 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -18168,12 +18154,12 @@ id|alc861vd_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -18256,12 +18242,12 @@ op_assign
 id|alc_eapd_shutup
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -18405,7 +18391,7 @@ comma
 "&t;&t;&t;"
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 op_star
 id|fix
 comma
@@ -18419,7 +18405,7 @@ c_cond
 (paren
 id|action
 op_ne
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 "&t;&t;"
 r_return
@@ -18533,7 +18519,7 @@ comma
 suffix:semicolon
 r_const
 r_struct
-id|alc_fixup
+id|hda_fixup
 id|alc662_fixups
 (braket
 )braket
@@ -18549,7 +18535,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -18558,7 +18544,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -18589,7 +18575,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -18598,7 +18584,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -18629,7 +18615,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -18650,7 +18636,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_VERBS
+id|HDA_FIXUP_VERBS
 comma
 "&t;&t;"
 dot
@@ -18691,7 +18677,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -18712,7 +18698,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -18721,7 +18707,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -18764,7 +18750,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -18773,7 +18759,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -18840,7 +18826,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -18849,7 +18835,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -18916,7 +18902,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -18925,7 +18911,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -19000,7 +18986,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -19009,7 +18995,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -19084,7 +19070,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -19093,7 +19079,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -19168,7 +19154,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -19177,7 +19163,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -19252,7 +19238,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -19261,7 +19247,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -19344,7 +19330,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -19353,7 +19339,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -19436,7 +19422,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -19457,7 +19443,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_PINS
+id|HDA_FIXUP_PINS
 comma
 "&t;&t;"
 dot
@@ -19466,7 +19452,7 @@ op_assign
 (paren
 r_const
 r_struct
-id|alc_pincfg
+id|hda_pintbl
 (braket
 )braket
 )paren
@@ -19497,7 +19483,7 @@ op_assign
 dot
 id|type
 op_assign
-id|ALC_FIXUP_FUNC
+id|HDA_FIXUP_FUNC
 comma
 "&t;&t;"
 dot
@@ -20348,7 +20334,7 @@ macro_line|#endif
 suffix:semicolon
 r_const
 r_struct
-id|alc_model_fixup
+id|hda_model_fixup
 id|alc662_fixup_models
 (braket
 )braket
@@ -20718,7 +20704,7 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|alc_pick_fixup
+id|snd_hda_pick_fixup
 c_func
 (paren
 id|codec
@@ -20732,12 +20718,12 @@ id|alc662_fixups
 )paren
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PRE_PROBE
+id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 suffix:semicolon
 "&t;"
@@ -20946,12 +20932,12 @@ op_assign
 id|alc_eapd_shutup
 suffix:semicolon
 "&t;"
-id|alc_apply_fixup
+id|snd_hda_apply_fixup
 c_func
 (paren
 id|codec
 comma
-id|ALC_FIXUP_ACT_PROBE
+id|HDA_FIXUP_ACT_PROBE
 )paren
 suffix:semicolon
 "&t;"
