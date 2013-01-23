@@ -15894,6 +15894,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x0740
+comma
+l_string|&quot;Acer AO725&quot;
+comma
+id|ALC271_FIXUP_HP_GATE_MIC_JACK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x0742
 comma
 l_string|&quot;Acer AO756&quot;
