@@ -10847,6 +10847,19 @@ id|ALC882_FIXUP_NO_PRIMARY_HP
 )paren
 comma
 "&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
+l_int|0x9043
+comma
+l_string|&quot;Sony Vaio VGC-LN51JGB&quot;
+comma
+id|ALC882_FIXUP_NO_PRIMARY_HP
+)paren
+comma
+"&t;"
 multiline_comment|/* All Apple entries are in codec SSIDs */
 "&t;"
 id|SND_PCI_QUIRK
