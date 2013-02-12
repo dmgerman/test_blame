@@ -9453,7 +9453,7 @@ op_assign
 l_int|1
 suffix:semicolon
 )brace
-multiline_comment|/* Don&squot;t take HP output as primary&n; * strangely, the speaker output doesn&squot;t work on VAIO Z through DAC 0x05&n; */
+multiline_comment|/* Don&squot;t take HP output as primary&n; * Strangely, the speaker output doesn&squot;t work on Vaio Z and some Vaio&n; * all-in-one desktop PCs (for example VGC-LN51JGB) through DAC 0x05&n; */
 r_void
 id|alc882_fixup_no_primary_hp
 c_func
