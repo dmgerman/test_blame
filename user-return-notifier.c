@@ -120,9 +120,6 @@ suffix:semicolon
 r_struct
 id|hlist_node
 op_star
-id|tmp1
-comma
-op_star
 id|tmp2
 suffix:semicolon
 "&t;"
@@ -146,8 +143,6 @@ id|hlist_for_each_entry_safe
 c_func
 (paren
 id|urn
-comma
-id|tmp1
 comma
 id|tmp2
 comma
