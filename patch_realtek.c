@@ -8006,12 +8006,7 @@ id|HDA_FIXUP_ACT_PRE_PROBE
 )paren
 (brace
 "&t;&t;"
-id|spec-&gt;gen.add_out_jack_modes
-op_assign
-l_int|1
-suffix:semicolon
-"&t;&t;"
-id|spec-&gt;gen.add_in_jack_modes
+id|spec-&gt;gen.add_jack_modes
 op_assign
 l_int|1
 suffix:semicolon
