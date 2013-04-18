@@ -24327,9 +24327,8 @@ l_int|1
 )paren
 (brace
 "&t;&t;"
-r_if
-c_cond
-(paren
+id|err
+op_assign
 id|alc_codec_rename
 c_func
 (paren
@@ -24337,6 +24336,12 @@ id|codec
 comma
 l_string|&quot;ALC272X&quot;
 )paren
+suffix:semicolon
+"&t;&t;"
+r_if
+c_cond
+(paren
+id|err
 OL
 l_int|0
 )paren
