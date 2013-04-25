@@ -13451,6 +13451,9 @@ comma
 "&t;"
 id|ALC269_TYPE_ALC284
 comma
+"&t;"
+id|ALC269_TYPE_ALC286
+comma
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * BIOS auto configuration&n; */
@@ -13567,6 +13570,10 @@ suffix:colon
 "&t;"
 r_case
 id|ALC269_TYPE_ALC282
+suffix:colon
+"&t;"
+r_case
+id|ALC269_TYPE_ALC286
 suffix:colon
 "&t;&t;"
 id|ssids
@@ -20841,6 +20848,18 @@ suffix:semicolon
 r_break
 suffix:semicolon
 "&t;"
+r_case
+l_int|0x10ec0286
+suffix:colon
+"&t;&t;"
+id|spec-&gt;codec_variant
+op_assign
+id|ALC269_TYPE_ALC286
+suffix:semicolon
+"&t;&t;"
+r_break
+suffix:semicolon
+"&t;"
 )brace
 "&t;"
 multiline_comment|/* automatic parse from the BIOS config */
@@ -25113,6 +25132,24 @@ dot
 id|name
 op_assign
 l_string|&quot;ALC284&quot;
+comma
+dot
+id|patch
+op_assign
+id|patch_alc269
+)brace
+comma
+"&t;"
+(brace
+dot
+id|id
+op_assign
+l_int|0x10ec0286
+comma
+dot
+id|name
+op_assign
+l_string|&quot;ALC286&quot;
 comma
 dot
 id|patch
