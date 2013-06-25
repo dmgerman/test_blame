@@ -13888,6 +13888,15 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
+id|alc_inv_dmic_sync
+c_func
+(paren
+id|codec
+comma
+l_bool|true
+)paren
+suffix:semicolon
+"&t;"
 id|hda_call_check_power_status
 c_func
 (paren
