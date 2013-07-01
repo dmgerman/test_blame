@@ -19727,6 +19727,32 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x05cc
+comma
+l_string|&quot;Dell X5 Precision&quot;
+comma
+id|ALC269_FIXUP_DELL2_MIC_NO_PRESENCE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
+l_int|0x05cd
+comma
+l_string|&quot;Dell X5 Precision&quot;
+comma
+id|ALC269_FIXUP_DELL2_MIC_NO_PRESENCE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x05de
 comma
 l_string|&quot;Dell&quot;
@@ -19966,6 +19992,32 @@ comma
 l_string|&quot;Dell&quot;
 comma
 id|ALC269_FIXUP_DELL1_MIC_NO_PRESENCE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
+l_int|0x15cc
+comma
+l_string|&quot;Dell X5 Precision&quot;
+comma
+id|ALC269_FIXUP_DELL2_MIC_NO_PRESENCE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
+l_int|0x15cd
+comma
+l_string|&quot;Dell X5 Precision&quot;
+comma
+id|ALC269_FIXUP_DELL2_MIC_NO_PRESENCE
 )paren
 comma
 "&t;"
