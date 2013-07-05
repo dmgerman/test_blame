@@ -12,6 +12,8 @@ macro_line|#include &quot;hda_local.h&quot;
 macro_line|#include &quot;hda_auto_parser.h&quot;
 macro_line|#include &quot;hda_jack.h&quot;
 macro_line|#include &quot;hda_generic.h&quot;
+multiline_comment|/* keep halting ALC5505 DSP, for power saving */
+macro_line|#define HALT_REALTEK_ALC5505
 multiline_comment|/* unsol event tags */
 macro_line|#define ALC_DCVOL_EVENT&t;&t;0x08
 multiline_comment|/* for GPIO Poll */
@@ -14423,7 +14425,23 @@ comma
 l_int|0x00000010
 )paren
 suffix:semicolon
+macro_line|#ifdef HALT_REALTEK_ALC5505
+"&t;"
+id|alc5505_dsp_halt
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
+macro_line|#endif
 )brace
+macro_line|#ifdef HALT_REALTEK_ALC5505
+macro_line|#define alc5505_dsp_suspend(codec)&t;/* NOP */
+macro_line|#define alc5505_dsp_resume(codec)&t;/* NOP */
+macro_line|#else
+macro_line|#define alc5505_dsp_suspend(codec)&t;alc5505_dsp_halt(codec)
+macro_line|#define alc5505_dsp_resume(codec)&t;alc5505_dsp_back_from_halt(codec)
+macro_line|#endif
 macro_line|#ifdef CONFIG_PM
 r_int
 id|alc269_suspend
@@ -14450,7 +14468,7 @@ c_cond
 id|spec-&gt;has_alc5505_dsp
 )paren
 "&t;&t;"
-id|alc5505_dsp_halt
+id|alc5505_dsp_suspend
 c_func
 (paren
 id|codec
@@ -14627,7 +14645,7 @@ c_cond
 id|spec-&gt;has_alc5505_dsp
 )paren
 "&t;&t;"
-id|alc5505_dsp_back_from_halt
+id|alc5505_dsp_resume
 c_func
 (paren
 id|codec
