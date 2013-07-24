@@ -1171,6 +1171,13 @@ c_func
 l_int|200
 )paren
 suffix:semicolon
+"&t;"
+id|snd_hda_shutup_pins
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
 )brace
 multiline_comment|/* generic EAPD initialization */
 r_void
@@ -3791,6 +3798,8 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
+r_else
+"&t;&t;"
 id|snd_hda_shutup_pins
 c_func
 (paren
@@ -13700,17 +13709,6 @@ r_if
 c_cond
 (paren
 id|spec-&gt;codec_variant
-op_ne
-id|ALC269_TYPE_ALC269VB
-)paren
-"&t;&t;"
-r_return
-suffix:semicolon
-"&t;"
-r_if
-c_cond
-(paren
-id|spec-&gt;codec_variant
 op_eq
 id|ALC269_TYPE_ALC269VB
 )paren
@@ -13754,6 +13752,13 @@ l_int|150
 suffix:semicolon
 "&t;"
 )brace
+"&t;"
+id|snd_hda_shutup_pins
+c_func
+(paren
+id|codec
+)paren
+suffix:semicolon
 )brace
 r_void
 id|alc5505_coef_set
