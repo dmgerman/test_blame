@@ -19782,6 +19782,69 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1025
+comma
+l_int|0x047c
+comma
+l_string|&quot;Acer AC700&quot;
+comma
+id|ALC269_FIXUP_ACER_AC700
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
+l_int|0x0740
+comma
+l_string|&quot;Acer AO725&quot;
+comma
+id|ALC271_FIXUP_HP_GATE_MIC_JACK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
+l_int|0x0742
+comma
+l_string|&quot;Acer AO756&quot;
+comma
+id|ALC271_FIXUP_HP_GATE_MIC_JACK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK_VENDOR
+c_func
+(paren
+l_int|0x1025
+comma
+l_string|&quot;Acer Aspire&quot;
+comma
+id|ALC271_FIXUP_DMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
+l_int|0x0470
+comma
+l_string|&quot;Dell M101z&quot;
+comma
+id|ALC269_FIXUP_DELL_M101Z
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1028
 comma
 l_int|0x05bd
@@ -20493,69 +20556,6 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
-l_int|0x1028
-comma
-l_int|0x0470
-comma
-l_string|&quot;Dell M101z&quot;
-comma
-id|ALC269_FIXUP_DELL_M101Z
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1025
-comma
-l_int|0x047c
-comma
-l_string|&quot;Acer AC700&quot;
-comma
-id|ALC269_FIXUP_ACER_AC700
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1025
-comma
-l_int|0x0740
-comma
-l_string|&quot;Acer AO725&quot;
-comma
-id|ALC271_FIXUP_HP_GATE_MIC_JACK
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
-l_int|0x1025
-comma
-l_int|0x0742
-comma
-l_string|&quot;Acer AO756&quot;
-comma
-id|ALC271_FIXUP_HP_GATE_MIC_JACK
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK_VENDOR
-c_func
-(paren
-l_int|0x1025
-comma
-l_string|&quot;Acer Aspire&quot;
-comma
-id|ALC271_FIXUP_DMIC
-)paren
-comma
-"&t;"
-id|SND_PCI_QUIRK
-c_func
-(paren
 l_int|0x10cf
 comma
 l_int|0x1475
@@ -20688,9 +20688,9 @@ c_func
 (paren
 l_int|0x17aa
 comma
-l_int|0x2208
+l_int|0x2203
 comma
-l_string|&quot;Thinkpad T431s&quot;
+l_string|&quot;Thinkpad X230 Tablet&quot;
 comma
 id|ALC269_FIXUP_LENOVO_DOCK
 )paren
@@ -20701,9 +20701,9 @@ c_func
 (paren
 l_int|0x17aa
 comma
-l_int|0x2203
+l_int|0x2208
 comma
-l_string|&quot;Thinkpad X230 Tablet&quot;
+l_string|&quot;Thinkpad T431s&quot;
 comma
 id|ALC269_FIXUP_LENOVO_DOCK
 )paren
