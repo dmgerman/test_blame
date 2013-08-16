@@ -24477,6 +24477,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x034a
+comma
+l_string|&quot;Gateway LT27&quot;
+comma
+id|ALC662_FIXUP_INV_DMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x038b
 comma
 l_string|&quot;Acer Aspire 8943G&quot;
