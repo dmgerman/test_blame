@@ -4826,6 +4826,9 @@ comma
 id|ALC880_FIXUP_LG
 comma
 "&t;"
+id|ALC880_FIXUP_LG_LW25
+comma
+"&t;"
 id|ALC880_FIXUP_W810
 comma
 "&t;"
@@ -5087,6 +5090,54 @@ comma
 l_int|0x411111f0
 )brace
 comma
+"&t;&t;&t;"
+(brace
+)brace
+"&t;&t;"
+)brace
+"&t;"
+)brace
+comma
+"&t;"
+(braket
+id|ALC880_FIXUP_LG_LW25
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|HDA_FIXUP_PINS
+comma
+"&t;&t;"
+dot
+id|v.pins
+op_assign
+(paren
+r_const
+r_struct
+id|hda_pintbl
+(braket
+)braket
+)paren
+(brace
+"&t;&t;&t;"
+(brace
+l_int|0x1a
+comma
+l_int|0x0181344f
+)brace
+comma
+multiline_comment|/* line-in */
+"&t;&t;&t;"
+(brace
+l_int|0x1b
+comma
+l_int|0x0321403f
+)brace
+comma
+multiline_comment|/* headphone */
 "&t;&t;&t;"
 (brace
 )brace
@@ -6789,6 +6840,19 @@ comma
 l_string|&quot;LG w1&quot;
 comma
 id|ALC880_FIXUP_LG
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1854
+comma
+l_int|0x0077
+comma
+l_string|&quot;LG LW25&quot;
+comma
+id|ALC880_FIXUP_LG_LW25
 )paren
 comma
 "&t;"
@@ -25258,6 +25322,19 @@ comma
 l_int|0x0349
 comma
 l_string|&quot;eMachines eM250&quot;
+comma
+id|ALC662_FIXUP_INV_DMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
+l_int|0x034a
+comma
+l_string|&quot;Gateway LT27&quot;
 comma
 id|ALC662_FIXUP_INV_DMIC
 )paren
