@@ -25958,6 +25958,19 @@ c_func
 (paren
 l_int|0x1043
 comma
+l_int|0x1477
+comma
+l_string|&quot;ASUS N56VZ&quot;
+comma
+id|ALC662_FIXUP_ASUS_MODE4
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
 l_int|0x8469
 comma
 l_string|&quot;ASUS mobo&quot;
