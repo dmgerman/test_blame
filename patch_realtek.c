@@ -20437,6 +20437,17 @@ multiline_comment|/* use as headset mic, without its own jack detect */
 "&t;&t;"
 )brace
 comma
+"&t;&t;"
+dot
+id|chained
+op_assign
+l_bool|true
+comma
+"&t;&t;"
+dot
+id|chain_id
+op_assign
+id|ALC269_FIXUP_HEADSET_MIC
 "&t;"
 )brace
 comma
