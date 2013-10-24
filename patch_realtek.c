@@ -14132,7 +14132,7 @@ id|hp_pin_sense
 id|msleep
 c_func
 (paren
-l_int|85
+l_int|100
 )paren
 suffix:semicolon
 "&t;"
@@ -14189,7 +14189,7 @@ id|hp_pin_sense
 id|msleep
 c_func
 (paren
-l_int|85
+l_int|100
 )paren
 suffix:semicolon
 "&t;"
