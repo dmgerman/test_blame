@@ -2472,12 +2472,6 @@ op_assign
 id|porti
 suffix:semicolon
 "&t;&t;"
-r_else
-"&t;&t;&t;"
-r_return
-l_int|1
-suffix:semicolon
-"&t;&t;"
 r_if
 c_cond
 (paren
