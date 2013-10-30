@@ -18748,6 +18748,13 @@ id|codec
 )paren
 suffix:semicolon
 "&t;&t;"
+multiline_comment|/* Disable AA-loopback as it causes white noise */
+"&t;&t;"
+id|spec-&gt;gen.mixer_nid
+op_assign
+l_int|0
+suffix:semicolon
+"&t;&t;"
 id|spec-&gt;gen.hp_automute_hook
 op_assign
 id|alc283_hp_automute_hook
