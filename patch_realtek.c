@@ -19078,6 +19078,13 @@ op_assign
 id|alc283_hp_automute_hook
 suffix:semicolon
 "&t;&t;"
+r_break
+suffix:semicolon
+"&t;"
+r_case
+id|HDA_FIXUP_ACT_INIT
+suffix:colon
+"&t;&t;"
 multiline_comment|/* MIC2-VREF control */
 "&t;&t;"
 multiline_comment|/* Set to manual mode */
