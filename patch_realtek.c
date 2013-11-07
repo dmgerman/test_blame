@@ -4876,6 +4876,9 @@ comma
 id|ALC880_FIXUP_Z71V
 comma
 "&t;"
+id|ALC880_FIXUP_ASUS_W5A
+comma
+"&t;"
 id|ALC880_FIXUP_3ST_BASE
 comma
 "&t;"
@@ -5874,6 +5877,141 @@ multiline_comment|/* SPDIF */
 comma
 "&t;"
 (braket
+id|ALC880_FIXUP_ASUS_W5A
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|HDA_FIXUP_PINS
+comma
+"&t;&t;"
+dot
+id|v.pins
+op_assign
+(paren
+r_const
+r_struct
+id|hda_pintbl
+(braket
+)braket
+)paren
+(brace
+"&t;&t;&t;"
+multiline_comment|/* set up the whole pins as BIOS is utterly broken */
+"&t;&t;&t;"
+(brace
+l_int|0x14
+comma
+l_int|0x0121411f
+)brace
+comma
+multiline_comment|/* HP */
+"&t;&t;&t;"
+(brace
+l_int|0x15
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x16
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x17
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x18
+comma
+l_int|0x90a60160
+)brace
+comma
+multiline_comment|/* mic */
+"&t;&t;&t;"
+(brace
+l_int|0x19
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1a
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1b
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1c
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1d
+comma
+l_int|0x411111f0
+)brace
+comma
+multiline_comment|/* N/A */
+"&t;&t;&t;"
+(brace
+l_int|0x1e
+comma
+l_int|0xb743111e
+)brace
+comma
+multiline_comment|/* SPDIF out */
+"&t;&t;&t;"
+(brace
+)brace
+"&t;&t;"
+)brace
+comma
+"&t;&t;"
+dot
+id|chained
+op_assign
+l_bool|true
+comma
+"&t;&t;"
+dot
+id|chain_id
+op_assign
+id|ALC880_FIXUP_GPIO1
+comma
+"&t;"
+)brace
+comma
+"&t;"
+(braket
 id|ALC880_FIXUP_3ST_BASE
 )braket
 op_assign
@@ -6630,6 +6768,19 @@ comma
 l_string|&quot;Coeus G610P&quot;
 comma
 id|ALC880_FIXUP_W810
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1043
+comma
+l_int|0x10c3
+comma
+l_string|&quot;ASUS W5A&quot;
+comma
+id|ALC880_FIXUP_ASUS_W5A
 )paren
 comma
 "&t;"
