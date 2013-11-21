@@ -8715,6 +8715,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x104d
+comma
+l_int|0x81e2
+comma
+l_string|&quot;Sony VAIO TX&quot;
+comma
+id|ALC260_FIXUP_HP_PIN_0F
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x10cf
 comma
 l_int|0x1326
