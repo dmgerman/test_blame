@@ -22988,6 +22988,19 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x0614
+comma
+l_string|&quot;Dell Inspiron 3135&quot;
+comma
+id|ALC269_FIXUP_DELL1_MIC_NO_PRESENCE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x0616
 comma
 l_string|&quot;Dell Vostro 5470&quot;
