@@ -18698,7 +18698,7 @@ suffix:semicolon
 "&t;"
 id|spec-&gt;current_headset_type
 op_assign
-id|ALC_HEADSET_MODE_UNKNOWN
+id|ALC_HEADSET_TYPE_UNKNOWN
 suffix:semicolon
 "&t;"
 id|snd_hda_gen_hp_automute
