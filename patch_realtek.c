@@ -29400,6 +29400,10 @@ suffix:colon
 r_case
 l_int|0x10ec0665
 suffix:colon
+"&t;&t;"
+r_case
+l_int|0x10ec0668
+suffix:colon
 "&t;&t;&t;"
 id|set_beep_amp
 c_func
