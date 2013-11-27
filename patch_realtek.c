@@ -20678,6 +20678,9 @@ comma
 id|ALC269_FIXUP_LIMIT_INT_MIC_BOOST
 comma
 "&t;"
+id|ALC269VB_FIXUP_ASUS_ZENBOOK
+comma
+"&t;"
 id|ALC269_FIXUP_LIMIT_INT_MIC_BOOST_MUTE_LED
 comma
 "&t;"
@@ -22280,6 +22283,39 @@ comma
 comma
 "&t;"
 (braket
+id|ALC269VB_FIXUP_ASUS_ZENBOOK
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|HDA_FIXUP_FUNC
+comma
+"&t;&t;"
+dot
+id|v.func
+op_assign
+id|alc269_fixup_limit_int_mic_boost
+comma
+"&t;&t;"
+dot
+id|chained
+op_assign
+l_bool|true
+comma
+"&t;&t;"
+dot
+id|chain_id
+op_assign
+id|ALC269VB_FIXUP_DMIC
+comma
+"&t;"
+)brace
+comma
+"&t;"
+(braket
 id|ALC269_FIXUP_LIMIT_INT_MIC_BOOST_MUTE_LED
 )braket
 op_assign
@@ -23325,7 +23361,7 @@ l_int|0x1427
 comma
 l_string|&quot;Asus Zenbook UX31E&quot;
 comma
-id|ALC269VB_FIXUP_DMIC
+id|ALC269VB_FIXUP_ASUS_ZENBOOK
 )paren
 comma
 "&t;"
@@ -23338,7 +23374,7 @@ l_int|0x1517
 comma
 l_string|&quot;Asus Zenbook UX31A&quot;
 comma
-id|ALC269VB_FIXUP_DMIC
+id|ALC269VB_FIXUP_ASUS_ZENBOOK
 )paren
 comma
 "&t;"
