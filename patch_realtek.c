@@ -23303,6 +23303,19 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x0638
+comma
+l_string|&quot;Dell Inspiron 5439&quot;
+comma
+id|ALC290_FIXUP_MONO_SPEAKERS
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x063f
 comma
 l_string|&quot;Dell&quot;
