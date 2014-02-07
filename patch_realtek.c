@@ -24285,6 +24285,19 @@ c_func
 (paren
 l_int|0x104d
 comma
+l_int|0x90b5
+comma
+l_string|&quot;Sony VAIO Pro 11&quot;
+comma
+id|ALC286_FIXUP_SONY_MIC_NO_PRESENCE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x104d
+comma
 l_int|0x90b6
 comma
 l_string|&quot;Sony VAIO Pro 13&quot;
