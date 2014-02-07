@@ -28996,6 +28996,19 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x060a
+comma
+l_string|&quot;Dell XPS 13&quot;
+comma
+id|ALC668_FIXUP_DELL_MIC_NO_PRESENCE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x0623
 comma
 l_string|&quot;Dell&quot;
