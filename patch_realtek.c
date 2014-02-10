@@ -3812,33 +3812,7 @@ id|codec
 )paren
 suffix:semicolon
 )brace
-r_void
-id|alc_free
-c_func
-(paren
-r_struct
-id|hda_codec
-op_star
-id|codec
-)paren
-(brace
-"&t;"
-id|snd_hda_apply_fixup
-c_func
-(paren
-id|codec
-comma
-id|HDA_FIXUP_ACT_FREE
-)paren
-suffix:semicolon
-"&t;"
-id|snd_hda_gen_free
-c_func
-(paren
-id|codec
-)paren
-suffix:semicolon
-)brace
+macro_line|#define alc_free&t;snd_hda_gen_free
 macro_line|#ifdef CONFIG_PM
 r_void
 id|alc_power_eapd
