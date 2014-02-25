@@ -1765,13 +1765,14 @@ l_int|1
 )paren
 (brace
 "&t;&t;"
-id|printk
+id|codec_info
 c_func
 (paren
-id|KERN_INFO
-l_string|&quot;hda_codec: %s: SKU not ready 0x%08x&bslash;n&quot;
+id|codec
 comma
-"&t;&t;"
+l_string|&quot;%s: SKU not ready 0x%08x&bslash;n&quot;
+comma
+"&t;&t;&t;"
 id|codec-&gt;chip_name
 comma
 id|ass
@@ -1928,9 +1929,11 @@ op_amp
 l_int|0x1
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: Nid=0x%x sku_cfg=0x%08x&bslash;n&quot;
 comma
 "&t;&t;"
@@ -1940,9 +1943,11 @@ id|spec-&gt;cdefine.sku_cfg
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: port_connectivity=0x%x&bslash;n&quot;
 comma
 "&t;&t;"
@@ -1950,63 +1955,77 @@ id|spec-&gt;cdefine.port_connectivity
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: enable_pcbeep=0x%x&bslash;n&quot;
 comma
 id|spec-&gt;cdefine.enable_pcbeep
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: check_sum=0x%08x&bslash;n&quot;
 comma
 id|spec-&gt;cdefine.check_sum
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: customization=0x%08x&bslash;n&quot;
 comma
 id|spec-&gt;cdefine.customization
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: external_amp=0x%x&bslash;n&quot;
 comma
 id|spec-&gt;cdefine.external_amp
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: platform_type=0x%x&bslash;n&quot;
 comma
 id|spec-&gt;cdefine.platform_type
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: swap=0x%x&bslash;n&quot;
 comma
 id|spec-&gt;cdefine.swap
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;SKU: override=0x%x&bslash;n&quot;
 comma
 id|spec-&gt;cdefine.override
@@ -2235,12 +2254,13 @@ id|nid
 )paren
 suffix:semicolon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
-l_string|&quot;realtek: No valid SSID, &quot;
+id|codec
+comma
 "&t;&t;"
-l_string|&quot;checking pincfg 0x%08x for NID 0x%x&bslash;n&quot;
+l_string|&quot;realtek: No valid SSID, checking pincfg 0x%08x for NID 0x%x&bslash;n&quot;
 comma
 "&t;&t;"
 id|ass
@@ -2345,9 +2365,11 @@ suffix:semicolon
 id|do_sku
 suffix:colon
 "&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;realtek: Enabling init ASM_ID=0x%04x CODEC_ID=%08x&bslash;n&quot;
 comma
 "&t;&t;"
@@ -2575,12 +2597,13 @@ op_assign
 id|codec-&gt;spec
 suffix:semicolon
 "&t;&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
-l_string|&quot;realtek: &quot;
+id|codec
+comma
 "&t;&t;&t;"
-l_string|&quot;Enable default setup for auto mode as fallback&bslash;n&quot;
+l_string|&quot;realtek: Enable default setup for auto mode as fallback&bslash;n&quot;
 )paren
 suffix:semicolon
 "&t;&t;"
@@ -17079,9 +17102,12 @@ op_assign
 id|led_power_filter
 suffix:semicolon
 "&t;&t;"
-id|snd_printd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
+"&t;&t;&t;"
 l_string|&quot;Detected mute LED for %x:%d&bslash;n&quot;
 comma
 id|spec-&gt;mute_led_nid
@@ -17801,9 +17827,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-id|snd_printdd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;Headset jack set to unplugged mode.&bslash;n&quot;
 )paren
 suffix:semicolon
@@ -18132,9 +18160,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-id|snd_printdd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;Headset jack set to mic-in mode.&bslash;n&quot;
 )paren
 suffix:semicolon
@@ -18332,9 +18362,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-id|snd_printdd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;Headset jack set to headphone (default) mode.&bslash;n&quot;
 )paren
 suffix:semicolon
@@ -18524,9 +18556,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-id|snd_printdd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;Headset jack set to iPhone-style headset mode.&bslash;n&quot;
 )paren
 suffix:semicolon
@@ -18716,9 +18750,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-id|snd_printdd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;Headset jack set to Nokia-style headset mode.&bslash;n&quot;
 )paren
 suffix:semicolon
@@ -18997,9 +19033,11 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-id|snd_printdd
+id|codec_dbg
 c_func
 (paren
+id|codec
+comma
 l_string|&quot;Headset jack detected iPhone-style headset: %s&bslash;n&quot;
 comma
 "&t;&t;"
@@ -28087,12 +28125,12 @@ id|AC_AMPCAP_MUTE_SHIFT
 )paren
 )paren
 "&t;&t;"
-id|printk
+id|codec_warn
 c_func
 (paren
-id|KERN_WARNING
-"&t;&t;"
-l_string|&quot;hda_codec: failed to override amp caps for NID 0x2&bslash;n&quot;
+id|codec
+comma
+l_string|&quot;failed to override amp caps for NID 0x2&bslash;n&quot;
 )paren
 suffix:semicolon
 )brace
