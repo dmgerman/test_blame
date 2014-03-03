@@ -23262,6 +23262,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x0283
+comma
+l_string|&quot;Acer TravelMate 8371&quot;
+comma
+id|ALC269_FIXUP_INV_DMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x029b
 comma
 l_string|&quot;Acer 1810TZ&quot;
