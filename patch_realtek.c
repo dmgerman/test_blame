@@ -22301,6 +22301,35 @@ r_case
 id|HDA_FIXUP_ACT_INIT
 suffix:colon
 "&t;&t;"
+multiline_comment|/* MIC2-VREF control */
+"&t;&t;"
+multiline_comment|/* Set to manual mode */
+"&t;&t;"
+id|val
+op_assign
+id|alc_read_coef_idx
+c_func
+(paren
+id|codec
+comma
+l_int|0x06
+)paren
+suffix:semicolon
+"&t;&t;"
+id|alc_write_coef_idx
+c_func
+(paren
+id|codec
+comma
+l_int|0x06
+comma
+id|val
+op_amp
+op_complement
+l_int|0x000c
+)paren
+suffix:semicolon
+"&t;&t;"
 multiline_comment|/* Enable Line1 input control by verb */
 "&t;&t;"
 id|val
