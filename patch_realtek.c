@@ -16932,6 +16932,15 @@ l_int|100
 )paren
 suffix:semicolon
 "&t;"
+id|alc_auto_setup_eapd
+c_func
+(paren
+id|codec
+comma
+l_bool|false
+)paren
+suffix:semicolon
+"&t;"
 id|snd_hda_shutup_pins
 c_func
 (paren
