@@ -28073,7 +28073,7 @@ comma
 dot
 id|name
 op_assign
-l_string|&quot;alc283-chrome&quot;
+l_string|&quot;alc283-dac-wcaps&quot;
 )brace
 comma
 "&t;"
