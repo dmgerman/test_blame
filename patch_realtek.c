@@ -19384,6 +19384,10 @@ r_break
 suffix:semicolon
 "&t;"
 r_case
+l_int|0x10ec0233
+suffix:colon
+"&t;"
+r_case
 l_int|0x10ec0283
 suffix:colon
 "&t;&t;"
@@ -19879,6 +19883,10 @@ r_break
 suffix:semicolon
 "&t;"
 r_case
+l_int|0x10ec0233
+suffix:colon
+"&t;"
+r_case
 l_int|0x10ec0283
 suffix:colon
 "&t;&t;"
@@ -20359,6 +20367,10 @@ r_break
 suffix:semicolon
 "&t;"
 r_case
+l_int|0x10ec0233
+suffix:colon
+"&t;"
+r_case
 l_int|0x10ec0283
 suffix:colon
 "&t;&t;"
@@ -20642,6 +20654,10 @@ r_break
 suffix:semicolon
 "&t;"
 r_case
+l_int|0x10ec0233
+suffix:colon
+"&t;"
+r_case
 l_int|0x10ec0283
 suffix:colon
 "&t;&t;"
@@ -20895,6 +20911,10 @@ suffix:semicolon
 "&t;&t;"
 r_break
 suffix:semicolon
+"&t;"
+r_case
+l_int|0x10ec0233
+suffix:colon
 "&t;"
 r_case
 l_int|0x10ec0283
@@ -21181,6 +21201,10 @@ suffix:semicolon
 "&t;&t;"
 r_break
 suffix:semicolon
+"&t;"
+r_case
+l_int|0x10ec0233
+suffix:colon
 "&t;"
 r_case
 l_int|0x10ec0283
