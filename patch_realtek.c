@@ -8709,7 +8709,7 @@ id|hda_verb
 (brace
 "&t;&t;&t;"
 (brace
-l_int|0x20
+l_int|0x1a
 comma
 id|AC_VERB_SET_COEF_INDEX
 comma
@@ -8718,7 +8718,7 @@ l_int|0x07
 comma
 "&t;&t;&t;"
 (brace
-l_int|0x20
+l_int|0x1a
 comma
 id|AC_VERB_SET_PROC_COEF
 comma
