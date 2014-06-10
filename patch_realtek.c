@@ -7235,6 +7235,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x147b
+comma
+l_int|0x1045
+comma
+l_string|&quot;ABit AA8XE&quot;
+comma
+id|ALC880_FIXUP_6ST_AUTOMUTE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1558
 comma
 l_int|0x5401
