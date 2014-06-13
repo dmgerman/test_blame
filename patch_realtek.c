@@ -30475,7 +30475,7 @@ comma
 dot
 id|value
 op_assign
-id|ALC269_FIXUP_DELL1_MIC_NO_PRESENCE
+id|ALC293_FIXUP_DELL1_MIC_NO_PRESENCE
 comma
 "&t;"
 )brace
