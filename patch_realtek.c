@@ -19483,7 +19483,7 @@ c_func
 (paren
 id|codec
 comma
-id|spec-&gt;mute_led_nid
+id|spec-&gt;cap_mute_led_nid
 )paren
 suffix:semicolon
 "&t;"
