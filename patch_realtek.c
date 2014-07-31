@@ -24165,6 +24165,8 @@ suffix:semicolon
 )brace
 multiline_comment|/* for hda_fixup_thinkpad_acpi() */
 macro_line|#include &quot;thinkpad_helper.c&quot;
+multiline_comment|/* for dell wmi mic mute led */
+macro_line|#include &quot;dell_wmi_helper.c&quot;
 r_enum
 (brace
 "&t;"
@@ -24355,6 +24357,9 @@ id|ALC292_FIXUP_TPT440_DOCK
 comma
 "&t;"
 id|ALC283_FIXUP_BXBT2807_MIC
+comma
+"&t;"
+id|ALC255_FIXUP_DELL_WMI_MIC_MUTE_LED
 comma
 )brace
 suffix:semicolon
@@ -26920,6 +26925,38 @@ comma
 "&t;"
 )brace
 comma
+"&t;"
+(braket
+id|ALC255_FIXUP_DELL_WMI_MIC_MUTE_LED
+)braket
+op_assign
+(brace
+"&t;&t;"
+dot
+id|type
+op_assign
+id|HDA_FIXUP_FUNC
+comma
+"&t;&t;"
+dot
+id|v.func
+op_assign
+id|alc_fixup_dell_wmi
+comma
+"&t;&t;"
+dot
+id|chained_before
+op_assign
+l_bool|true
+comma
+"&t;&t;"
+dot
+id|chain_id
+op_assign
+id|ALC255_FIXUP_DELL1_MIC_NO_PRESENCE
+"&t;"
+)brace
+comma
 )brace
 suffix:semicolon
 r_const
@@ -27443,6 +27480,19 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x0610
+comma
+l_string|&quot;Dell&quot;
+comma
+id|ALC255_FIXUP_DELL_WMI_MIC_MUTE_LED
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x0613
 comma
 l_string|&quot;Dell&quot;
@@ -27487,6 +27537,19 @@ comma
 l_string|&quot;Dell Vostro 5470&quot;
 comma
 id|ALC290_FIXUP_SUBWOOFER_HSJACK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
+l_int|0x061f
+comma
+l_string|&quot;Dell&quot;
+comma
+id|ALC255_FIXUP_DELL_WMI_MIC_MUTE_LED
 )paren
 comma
 "&t;"
