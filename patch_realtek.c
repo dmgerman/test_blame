@@ -23099,6 +23099,10 @@ op_logical_or
 id|nid
 op_eq
 l_int|0x02
+op_logical_or
+id|nid
+op_eq
+l_int|0x15
 )paren
 "&t;&t;&t;"
 r_return
