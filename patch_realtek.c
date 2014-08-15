@@ -564,6 +564,17 @@ l_int|0
 )paren
 suffix:semicolon
 "&t;"
+r_if
+c_cond
+(paren
+id|val
+op_eq
+l_int|1
+)paren
+"&t;&t;"
+r_return
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_write
 c_func
 (paren
@@ -15103,6 +15114,17 @@ id|codec
 comma
 l_int|0x04
 )paren
+suffix:semicolon
+"&t;"
+r_if
+c_cond
+(paren
+id|val
+op_eq
+l_int|1
+)paren
+"&t;&t;"
+r_return
 suffix:semicolon
 "&t;"
 r_if
@@ -31967,6 +31989,14 @@ suffix:semicolon
 "&t;&t;"
 multiline_comment|/* Power up output pin */
 "&t;&t;"
+r_if
+c_cond
+(paren
+id|val
+op_ne
+l_int|1
+)paren
+"&t;&t;&t;"
 id|alc_write_coef_idx
 c_func
 (paren
@@ -32017,6 +32047,10 @@ suffix:semicolon
 r_if
 c_cond
 (paren
+id|val
+op_ne
+l_int|1
+op_logical_and
 (paren
 id|val
 op_amp
@@ -32064,6 +32098,10 @@ suffix:semicolon
 r_if
 c_cond
 (paren
+id|val
+op_ne
+l_int|1
+op_logical_and
 (paren
 id|val
 op_amp
@@ -32111,6 +32149,14 @@ l_int|0xd
 suffix:semicolon
 multiline_comment|/* Class D */
 "&t;"
+r_if
+c_cond
+(paren
+id|val
+op_ne
+l_int|1
+)paren
+"&t;&t;"
 id|alc_write_coef_idx
 c_func
 (paren
@@ -32140,6 +32186,14 @@ l_int|0x4
 suffix:semicolon
 multiline_comment|/* HP */
 "&t;"
+r_if
+c_cond
+(paren
+id|val
+op_ne
+l_int|1
+)paren
+"&t;&t;"
 id|alc_write_coef_idx
 c_func
 (paren
