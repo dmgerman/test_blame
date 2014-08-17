@@ -38,10 +38,10 @@ c_func
 op_amp
 id|urn-&gt;link
 comma
-op_amp
-id|__get_cpu_var
+id|this_cpu_ptr
 c_func
 (paren
+op_amp
 id|return_notifier_list
 )paren
 )paren
@@ -79,10 +79,10 @@ c_cond
 id|hlist_empty
 c_func
 (paren
-op_amp
-id|__get_cpu_var
+id|this_cpu_ptr
 c_func
 (paren
+op_amp
 id|return_notifier_list
 )paren
 )paren
