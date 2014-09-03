@@ -28795,6 +28795,10 @@ comma
 )brace
 )brace
 suffix:semicolon
+macro_line|#define ALC255_STANDARD_PINS &bslash;&n;&t;{0x18, 0x411111f0}, &bslash;&n;&t;{0x19, 0x411111f0}, &bslash;&n;&t;{0x1a, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x1e, 0x411111f0}
+macro_line|#define ALC282_STANDARD_PINS &bslash;&n;&t;{0x14, 0x90170110}, &bslash;&n;&t;{0x18, 0x411111f0}, &bslash;&n;&t;{0x1a, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x1e, 0x411111f0}
+macro_line|#define ALC290_STANDARD_PINS &bslash;&n;&t;{0x12, 0x99a30130}, &bslash;&n;&t;{0x13, 0x40000000}, &bslash;&n;&t;{0x16, 0x411111f0}, &bslash;&n;&t;{0x17, 0x411111f0}, &bslash;&n;&t;{0x19, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x1e, 0x411111f0}
+macro_line|#define ALC292_STANDARD_PINS &bslash;&n;&t;{0x14, 0x90170110}, &bslash;&n;&t;{0x15, 0x0221401f}, &bslash;&n;&t;{0x1a, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x1d, 0x40700001}, &bslash;&n;&t;{0x1e, 0x411111f0}
 r_const
 r_struct
 id|snd_hda_pin_quirk
