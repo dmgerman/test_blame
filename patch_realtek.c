@@ -937,8 +937,9 @@ id|hda_codec
 op_star
 id|codec
 comma
+"&t;&t;&t;&t;"
 r_struct
-id|hda_jack_tbl
+id|hda_jack_callback
 op_star
 id|jack
 )paren
@@ -1014,7 +1015,7 @@ c_func
 (paren
 id|codec
 comma
-id|jack-&gt;nid
+id|jack-&gt;tbl-&gt;nid
 comma
 l_int|0
 comma
@@ -17847,7 +17848,7 @@ id|codec
 comma
 "&t;&t;&t;&t;&t;"
 r_struct
-id|hda_jack_tbl
+id|hda_jack_callback
 op_star
 id|jack
 )paren
@@ -21720,8 +21721,9 @@ id|hda_codec
 op_star
 id|codec
 comma
+"&t;&t;&t;&t;"
 r_struct
-id|hda_jack_tbl
+id|hda_jack_callback
 op_star
 id|jack
 )paren
@@ -22996,7 +22998,7 @@ id|codec
 comma
 "&t;&t;&t;&t;"
 r_struct
-id|hda_jack_tbl
+id|hda_jack_callback
 op_star
 id|jack
 )paren
