@@ -14,8 +14,6 @@ macro_line|#include &quot;hda_jack.h&quot;
 macro_line|#include &quot;hda_generic.h&quot;
 multiline_comment|/* keep halting ALC5505 DSP, for power saving */
 macro_line|#define HALT_REALTEK_ALC5505
-multiline_comment|/* unsol event tags */
-macro_line|#define ALC_DCVOL_EVENT&t;&t;0x08
 multiline_comment|/* for GPIO Poll */
 macro_line|#define GPIO_MASK&t;0x03
 multiline_comment|/* extra amp-initialization sequence types */
@@ -5252,8 +5250,7 @@ id|codec
 comma
 l_int|0x21
 comma
-id|ALC_DCVOL_EVENT
-comma
+"&t;&t;&t;&t;&t;&t;"
 id|alc_update_knob_master
 )paren
 suffix:semicolon
@@ -8296,8 +8293,6 @@ c_func
 id|codec
 comma
 l_int|0x0f
-comma
-id|HDA_GEN_HP_EVENT
 comma
 "&t;&t;&t;&t;&t;&t;"
 id|snd_hda_gen_hp_automute
@@ -23441,9 +23436,6 @@ c_func
 id|codec
 comma
 l_int|0x1b
-comma
-"&t;&t;&t;&t;&t;&t;"
-id|HDA_GEN_HP_EVENT
 comma
 "&t;&t;&t;&t;&t;&t;"
 id|snd_hda_gen_hp_automute
