@@ -27813,6 +27813,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x144d
+comma
+l_int|0xc109
+comma
+l_string|&quot;Samsung Ativ book 9 (NP900X3G)&quot;
+comma
+id|ALC269_FIXUP_INV_DMIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1458
 comma
 l_int|0xfa53
