@@ -15675,6 +15675,19 @@ l_int|0x9004
 )paren
 suffix:semicolon
 "&t;"
+multiline_comment|/*depop hp during suspend*/
+"&t;"
+id|alc_write_coef_idx
+c_func
+(paren
+id|codec
+comma
+l_int|0x06
+comma
+l_int|0x2100
+)paren
+suffix:semicolon
+"&t;"
 id|snd_hda_codec_write
 c_func
 (paren
