@@ -14317,10 +14317,12 @@ l_int|0x0002
 comma
 multiline_comment|/* Power Down Control */
 "&t;"
-id|WRITE_COEF
+id|UPDATE_COEF
 c_func
 (paren
 l_int|0x05
+comma
+l_int|0xff3f
 comma
 l_int|0x0700
 )paren
