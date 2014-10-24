@@ -15024,10 +15024,12 @@ l_int|0x0002
 comma
 multiline_comment|/* Power Down Control */
 "&t;"
-id|WRITE_COEF
+id|UPDATE_COEF
 c_func
 (paren
 l_int|0x05
+comma
+l_int|0xff3f
 comma
 l_int|0x0700
 )paren
@@ -15361,6 +15363,18 @@ l_int|0xfc06
 )paren
 comma
 multiline_comment|/* Class D amp control */
+"&t;"
+id|UPDATE_COEF
+c_func
+(paren
+l_int|0x1b
+comma
+l_int|0x8000
+comma
+l_int|0
+)paren
+comma
+multiline_comment|/* HP JD control */
 "&t;"
 (brace
 )brace
