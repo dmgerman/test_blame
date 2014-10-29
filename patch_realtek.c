@@ -27346,9 +27346,9 @@ l_int|0x17aa
 comma
 l_int|0x2214
 comma
-l_string|&quot;Thinkpad&quot;
+l_string|&quot;Thinkpad X240&quot;
 comma
-id|ALC269_FIXUP_LIMIT_INT_MIC_BOOST
+id|ALC292_FIXUP_TPT440_DOCK
 )paren
 comma
 "&t;"
