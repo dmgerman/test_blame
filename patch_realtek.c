@@ -1083,7 +1083,7 @@ id|codec
 )paren
 (brace
 "&t;"
-r_if
+r_switch
 c_cond
 (paren
 id|alc_get_coef0
@@ -1091,50 +1091,23 @@ c_func
 (paren
 id|codec
 )paren
-op_eq
-l_int|0x20
-)paren
-"&t;&t;"
-multiline_comment|/* alc888S-VC */
-"&t;&t;"
-id|alc_write_coef_idx
-c_func
-(paren
-id|codec
-comma
-l_int|7
-comma
-l_int|0x830
-)paren
-suffix:semicolon
-"&t;"
-r_else
-"&t;&t;"
-multiline_comment|/* alc888-VB */
-"&t;&t;"
-id|alc_write_coef_idx
-c_func
-(paren
-id|codec
-comma
-l_int|7
-comma
-l_int|0x3030
-)paren
-suffix:semicolon
-)brace
-multiline_comment|/* additional initialization for ALC889 variants */
-r_void
-id|alc889_coef_init
-c_func
-(paren
-r_struct
-id|hda_codec
-op_star
-id|codec
+op_amp
+l_int|0x00f0
 )paren
 (brace
 "&t;"
+multiline_comment|/* alc888-VA */
+"&t;"
+r_case
+l_int|0x00
+suffix:colon
+"&t;"
+multiline_comment|/* alc888-VB */
+"&t;"
+r_case
+l_int|0x10
+suffix:colon
+"&t;&t;"
 id|alc_update_coef_idx
 c_func
 (paren
@@ -1144,9 +1117,15 @@ l_int|7
 comma
 l_int|0
 comma
-l_int|0x2010
+l_int|0x2030
 )paren
 suffix:semicolon
+multiline_comment|/* Turn EAPD to High */
+"&t;&t;"
+r_break
+suffix:semicolon
+"&t;"
+)brace
 )brace
 multiline_comment|/* turn on/off EAPD control (only if available) */
 r_void
@@ -1453,10 +1432,6 @@ r_break
 suffix:semicolon
 "&t;&t;"
 r_case
-l_int|0x10ec0262
-suffix:colon
-"&t;&t;"
-r_case
 l_int|0x10ec0880
 suffix:colon
 "&t;&t;"
@@ -1471,22 +1446,17 @@ suffix:colon
 r_case
 l_int|0x10ec0885
 suffix:colon
-"&t;&t;"
-r_case
-l_int|0x10ec0887
-suffix:colon
-"&t;&t;"
-multiline_comment|/*case 0x10ec0889:*/
-multiline_comment|/* this causes an SPDIF problem */
-"&t;&t;"
-r_case
-l_int|0x10ec0900
-suffix:colon
 "&t;&t;&t;"
-id|alc889_coef_init
+id|alc_update_coef_idx
 c_func
 (paren
 id|codec
+comma
+l_int|7
+comma
+l_int|0
+comma
+l_int|0x2030
 )paren
 suffix:semicolon
 "&t;&t;&t;"
@@ -1506,32 +1476,6 @@ suffix:semicolon
 "&t;&t;&t;"
 r_break
 suffix:semicolon
-macro_line|#if 0 /* XXX: This may cause the silent output on speaker on some machines */
-"&t;&t;"
-r_case
-l_int|0x10ec0267
-suffix:colon
-"&t;&t;"
-r_case
-l_int|0x10ec0268
-suffix:colon
-"&t;&t;&t;"
-id|alc_update_coef_idx
-c_func
-(paren
-id|codec
-comma
-l_int|7
-comma
-l_int|0
-comma
-l_int|0x3000
-)paren
-suffix:semicolon
-"&t;&t;&t;"
-r_break
-suffix:semicolon
-macro_line|#endif /* XXX */
 "&t;&t;"
 )brace
 "&t;&t;"
@@ -8861,10 +8805,16 @@ id|HDA_FIXUP_ACT_INIT
 r_return
 suffix:semicolon
 "&t;"
-id|alc889_coef_init
+id|alc_update_coef_idx
 c_func
 (paren
 id|codec
+comma
+l_int|7
+comma
+l_int|0
+comma
+l_int|0x2030
 )paren
 suffix:semicolon
 )brace
