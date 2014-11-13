@@ -27868,6 +27868,19 @@ c_func
 (paren
 l_int|0x17aa
 comma
+l_int|0x3977
+comma
+l_string|&quot;IdeaPad S210&quot;
+comma
+id|ALC283_FIXUP_INT_MIC
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
 l_int|0x3978
 comma
 l_string|&quot;IdeaPad Y410P&quot;
