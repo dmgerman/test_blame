@@ -24921,6 +24921,17 @@ id|v.func
 op_assign
 id|alc_fixup_headset_mode
 comma
+"&t;&t;"
+dot
+id|chained
+op_assign
+l_bool|true
+comma
+"&t;&t;"
+dot
+id|chain_id
+op_assign
+id|ALC255_FIXUP_DELL_WMI_MIC_MUTE_LED
 "&t;"
 )brace
 comma
