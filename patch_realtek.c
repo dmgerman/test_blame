@@ -19380,13 +19380,6 @@ id|spec-&gt;kb_dev
 )paren
 suffix:semicolon
 "&t;&t;"
-id|input_free_device
-c_func
-(paren
-id|spec-&gt;kb_dev
-)paren
-suffix:semicolon
-"&t;&t;"
 id|spec-&gt;kb_dev
 op_assign
 l_int|NULL
