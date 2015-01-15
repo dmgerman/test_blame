@@ -312,14 +312,12 @@ r_int
 r_int
 id|coef0
 suffix:semicolon
-macro_line|#if IS_ENABLED(CONFIG_INPUT)
 "&t;"
 r_struct
 id|input_dev
 op_star
 id|kb_dev
 suffix:semicolon
-macro_line|#endif
 )brace
 suffix:semicolon
 multiline_comment|/*&n; * COEF access helper functions&n; */
@@ -19020,7 +19018,6 @@ suffix:semicolon
 "&t;"
 )brace
 )brace
-macro_line|#if IS_ENABLED(CONFIG_INPUT)
 r_void
 id|gpio2_mic_hotkey_event
 c_func
@@ -19084,7 +19081,6 @@ id|spec-&gt;kb_dev
 )paren
 suffix:semicolon
 )brace
-macro_line|#endif
 r_void
 id|alc280_fixup_hp_gpio2_mic_hotkey
 c_func
@@ -19105,7 +19101,6 @@ r_int
 id|action
 )paren
 (brace
-macro_line|#if IS_ENABLED(CONFIG_INPUT)
 "&t;"
 multiline_comment|/* GPIO1 = set according to SKU external amp&n;&t;   GPIO2 = mic mute hotkey&n;&t;   GPIO3 = mute LED&n;&t;   GPIO4 = mic mute LED */
 "&t;"
@@ -19386,7 +19381,6 @@ l_int|NULL
 suffix:semicolon
 "&t;"
 )brace
-macro_line|#endif
 )brace
 r_void
 id|alc269_fixup_hp_line1_mic1_led
