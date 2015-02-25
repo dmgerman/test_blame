@@ -3608,10 +3608,10 @@ id|codec
 )paren
 suffix:semicolon
 "&t;"
-id|snd_hda_codec_resume_amp
+id|regcache_sync
 c_func
 (paren
-id|codec
+id|codec-&gt;core.regmap
 )paren
 suffix:semicolon
 "&t;"
@@ -16927,10 +16927,10 @@ suffix:semicolon
 "&t;"
 )brace
 "&t;"
-id|snd_hda_codec_resume_amp
+id|regcache_sync
 c_func
 (paren
-id|codec
+id|codec-&gt;core.regmap
 )paren
 suffix:semicolon
 "&t;"
