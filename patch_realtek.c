@@ -3615,13 +3615,6 @@ id|codec-&gt;core.regmap
 )paren
 suffix:semicolon
 "&t;"
-id|snd_hda_codec_resume_cache
-c_func
-(paren
-id|codec
-)paren
-suffix:semicolon
-"&t;"
 id|hda_call_check_power_status
 c_func
 (paren
@@ -16931,13 +16924,6 @@ id|regcache_sync
 c_func
 (paren
 id|codec-&gt;core.regmap
-)paren
-suffix:semicolon
-"&t;"
-id|snd_hda_codec_resume_cache
-c_func
-(paren
-id|codec
 )paren
 suffix:semicolon
 "&t;"
