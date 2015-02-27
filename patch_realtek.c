@@ -33564,7 +33564,7 @@ id|spec-&gt;gen.pcm_rec
 (braket
 l_int|0
 )braket
-dot
+op_member_access_from_pointer
 id|stream
 (braket
 l_int|0
