@@ -1116,7 +1116,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -1925,7 +1925,7 @@ suffix:colon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;&t;"
@@ -2190,7 +2190,7 @@ suffix:semicolon
 "&t;"
 id|ass
 op_assign
-id|codec-&gt;subsystem_id
+id|codec-&gt;core.subsystem_id
 op_amp
 l_int|0xffff
 suffix:semicolon
@@ -2221,7 +2221,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 op_eq
 l_int|0x10ec0260
 )paren
@@ -2262,7 +2262,7 @@ comma
 l_string|&quot;%s: SKU not ready 0x%08x&bslash;n&quot;
 comma
 "&t;&t;&t;"
-id|codec-&gt;chip_name
+id|codec-&gt;core.chip_name
 comma
 id|ass
 )paren
@@ -2684,7 +2684,7 @@ suffix:semicolon
 "&t;"
 id|ass
 op_assign
-id|codec-&gt;subsystem_id
+id|codec-&gt;core.subsystem_id
 op_amp
 l_int|0xffff
 suffix:semicolon
@@ -2722,7 +2722,7 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 op_eq
 l_int|0x10ec0260
 )paren
@@ -2866,7 +2866,7 @@ id|ass
 op_amp
 l_int|0xffff
 comma
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 suffix:semicolon
 "&t;"
@@ -3721,11 +3721,11 @@ id|name
 id|kfree
 c_func
 (paren
-id|codec-&gt;chip_name
+id|codec-&gt;core.chip_name
 )paren
 suffix:semicolon
 "&t;"
-id|codec-&gt;chip_name
+id|codec-&gt;core.chip_name
 op_assign
 id|kstrdup
 c_func
@@ -3740,7 +3740,7 @@ r_if
 c_cond
 (paren
 op_logical_neg
-id|codec-&gt;chip_name
+id|codec-&gt;core.chip_name
 )paren
 (brace
 "&t;&t;"
@@ -4302,7 +4302,7 @@ c_cond
 (paren
 id|p-&gt;vendor_id
 op_ne
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 "&t;&t;&t;"
 r_continue
@@ -4366,7 +4366,7 @@ c_cond
 (paren
 id|q-&gt;codec_vendor_id
 op_ne
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 "&t;&t;&t;"
 r_continue
@@ -9372,7 +9372,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 l_int|0
 comma
@@ -9418,7 +9418,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 l_int|0
 comma
@@ -9445,7 +9445,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 l_int|0
 comma
@@ -9470,7 +9470,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 l_int|0
 comma
@@ -9486,7 +9486,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 l_int|0
 comma
@@ -9509,7 +9509,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 l_int|0
 comma
@@ -12454,7 +12454,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -16963,7 +16963,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 l_int|0
 comma
@@ -17183,7 +17183,7 @@ c_cond
 id|strcmp
 c_func
 (paren
-id|codec-&gt;chip_name
+id|codec-&gt;core.chip_name
 comma
 l_string|&quot;ALC271X&quot;
 )paren
@@ -17192,7 +17192,7 @@ op_logical_and
 id|strcmp
 c_func
 (paren
-id|codec-&gt;chip_name
+id|codec-&gt;core.chip_name
 comma
 l_string|&quot;ALC269VB&quot;
 )paren
@@ -19064,7 +19064,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 l_int|0
 comma
@@ -19080,7 +19080,7 @@ c_func
 (paren
 id|codec
 comma
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 comma
 "&t;&t;&t;&t;&t;&t;"
 id|gpio2_mic_hotkey_event
@@ -19597,7 +19597,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -19947,7 +19947,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -20430,7 +20430,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -20751,7 +20751,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -21072,7 +21072,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -21323,7 +21323,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -22610,7 +22610,7 @@ c_cond
 (paren
 id|nid
 op_eq
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 op_logical_or
 id|nid
 op_eq
@@ -31581,7 +31581,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -33174,25 +33174,25 @@ suffix:semicolon
 r_if
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 op_eq
 l_int|0x10ec0272
 op_logical_or
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 op_eq
 l_int|0x10ec0663
 op_logical_or
 "&t;"
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 op_eq
 l_int|0x10ec0665
 op_logical_or
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 op_eq
 l_int|0x10ec0670
 op_logical_or
 "&t;"
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 op_eq
 l_int|0x10ec0671
 )paren
@@ -33450,7 +33450,7 @@ c_cond
 (paren
 id|nid
 op_eq
-id|codec-&gt;afg
+id|codec-&gt;core.afg
 op_logical_and
 id|power_state
 op_eq
@@ -37268,7 +37268,7 @@ suffix:semicolon
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;"
@@ -37434,7 +37434,7 @@ id|spec-&gt;gen.beep_nid
 r_switch
 c_cond
 (paren
-id|codec-&gt;vendor_id
+id|codec-&gt;core.vendor_id
 )paren
 (brace
 "&t;&t;"
