@@ -15961,6 +15961,13 @@ id|hp_pin
 r_return
 suffix:semicolon
 "&t;"
+id|msleep
+c_func
+(paren
+l_int|30
+)paren
+suffix:semicolon
+"&t;"
 id|hp_pin_sense
 op_assign
 id|snd_hda_jack_detect
