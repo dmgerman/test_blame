@@ -33006,6 +33006,12 @@ op_assign
 id|ALC269_TYPE_ALC256
 suffix:semicolon
 "&t;&t;"
+id|spec-&gt;gen.mixer_nid
+op_assign
+l_int|0
+suffix:semicolon
+multiline_comment|/* ALC256 does not have any loopback mixer path */
+"&t;&t;"
 r_break
 suffix:semicolon
 "&t;"
@@ -33074,6 +33080,8 @@ op_logical_neg
 id|spec-&gt;gen.no_analog
 op_logical_and
 id|spec-&gt;gen.beep_nid
+op_logical_and
+id|spec-&gt;gen.mixer_nid
 )paren
 "&t;&t;"
 id|set_beep_amp
@@ -33081,7 +33089,7 @@ c_func
 (paren
 id|spec
 comma
-l_int|0x0b
+id|spec-&gt;gen.mixer_nid
 comma
 l_int|0x04
 comma
