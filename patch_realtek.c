@@ -33012,6 +33012,24 @@ l_int|0
 suffix:semicolon
 multiline_comment|/* ALC256 does not have any loopback mixer path */
 "&t;&t;"
+id|alc_update_coef_idx
+c_func
+(paren
+id|codec
+comma
+l_int|0x36
+comma
+l_int|1
+op_lshift
+l_int|13
+comma
+l_int|1
+op_lshift
+l_int|5
+)paren
+suffix:semicolon
+multiline_comment|/* Switch pcbeep path to Line in path*/
+"&t;&t;"
 r_break
 suffix:semicolon
 "&t;"
