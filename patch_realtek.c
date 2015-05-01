@@ -29119,6 +29119,19 @@ c_func
 (paren
 l_int|0x10cf
 comma
+l_int|0x1757
+comma
+l_string|&quot;Lifebook E752&quot;
+comma
+id|ALC269_FIXUP_LIFEBOOK_HP_PIN
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x10cf
+comma
 l_int|0x1845
 comma
 l_string|&quot;Lifebook U904&quot;
