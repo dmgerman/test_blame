@@ -20787,9 +20787,6 @@ suffix:semicolon
 "&t;&t;"
 r_break
 suffix:semicolon
-"&t;&t;"
-r_break
-suffix:semicolon
 "&t;"
 r_case
 l_int|0x10ec0292
