@@ -29613,6 +29613,19 @@ c_func
 (paren
 l_int|0x17aa
 comma
+l_int|0x503c
+comma
+l_string|&quot;Thinkpad L450&quot;
+comma
+id|ALC292_FIXUP_TPT440_DOCK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x17aa
+comma
 l_int|0x5109
 comma
 l_string|&quot;Thinkpad&quot;
