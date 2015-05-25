@@ -4139,6 +4139,17 @@ l_string|&quot;ALC3266&quot;
 comma
 "&t;"
 (brace
+l_int|0x10ec0256
+comma
+l_int|0x1028
+comma
+l_int|0
+comma
+l_string|&quot;ALC3246&quot;
+)brace
+comma
+"&t;"
+(brace
 l_int|0x10ec0670
 comma
 l_int|0x1025
