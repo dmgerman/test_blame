@@ -33315,11 +33315,6 @@ id|codec-&gt;patch_ops
 op_assign
 id|alc_patch_ops
 suffix:semicolon
-"&t;"
-id|codec-&gt;patch_ops.stream_pm
-op_assign
-id|snd_hda_gen_stream_pm
-suffix:semicolon
 macro_line|#ifdef CONFIG_PM
 "&t;"
 id|codec-&gt;patch_ops.suspend
