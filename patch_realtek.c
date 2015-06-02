@@ -11565,6 +11565,19 @@ c_func
 (paren
 l_int|0x1025
 comma
+l_int|0x0107
+comma
+l_string|&quot;Acer Aspire&quot;
+comma
+id|ALC883_FIXUP_ACER_EAPD
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1025
+comma
 l_int|0x010a
 comma
 l_string|&quot;Acer Ferrari 5000&quot;
