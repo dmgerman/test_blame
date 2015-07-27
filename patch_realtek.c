@@ -31194,7 +31194,7 @@ comma
 )brace
 suffix:semicolon
 macro_line|#define ALC255_STANDARD_PINS &bslash;&n;&t;{0x18, 0x411111f0}, &bslash;&n;&t;{0x19, 0x411111f0}, &bslash;&n;&t;{0x1a, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x1e, 0x411111f0}
-macro_line|#define ALC256_STANDARD_PINS &bslash;&n;&t;{0x12, 0x90a60140}, &bslash;&n;&t;{0x14, 0x90170110}, &bslash;&n;&t;{0x19, 0x411111f0}, &bslash;&n;&t;{0x1a, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x1d, 0x40700001}, &bslash;&n;&t;{0x1e, 0x411111f0}, &bslash;&n;&t;{0x21, 0x02211020}
+macro_line|#define ALC256_STANDARD_PINS &bslash;&n;&t;{0x12, 0x90a60140}, &bslash;&n;&t;{0x14, 0x90170110}, &bslash;&n;&t;{0x19, 0x411111f0}, &bslash;&n;&t;{0x1a, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x21, 0x02211020}
 macro_line|#define ALC282_STANDARD_PINS &bslash;&n;&t;{0x14, 0x90170110}, &bslash;&n;&t;{0x18, 0x411111f0}, &bslash;&n;&t;{0x1a, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x1e, 0x411111f0}
 macro_line|#define ALC288_STANDARD_PINS &bslash;&n;&t;{0x17, 0x411111f0}, &bslash;&n;&t;{0x18, 0x411111f0}, &bslash;&n;&t;{0x19, 0x411111f0}, &bslash;&n;&t;{0x1a, 0x411111f0}, &bslash;&n;&t;{0x1e, 0x411111f0}
 macro_line|#define ALC290_STANDARD_PINS &bslash;&n;&t;{0x12, 0x99a30130}, &bslash;&n;&t;{0x13, 0x40000000}, &bslash;&n;&t;{0x16, 0x411111f0}, &bslash;&n;&t;{0x17, 0x411111f0}, &bslash;&n;&t;{0x19, 0x411111f0}, &bslash;&n;&t;{0x1b, 0x411111f0}, &bslash;&n;&t;{0x1e, 0x411111f0}
@@ -32071,6 +32071,20 @@ l_int|0x13
 comma
 l_int|0x40000000
 )brace
+comma
+"&t;&t;"
+(brace
+l_int|0x1d
+comma
+l_int|0x40700001
+)brace
+comma
+"&t;&t;"
+(brace
+l_int|0x1e
+comma
+l_int|0x411111f0
+)brace
 )paren
 comma
 "&t;"
@@ -32093,6 +32107,57 @@ comma
 l_int|0x13
 comma
 l_int|0x411111f0
+)brace
+comma
+"&t;&t;"
+(brace
+l_int|0x1d
+comma
+l_int|0x40700001
+)brace
+comma
+"&t;&t;"
+(brace
+l_int|0x1e
+comma
+l_int|0x411111f0
+)brace
+)paren
+comma
+"&t;"
+id|SND_HDA_PIN_QUIRK
+c_func
+(paren
+l_int|0x10ec0256
+comma
+l_int|0x1028
+comma
+l_string|&quot;Dell&quot;
+comma
+id|ALC255_FIXUP_DELL1_MIC_NO_PRESENCE
+comma
+"&t;&t;"
+id|ALC256_STANDARD_PINS
+comma
+"&t;&t;"
+(brace
+l_int|0x13
+comma
+l_int|0x411111f0
+)brace
+comma
+"&t;&t;"
+(brace
+l_int|0x1d
+comma
+l_int|0x4077992d
+)brace
+comma
+"&t;&t;"
+(brace
+l_int|0x1e
+comma
+l_int|0x411111ff
 )brace
 )paren
 comma
