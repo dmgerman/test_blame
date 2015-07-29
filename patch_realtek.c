@@ -28852,6 +28852,19 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x069a
+comma
+l_string|&quot;Dell Vostro 5480&quot;
+comma
+id|ALC290_FIXUP_SUBWOOFER_HSJACK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x06c7
 comma
 l_string|&quot;Dell&quot;
