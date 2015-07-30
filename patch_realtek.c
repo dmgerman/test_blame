@@ -12172,7 +12172,7 @@ l_int|0x4a00
 comma
 l_string|&quot;Macbook 5,2&quot;
 comma
-id|ALC889_FIXUP_IMAC91_VREF
+id|ALC889_FIXUP_MBA11_VREF
 )paren
 comma
 "&t;"
