@@ -31197,6 +31197,7 @@ macro_line|#define ALC256_STANDARD_PINS &bslash;&n;&t;{0x12, 0x90a60140}, &bslas
 macro_line|#define ALC282_STANDARD_PINS &bslash;&n;&t;{0x14, 0x90170110}
 macro_line|#define ALC290_STANDARD_PINS &bslash;&n;&t;{0x12, 0x99a30130}
 macro_line|#define ALC292_STANDARD_PINS &bslash;&n;&t;{0x14, 0x90170110}, &bslash;&n;&t;{0x15, 0x0221401f}
+macro_line|#define ALC298_STANDARD_PINS &bslash;&n;&t;{0x12, 0x90a60130}, &bslash;&n;&t;{0x21, 0x03211020}
 r_const
 r_struct
 id|snd_hda_pin_quirk
@@ -32535,11 +32536,7 @@ comma
 id|ALC298_FIXUP_DELL1_MIC_NO_PRESENCE
 comma
 "&t;&t;"
-(brace
-l_int|0x12
-comma
-l_int|0x90a60130
-)brace
+id|ALC298_STANDARD_PINS
 comma
 "&t;&t;"
 (brace
@@ -32547,12 +32544,28 @@ l_int|0x17
 comma
 l_int|0x90170140
 )brace
+)paren
+comma
+"&t;"
+id|SND_HDA_PIN_QUIRK
+c_func
+(paren
+l_int|0x10ec0298
+comma
+l_int|0x1028
+comma
+l_string|&quot;Dell&quot;
+comma
+id|ALC298_FIXUP_DELL1_MIC_NO_PRESENCE
+comma
+"&t;&t;"
+id|ALC298_STANDARD_PINS
 comma
 "&t;&t;"
 (brace
-l_int|0x21
+l_int|0x17
 comma
-l_int|0x03211020
+l_int|0x90170110
 )brace
 )paren
 comma
