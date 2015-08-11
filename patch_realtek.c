@@ -12172,7 +12172,7 @@ l_int|0x4a00
 comma
 l_string|&quot;Macbook 5,2&quot;
 comma
-id|ALC889_FIXUP_IMAC91_VREF
+id|ALC889_FIXUP_MBA11_VREF
 )paren
 comma
 "&t;"
@@ -28852,6 +28852,19 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x069a
+comma
+l_string|&quot;Dell Vostro 5480&quot;
+comma
+id|ALC290_FIXUP_SUBWOOFER_HSJACK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x06c7
 comma
 l_string|&quot;Dell&quot;
@@ -28883,6 +28896,19 @@ comma
 l_string|&quot;Dell&quot;
 comma
 id|ALC293_FIXUP_DELL1_MIC_NO_PRESENCE
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
+l_int|0x06de
+comma
+l_string|&quot;Dell&quot;
+comma
+id|ALC292_FIXUP_DISABLE_AAMIX
 )paren
 comma
 "&t;"
