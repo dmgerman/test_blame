@@ -5469,7 +5469,7 @@ id|hda_pintbl
 (brace
 l_int|0x14
 comma
-l_int|0x0121411f
+l_int|0x0121401f
 )brace
 comma
 multiline_comment|/* HP */
@@ -5604,7 +5604,7 @@ id|hda_pintbl
 (brace
 l_int|0x14
 comma
-l_int|0x0121411f
+l_int|0x0121401f
 )brace
 comma
 multiline_comment|/* HP */
