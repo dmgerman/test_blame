@@ -7020,9 +7020,9 @@ l_int|0x1734
 comma
 l_int|0x107c
 comma
-l_string|&quot;FSC F1734&quot;
+l_string|&quot;FSC Amilo M1437&quot;
 comma
-id|ALC880_FIXUP_F1734
+id|ALC880_FIXUP_FUJITSU
 )paren
 comma
 "&t;"
