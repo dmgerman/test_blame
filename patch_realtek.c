@@ -37305,6 +37305,19 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x060d
+comma
+l_string|&quot;Dell M3800&quot;
+comma
+id|ALC668_FIXUP_DELL_XPS13
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x0625
 comma
 l_string|&quot;Dell&quot;
