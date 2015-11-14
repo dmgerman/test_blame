@@ -28739,6 +28739,19 @@ c_func
 (paren
 l_int|0x1028
 comma
+l_int|0x05bd
+comma
+l_string|&quot;Dell Latitude E6440&quot;
+comma
+id|ALC292_FIXUP_DELL_E7X
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
+l_int|0x1028
+comma
 l_int|0x05ca
 comma
 l_string|&quot;Dell Latitude E7240&quot;
