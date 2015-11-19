@@ -28711,6 +28711,19 @@ comma
 id|SND_PCI_QUIRK
 c_func
 (paren
+l_int|0x1025
+comma
+l_int|0x106d
+comma
+l_string|&quot;Acer Cloudbook 14&quot;
+comma
+id|ALC283_FIXUP_CHROME_BOOK
+)paren
+comma
+"&t;"
+id|SND_PCI_QUIRK
+c_func
+(paren
 l_int|0x1028
 comma
 l_int|0x0470
